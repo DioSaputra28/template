@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Verdant - Eco-Friendly Essentials</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for visual polish */
+    :root{
+      --brand-green:#1f8a4c; /* solid green */
+      --brand-dark:#0f1724; /* deep slate */
+      --muted:#6b7280;
+      --card: #ffffff;
+    }
+    body { background-color: #f8fafc; color: var(--brand-dark); }
+    /* subtle card border */
+    .card { background: var(--card); border: 1px solid rgba(15,23,36,0.06); box-shadow: 0 6px 18px rgba(15,23,36,0.06); }
+    /* Ensure no gradients used by accidental Tailwind utilities */
+    .no-gradient { background-image: none !important; }
+    /* Decorative rounded SVG container */
+    .svg-ill { width:100%; max-width:560px; height:auto; }
+    /* Accessible focus for interactive elements */
+    .focus-ring:focus { outline: 2px solid rgba(31,138,76,0.2); outline-offset: 2px; }
+  </style>
+</head>
+<body class="antialiased font-sans">
+  <!-- Navbar -->
+  <header class="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-100 z-30">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-3">
+          <!-- Leaf logo -->
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="24" height="24" rx="6" fill="var(--brand-green)" />
+            <path d="M7 13c1.5-3 4-6 9-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.5 16c1-1 2-2 4-2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div class="text-lg font-semibold text-slate-800">Verdant</div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+          <a href="#features" class="hover:text-slate-900">Features</a>
+          <a href="#how" class="hover:text-slate-900">How it works</a>
+          <a href="#testimonials" class="hover:text-slate-900">Testimonials</a>
+          <a href="#faq" class="hover:text-slate-900">FAQ</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="#pricing" class="hidden md:inline-block text-sm px-4 py-2 border border-transparent rounded-md text-white bg-[var(--brand-green)] hover:bg-[#166c3f] focus-ring">Get started</a>
+          <a href="#" class="md:hidden p-2 rounded-md focus-ring" aria-label="Open menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-slate-900">Premium eco-friendly products crafted for modern living</h1>
+            <p class="mt-4 text-lg text-slate-600 max-w-xl">Sustainably sourced materials, minimal waste packaging, and durable design — built to reduce your footprint without compromising quality.</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="#pricing" class="inline-flex items-center px-5 py-3 bg-[var(--brand-green)] text-white rounded-md shadow-sm hover:bg-[#166c3f] focus-ring">Shop now</a>
+              <a href="#how" class="inline-flex items-center px-5 py-3 border border-gray-200 rounded-md text-slate-700 hover:bg-gray-50 focus-ring">How it works</a>
+            </div>
+
+            <div class="mt-8 flex items-center gap-6">
+              <!-- Small social proof badges -->
+              <div class="flex items-center gap-3">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <circle cx="12" cy="12" r="10" fill="#e6f3ec" stroke="var(--brand-green)" />
+                  <path d="M8 12l2 2 6-6" stroke="var(--brand-green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div>
+                  <div class="text-sm font-semibold">Certified compostable</div>
+                  <div class="text-xs text-slate-500">ASTM compliant packaging</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <rect x="2" y="2" width="20" height="20" rx="4" fill="#eef7f1" stroke="var(--brand-green)" />
+                  <path d="M7 14s2-4 5-4 5 4 5 4" stroke="var(--brand-green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div>
+                  <div class="text-sm font-semibold">Carbon-aware</div>
+                  <div class="text-xs text-slate-500">Offset shipping available</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center lg:justify-end">
+            <div class="card p-6 rounded-xl max-w-md w-full">
+              <!-- Illustration: reusable bottle with leaves -->
+              <svg class="svg-ill" viewBox="0 0 600 420" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <rect x="0" y="0" width="600" height="420" rx="20" fill="#fff" />
+                <g transform="translate(50,40)">
+                  <rect x="0" y="0" width="460" height="340" rx="12" fill="#fbfdfb" stroke="#eef6ef" />
+                  <g transform="translate(40,20)">
+                    <rect x="40" y="10" width="120" height="260" rx="24" fill="var(--brand-green)" />
+                    <rect x="36" y="8" width="128" height="16" rx="8" fill="#145c33" />
+                    <path d="M200 40c-10 8-30 20-42 10s-6-30 4-38 34-12 46-6 6 20-8 34z" fill="#dff3e6" />
+                    <g transform="translate(200,150)">
+                      <path d="M0 0c18-30 78-30 96 0 12 18 6 44-16 58-28 18-64 18-92 0C-6 44-2 18 0 0z" fill="#e8f8ef" />
+                    </g>
+                    <text x="8" y="300" fill="#0f1724" font-size="14" font-family="sans-serif">Reusable bottle — bamboo lid, stainless core</text>
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos / Social Proof -->
+    <section class="py-6 border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between gap-6 overflow-auto">
+          <!-- simple monochrome placeholder logos as SVGs -->
+          <div class="flex items-center gap-8 py-4">
+            <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden>
+              <rect width="92" height="28" rx="6" fill="#fff" stroke="#edf7ee" />
+              <path d="M8 18h12" stroke="#9ca3af" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden>
+              <rect width="92" height="28" rx="6" fill="#fff" stroke="#edf7ee" />
+              <circle cx="44" cy="14" r="6" fill="#d1eede" stroke="#7bc48b" />
+            </svg>
+            <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden>
+              <rect width="92" height="28" rx="6" fill="#fff" stroke="#edf7ee" />
+              <path d="M14 8h16v12H14z" fill="#f1f7ef" stroke="#c6e7d0" />
+            </svg>
+            <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden>
+              <rect width="92" height="28" rx="6" fill="#fff" stroke="#edf7ee" />
+              <path d="M20 7l10 14 10-14" stroke="#8fbf95" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-16">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold">Thoughtful design, honest materials</h2>
+          <p class="mt-2 text-slate-600 max-w-2xl mx-auto">Everything we make is designed to last and to be as kind to the planet as possible.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="card p-6 rounded-lg">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-md flex items-center justify-center bg-[#f1fbf5]">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 2v20" stroke="#1f8a4c" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M5 8c3-5 6-6 12-6" stroke="#1f8a4c" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Sustainably sourced</h3>
+                <p class="mt-1 text-sm text-slate-500">Materials selected for lowest impact and highest durability.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6 rounded-lg">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-md flex items-center justify-center bg-[#fff8ec]">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 5v14" stroke="#b7791f" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M7 9h10" stroke="#b7791f" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Minimal packaging</h3>
+                <p class="mt-1 text-sm text-slate-500">Recycled, recyclable, or compostable — we avoid single-use plastics.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6 rounded-lg">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-md flex items-center justify-center bg-[#eef6ff]">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M3 12h18" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M12 3v18" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Durable & repairable</h3>
+                <p class="mt-1 text-sm text-slate-500">Long-life design with replaceable parts to reduce waste.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6 rounded-lg">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-md flex items-center justify-center bg-[#fef6f3]">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 2c4 7 8 7 8 14H4c0-7 4-7 8-14z" stroke="#ef4444" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="#fff0f0"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Transparent sourcing</h3>
+                <p class="mt-1 text-sm text-slate-500">We share supplier and material details for every product.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6 rounded-lg">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-md flex items-center justify-center bg-[#f1fafb]">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <circle cx="12" cy="12" r="7" stroke="#0891b2" stroke-width="1.6"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Certified partners</h3>
+                <p class="mt-1 text-sm text-slate-500">We work with verified mills and factories meeting clear standards.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-6 rounded-lg">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-md flex items-center justify-center bg-[#f7f6ff]">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M4 20h16" stroke="#6d28d9" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M12 4v12" stroke="#6d28d9" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Ethical labor</h3>
+                <p class="mt-1 text-sm text-slate-500">Fair wages and safe conditions are required across our supply chain.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold">How it works</h2>
+          <p class="mt-2 text-slate-600">A simple, transparent process from design to doorstep.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="card p-6 rounded-lg text-center">
+            <div class="w-12 h-12 mx-auto rounded-full flex items-center justify-center bg-[#eef7f1]">
+              <span class="text-sm font-semibold text-[var(--brand-green)]">1</span>
+            </div>
+            <h3 class="mt-4 font-semibold">Design & Materials</h3>
+            <p class="mt-2 text-sm text-slate-500">Careful selection and testing before anything reaches production.</p>
+          </div>
+          <div class="card p-6 rounded-lg text-center">
+            <div class="w-12 h-12 mx-auto rounded-full flex items-center justify-center bg-[#eef6ff]">
+              <span class="text-sm font-semibold text-[#2563eb]">2</span>
+            </div>
+            <h3 class="mt-4 font-semibold">Manufacture</h3>
+            <p class="mt-2 text-sm text-slate-500">Local partners with certified practices and low-waste processes.</p>
+          </div>
+          <div class="card p-6 rounded-lg text-center">
+            <div class="w-12 h-12 mx-auto rounded-full flex items-center justify-center bg-[#fff8ec]">
+              <span class="text-sm font-semibold text-[#b7791f]">3</span>
+            </div>
+            <h3 class="mt-4 font-semibold">Delivery & Care</h3>
+            <p class="mt-2 text-sm text-slate-500">Carbon-aware shipping, refill options, and clear end-of-life guidance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold">What customers say</h2>
+          <p class="mt-2 text-slate-600">Real feedback from happy customers who switched to sustainable essentials.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <blockquote class="card p-6 rounded-lg">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-[#eef6ff] flex items-center justify-center text-sm font-semibold">AS</div>
+              <div>
+                <div class="font-semibold">Asha Singh</div>
+                <div class="text-xs text-slate-500">Product Designer</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-700">"The bottle feels premium and has lasted through daily use for months. The packaging alone convinced me to switch."</p>
+          </blockquote>
+
+          <blockquote class="card p-6 rounded-lg">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-[#f1fbf5] flex items-center justify-center text-sm font-semibold">MR</div>
+              <div>
+                <div class="font-semibold">Michael Rivera</div>
+                <div class="text-xs text-slate-500">Teacher</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-700">"Solid craftsmanship and the refill program makes it easy to keep using the same product. Love the transparency on materials."</p>
+          </blockquote>
+
+          <blockquote class="card p-6 rounded-lg">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-[#fff8ec] flex items-center justify-center text-sm font-semibold">JL</div>
+              <div>
+                <div class="font-semibold">J. Lee</div>
+                <div class="text-xs text-slate-500">Urban Gardener</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-700">"Fast shipping and excellent customer service. The parts I needed were available and affordable."</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="pricing" class="py-16 bg-[#f7faf7]">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold">Choose your plan</h2>
+          <p class="mt-2 text-slate-600">Simple pricing with refill options to reduce long-term waste.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="card p-6 rounded-lg text-center">
+            <div class="text-sm text-slate-500">Starter</div>
+            <div class="mt-2 text-3xl font-extrabold">$24</div>
+            <div class="text-sm text-slate-500">One-time purchase</div>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>Premium materials</li>
+              <li>Minimal packaging</li>
+              <li>Free shipping over $50</li>
+            </ul>
+            <a href="#" class="mt-6 inline-block px-4 py-2 bg-[var(--brand-green)] text-white rounded-md hover:bg-[#166c3f] focus-ring">Buy now</a>
+          </div>
+
+          <div class="card p-6 rounded-lg border-2 border-[var(--brand-green)] shadow-md text-center">
+            <div class="text-sm text-slate-500">Best value</div>
+            <div class="mt-2 text-3xl font-extrabold">$9/mo</div>
+            <div class="text-sm text-slate-500">Subscription</div>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>Auto-refill discounts</li>
+              <li>Free returns</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#" class="mt-6 inline-block px-4 py-2 bg-[var(--brand-green)] text-white rounded-md hover:bg-[#166c3f] focus-ring">Start subscription</a>
+          </div>
+
+          <div class="card p-6 rounded-lg text-center">
+            <div class="text-sm text-slate-500">Business</div>
+            <div class="mt-2 text-3xl font-extrabold">Contact</div>
+            <div class="text-sm text-slate-500">Bulk & custom orders</div>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>Custom branding</li>
+              <li>Dedicated account manager</li>
+              <li>Priority fulfillment</li>
+            </ul>
+            <a href="#" class="mt-6 inline-block px-4 py-2 border border-gray-200 rounded-md text-slate-700 hover:bg-gray-50 focus-ring">Contact sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold">Frequently asked questions</h2>
+          <p class="mt-2 text-slate-600">Common questions about our products, materials, and policies.</p>
+        </div>
+
+        <div class="mt-8 space-y-4">
+          <details class="card p-5 rounded-lg">
+            <summary class="font-semibold cursor-pointer">Are your products fully compostable?</summary>
+            <div class="mt-2 text-sm text-slate-600">Certain packaging is certified compostable; product materials vary. We provide clear end-of-life instructions per product page.</div>
+          </details>
+
+          <details class="card p-5 rounded-lg">
+            <summary class="font-semibold cursor-pointer">What is your return policy?</summary>
+            <div class="mt-2 text-sm text-slate-600">30-day hassle-free returns on unused items. Refillable parts and exchanges are supported for damaged products.</div>
+          </details>
+
+          <details class="card p-5 rounded-lg">
+            <summary class="font-semibold cursor-pointer">Do you offer bulk discounts?</summary>
+            <div class="mt-2 text-sm text-slate-600">Yes — contact our sales team for custom pricing and fulfillment timelines.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-100 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect width="24" height="24" rx="6" fill="var(--brand-green)" />
+            <path d="M7 13c1.5-3 4-6 9-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <div class="font-semibold">Verdant</div>
+            <div class="text-xs text-slate-500">Eco essentials for everyday life</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 text-sm text-slate-600">
+          <a href="#" class="hover:text-slate-900">Privacy</a>
+          <a href="#" class="hover:text-slate-900">Terms</a>
+          <a href="#" class="hover:text-slate-900">Contact</a>
+        </div>
+      </div>
+
+      <div class="mt-8 text-xs text-slate-400">© 2026 Verdant. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
