@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CarePoint Clinic — Easy Appointments</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* small helpers Tailwind doesn't cover succinctly */
+    :root{--brand:#0f766e;--muted:#64748b;--card:#f8fafc}
+    /* subtle focus outline for accessibility */
+    .focus-ring:focus{box-shadow:0 0 0 4px rgba(15,118,110,0.12);outline: none}
+    /* keep testimonial avatars a consistent ring */
+    .avatar-ring{box-shadow:0 2px 0 rgba(2,6,23,0.04)}
+  </style>
+</head>
+<body class="antialiased text-slate-900 bg-white">
+
+  <!-- NAVBAR -->
+  <header class="border-b bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect x="1.5" y="1.5" width="21" height="21" rx="5" fill="var(--brand)" />
+            <path d="M7 12h10M12 7v10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-semibold text-lg">CarePoint</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700">
+          <a href="#features" class="hover:text-slate-900">Features</a>
+          <a href="#how" class="hover:text-slate-900">How it works</a>
+          <a href="#testimonials" class="hover:text-slate-900">Testimonials</a>
+          <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+          <a href="#faq" class="hover:text-slate-900">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="#book" class="hidden md:inline-block px-4 py-2 border rounded-md text-sm font-medium text-white bg-[color:var(--brand)] hover:bg-teal-700 focus-ring">Book Appointment</a>
+          <button class="md:hidden p-2 rounded-md border text-slate-700 focus-ring" aria-label="Open menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="inline-flex items-center px-3 py-1 rounded-md text-sm font-semibold text-[color:var(--brand)] bg-[color:var(--card)] border border-slate-100">Open appointments • Insurance accepted</p>
+          <h1 class="mt-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">Fast, trusted medical appointments — near you</h1>
+          <p class="mt-4 text-slate-600 max-w-prose">Book same-week visits with experienced clinicians for primary care, urgent needs, and wellness follow-ups. Secure records, transparent pricing, and reminders.</p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#book" class="inline-flex items-center px-5 py-3 bg-[color:var(--brand)] text-white rounded-md shadow-sm text-sm font-semibold hover:bg-teal-700 focus-ring">Book an appointment</a>
+            <a href="#how" class="inline-flex items-center px-5 py-3 border rounded-md text-sm font-medium text-slate-700 hover:border-slate-400">How it works</a>
+          </div>
+
+          <!-- Quick booking form (nonfunctional) -->
+          <form id="book" class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl">
+            <input class="focus-ring border rounded-md px-3 py-2 text-sm" placeholder="Full name" aria-label="Full name">
+            <input class="focus-ring border rounded-md px-3 py-2 text-sm" placeholder="Phone or email" aria-label="Contact">
+            <input type="date" class="focus-ring border rounded-md px-3 py-2 text-sm" aria-label="Date">
+            <select class="focus-ring border rounded-md px-3 py-2 text-sm" aria-label="Service">
+              <option>General Consultation</option>
+              <option>Urgent Visit</option>
+              <option>Wellness Follow-up</option>
+            </select>
+            <div class="sm:col-span-2">
+              <button class="w-full px-4 py-2 bg-[color:var(--brand)] text-white rounded-md font-medium hover:bg-teal-700 focus-ring">Request Appointment</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-xl border shadow-sm p-8 bg-white">
+            <!-- Inline illustration: clinic + doctor -->
+            <svg viewBox="0 0 640 480" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect x="0" y="0" width="640" height="480" fill="#fff"/>
+              <rect x="28" y="80" width="420" height="330" rx="12" fill="#f8fafc" stroke="#e6eef0"/>
+              <rect x="460" y="110" width="140" height="140" rx="8" fill="#eef6f5" stroke="#dbeef0"/>
+              <circle cx="120" cy="170" r="36" fill="var(--brand)"/>
+              <rect x="88" y="220" width="200" height="14" rx="7" fill="#e6eef0"/>
+              <rect x="88" y="246" width="120" height="10" rx="5" fill="#e6eef0"/>
+              <rect x="460" y="270" width="120" height="20" rx="6" fill="#e6eef0"/>
+              <g transform="translate(420,320)">
+                <rect x="20" y="10" width="160" height="130" rx="10" fill="#fff" stroke="#e6eef0"/>
+                <path d="M40 60c25-30 60-30 85 0" stroke="var(--brand)" stroke-width="4" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+          <div class="mt-4 text-sm text-slate-500">Trusted clinicians • HIPAA-compliant scheduling</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / LOGOS -->
+    <section class="border-t py-8">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between gap-6 overflow-auto snap-x">
+          <div class="flex items-center gap-6">
+            <!-- simple logo placeholders, solid color only -->
+            <svg width="92" height="40" viewBox="0 0 92 40" fill="none" class="opacity-90"><rect width="92" height="40" rx="6" fill="#0ea5a4"/></svg>
+            <svg width="92" height="40" viewBox="0 0 92 40" fill="none" class="opacity-90"><rect width="92" height="40" rx="6" fill="#0f172a"/></svg>
+            <svg width="92" height="40" viewBox="0 0 92 40" fill="none" class="opacity-90"><rect width="92" height="40" rx="6" fill="#2563eb"/></svg>
+            <svg width="92" height="40" viewBox="0 0 92 40" fill="none" class="opacity-90"><rect width="92" height="40" rx="6" fill="#334155"/></svg>
+          </div>
+          <div class="text-sm text-slate-500">Over 12,000 appointments booked</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <h2 class="text-2xl font-bold">Why patients choose CarePoint</h2>
+      <p class="mt-2 text-slate-600 max-w-2xl">Designed for speed, clarity, and patient comfort — everything from booking to follow-up.</p>
+
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-5 border rounded-lg bg-white shadow-sm">
+          <div class="w-10 h-10 rounded-md bg-[color:var(--brand)] text-white flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 7v10M7 12h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold">Same-week booking</h3>
+          <p class="mt-2 text-sm text-slate-600">Find open slots quickly with real-time availability.</p>
+        </div>
+
+        <div class="p-5 border rounded-lg bg-white shadow-sm">
+          <div class="w-10 h-10 rounded-md bg-slate-800 text-white flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2v4M6 6v6M18 6v6M8 18h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold">Insurance & billing</h3>
+          <p class="mt-2 text-sm text-slate-600">Clear pricing, insurance support, and itemized invoices.</p>
+        </div>
+
+        <div class="p-5 border rounded-lg bg-white shadow-sm">
+          <div class="w-10 h-10 rounded-md bg-indigo-600 text-white flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold">Secure records</h3>
+          <p class="mt-2 text-sm text-slate-600">Encrypted communications and HIPAA-minded storage.</p>
+        </div>
+
+        <div class="p-5 border rounded-lg bg-white shadow-sm">
+          <div class="w-10 h-10 rounded-md bg-yellow-600 text-white flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold">Follow-up & reminders</h3>
+          <p class="mt-2 text-sm text-slate-600">Automated reminders and easy follow-up scheduling.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="bg-white border-t py-16">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
+        <h2 class="text-2xl font-bold">How it works</h2>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 border rounded-lg bg-white">
+            <div class="w-12 h-12 rounded-md bg-[color:var(--brand)] text-white flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="mt-4 font-semibold">Choose a service</h3>
+            <p class="mt-2 text-sm text-slate-600">Select a visit type and search nearby clinics.</p>
+          </div>
+          <div class="p-6 border rounded-lg bg-white">
+            <div class="w-12 h-12 rounded-md bg-slate-800 text-white flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 7v10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="mt-4 font-semibold">Confirm & pay</h3>
+            <p class="mt-2 text-sm text-slate-600">Securely confirm patient details and payment method.</p>
+          </div>
+          <div class="p-6 border rounded-lg bg-white">
+            <div class="w-12 h-12 rounded-md bg-indigo-600 text-white flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="mt-4 font-semibold">Visit & follow-up</h3>
+            <p class="mt-2 text-sm text-slate-600">Receive treatment, download notes, and schedule follow-ups if needed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <h2 class="text-2xl font-bold">What patients say</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="p-6 border rounded-lg bg-white shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center avatar-ring">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 20a8 8 0 0116 0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <div class="font-semibold">Jordan P.</div>
+              <div class="text-sm text-slate-500">Verified patient</div>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-600">"Quick booking and the clinician explained everything clearly. No surprises on billing."</p>
+        </blockquote>
+
+        <blockquote class="p-6 border rounded-lg bg-white shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center avatar-ring">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 20a8 8 0 0116 0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <div class="font-semibold">Rita M.</div>
+              <div class="text-sm text-slate-500">Verified patient</div>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-600">"Staff were friendly and the reminder system made it easy to remember my visit."</p>
+        </blockquote>
+
+        <blockquote class="p-6 border rounded-lg bg-white shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center avatar-ring">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 20a8 8 0 0116 0" stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <div class="font-semibold">Sam K.</div>
+              <div class="text-sm text-slate-500">Verified patient</div>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-600">"Clean clinic, punctual appointments. Would recommend for busy families."</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section id="pricing" class="bg-white border-t py-16">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
+        <h2 class="text-2xl font-bold">Pricing</h2>
+        <p class="mt-2 text-slate-600">Transparent pricing so you know what to expect. Insurance accepted where applicable.</p>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 border rounded-lg bg-white">
+            <div class="text-sm text-slate-500">Single visit</div>
+            <div class="mt-4 text-3xl font-extrabold">$79</div>
+            <p class="mt-2 text-sm text-slate-600">One-time consultation for general concerns.</p>
+            <a href="#book" class="mt-6 inline-block px-4 py-2 bg-[color:var(--brand)] text-white rounded-md text-sm font-medium hover:bg-teal-700">Book</a>
+          </div>
+
+          <div class="p-6 border-2 border-[color:var(--brand)] rounded-lg bg-white">
+            <div class="text-sm text-slate-500">Starter plan</div>
+            <div class="mt-4 text-3xl font-extrabold">$199<span class="text-base font-medium">/3 visits</span></div>
+            <p class="mt-2 text-sm text-slate-600">Best value for repeat care and follow-ups.</p>
+            <a href="#book" class="mt-6 inline-block px-4 py-2 bg-[color:var(--brand)] text-white rounded-md text-sm font-medium hover:bg-teal-700">Choose plan</a>
+          </div>
+
+          <div class="p-6 border rounded-lg bg-white">
+            <div class="text-sm text-slate-500">Family pack</div>
+            <div class="mt-4 text-3xl font-extrabold">Custom</div>
+            <p class="mt-2 text-sm text-slate-600">Tailored plans for families — call for details.</p>
+            <a href="#book" class="mt-6 inline-block px-4 py-2 border rounded-md text-slate-700 text-sm font-medium hover:border-slate-400">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-5xl mx-auto px-6 lg:px-8 py-16">
+      <h2 class="text-2xl font-bold">Frequently asked questions</h2>
+      <div class="mt-6 space-y-3">
+        <details class="p-4 border rounded-md bg-white">
+          <summary class="font-medium cursor-pointer">Do you accept my insurance?</summary>
+          <p class="mt-2 text-sm text-slate-600">We accept most major insurers. During booking, choose insurance billing to check coverage.</p>
+        </details>
+        <details class="p-4 border rounded-md bg-white">
+          <summary class="font-medium cursor-pointer">What is your cancellation policy?</summary>
+          <p class="mt-2 text-sm text-slate-600">Cancel up to 24 hours before the appointment for no fee. Late cancellations may incur charges.</p>
+        </details>
+        <details class="p-4 border rounded-md bg-white">
+          <summary class="font-medium cursor-pointer">Are telehealth visits available?</summary>
+          <p class="mt-2 text-sm text-slate-600">Yes. Select Telehealth at booking for eligible services.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10 flex flex-col md:flex-row justify-between gap-6">
+      <div>
+        <a href="#" class="flex items-center gap-3">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="5" fill="var(--brand)"/></svg>
+          <div>
+            <div class="font-semibold">CarePoint</div>
+            <div class="text-sm text-slate-500">Safe. Simple. Secure.</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="flex gap-12">
+        <div>
+          <div class="font-semibold mb-2">Contact</div>
+          <div class="text-sm text-slate-600">support@carepoint.example<br>+1 (555) 123-4567</div>
+        </div>
+        <div>
+          <div class="font-semibold mb-2">Legal</div>
+          <div class="text-sm text-slate-600">Privacy • Terms</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
