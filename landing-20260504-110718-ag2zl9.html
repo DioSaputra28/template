@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Atlas — Personal Finance App</title>
+    <meta name="description" content="Atlas helps you master your money: budgeting, saving, and investing in one simple app." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* small custom styles for fine control */
+      .card-shadow { box-shadow: 0 8px 24px rgba(15,23,42,0.08); }
+      .muted { color: #6b7280; }
+      .btn-primary { background-color: #3730a3; color: white; }
+      .btn-primary:hover { background-color: #2f2b90; }
+      .accent { color: #0f766e; }
+      /* phone mockup inner elements */
+      .phone-screen { background: white; border: 1px solid #e6e9ef; border-radius: 20px; }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased">
+    <header class="bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <nav class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-4">
+            <a href="#" class="flex items-center gap-3">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="2" width="20" height="20" rx="6" fill="#3730a3" />
+                <path d="M7 13c1.5-2 3.5-3 6-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 16c1-1.5 3-2.5 6-2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="font-semibold text-lg">Atlas</span>
+            </a>
+          </div>
+          <div class="hidden md:flex items-center gap-8">
+            <a href="#features" class="text-sm muted hover:text-slate-900">Features</a>
+            <a href="#how" class="text-sm muted hover:text-slate-900">How it works</a>
+            <a href="#pricing" class="text-sm muted hover:text-slate-900">Pricing</a>
+            <a href="#faq" class="text-sm muted hover:text-slate-900">FAQ</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="#" class="hidden md:inline-block px-4 py-2 border border-slate-200 rounded-md text-sm muted hover:bg-slate-50">Log in</a>
+            <a href="#pricing" class="inline-block px-4 py-2 rounded-md btn-primary text-sm">Get started</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 lg:px-8">
+      <!-- Hero -->
+      <section class="pt-12 lg:pt-20 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7">
+            <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Master your money with simple, confident decisions.</h1>
+            <p class="mt-4 text-lg muted max-w-2xl">Atlas is a personal finance app that brings budgets, goals, and investments into one clear view. Track spending, automate savings, and grow with confidence.</p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a href="#pricing" class="inline-flex items-center px-5 py-3 btn-primary rounded-md text-sm font-medium shadow-sm">Create account</a>
+              <a href="#features" class="inline-flex items-center px-5 py-3 border border-slate-200 rounded-md text-sm muted hover:bg-slate-50">Explore features</a>
+            </div>
+
+            <div class="mt-8 flex items-center gap-6">
+              <div class="flex items-center gap-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#0f766e" stroke-width="2"/></svg>
+                <div>
+                  <div class="text-sm font-semibold">$3.2M</div>
+                  <div class="text-xs muted">Assets tracked</div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="14" rx="2" stroke="#3730a3" stroke-width="2"/></svg>
+                <div>
+                  <div class="text-sm font-semibold">120k</div>
+                  <div class="text-xs muted">Active users</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex justify-center lg:justify-end">
+            <!-- phone mockup -->
+            <div class="w-80 sm:w-96 card-shadow rounded-3xl phone-screen p-4">
+              <svg viewBox="0 0 360 780" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Phone mockup">
+                <rect x="8" y="8" width="344" height="764" rx="26" fill="#ffffff" stroke="#e6e9ef" />
+                <!-- status bar -->
+                <rect x="26" y="26" width="308" height="6" rx="3" fill="#f3f4f6" />
+                <!-- header -->
+                <text x="28" y="70" fill="#0f1724" font-size="20" font-family="Inter, Arial">Overview</text>
+                <!-- balance card -->
+                <rect x="26" y="86" width="308" height="110" rx="12" fill="#3730a3" />
+                <text x="44" y="120" fill="#fff" font-size="13">Total balance</text>
+                <text x="44" y="148" fill="#fff" font-size="24" font-weight="700">$12,842.50</text>
+                <!-- chart area (simple bars) -->
+                <g transform="translate(40,210)">
+                  <rect x="0" y="30" width="20" height="20" rx="3" fill="#a78bfa" />
+                  <rect x="34" y="10" width="20" height="40" rx="3" fill="#7c3aed" />
+                  <rect x="68" y="0" width="20" height="50" rx="3" fill="#4c1d95" />
+                  <rect x="102" y="20" width="20" height="30" rx="3" fill="#7c3aed" />
+                  <rect x="136" y="12" width="20" height="38" rx="3" fill="#a78bfa" />
+                </g>
+                <!-- quick actions -->
+                <g transform="translate(26,300)">
+                  <rect x="0" y="0" width="124" height="46" rx="10" fill="#f8fafc" stroke="#e6e9ef" />
+                  <text x="14" y="30" fill="#0f1724" font-size="13">Send</text>
+                  <rect x="132" y="0" width="124" height="46" rx="10" fill="#f8fafc" stroke="#e6e9ef" />
+                  <text x="146" y="30" fill="#0f1724" font-size="13">Save</text>
+                </g>
+                <!-- list items -->
+                <g transform="translate(26,366)">
+                  <rect x="0" y="0" width="308" height="64" rx="10" fill="#fff" stroke="#eef2ff" />
+                  <text x="18" y="26" fill="#0f1724" font-size="13">Groceries</text>
+                  <text x="18" y="48" fill="#6b7280" font-size="12">$72 · Today</text>
+                  <text x="260" y="38" fill="#ef4444" font-size="13">- $72</text>
+                </g>
+                <g transform="translate(26,444)">
+                  <rect x="0" y="0" width="308" height="64" rx="10" fill="#fff" stroke="#eef2ff" />
+                  <text x="18" y="26" fill="#0f1724" font-size="13">Salary</text>
+                  <text x="18" y="48" fill="#6b7280" font-size="12">$2,800 · May 1</text>
+                  <text x="260" y="38" fill="#10b981" font-size="13">+ $2,800</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social proof / logos -->
+      <section class="py-6">
+        <div class="bg-white rounded-md border border-slate-100 p-6 flex items-center justify-between gap-6">
+          <p class="muted text-sm">Trusted by teams and individuals at</p>
+          <div class="flex items-center gap-6">
+            <!-- minimal logo solids -->
+            <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="28" rx="4" fill="#e6eef6"/><text x="12" y="18" fill="#0f1724" font-size="12">Acme</text></svg>
+            <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="28" rx="4" fill="#eefaf6"/><text x="12" y="18" fill="#0f1724" font-size="12">Novo</text></svg>
+            <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="80" height="28" rx="4" fill="#f6f6ff"/><text x="12" y="18" fill="#0f1724" font-size="12">Harbor</text></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="pt-10 pb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-1">
+            <h2 class="text-2xl font-semibold">Complete money management</h2>
+            <p class="mt-3 muted">All the tools you need to budget, save, and invest — without clutter. Built for clarity and action.</p>
+          </div>
+
+          <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- feature card -->
+            <div class="p-6 bg-white rounded-lg border border-slate-100 card-shadow">
+              <div class="flex items-start gap-4">
+                <div class="p-3 rounded-md bg-indigo-50 border border-indigo-100">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2" stroke="#4c1d95" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold">Clear budgets</h3>
+                  <p class="mt-2 text-sm muted">Create flexible budgets that adapt to your real spending and goals.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg border border-slate-100 card-shadow">
+              <div class="flex items-start gap-4">
+                <div class="p-3 rounded-md bg-teal-50 border border-teal-100">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 12h16" stroke="#0f766e" stroke-width="1.6" stroke-linecap="round"/><path d="M4 6h16" stroke="#0f766e" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold">Automated saving</h3>
+                  <p class="mt-2 text-sm muted">Rules to move money automatically into savings when you get paid.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg border border-slate-100 card-shadow">
+              <div class="flex items-start gap-4">
+                <div class="p-3 rounded-md bg-sky-50 border border-sky-100">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#0369a1" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold">Smart investments</h3>
+                  <p class="mt-2 text-sm muted">Start fractional investments aligned to your goals with clear fees.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg border border-slate-100 card-shadow">
+              <div class="flex items-start gap-4">
+                <div class="p-3 rounded-md bg-amber-50 border border-amber-100">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3v18" stroke="#b45309" stroke-width="1.6" stroke-linecap="round"/></svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold">Insights & reports</h3>
+                  <p class="mt-2 text-sm muted">Understand trends and make better choices with simple reports.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="how" class="py-12">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-2xl font-semibold">How Atlas works</h2>
+          <p class="mt-2 muted">Set up in minutes. Stay on track every month.</p>
+
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg border border-slate-100 card-shadow">
+              <div class="w-12 h-12 rounded-md bg-indigo-50 flex items-center justify-center mb-4">
+                <span class="font-semibold text-indigo-700">1</span>
+              </div>
+              <h3 class="font-semibold">Connect accounts</h3>
+              <p class="mt-2 text-sm muted">Securely connect checking, savings, and investment accounts for a unified view.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg border border-slate-100 card-shadow">
+              <div class="w-12 h-12 rounded-md bg-teal-50 flex items-center justify-center mb-4">
+                <span class="font-semibold text-teal-700">2</span>
+              </div>
+              <h3 class="font-semibold">Create budgets</h3>
+              <p class="mt-2 text-sm muted">Set monthly targets and let Atlas categorize transactions automatically.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg border border-slate-100 card-shadow">
+              <div class="w-12 h-12 rounded-md bg-sky-50 flex items-center justify-center mb-4">
+                <span class="font-semibold text-sky-700">3</span>
+              </div>
+              <h3 class="font-semibold">Act & grow</h3>
+              <p class="mt-2 text-sm muted">Move money, invest, and track progress — Atlas helps you stick to plans.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="py-12">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-2xl font-semibold">What customers say</h2>
+          <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <blockquote class="bg-white p-6 rounded-lg border border-slate-100 card-shadow">
+              <p class="text-sm">"Atlas made it simple to actually save. The automatic rules are subtle but powerful — my emergency fund grew without me thinking about it."</p>
+              <footer class="mt-4 text-sm muted">— Priya R., freelance designer</footer>
+            </blockquote>
+
+            <blockquote class="bg-white p-6 rounded-lg border border-slate-100 card-shadow">
+              <p class="text-sm">"The overview page gives me anxiety-free clarity. I can see where I'm overspending and fix it quickly."</p>
+              <footer class="mt-4 text-sm muted">— Marcus L., product manager</footer>
+            </blockquote>
+
+            <blockquote class="bg-white p-6 rounded-lg border border-slate-100 card-shadow">
+              <p class="text-sm">"Support is fast and the team actually listens to feedback. The app feels premium and trustworthy."</p>
+              <footer class="mt-4 text-sm muted">— Elaine T., teacher</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing / CTA -->
+      <section id="pricing" class="py-12">
+        <div class="max-w-5xl mx-auto text-center">
+          <h2 class="text-2xl font-semibold">Simple pricing</h2>
+          <p class="mt-2 muted">Transparent plans with essential tools for everyone. No hidden fees.</p>
+
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 bg-white rounded-lg border border-slate-100 card-shadow">
+              <div class="text-sm muted">Starter</div>
+              <div class="mt-4 text-3xl font-bold">Free</div>
+              <p class="mt-2 text-sm muted">Budgeting, basic reports, and secure account linking.</p>
+              <a href="#" class="mt-6 inline-block px-4 py-2 rounded-md border border-slate-200 text-sm muted hover:bg-slate-50">Choose</a>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg border-2 border-indigo-600 shadow-lg">
+              <div class="text-sm text-indigo-700">Most popular</div>
+              <div class="mt-4 text-3xl font-bold">Pro</div>
+              <div class="mt-1 text-sm muted">$9 / month</div>
+              <p class="mt-2 text-sm muted">Automations, advanced reports, and investing features.</p>
+              <a href="#" class="mt-6 inline-block px-4 py-2 rounded-md btn-primary text-sm">Get Pro</a>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg border border-slate-100 card-shadow">
+              <div class="text-sm muted">Team</div>
+              <div class="mt-4 text-3xl font-bold">Custom</div>
+              <p class="mt-2 text-sm muted">Multi-user accounts and priority support for businesses.</p>
+              <a href="#" class="mt-6 inline-block px-4 py-2 rounded-md border border-slate-200 text-sm muted hover:bg-slate-50">Contact sales</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="py-12">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-semibold">Frequently asked questions</h2>
+          <div class="mt-6 space-y-4">
+            <details class="bg-white p-4 rounded-md border border-slate-100">
+              <summary class="cursor-pointer font-medium">Is my data secure?</summary>
+              <p class="mt-2 muted text-sm">Yes. Atlas uses bank-level encryption and read-only connections to ensure your credentials and money are safe.</p>
+            </details>
+
+            <details class="bg-white p-4 rounded-md border border-slate-100">
+              <summary class="cursor-pointer font-medium">Which banks are supported?</summary>
+              <p class="mt-2 muted text-sm">We support most major banks and many regional banks. If yours is missing, contact support and we’ll prioritize it.</p>
+            </details>
+
+            <details class="bg-white p-4 rounded-md border border-slate-100">
+              <summary class="cursor-pointer font-medium">Can I cancel anytime?</summary>
+              <p class="mt-2 muted text-sm">Yes. Paid plans can be canceled at any time from your account settings. No long-term commitments.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-12 border-t border-slate-200 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="6" fill="#3730a3"/><path d="M7 13c1.5-2 3.5-3 6-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <div class="font-semibold">Atlas</div>
+              <div class="text-sm muted">Personal finance, simplified.</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-6">
+            <a href="#" class="text-sm muted hover:text-slate-900">Privacy</a>
+            <a href="#" class="text-sm muted hover:text-slate-900">Terms</a>
+            <a href="#" class="text-sm muted hover:text-slate-900">Support</a>
+          </div>
+        </div>
+
+        <div class="mt-6 text-sm muted text-center">© 2026 Atlas — All rights reserved.</div>
+      </div>
+    </footer>
+  </body>
+</html>
