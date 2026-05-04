@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nimbus Storage — Secure Cloud Storage for Teams</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for details Tailwind doesn't cover */
+    :root{
+      --bg:#f8fafc; /* light neutral */
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#0b5fff; /* solid blue */
+      --accent-600:#0846d6;
+    }
+    html,body{background:var(--bg);}
+    /* Slightly larger focus outline for keyboard users */
+    :focus{outline:3px solid rgba(11,95,255,0.15);outline-offset:2px}
+    /* Simple decorative cloud pattern using CSS only for hero */
+    .hero-cloud{opacity:0.06}
+    /* limit content width for large screens */
+    .max-w-9xl{max-width:1200px}
+  </style>
+</head>
+<body class="antialiased text-slate-900">
+  <header class="border-b bg-white">
+    <div class="max-w-9xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect x="2" y="7" width="20" height="12" rx="2" fill="#0b5fff"></rect>
+          <path d="M7 7V5a5 5 0 0 1 10 0v2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="font-semibold text-lg">Nimbus</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700">
+        <a href="#features" class="hover:text-slate-900">Features</a>
+        <a href="#how" class="hover:text-slate-900">How it works</a>
+        <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+        <a href="#faq" class="hover:text-slate-900">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#login" class="text-sm px-3 py-2 rounded hover:bg-slate-100">Sign in</a>
+        <a href="#signup" class="inline-flex items-center gap-2 text-sm font-medium px-4 py-2 bg-[color:var(--accent)] text-white rounded shadow hover:bg-[color:var(--accent-600)]">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="max-w-9xl mx-auto px-6 py-16 md:py-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-sm font-medium text-[color:var(--accent)] mb-3">Secure • Fast • Collaborative</p>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">Cloud storage built for teams that move fast</h1>
+          <p class="mt-4 text-slate-600 max-w-xl">Nimbus provides enterprise-grade security, lightning-fast sync, and predictable pricing — so teams can focus on work, not storage headaches.</p>
+
+          <div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3">
+            <a href="#signup" class="inline-flex items-center gap-3 px-5 py-3 bg-[color:var(--accent)] text-white rounded shadow hover:bg-[color:var(--accent-600)]">Start free trial</a>
+            <a href="#features" class="inline-flex items-center gap-2 px-4 py-3 border rounded text-sm hover:bg-slate-50">Explore features
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="mt-8 flex items-center gap-6">
+            <div class="flex items-center gap-3">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 3v6" stroke="#0b5fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 12v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7 10a5 5 0 0 1 10 0" stroke="#0b5fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <div class="text-sm font-semibold">99.99% Uptime</div>
+                <div class="text-xs text-slate-500">Globally redundant infrastructure</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="6" width="18" height="12" rx="2" stroke="#0b5fff" stroke-width="1.5"/>
+                <path d="M8 12h8" stroke="#0b5fff" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <div class="text-sm font-semibold">End-to-end encryption</div>
+                <div class="text-xs text-slate-500">Encrypted on device and at rest</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <!-- Decorative subtle cloud behind (low opacity) -->
+          <svg class="absolute inset-0 w-full h-full hero-cloud" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect x="0" y="0" width="800" height="600" fill="#0b5fff"/>
+            <g fill="#fff">
+              <ellipse cx="200" cy="200" rx="140" ry="70"/>
+              <ellipse cx="340" cy="160" rx="160" ry="100"/>
+              <ellipse cx="520" cy="220" rx="120" ry="60"/>
+            </g>
+          </svg>
+
+          <div class="relative bg-[color:var(--card)] border rounded-lg shadow-lg p-6 md:p-8">
+            <!-- device/mockup with cloud and file cards -->
+            <div class="flex items-center gap-4">
+              <span class="flex-none w-16 h-16 bg-[color:var(--accent)] rounded-md flex items-center justify-center">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M20 17.5A4.5 4.5 0 0 0 15.5 13h-1.1A6 6 0 0 0 6 12.5 4.5 4.5 0 0 0 6 21h9" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <div class="flex-1">
+                <div class="flex items-center justify-between">
+                  <div class="text-sm font-medium">Team Drive • Marketing</div>
+                  <div class="text-xs text-slate-500">Updated 2m ago</div>
+                </div>
+
+                <div class="mt-3 grid grid-cols-2 gap-3">
+                  <div class="p-3 border rounded bg-slate-50">
+                    <div class="text-sm font-semibold">Brand Guidelines.pdf</div>
+                    <div class="text-xs text-slate-500">24 MB</div>
+                  </div>
+                  <div class="p-3 border rounded bg-slate-50">
+                    <div class="text-sm font-semibold">Q2_campaign.zip</div>
+                    <div class="text-xs text-slate-500">1.2 GB</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos / social proof -->
+    <section class="bg-white border-t border-b">
+      <div class="max-w-9xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <p class="text-sm text-slate-600">Trusted by teams at</p>
+        <div class="flex items-center gap-6 flex-wrap justify-center md:justify-end">
+          <!-- simple monochrome logo placeholders -->
+          <svg width="88" height="28" viewBox="0 0 88 28" fill="none" aria-hidden>
+            <rect width="88" height="28" rx="4" fill="#f1f5f9"></rect>
+            <text x="44" y="18" text-anchor="middle" font-size="10" fill="#94a3b8" font-family="sans-serif">Acme</text>
+          </svg>
+          <svg width="88" height="28" viewBox="0 0 88 28" fill="none" aria-hidden>
+            <rect width="88" height="28" rx="4" fill="#f1f5f9"></rect>
+            <text x="44" y="18" text-anchor="middle" font-size="10" fill="#94a3b8" font-family="sans-serif">Atlas</text>
+          </svg>
+          <svg width="88" height="28" viewBox="0 0 88 28" fill="none" aria-hidden>
+            <rect width="88" height="28" rx="4" fill="#f1f5f9"></rect>
+            <text x="44" y="18" text-anchor="middle" font-size="10" fill="#94a3b8" font-family="sans-serif">Orbit</text>
+          </svg>
+          <svg width="88" height="28" viewBox="0 0 88 28" fill="none" aria-hidden>
+            <rect width="88" height="28" rx="4" fill="#f1f5f9"></rect>
+            <text x="44" y="18" text-anchor="middle" font-size="10" fill="#94a3b8" font-family="sans-serif">Nova</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="max-w-9xl mx-auto px-6 py-16">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl font-bold">Everything teams need to store, share, and secure files</h2>
+        <p class="mt-3 text-slate-600">Fast sync, fine-grained permissions, and simple admin tools — with predictable pricing for every team size.</p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="p-6 bg-white border rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-4">
+            <div class="p-3 bg-slate-50 rounded">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2l3 7h6l-5 4 2 7-6-4-6 4 2-7-5-4h6l3-7z" stroke="#0b5fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Fast global sync</h3>
+              <p class="text-sm text-slate-600">Efficient delta sync keeps files up to date across devices with minimal bandwidth.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="p-6 bg-white border rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-4">
+            <div class="p-3 bg-slate-50 rounded">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 1v4" stroke="#0b5fff" stroke-width="1.5" stroke-linecap="round"/>
+                <rect x="4" y="8" width="16" height="12" rx="2" stroke="#0b5fff" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Zero-trust security</h3>
+              <p class="text-sm text-slate-600">Encrypted keys per user, audit logs, and SSO support keep access controlled and auditable.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="p-6 bg-white border rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-4">
+            <div class="p-3 bg-slate-50 rounded">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 7h18M12 7v14" stroke="#0b5fff" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Simple admin tools</h3>
+              <p class="text-sm text-slate-600">Manage teams, set retention policies, and view activity from a single console.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="p-6 bg-white border rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-4">
+            <div class="p-3 bg-slate-50 rounded">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 12h18M12 3v18" stroke="#0b5fff" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Flexible sharing</h3>
+              <p class="text-sm text-slate-600">Create secure share links, set expiration, and control download permissions.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="p-6 bg-white border rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-4">
+            <div class="p-3 bg-slate-50 rounded">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M4 6h16M4 12h8m-8 6h16" stroke="#0b5fff" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Version history</h3>
+              <p class="text-sm text-slate-600">Recover previous versions and track changes with a compact timeline view.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="p-6 bg-white border rounded-lg shadow-sm hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-4">
+            <div class="p-3 bg-slate-50 rounded">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2l4 7h6l-5 4 2 7-6-4-6 4 2-7-5-4h6l4-7z" stroke="#0b5fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Developer friendly</h3>
+              <p class="text-sm text-slate-600">Powerful API, webhooks, and SDKs for integrating storage into your apps.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="max-w-9xl mx-auto px-6 py-16">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl font-bold">How Nimbus works</h2>
+        <p class="mt-3 text-slate-600">Three simple steps to get your team onboarded and syncing securely.</p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white border rounded-lg text-center">
+          <div class="flex items-center justify-center w-16 h-16 mx-auto rounded-full bg-[color:var(--accent)] text-white">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 2v6" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M21 12v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-6" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="mt-4 font-semibold">Create your team</h3>
+          <p class="text-sm text-slate-600 mt-2">Invite members, configure groups, and set permissions in minutes.</p>
+        </div>
+
+        <div class="p-6 bg-white border rounded-lg text-center">
+          <div class="flex items-center justify-center w-16 h-16 mx-auto rounded-full bg-[color:var(--accent)] text-white">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M3 12h18M12 3v18" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="mt-4 font-semibold">Sync files</h3>
+          <p class="text-sm text-slate-600 mt-2">Install the sync client or use the web app to upload and share files instantly.</p>
+        </div>
+
+        <div class="p-6 bg-white border rounded-lg text-center">
+          <div class="flex items-center justify-center w-16 h-16 mx-auto rounded-full bg-[color:var(--accent)] text-white">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 2l4 7h6l-5 4 2 7-6-4-6 4 2-7-5-4h6l4-7z" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <h3 class="mt-4 font-semibold">Manage & monitor</h3>
+          <p class="text-sm text-slate-600 mt-2">Use the admin console for logs, backups, and policy enforcement.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-white border-t border-b">
+      <div class="max-w-9xl mx-auto px-6 py-16">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-2xl font-bold">What customers say</h2>
+          <p class="mt-3 text-slate-600">Teams love the reliability and simple admin experience.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <figure class="p-6 bg-[color:var(--card)] border rounded-lg">
+            <blockquote class="text-slate-700">"Nimbus reduced our backup time by 70% and made sharing across offices painless. The admin console is particularly well-designed."</blockquote>
+            <figcaption class="mt-4 flex items-center gap-3">
+              <svg class="w-10 h-10 rounded-full bg-slate-100 p-2" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <circle cx="12" cy="8" r="3" stroke="#94a3b8" stroke-width="1.2"/>
+                <path d="M4 20c1.5-4 6-6 8-6s6.5 2 8 6" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+              </svg>
+              <div>
+                <div class="font-semibold">Ava Richards</div>
+                <div class="text-xs text-slate-500">CTO, Orbit Labs</div>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="p-6 bg-[color:var(--card)] border rounded-lg">
+            <blockquote class="text-slate-700">"The encryption and audit logs gave our compliance team confidence. Their support was fast and knowledgeable."</blockquote>
+            <figcaption class="mt-4 flex items-center gap-3">
+              <svg class="w-10 h-10 rounded-full bg-slate-100 p-2" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <circle cx="12" cy="8" r="3" stroke="#94a3b8" stroke-width="1.2"/>
+                <path d="M4 20c1.5-4 6-6 8-6s6.5 2 8 6" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+              </svg>
+              <div>
+                <div class="font-semibold">Marcus Lee</div>
+                <div class="text-xs text-slate-500">Head of Ops, Nova Media</div>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="p-6 bg-[color:var(--card)] border rounded-lg">
+            <blockquote class="text-slate-700">"Onboarding was straightforward and our team adopted it immediately. Syncing is reliable even on flaky networks."</blockquote>
+            <figcaption class="mt-4 flex items-center gap-3">
+              <svg class="w-10 h-10 rounded-full bg-slate-100 p-2" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <circle cx="12" cy="8" r="3" stroke="#94a3b8" stroke-width="1.2"/>
+                <path d="M4 20c1.5-4 6-6 8-6s6.5 2 8 6" stroke="#94a3b8" stroke-width="1.2" fill="none"/>
+              </svg>
+              <div>
+                <div class="font-semibold">Sofia Martinez</div>
+                <div class="text-xs text-slate-500">Product Lead, Atlas</div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="pricing" class="max-w-9xl mx-auto px-6 py-16">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl font-bold">Pricing that scales with your team</h2>
+        <p class="mt-3 text-slate-600">Simple plans — predictable costs. Pricing per active user per month.</p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white border rounded-lg shadow-sm">
+          <div class="text-sm text-slate-500">Starter</div>
+          <div class="mt-4 text-3xl font-extrabold">$6<span class="text-sm font-medium">/user</span></div>
+          <p class="mt-2 text-slate-600 text-sm">Essential storage and sharing for small teams.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>1 TB per user</li>
+            <li>Email support</li>
+            <li>Basic audit logs</li>
+          </ul>
+          <a href="#signup" class="mt-6 inline-block px-4 py-2 bg-[color:var(--accent)] text-white rounded hover:bg-[color:var(--accent-600)]">Start free trial</a>
+        </div>
+
+        <div class="p-6 bg-[color:var(--accent)] text-white border rounded-lg shadow-lg transform scale-100 md:scale-105">
+          <div class="text-sm opacity-90">Business</div>
+          <div class="mt-4 text-3xl font-extrabold">$12<span class="text-sm font-medium">/user</span></div>
+          <p class="mt-2 text-sm opacity-90">Advanced controls, SSO, and priority support.</p>
+          <ul class="mt-4 space-y-2 text-sm opacity-90">
+            <li>Unlimited team storage</li>
+            <li>SSO & SCIM</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#signup" class="mt-6 inline-block px-4 py-2 bg-white text-[color:var(--accent)] rounded font-semibold hover:bg-slate-50">Get Business</a>
+        </div>
+
+        <div class="p-6 bg-white border rounded-lg shadow-sm">
+          <div class="text-sm text-slate-500">Enterprise</div>
+          <div class="mt-4 text-3xl font-extrabold">Custom</div>
+          <p class="mt-2 text-slate-600 text-sm">Tailored solutions, dedicated support, and SLA.</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>Advanced compliance</li>
+            <li>Dedicated account team</li>
+            <li>Custom SLAs</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block px-4 py-2 border rounded text-sm hover:bg-slate-50">Contact sales</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-white border-t border-b">
+      <div class="max-w-9xl mx-auto px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-2xl font-bold text-center">Frequently asked questions</h2>
+          <div class="mt-6 space-y-4">
+            <details class="p-4 border rounded">
+              <summary class="font-medium">How does billing work?</summary>
+              <p class="mt-2 text-slate-600 text-sm">Billing is monthly by active user. You can view invoices and usage from the billing console and upgrade/downgrade at any time.</p>
+            </details>
+
+            <details class="p-4 border rounded">
+              <summary class="font-medium">Is my data encrypted?</summary>
+              <p class="mt-2 text-slate-600 text-sm">Yes. Files are encrypted on-device and at rest. You can also enable customer-managed keys for additional control.</p>
+            </details>
+
+            <details class="p-4 border rounded">
+              <summary class="font-medium">Do you offer SSO?</summary>
+              <p class="mt-2 text-slate-600 text-sm">SSO, SCIM provisioning, and advanced admin controls are available on the Business and Enterprise plans.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t">
+    <div class="max-w-9xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <a href="#" class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect x="2" y="7" width="20" height="12" rx="2" fill="#0b5fff"></rect>
+            <path d="M7 7V5a5 5 0 0 1 10 0v2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-semibold">Nimbus</span>
+        </a>
+        <p class="mt-4 text-sm text-slate-600">Secure cloud storage built for teams. Simple pricing, enterprise controls, and world-class reliability.</p>
+      </div>
+
+      <div class="flex justify-between md:justify-center gap-12">
+        <div>
+          <h4 class="font-semibold text-sm">Product</h4>
+          <ul class="mt-3 text-sm text-slate-600 space-y-2">
+            <li><a href="#features" class="hover:text-slate-900">Features</a></li>
+            <li><a href="#how" class="hover:text-slate-900">How it works</a></li>
+            <li><a href="#pricing" class="hover:text-slate-900">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold text-sm">Company</h4>
+          <ul class="mt-3 text-sm text-slate-600 space-y-2">
+            <li><a href="#" class="hover:text-slate-900">About</a></li>
+            <li><a href="#" class="hover:text-slate-900">Careers</a></li>
+            <li><a href="#" class="hover:text-slate-900">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-sm text-slate-600">
+        <div>© <span id="year">2026</span> Nimbus, Inc.</div>
+        <div class="mt-4">Built with security-first design. <a href="#" class="text-[color:var(--accent)] hover:underline">Privacy</a> · <a href="#" class="text-[color:var(--accent)] hover:underline">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    try{document.getElementById('year').textContent = new Date().getFullYear()}catch(e){}
+  </script>
+</body>
+</html>
