@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PeakForm — Fitness Coaching App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for fine control */
+    :root{
+      --accent: #0ea5a4; /* teal-500 */
+      --muted: #94a3b8; /* slate-400 */
+      --dark: #0f172a; /* slate-900 */
+      --card: #ffffff;
+    }
+    /* Decorative solid shape without gradients */
+    .hero-shape { background-color: #e6fffa; } /* very light teal */
+    /* Ensure long FAQ answers are readable */
+    .prose-like { line-height: 1.6; color: #0f172a; }
+    /* subtle focus ring for keyboard users */
+    .focus-ring:focus { outline: 3px solid rgba(14,165,164,0.15); outline-offset: 2px; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <!-- Navbar -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-md bg-[var(--dark)] flex items-center justify-center">
+          <!-- simple monogram SVG -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect x="3" y="3" width="18" height="18" rx="4" fill="#0ea5a4"></rect>
+            <path d="M7 16V8l5 8 5-8v8" stroke="#0f172a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="font-semibold text-lg">PeakForm</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700">
+        <a href="#features" class="hover:text-[var(--dark)]">Features</a>
+        <a href="#how" class="hover:text-[var(--dark)]">How it works</a>
+        <a href="#pricing" class="hover:text-[var(--dark)]">Pricing</a>
+        <a href="#faq" class="hover:text-[var(--dark)]">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden md:inline-block px-4 py-2 text-sm font-medium text-[var(--dark)] border border-slate-200 rounded-md hover:bg-slate-100 focus-ring">Log in</a>
+        <a href="#pricing" class="inline-block px-4 py-2 bg-[var(--accent)] text-white text-sm font-medium rounded-md shadow hover:bg-teal-600 focus-ring">Start Free</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="max-w-7xl mx-auto px-6 py-12">
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-6">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Personal coaching, smart plans, measurable results</h1>
+        <p class="mt-4 text-lg text-slate-600 max-w-xl">PeakForm pairs professional coaches with AI-powered progress tracking to keep you consistent and moving toward your goals — faster and safely.</p>
+
+        <div class="mt-6 flex gap-3 flex-wrap">
+          <a href="#pricing" class="inline-flex items-center gap-2 px-5 py-3 bg-[var(--accent)] text-white rounded-md font-semibold shadow hover:bg-teal-600 focus-ring">
+            <!-- play icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M5 3v18l15-9L5 3z" fill="white" />
+            </svg>
+            Start free trial
+          </a>
+          <a href="#how" class="inline-flex items-center gap-2 px-5 py-3 border border-slate-200 rounded-md text-sm text-[var(--dark)] hover:bg-slate-50 focus-ring">
+            <!-- sparkline icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M4 12h3l3-6 4 12 3-8h3" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            See how it works
+          </a>
+        </div>
+
+        <div class="mt-8 flex items-center gap-6">
+          <!-- simple stat cards -->
+          <div class="bg-white border border-slate-100 shadow-sm rounded-lg px-4 py-3">
+            <div class="text-sm text-slate-500">Coaches</div>
+            <div class="text-xl font-semibold">150+</div>
+          </div>
+          <div class="bg-white border border-slate-100 shadow-sm rounded-lg px-4 py-3">
+            <div class="text-sm text-slate-500">Avg. progress</div>
+            <div class="text-xl font-semibold">+24% / month</div>
+          </div>
+          <div class="bg-white border border-slate-100 shadow-sm rounded-lg px-4 py-3">
+            <div class="text-sm text-slate-500">Secure</div>
+            <div class="text-xl font-semibold">GDPR-ready</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6">
+        <div class="hero-shape p-6 rounded-2xl border border-slate-100 shadow-lg">
+          <!-- app mockup with inline SVG elements (no external images) -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-white rounded-xl p-4 shadow-sm border border-slate-100">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-sm font-semibold">Morning Strength</h3>
+                  <p class="text-xs text-slate-500">30 min • Bodyweight</p>
+                </div>
+                <div class="text-[var(--accent)] font-bold">80%</div>
+              </div>
+              <div class="mt-4 h-24 bg-slate-50 rounded-md flex items-center justify-center text-slate-400">SVG Workout</div>
+            </div>
+
+            <div class="bg-white rounded-xl p-4 shadow-sm border border-slate-100">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-sm font-semibold">Cardio Routine</h3>
+                  <p class="text-xs text-slate-500">20 min • Interval</p>
+                </div>
+                <div class="text-[var(--accent)] font-bold">92%</div>
+              </div>
+              <div class="mt-4 h-24 bg-slate-50 rounded-md flex items-center justify-center text-slate-400">SVG Heart</div>
+            </div>
+          </div>
+
+          <div class="mt-4 flex gap-4">
+            <div class="bg-white rounded-xl p-4 flex-1 shadow-sm border border-slate-100">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-md bg-[var(--accent)] flex items-center justify-center text-white">
+                  <!-- dumbbell -->
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+                    <path d="M2 12h3v2H2zM19 12h3v2h-3zM7 9h10v6H7z" fill="white"></path>
+                    <path d="M7 9H5a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2" stroke="#0f172a" stroke-width="0"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-sm font-semibold">Plan adherence</div>
+                  <div class="text-xs text-slate-500">Daily check-ins and reminders</div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl p-4 w-40 shadow-sm border border-slate-100">
+              <div class="text-xs text-slate-500">Streak</div>
+              <div class="text-lg font-semibold">18 days</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos / social proof -->
+    <section class="mt-12">
+      <div class="bg-white rounded-lg border border-slate-100 px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-slate-600">Trusted by teams & coaches at</p>
+        <div class="flex items-center gap-8 flex-wrap justify-center md:justify-end">
+          <!-- simple logo placeholders with inline SVGs -->
+          <svg width="96" height="28" viewBox="0 0 96 28" fill="none" aria-hidden>
+            <rect width="96" height="28" rx="4" fill="#f1f5f9"></rect>
+            <path d="M12 8h8v12h-8zM28 8h8v12h-8zM44 8h8v12h-8z" fill="#94a3b8"></path>
+          </svg>
+          <svg width="96" height="28" viewBox="0 0 96 28" fill="none" aria-hidden>
+            <rect width="96" height="28" rx="4" fill="#f1f5f9"></rect>
+            <circle cx="20" cy="14" r="7" fill="#94a3b8"></circle>
+            <rect x="36" y="7" width="28" height="14" rx="3" fill="#cbd5e1"></rect>
+          </svg>
+          <svg width="96" height="28" viewBox="0 0 96 28" fill="none" aria-hidden>
+            <rect width="96" height="28" rx="4" fill="#f1f5f9"></rect>
+            <path d="M18 7h8v14h-8zM34 7h18v6H34z" fill="#94a3b8"></path>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
+        <div class="w-12 h-12 rounded-lg bg-[var(--accent)] flex items-center justify-center text-white">
+          <!-- coach icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 20a8 8 0 0 1 16 0" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="mt-4 font-semibold">Human coaches + AI</h3>
+        <p class="mt-2 text-sm text-slate-600">Weekly coaching calls combined with adaptive plans that respond to your feedback and progress.</p>
+      </div>
+
+      <div class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
+        <div class="w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center text-white">
+          <!-- chart icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M3 3v18h18" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7 14v-4M12 14V7M17 14v-2" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="mt-4 font-semibold">Progress tracking</h3>
+        <p class="mt-2 text-sm text-slate-600">Objective metrics and clear, weekly milestones so you always know what's next.</p>
+      </div>
+
+      <div class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
+        <div class="w-12 h-12 rounded-lg bg-slate-700 flex items-center justify-center text-white">
+          <!-- lock icon -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect x="4" y="11" width="16" height="10" rx="2" stroke="white" stroke-width="1.2"></rect>
+            <path d="M8 11V7a4 4 0 0 1 8 0v4" stroke="white" stroke-width="1.2" stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <h3 class="mt-4 font-semibold">Privacy & Security</h3>
+        <p class="mt-2 text-sm text-slate-600">Encrypted data, coach-controlled sharing, and enterprise options for teams.</p>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="mt-12">
+      <h2 class="text-2xl font-semibold">How it works</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-slate-800 text-white flex items-center justify-center">1</div>
+            <div>
+              <h4 class="font-semibold">Set goals</h4>
+              <p class="text-sm text-slate-600 mt-1">Tell us your focus — strength, weight loss, endurance — and current fitness level.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-slate-800 text-white flex items-center justify-center">2</div>
+            <div>
+              <h4 class="font-semibold">Get a plan</h4>
+              <p class="text-sm text-slate-600 mt-1">A coach curates your plan; the system adapts it when life changes or you improve.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-slate-800 text-white flex items-center justify-center">3</div>
+            <div>
+              <h4 class="font-semibold">Track & improve</h4>
+              <p class="text-sm text-slate-600 mt-1">Daily check-ins, video feedback, and weekly calls keep you accountable and safe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="mt-12">
+      <h2 class="text-2xl font-semibold">What members say</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
+          <p class="prose-like">"I finally hit consistent progress. The coaches are realistic, and the app made adjustments when life got busy — I never felt lost."</p>
+          <footer class="mt-4 text-sm text-slate-600">— Maya R., 9 months</footer>
+        </blockquote>
+
+        <blockquote class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
+          <p class="prose-like">"My endurance improved and my injury rate went down. The video feedback is concise and helpful."</p>
+          <footer class="mt-4 text-sm text-slate-600">— Aaron T., 5 months</footer>
+        </blockquote>
+
+        <blockquote class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
+          <p class="prose-like">"For busy professionals, this is the most efficient investment I've made in fitness. Measurable returns every month."</p>
+          <footer class="mt-4 text-sm text-slate-600">— Priya S., 7 months</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="pricing" class="mt-12 bg-white border border-slate-100 rounded-xl p-8 shadow-sm">
+      <div class="flex flex-col lg:flex-row gap-6 items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-semibold">Plans built around progress</h2>
+          <p class="mt-2 text-slate-600">Simple transparent pricing for individuals and teams. No hidden fees.</p>
+        </div>
+
+        <div class="flex gap-4 items-center">
+          <div class="bg-slate-50 border border-slate-100 rounded-lg p-4">
+            <div class="text-sm text-slate-500">Starter</div>
+            <div class="text-2xl font-bold">$9<span class="text-sm font-medium">/mo</span></div>
+            <div class="mt-2 text-xs text-slate-600">Plan basics, progress tracking</div>
+          </div>
+
+          <div class="bg-[var(--accent)] text-white border border-teal-600 rounded-lg p-4 shadow-lg">
+            <div class="text-sm">Pro</div>
+            <div class="text-2xl font-bold">$39<span class="text-sm font-medium">/mo</span></div>
+            <div class="mt-2 text-xs">Coach sessions, full features</div>
+          </div>
+
+          <a href="#" class="px-4 py-3 bg-[var(--dark)] text-white rounded-md font-semibold hover:bg-black focus-ring">Get started</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mt-12">
+      <h2 class="text-2xl font-semibold">Frequently asked questions</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
+          <h4 class="font-semibold">Do I need equipment?</h4>
+          <p class="mt-2 text-sm text-slate-600">No. Our coaches design plans for bodyweight or gym-based training depending on your access and goals.</p>
+        </div>
+
+        <div class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
+          <h4 class="font-semibold">Can I switch coaches?</h4>
+          <p class="mt-2 text-sm text-slate-600">Yes. You can request a different coach at any time without losing your history or progress tracking.</p>
+        </div>
+
+        <div class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
+          <h4 class="font-semibold">What if I get injured?</h4>
+          <p class="mt-2 text-sm text-slate-600">Coaches provide exercise regressions and recovery plans; they instruct you to pause or modify when necessary.</p>
+        </div>
+
+        <div class="bg-white border border-slate-100 rounded-xl p-6 shadow-sm">
+          <h4 class="font-semibold">Do you offer team plans?</h4>
+          <p class="mt-2 text-sm text-slate-600">Yes. We provide enterprise options with coach staffing, analytics, and single sign-on.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-md bg-[var(--dark)] flex items-center justify-center text-white">PF</div>
+          <span class="font-semibold">PeakForm</span>
+        </a>
+        <p class="mt-3 text-sm text-slate-600">Personal coaching and intelligent plans that scale to your life.</p>
+      </div>
+
+      <div class="text-sm text-slate-600">
+        <div class="font-semibold mb-2">Product</div>
+        <ul class="space-y-2">
+          <li><a href="#features" class="hover:text-[var(--dark)]">Features</a></li>
+          <li><a href="#how" class="hover:text-[var(--dark)]">How it works</a></li>
+          <li><a href="#pricing" class="hover:text-[var(--dark)]">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="text-sm text-slate-600">
+        <div class="font-semibold mb-2">Company</div>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-[var(--dark)]">About</a></li>
+          <li><a href="#" class="hover:text-[var(--dark)]">Careers</a></li>
+          <li><a href="#" class="hover:text-[var(--dark)]">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-100 mt-6">
+      <div class="max-w-7xl mx-auto px-6 py-4 text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between">
+        <div>© <span id="year">2026</span> PeakForm. All rights reserved.</div>
+        <div class="mt-3 md:mt-0 flex items-center gap-4">
+          <a href="#" class="text-slate-500 hover:text-[var(--dark)]">Privacy</a>
+          <a href="#" class="text-slate-500 hover:text-[var(--dark)]">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
