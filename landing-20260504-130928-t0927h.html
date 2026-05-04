@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CarePoint Clinic — Fast, Trusted Appointments</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom rules for visuals not convenient in Tailwind tokens */
+    .soft-ring:focus { outline: 2px solid transparent; box-shadow: 0 0 0 4px rgba(14,165,233,0.12); }
+    .card-glow { box-shadow: 0 6px 18px rgba(15,23,42,0.06); }
+    /* Keep hero illustration consistent size */
+    .hero-illustration { max-width: 520px; width: 100%; }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-white">
+
+  <!-- NAVBAR -->
+  <header class="border-b bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect width="24" height="24" rx="6" fill="#0EA5E9"/>
+          <path d="M7 12h10M12 7v10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="text-lg font-semibold">CarePoint</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+        <a href="#features" class="hover:text-slate-900">Features</a>
+        <a href="#how" class="hover:text-slate-900">How it Works</a>
+        <a href="#testimonials" class="hover:text-slate-900">Testimonials</a>
+        <a href="#pricing" class="hover:text-slate-900">Plans</a>
+        <a href="#faq" class="hover:text-slate-900">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#book" class="hidden md:inline-block px-4 py-2 border border-slate-200 rounded-md text-sm hover:bg-slate-50">Sign in</a>
+        <a href="#book" class="px-4 py-2 bg-sky-600 text-white rounded-md text-sm shadow-sm hover:bg-sky-700">Book Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="max-w-7xl mx-auto px-6 py-12 lg:py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="inline-flex items-center gap-2 text-sm text-sky-700 font-medium bg-sky-50 px-3 py-1 rounded-md">Trusted by clinics & patients</p>
+        <h1 class="mt-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">Seamless medical appointments — faster care, happier patients</h1>
+        <p class="mt-4 text-slate-600 max-w-xl">CarePoint streamlines scheduling, reminders, and follow-ups for modern clinics. Reduce no-shows, fill cancellations quickly, and give patients an effortless booking experience.</p>
+
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="#book" class="inline-flex items-center justify-center px-5 py-3 bg-sky-600 text-white rounded-md shadow-sm hover:bg-sky-700">Book a Demo</a>
+          <a href="#features" class="inline-flex items-center justify-center px-5 py-3 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-50">See Features</a>
+        </div>
+
+        <div class="mt-8 bg-slate-50 border border-slate-100 rounded-lg p-5 max-w-md card-glow">
+          <h3 class="text-sm font-semibold text-slate-700">Quick Booking</h3>
+          <p class="mt-2 text-sm text-slate-600">Select date, time and specialist — confirmations and reminders sent automatically.</p>
+          <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div class="text-xs text-slate-500">Avg. booking time</div>
+            <div class="text-right font-medium">Under 45 seconds</div>
+            <div class="text-xs text-slate-500">No-show reduction</div>
+            <div class="text-right font-medium">Up to 40%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center">
+        <!-- Inline SVG illustration of appointment and calendar -->
+        <svg class="hero-illustration" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of clinic appointment">
+          <rect x="0" y="0" width="800" height="600" fill="transparent"/>
+          <!-- Calendar card -->
+          <rect x="60" y="40" width="420" height="320" rx="16" fill="#F8FAFC" stroke="#E6EEF6" stroke-width="2"/>
+          <rect x="60" y="40" width="420" height="64" rx="12" fill="#0EA5E9"/>
+          <text x="90" y="84" fill="#ffffff" font-size="20" font-family="sans-serif" font-weight="600">June 2026</text>
+          <!-- Days boxes -->
+          <g fill="#ffffff" stroke="#E6EEF6" stroke-width="1">
+            <rect x="84" y="120" width="56" height="56" rx="8" fill="#ffffff"/>
+            <rect x="152" y="120" width="56" height="56" rx="8" fill="#f1f5f9"/>
+            <rect x="220" y="120" width="56" height="56" rx="8" fill="#ffffff"/>
+            <rect x="288" y="120" width="56" height="56" rx="8" fill="#ffffff"/>
+            <rect x="356" y="120" width="56" height="56" rx="8" fill="#ffffff"/>
+          </g>
+          <!-- Appointment card -->
+          <rect x="120" y="220" width="300" height="110" rx="12" fill="#ffffff" stroke="#E6EEF6"/>
+          <circle cx="150" cy="265" r="22" fill="#06B6D4"/>
+          <text x="190" y="254" fill="#0F172A" font-size="18" font-family="sans-serif" font-weight="700">Dr. Aisha Khan</text>
+          <text x="190" y="277" fill="#475569" font-size="14" font-family="sans-serif">General Practitioner • 11:00 AM</text>
+
+          <!-- Small patient/check icons -->
+          <g transform="translate(520,80)">
+            <rect x="0" y="0" width="220" height="260" rx="12" fill="#F8FAFC" stroke="#E6EEF6"/>
+            <svg x="20" y="20" width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 12a4 4 0 100-8 4 4 0 000 8z" fill="#0EA5E9"/>
+              <path d="M3 20a9 9 0 0118 0" stroke="#94A3B8" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+            <text x="20" y="70" fill="#0F172A" font-size="16" font-family="sans-serif" font-weight="700">Patient Portal</text>
+            <text x="20" y="92" fill="#475569" font-size="13" font-family="sans-serif">Secure records and messaging</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </main>
+
+  <!-- SOCIAL PROOF / LOGOS -->
+  <section class="border-t py-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex items-center justify-between gap-6 flex-wrap">
+        <div class="text-sm text-slate-500">Trusted by</div>
+        <div class="flex items-center gap-6 flex-wrap">
+          <!-- Logos as simple SVG marks -->
+          <svg width="96" height="28" viewBox="0 0 96 28" fill="none" aria-hidden><rect width="96" height="28" rx="6" fill="#F1F5F9"/><text x="14" y="19" fill="#334155" font-size="12">Northside Health</text></svg>
+          <svg width="96" height="28" viewBox="0 0 96 28" fill="none" aria-hidden><rect width="96" height="28" rx="6" fill="#F1F5F9"/><text x="16" y="19" fill="#334155" font-size="12">Greenway Clinic</text></svg>
+          <svg width="96" height="28" viewBox="0 0 96 28" fill="none" aria-hidden><rect width="96" height="28" rx="6" fill="#F1F5F9"/><text x="18" y="19" fill="#334155" font-size="12">Harbor Medical</text></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 border rounded-lg bg-white card-glow">
+        <div class="w-12 h-12 bg-sky-50 rounded-lg flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 7v10M7 12h10" stroke="#0EA5E9" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4 class="mt-4 font-semibold text-slate-800">Instant Booking</h4>
+        <p class="mt-2 text-sm text-slate-600">Patients book in seconds with intelligent availability and automated confirmations.</p>
+      </div>
+
+      <div class="p-6 border rounded-lg bg-white card-glow">
+        <div class="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M12 3v18" stroke="#059669" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4 class="mt-4 font-semibold text-slate-800">Reminders & Alerts</h4>
+        <p class="mt-2 text-sm text-slate-600">SMS and email reminders reduce no-shows and keep schedules full.</p>
+      </div>
+
+      <div class="p-6 border rounded-lg bg-white card-glow">
+        <div class="w-12 h-12 bg-violet-50 rounded-lg flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h8m-8 6h16" stroke="#7C3AED" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4 class="mt-4 font-semibold text-slate-800">Patient Portal</h4>
+        <p class="mt-2 text-sm text-slate-600">Secure messaging, records access, and post-visit follow-ups in one place.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="bg-slate-50 py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-center text-2xl font-semibold">How it works</h3>
+      <p class="text-center text-slate-600 mt-2">Three simple steps to better scheduling</p>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white border rounded-lg card-glow">
+          <div class="w-12 h-12 rounded-full bg-sky-600 text-white flex items-center justify-center font-semibold">1</div>
+          <h4 class="mt-4 font-semibold">Set Availability</h4>
+          <p class="mt-2 text-sm text-slate-600">Configure doctors, rooms, and appointment lengths in minutes.</p>
+        </div>
+
+        <div class="p-6 bg-white border rounded-lg card-glow">
+          <div class="w-12 h-12 rounded-full bg-sky-600 text-white flex items-center justify-center font-semibold">2</div>
+          <h4 class="mt-4 font-semibold">Accept Bookings</h4>
+          <p class="mt-2 text-sm text-slate-600">Accept online bookings and manage walk-ins from a single dashboard.</p>
+        </div>
+
+        <div class="p-6 bg-white border rounded-lg card-glow">
+          <div class="w-12 h-12 rounded-full bg-sky-600 text-white flex items-center justify-center font-semibold">3</div>
+          <h4 class="mt-4 font-semibold">Automate Follow-up</h4>
+          <p class="mt-2 text-sm text-slate-600">Automated reminders and post-visit outreach to improve outcomes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="max-w-7xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-semibold text-center">What clinic managers say</h3>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <blockquote class="p-6 border rounded-lg bg-white card-glow">
+        <p class="text-slate-700">"CarePoint reduced our no-shows by 32% and made scheduling far less chaotic. The patient portal is clean and patients love it."</p>
+        <footer class="mt-4 flex items-center gap-3">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden>
+            <circle cx="22" cy="22" r="22" fill="#FFEDD5"/>
+            <text x="22" y="28" text-anchor="middle" fill="#92400E" font-size="16" font-family="sans-serif" font-weight="700">AM</text>
+          </svg>
+          <div>
+            <div class="font-semibold">Amanda Lee</div>
+            <div class="text-sm text-slate-500">Practice Manager, Northside Health</div>
+          </div>
+        </footer>
+      </blockquote>
+
+      <blockquote class="p-6 border rounded-lg bg-white card-glow">
+        <p class="text-slate-700">"The analytics and reminders let us make better decisions. Onboarding took one afternoon — fantastic support."</p>
+        <footer class="mt-4 flex items-center gap-3">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden>
+            <circle cx="22" cy="22" r="22" fill="#E0F2FE"/>
+            <text x="22" y="28" text-anchor="middle" fill="#075985" font-size="16" font-family="sans-serif" font-weight="700">DR</text>
+          </svg>
+          <div>
+            <div class="font-semibold">Dr. Ricardo Flores</div>
+            <div class="text-sm text-slate-500">Greenway Clinic</div>
+          </div>
+        </footer>
+      </blockquote>
+
+      <blockquote class="p-6 border rounded-lg bg-white card-glow">
+        <p class="text-slate-700">"Filling last-minute cancellations used to be a headache. Now we reassign slots in minutes and keep revenue steady."</p>
+        <footer class="mt-4 flex items-center gap-3">
+          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" aria-hidden>
+            <circle cx="22" cy="22" r="22" fill="#ECFCCB"/>
+            <text x="22" y="28" text-anchor="middle" fill="#3F6212" font-size="16" font-family="sans-serif" font-weight="700">SB</text>
+          </svg>
+          <div>
+            <div class="font-semibold">S. Brown</div>
+            <div class="text-sm text-slate-500">Clinic Administrator, Harbor Medical</div>
+          </div>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- PRICING / CTA -->
+  <section id="pricing" class="bg-slate-50 py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-2xl font-semibold text-center">Plans for clinics of every size</h3>
+      <p class="text-center text-slate-600 mt-2">Transparent pricing — no hidden fees. Start with a free trial.</p>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 border rounded-lg bg-white card-glow flex flex-col">
+          <div class="text-sm text-slate-500">Starter</div>
+          <div class="mt-4 text-3xl font-extrabold">Free</div>
+          <div class="mt-2 text-sm text-slate-600">For small practices testing the platform</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 flex-1">
+            <li>Unlimited bookings</li>
+            <li>Email reminders</li>
+            <li>Basic reporting</li>
+          </ul>
+          <a href="#book" class="mt-6 inline-block px-4 py-3 bg-sky-600 text-white rounded-md text-center hover:bg-sky-700">Start Free</a>
+        </div>
+
+        <div class="p-6 border-2 border-sky-600 rounded-lg bg-white card-glow flex flex-col">
+          <div class="text-sm text-slate-500">Professional</div>
+          <div class="mt-4 text-3xl font-extrabold">$99/mo</div>
+          <div class="mt-2 text-sm text-slate-600">Best for growing clinics</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 flex-1">
+            <li>SMS & Email reminders</li>
+            <li>Advanced scheduling</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#book" class="mt-6 inline-block px-4 py-3 bg-sky-600 text-white rounded-md text-center hover:bg-sky-700">Get Professional</a>
+        </div>
+
+        <div class="p-6 border rounded-lg bg-white card-glow flex flex-col">
+          <div class="text-sm text-slate-500">Enterprise</div>
+          <div class="mt-4 text-3xl font-extrabold">Custom</div>
+          <div class="mt-2 text-sm text-slate-600">For large networks and hospitals</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 flex-1">
+            <li>Dedicated account manager</li>
+            <li>Custom integrations</li>
+            <li>SLAs & onboarding</li>
+          </ul>
+          <a href="#book" class="mt-6 inline-block px-4 py-3 border border-sky-600 text-sky-600 rounded-md text-center hover:bg-sky-50">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="max-w-6xl mx-auto px-6 py-12">
+    <h3 class="text-2xl font-semibold text-center">Frequently asked questions</h3>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <details class="p-4 border rounded-md bg-white card-glow">
+        <summary class="font-medium cursor-pointer">Can CarePoint integrate with my EHR?</summary>
+        <p class="mt-2 text-sm text-slate-600">Yes — we support common standards and can integrate with most EHR systems via secure APIs.</p>
+      </details>
+
+      <details class="p-4 border rounded-md bg-white card-glow">
+        <summary class="font-medium cursor-pointer">How secure is patient data?</summary>
+        <p class="mt-2 text-sm text-slate-600">We follow industry best practices including encryption at rest and in transit. We also provide role-based access controls for clinics.</p>
+      </details>
+
+      <details class="p-4 border rounded-md bg-white card-glow">
+        <summary class="font-medium cursor-pointer">Do you offer a trial?</summary>
+        <p class="mt-2 text-sm text-slate-600">Yes — a free Starter plan is available so clinics can evaluate the platform risk-free.</p>
+      </details>
+
+      <details class="p-4 border rounded-md bg-white card-glow">
+        <summary class="font-medium cursor-pointer">What languages are supported?</summary>
+        <p class="mt-2 text-sm text-slate-600">English is available now. Spanish and French localizations are available for Professional and Enterprise plans.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <a href="#" class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect width="24" height="24" rx="6" fill="#0EA5E9"/>
+            <path d="M7 12h10M12 7v10" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="text-lg font-semibold">CarePoint</span>
+        </a>
+        <p class="mt-3 text-sm text-slate-600">Modern scheduling and patient engagement for clinics of every size.</p>
+      </div>
+
+      <div class="text-sm text-slate-600">
+        <div class="font-semibold text-slate-800">Contact</div>
+        <div class="mt-2">support@carepoint.example</div>
+        <div class="mt-1">(555) 123-4567</div>
+      </div>
+
+      <div class="text-sm text-slate-600">
+        <div class="font-semibold text-slate-800">Legal</div>
+        <div class="mt-2"><a href="#" class="hover:underline">Privacy</a></div>
+        <div class="mt-1"><a href="#" class="hover:underline">Terms</a></div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 py-4 text-xs text-slate-400">© 2026 CarePoint, Inc. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

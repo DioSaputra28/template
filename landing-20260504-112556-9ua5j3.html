@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Riverview Residences — New Property Launch</title>
+  <meta name="description" content="Riverview Residences — premium riverside homes. Launch registration & virtual tour." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for polish */
+    .brand-accent { color: #0f766e; } /* teal-700 */
+    .brand-bg { background-color: #f8fafb; } /* slate-50-like */
+    .glass { background-color: rgba(255,255,255,0.7); backdrop-filter: blur(6px); }
+    /* limit testimonial quote length consistently */
+    .clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    /* subtle focus ring for accessibility */
+    .focus-ring:focus { outline: 2px solid rgba(14,165,140,0.18); outline-offset: 2px; }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-white">
+
+  <!-- Navbar -->
+  <header class="border-b bg-white/80 sticky top-0 z-30">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 flex items-center justify-center rounded-md bg-emerald-600 text-white">
+          <!-- Home / building svg -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <path d="M3 11.5L12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V11.5z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div>
+          <span class="block font-semibold text-slate-900">Riverview Residences</span>
+          <span class="block text-sm text-slate-500">Premium Riverside Living</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#features" class="text-slate-600 hover:text-slate-900">Features</a>
+        <a href="#how" class="text-slate-600 hover:text-slate-900">How it works</a>
+        <a href="#testimonials" class="text-slate-600 hover:text-slate-900">Testimonials</a>
+        <a href="#faq" class="text-slate-600 hover:text-slate-900">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#register" class="hidden md:inline-block px-4 py-2 border rounded-md text-sm text-slate-700 hover:bg-slate-50">Schedule a Tour</a>
+        <a href="#pricing" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-600 text-white rounded-md text-sm shadow-md hover:bg-emerald-700 focus-ring">Register Interest</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="brand-bg pb-16 pt-10">
+      <div class="max-w-7xl mx-auto px-6 grid gap-12 lg:grid-cols-2 items-center">
+        <div>
+          <div class="inline-flex items-center gap-3 px-3 py-1 bg-white rounded-full shadow-sm mb-6">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-emerald-600" aria-hidden>
+              <path d="M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="text-sm text-slate-700">Limited release — 12 exclusive residences</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">Riverview Residences — Where calm meets craft</h1>
+          <p class="mt-6 text-lg text-slate-600 max-w-xl">Discover thoughtfully designed riverside homes with private balconies, wide-open living, and curated amenities. Early registrants get priority access to floorplans and pricing.</p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#pricing" class="inline-flex items-center justify-center px-5 py-3 bg-emerald-600 text-white rounded-md shadow hover:bg-emerald-700">Reserve Your Unit</a>
+            <a href="#how" class="inline-flex items-center justify-center px-5 py-3 border rounded-md text-slate-700 bg-white hover:bg-slate-50">How It Works</a>
+          </div>
+
+          <dl class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm text-slate-600">
+            <div class="flex flex-col">
+              <dt class="font-semibold text-slate-900">Starting Price</dt>
+              <dd>$750,000</dd>
+            </div>
+            <div class="flex flex-col">
+              <dt class="font-semibold text-slate-900">Completion</dt>
+              <dd>Q3 2027</dd>
+            </div>
+            <div class="flex flex-col">
+              <dt class="font-semibold text-slate-900">Units</dt>
+              <dd>12 premium</dd>
+            </div>
+            <div class="flex flex-col">
+              <dt class="font-semibold text-slate-900">Parking</dt>
+              <dd>Private + guest</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- Illustration card -->
+        <div class="relative">
+          <div class="rounded-2xl shadow-lg overflow-hidden border bg-white">
+            <div class="p-6 sm:p-8">
+              <!-- Simple architectural SVG illustration -- use solid fills only -->
+              <svg viewBox="0 0 600 380" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <rect x="20" y="120" width="560" height="220" fill="#f1f5f9" />
+                <rect x="60" y="40" width="220" height="200" fill="#ffffff" stroke="#e6eef0" stroke-width="2" />
+                <rect x="320" y="80" width="220" height="180" fill="#ffffff" stroke="#e6eef0" stroke-width="2" />
+                <rect x="90" y="80" width="60" height="40" fill="#0f766e" />
+                <rect x="150" y="80" width="60" height="40" fill="#94a3b8" />
+                <rect x="350" y="110" width="60" height="40" fill="#0f766e" />
+                <rect x="410" y="110" width="60" height="40" fill="#94a3b8" />
+                <rect x="40" y="300" width="520" height="12" fill="#e2e8f0" />
+                <!-- river -->
+                <rect x="20" y="330" width="560" height="30" fill="#0ea5a4" />
+                <!-- balcony lines -->
+                <path d="M80 160h160" stroke="#e6eef0" stroke-width="6" stroke-linecap="round" />
+              </svg>
+              <div class="mt-6">
+                <h3 class="text-lg font-semibold text-slate-900">Riverside design with private terraces</h3>
+                <p class="mt-2 text-sm text-slate-600">Generous glazing, natural materials, and carefully proportioned spaces oriented to the water.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof / logos -->
+    <section class="max-w-7xl mx-auto px-6 mt-10">
+      <div class="py-6 bg-white rounded-md shadow-sm border flex items-center justify-between gap-6">
+        <p class="text-sm text-slate-600">Featured in</p>
+        <div class="flex items-center gap-8 px-4">
+          <!-- Simple solid logo placeholders as SVG -->
+          <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden>
+            <rect width="92" height="28" fill="#e6eef0" rx="4"/>
+          </svg>
+          <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden>
+            <rect width="92" height="28" fill="#f1f5f9" rx="4"/>
+          </svg>
+          <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden>
+            <rect width="92" height="28" fill="#e6eef0" rx="4"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="max-w-7xl mx-auto px-6 mt-12">
+      <div class="grid gap-10 md:grid-cols-3">
+        <div class="p-6 border rounded-lg shadow-sm bg-white">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-md bg-emerald-600 text-white flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold">Curated Interiors</h4>
+              <p class="mt-1 text-sm text-slate-600">High-quality finishes, bespoke joinery, and natural stone surfaces.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 border rounded-lg shadow-sm bg-white">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-md bg-emerald-600 text-white flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold">Private Terraces</h4>
+              <p class="mt-1 text-sm text-slate-600">Outdoor living with panoramic river views and evening sunsets.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 border rounded-lg shadow-sm bg-white">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-md bg-emerald-600 text-white flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7L2 9h7z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <h4 class="font-semibold">Concierge Services</h4>
+              <p class="mt-1 text-sm text-slate-600">On-call concierge, secure parking, and private storage for residents.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="max-w-7xl mx-auto px-6 mt-14">
+      <div class="bg-white border rounded-2xl p-8 shadow-sm">
+        <h3 class="text-2xl font-semibold">How the launch works</h3>
+        <p class="mt-2 text-slate-600">Transparent process. Priority access for early registrants — no hidden fees.</p>
+
+        <ol class="mt-6 grid gap-4 md:grid-cols-3">
+          <li class="p-4 border rounded-lg bg-white">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-md bg-slate-100 text-slate-800 flex items-center justify-center font-semibold">1</div>
+              <div>
+                <h4 class="font-semibold">Register Interest</h4>
+                <p class="mt-1 text-sm text-slate-600">Fill the form and choose a preferred unit type. We'll confirm slot availability.</p>
+              </div>
+            </div>
+          </li>
+          <li class="p-4 border rounded-lg bg-white">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-md bg-slate-100 text-slate-800 flex items-center justify-center font-semibold">2</div>
+              <div>
+                <h4 class="font-semibold">Virtual & On-site Tours</h4>
+                <p class="mt-1 text-sm text-slate-600">Choose a virtual tour or schedule a private viewing with our sales team.</p>
+              </div>
+            </div>
+          </li>
+          <li class="p-4 border rounded-lg bg-white">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-md bg-slate-100 text-slate-800 flex items-center justify-center font-semibold">3</div>
+              <div>
+                <h4 class="font-semibold">Secure Your Residence</h4>
+                <p class="mt-1 text-sm text-slate-600">Reserve with a refundable deposit and complete purchase negotiations with our team.</p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="max-w-7xl mx-auto px-6 mt-14">
+      <h3 class="text-2xl font-semibold">Residents & Partners</h3>
+      <p class="mt-2 text-slate-600">What early guests say about the design and experience.</p>
+
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        <blockquote class="p-6 border rounded-lg bg-white shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-700">A</div>
+            <div>
+              <strong>Alexandra R.</strong>
+              <div class="text-sm text-slate-500">Interior Designer</div>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-slate-600 clamp-3">The attention to proportion and material selection is outstanding. The terraces feel private yet open to the water — a rare combination.</p>
+        </blockquote>
+
+        <blockquote class="p-6 border rounded-lg bg-white shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-700">M</div>
+            <div>
+              <strong>Marcus L.</strong>
+              <div class="text-sm text-slate-500">Investor</div>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-slate-600 clamp-3">Clear documentation, thoughtful finishes, and a strong location — the team delivered on schedule during the preview phase.</p>
+        </blockquote>
+
+        <blockquote class="p-6 border rounded-lg bg-white shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-700">S</div>
+            <div>
+              <strong>Sara P.</strong>
+              <div class="text-sm text-slate-500">Community Advisor</div>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-slate-600 clamp-3">Highly recommend for those seeking calm urban living with premium finishes and excellent building management.</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="pricing" class="max-w-7xl mx-auto px-6 mt-14">
+      <div class="bg-emerald-600 rounded-2xl p-8 md:p-12 text-white shadow-lg">
+        <div class="md:flex md:items-center md:justify-between">
+          <div>
+            <h3 class="text-2xl font-semibold">Priority Access — Reserve Your Home</h3>
+            <p class="mt-2 text-slate-100 max-w-xl">Secure early pricing and the best selection of floorplans by registering today. No-obligation deposit.</p>
+          </div>
+
+          <div class="mt-6 md:mt-0 md:flex md:items-center gap-4">
+            <a href="#register" class="inline-flex items-center px-6 py-3 bg-white text-emerald-600 rounded-md font-semibold shadow hover:bg-slate-100">Register Interest</a>
+            <a href="#" class="inline-flex items-center px-4 py-3 border border-white/30 rounded-md text-white hover:bg-white/10">Book Tour</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-7xl mx-auto px-6 mt-14 mb-20">
+      <h3 class="text-2xl font-semibold">Frequently asked questions</h3>
+      <div class="mt-6 grid gap-4 md:grid-cols-2">
+        <details class="p-4 border rounded-lg bg-white">
+          <summary class="font-medium cursor-pointer">What are the payment terms?</summary>
+          <div class="mt-2 text-sm text-slate-600">Initial reservation requires a refundable deposit; subsequent payment milestones align with the purchase agreement. Full details provided on registration.</div>
+        </details>
+        <details class="p-4 border rounded-lg bg-white">
+          <summary class="font-medium cursor-pointer">Can I customize finishes?</summary>
+          <div class="mt-2 text-sm text-slate-600">Select customization options will be available during the contract phase. Selections are subject to deadlines and availability.</div>
+        </details>
+        <details class="p-4 border rounded-lg bg-white">
+          <summary class="font-medium cursor-pointer">Is parking included?</summary>
+          <div class="mt-2 text-sm text-slate-600">Each residence includes at least one dedicated parking space; additional guest parking is available on site.</div>
+        </details>
+        <details class="p-4 border rounded-lg bg-white">
+          <summary class="font-medium cursor-pointer">When is completion scheduled?</summary>
+          <div class="mt-2 text-sm text-slate-600">Current projected completion is Q3 2027. We provide regular updates to registered buyers.</div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-8 grid md:grid-cols-3 gap-6">
+      <div>
+        <strong class="block text-slate-900">Riverview Residences</strong>
+        <p class="mt-2 text-sm text-slate-600">Riverside Drive, Waterfront District<br/>Contact: +1 (555) 123-4567</p>
+      </div>
+
+      <div class="text-sm text-slate-600">
+        <a href="#" class="block hover:text-slate-900">Privacy</a>
+        <a href="#" class="block mt-2 hover:text-slate-900">Terms</a>
+      </div>
+
+      <div class="flex items-center justify-end gap-4">
+        <a href="#" class="text-slate-600 hover:text-slate-900" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+        <a href="#" class="text-slate-600 hover:text-slate-900" aria-label="LinkedIn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="3" stroke="currentColor" stroke-width="1.2"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

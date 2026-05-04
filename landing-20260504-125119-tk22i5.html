@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Laurel & Stone — Grand Opening</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for details toggle and fine control */
+    details summary::-webkit-details-marker { display: none; }
+    details summary { list-style: none; }
+    details summary { cursor: pointer; }
+    details[open] summary .chev { transform: rotate(180deg); }
+    .chev { transition: transform .2s ease; }
+    /* subtle card border color */
+    .card-border { border-color: rgba(15,23,42,0.06); }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-slate-50">
+  <!-- Navbar -->
+  <header class="bg-white border-b card-border">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#" class="flex items-center gap-3">
+          <!-- Logo -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="24" height="24" rx="6" fill="#0F1724" />
+            <path d="M7 15c1.5-3 6-3 7.5 0" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 7v6" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="font-semibold text-lg text-slate-900">Laurel & Stone</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-slate-600">
+          <a href="#menu" class="hover:text-slate-900">Menu</a>
+          <a href="#about" class="hover:text-slate-900">About</a>
+          <a href="#reservations" class="hover:text-slate-900">Reservations</a>
+          <a href="#faq" class="hover:text-slate-900">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="#reservations" class="hidden md:inline-block px-4 py-2 rounded-md text-sm font-medium bg-[#0F1724] text-white hover:bg-slate-900">Reserve</a>
+          <button class="md:hidden p-2 rounded-md ring-1 ring-slate-200 bg-white" aria-label="Open menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M4 6h16M4 12h16M4 18h16" stroke="#0F1724" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6">
+          <p class="inline-flex items-center gap-3 text-sm font-medium text-[#BE185D] bg-[#FFF1F2] px-3 py-1 rounded-full border card-border">Grand Opening • May 2026</p>
+          <h1 class="mt-6 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">Craft dining. Warm hospitality. A new neighborhood restaurant.</h1>
+          <p class="mt-4 text-lg text-slate-600">Laurel & Stone blends seasonal ingredients, refined technique, and a welcoming dining room. Join us for our opening dinner — reservations recommended.</p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#reservations" class="inline-flex items-center justify-center px-5 py-3 rounded-md bg-[#0F1724] text-white font-medium hover:bg-slate-900">Reserve A Table</a>
+            <a href="#menu" class="inline-flex items-center justify-center px-5 py-3 rounded-md border card-border text-slate-700 hover:bg-slate-100">View Menu</a>
+          </div>
+
+          <div class="mt-8 flex items-center gap-6">
+            <div class="flex items-center gap-3">
+              <svg class="w-8 h-8 text-[#F97316]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <path d="M12 2v6" stroke="#F97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M6 10h12" stroke="#F97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M6 22h12" stroke="#F97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <div>
+                <div class="text-sm font-medium text-slate-900">Neighborhood Focus</div>
+                <div class="text-sm text-slate-500">Locally-sourced ingredients every day.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <!-- Illustration card -->
+          <div class="bg-white p-8 rounded-2xl shadow-lg border card-border">
+            <!-- Inline SVG illustration of a simple dining scene -->
+            <svg viewBox="0 0 600 420" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect x="0" y="0" width="600" height="420" rx="20" fill="#F8FAFC" />
+              <!-- Table -->
+              <rect x="80" y="220" width="440" height="12" rx="6" fill="#0F1724" opacity="0.08" />
+              <rect x="120" y="120" width="120" height="100" rx="12" fill="#111827" opacity="0.06" />
+              <rect x="360" y="120" width="120" height="100" rx="12" fill="#111827" opacity="0.06" />
+              <!-- Plates -->
+              <circle cx="180" cy="170" r="28" fill="#fff" stroke="#E6E7EA" />
+              <circle cx="420" cy="170" r="28" fill="#fff" stroke="#E6E7EA" />
+              <!-- Wine glasses -->
+              <path d="M200 130 v-30 a12 12 0 0 1 24 0 v30" fill="#fff" stroke="#E6E7EA" />
+              <path d="M440 130 v-30 a12 12 0 0 1 24 0 v30" fill="#fff" stroke="#E6E7EA" />
+              <!-- Lamp -->
+              <rect x="270" y="20" width="60" height="30" rx="6" fill="#0F1724" />
+              <path d="M300 50 v50" stroke="#0F1724" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof / logos -->
+    <section class="bg-white py-8 border-t card-border">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-center gap-10 flex-wrap opacity-90">
+          <!-- Inline logo placeholders -->
+          <svg width="120" height="36" viewBox="0 0 120 36" aria-hidden>
+            <rect width="120" height="36" rx="6" fill="#F1F5F9" />
+            <text x="60" y="22" fill="#0F1724" font-size="10" font-family="sans-serif" text-anchor="middle">Food & Wine</text>
+          </svg>
+          <svg width="120" height="36" viewBox="0 0 120 36" aria-hidden>
+            <rect width="120" height="36" rx="6" fill="#F1F5F9" />
+            <text x="60" y="22" fill="#0F1724" font-size="10" font-family="sans-serif" text-anchor="middle">CityTable</text>
+          </svg>
+          <svg width="120" height="36" viewBox="0 0 120 36" aria-hidden>
+            <rect width="120" height="36" rx="6" fill="#F1F5F9" />
+            <text x="60" y="22" fill="#0F1724" font-size="10" font-family="sans-serif" text-anchor="middle">Morning Herald</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="about" class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-sm border card-border">
+          <div class="flex items-center gap-4">
+            <div class="p-3 rounded-md bg-[#FEF3C7]">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2v10" stroke="#B45309" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M7 22h10" stroke="#B45309" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Seasonal Menu</h3>
+              <p class="text-sm text-slate-500">A rotating menu designed around local harvests.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm border card-border">
+          <div class="flex items-center gap-4">
+            <div class="p-3 rounded-md bg-[#EFF6FF]">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M4 7h16" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 7v10" stroke="#1D4ED8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Curated Wine List</h3>
+              <p class="text-sm text-slate-500">Selections that pair with each course — carefully chosen.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-sm border card-border">
+          <div class="flex items-center gap-4">
+            <div class="p-3 rounded-md bg-[#ECFCCB]">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z" stroke="#365314" stroke-width="1" fill="#84CC16" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Warm Hospitality</h3>
+              <p class="text-sm text-slate-500">Attentive service from a team that knows the neighborhood.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="bg-white border-t card-border">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8 py-14">
+        <h2 class="text-2xl font-bold text-slate-900">How It Works</h2>
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="p-6 bg-slate-50 rounded-lg border card-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-[#0F1724] text-white">1</div>
+            <h4 class="mt-4 font-semibold">Choose a Date</h4>
+            <p class="mt-2 text-sm text-slate-500">Select seatings available on our reservation calendar.</p>
+          </div>
+          <div class="p-6 bg-slate-50 rounded-lg border card-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-[#0F1724] text-white">2</div>
+            <h4 class="mt-4 font-semibold">Pick a Menu</h4>
+            <p class="mt-2 text-sm text-slate-500">Pre-select dishes or explore our chef's tasting options.</p>
+          </div>
+          <div class="p-6 bg-slate-50 rounded-lg border card-border">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-[#0F1724] text-white">3</div>
+            <h4 class="mt-4 font-semibold">Arrive & Enjoy</h4>
+            <p class="mt-2 text-sm text-slate-500">A relaxed service pace and thoughtful plating.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+      <h2 class="text-2xl font-bold text-slate-900">What Guests Are Saying</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="bg-white p-6 rounded-lg shadow-sm border card-border">
+          <p class="text-slate-700">"An elegant dining experience — the flavors were precise and the service felt personal. A neighborhood gem."</p>
+          <footer class="mt-4 text-sm text-slate-500">— A. Moreno</footer>
+        </blockquote>
+
+        <blockquote class="bg-white p-6 rounded-lg shadow-sm border card-border">
+          <p class="text-slate-700">"Perfect for date night. The tasting menu surprised us with creative pairings."</p>
+          <footer class="mt-4 text-sm text-slate-500">— J. Patel</footer>
+        </blockquote>
+
+        <blockquote class="bg-white p-6 rounded-lg shadow-sm border card-border">
+          <p class="text-slate-700">"Cozy dining room, excellent wine selection, and warm staff. We'll be back."</p>
+          <footer class="mt-4 text-sm text-slate-500">— M. Davis</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="reservations" class="bg-white border-t card-border">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8 py-14">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-lg border card-border bg-slate-50">
+            <h3 class="text-xl font-semibold">Standard Dinner</h3>
+            <p class="mt-2 text-slate-600">à la carte seating</p>
+            <div class="mt-4 text-3xl font-bold">$45</div>
+            <a href="#reservations" class="mt-6 inline-block px-4 py-2 rounded-md bg-[#0F1724] text-white hover:bg-slate-900">Reserve</a>
+          </div>
+
+          <div class="p-6 rounded-lg border card-border bg-white shadow-md">
+            <h3 class="text-xl font-semibold">Chef's Tasting</h3>
+            <p class="mt-2 text-slate-600">5-course seasonal tasting</p>
+            <div class="mt-4 text-3xl font-bold">$85</div>
+            <a href="#reservations" class="mt-6 inline-block px-4 py-2 rounded-md border card-border text-slate-700 hover:bg-slate-100">Reserve</a>
+          </div>
+
+          <div class="p-6 rounded-lg border card-border bg-slate-50">
+            <h3 class="text-xl font-semibold">Tasting + Wine Pairing</h3>
+            <p class="mt-2 text-slate-600">Curated pairings by the sommelier</p>
+            <div class="mt-4 text-3xl font-bold">$125</div>
+            <a href="#reservations" class="mt-6 inline-block px-4 py-2 rounded-md bg-[#0F1724] text-white hover:bg-slate-900">Reserve</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-4xl mx-auto px-6 lg:px-8 py-14">
+      <h2 class="text-2xl font-bold text-slate-900">Frequently Asked Questions</h2>
+      <div class="mt-6 space-y-4">
+        <details class="bg-white p-4 rounded-lg border card-border">
+          <summary class="flex items-center justify-between">
+            <span class="font-medium">Do you accept walk-ins?</span>
+            <svg class="chev w-5 h-5 text-slate-500" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <path d="M5 8l5 5 5-5" stroke="#0F1724" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </summary>
+          <div class="mt-3 text-sm text-slate-600">We recommend reservations for opening weeks; limited walk-in seating may be available depending on capacity.</div>
+        </details>
+
+        <details class="bg-white p-4 rounded-lg border card-border">
+          <summary class="flex items-center justify-between">
+            <span class="font-medium">Do you accommodate dietary restrictions?</span>
+            <svg class="chev w-5 h-5 text-slate-500" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <path d="M5 8l5 5 5-5" stroke="#0F1724" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </summary>
+          <div class="mt-3 text-sm text-slate-600">Yes. Please indicate allergies or dietary needs when booking and our team will do our best to accommodate.</div>
+        </details>
+
+        <details class="bg-white p-4 rounded-lg border card-border">
+          <summary class="flex items-center justify-between">
+            <span class="font-medium">Is there on-site parking?</span>
+            <svg class="chev w-5 h-5 text-slate-500" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <path d="M5 8l5 5 5-5" stroke="#0F1724" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </summary>
+          <div class="mt-3 text-sm text-slate-600">We offer limited street parking; several public lots are within a short walk. Valet is not available during opening month.</div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t card-border">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div>
+          <a href="#" class="flex items-center gap-3">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <rect width="24" height="24" rx="6" fill="#0F1724" />
+              <path d="M7 15c1.5-3 6-3 7.5 0" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12 7v6" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <div>
+              <div class="font-semibold text-slate-900">Laurel & Stone</div>
+              <div class="text-sm text-slate-500">Opening May 2026 • 123 Willow St.</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="text-sm text-slate-600">
+          <div class="font-medium text-slate-900">Hours</div>
+          <div class="mt-2">Tue–Sun: 5pm – 11pm</div>
+          <div class="mt-2">Mon: Closed</div>
+        </div>
+
+        <div class="flex items-start justify-end gap-4">
+          <a href="#" class="text-slate-500 hover:text-slate-900" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <rect x="3" y="3" width="18" height="18" rx="4" stroke="#0F1724" stroke-width="1.5" />
+              <circle cx="12" cy="12" r="3" stroke="#0F1724" stroke-width="1.5" />
+            </svg>
+          </a>
+          <a href="#" class="text-slate-500 hover:text-slate-900" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M15 8h2.5V5.5H15A2.5 2.5 0 0 0 12.5 8V10.5H10v2.5h2.5V20h2.5v-6.5H17l.5-2.5H15V8z" fill="#0F1724" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-8 text-sm text-slate-500 text-center">&copy; 2026 Laurel & Stone. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>

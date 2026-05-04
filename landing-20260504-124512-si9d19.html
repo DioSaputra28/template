@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ArenaLink — Community Platform for Gamers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for details Tailwind doesn't cover cleanly */
+    :root{
+      --bg:#0f172a; /* slate-900-ish for accents */
+      --card:#0b1220; /* deep card background */
+      --muted:#94a3b8; /* muted text */
+      --accent:#06b6d4; /* teal-400 */
+      --accent-2:#7c3aed; /* indigo-600 alternative */
+    }
+    /* subtle focus ring for keyboard users */
+    .focus-ring:focus{outline:2px solid rgba(99,102,241,0.18);outline-offset:2px}
+    /* small decorative SVG will be placed behind hero content */
+    .hero-deco{filter:opacity(0.06);}
+    /* constrain testimonial quote mark */
+    .quote-mark{opacity:0.08}
+    /* simple utility for subtle borders */
+    .soft-border{border-color:rgba(148,163,184,0.06)}
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <!-- Navbar -->
+  <header class="border-b soft-border bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <!-- Logo SVG -->
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+          <rect x="2" y="2" width="20" height="20" rx="4" fill="var(--bg)" />
+          <path d="M7 9L12 6l5 3v6l-5 3-5-3V9z" fill="white" />
+        </svg>
+        <span class="font-semibold text-lg tracking-tight">ArenaLink</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+        <a href="#features" class="hover:text-slate-900">Features</a>
+        <a href="#how" class="hover:text-slate-900">How it works</a>
+        <a href="#testimonials" class="hover:text-slate-900">Testimonials</a>
+        <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+        <a href="#faq" class="hover:text-slate-900">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#" class="text-sm px-4 py-2 rounded-md border border-slate-200 hover:bg-slate-50">Sign in</a>
+        <a href="#pricing" class="text-sm px-4 py-2 rounded-md bg-slate-900 text-white shadow hover:bg-slate-800 focus-ring">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="relative overflow-hidden">
+      <!-- decorative SVG behind hero -->
+      <svg class="absolute right-0 top-6 hero-deco" width="420" height="420" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+        <rect x="40" y="20" width="340" height="340" rx="28" fill="var(--accent)" />
+        <rect x="90" y="70" width="240" height="240" rx="20" fill="var(--accent-2)" />
+      </svg>
+
+      <div class="max-w-7xl mx-auto px-6 py-20 lg:py-28 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="z-10">
+            <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">Build a thriving gaming community — fast</h1>
+            <p class="mt-4 text-slate-600 max-w-xl">ArenaLink gives streamers, clans, and game studios the tools to host events, organise teams, and scale engagement with powerful community features.</p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="#pricing" class="inline-flex items-center justify-center px-5 py-3 rounded-md bg-slate-900 text-white text-sm font-medium shadow hover:bg-slate-800">Start free trial</a>
+              <a href="#features" class="inline-flex items-center justify-center px-5 py-3 rounded-md border border-slate-200 text-sm text-slate-700 hover:bg-slate-50">See features</a>
+            </div>
+
+            <div class="mt-8 flex items-center gap-6 text-sm text-slate-600">
+              <div class="flex items-center gap-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-slate-400" aria-hidden>
+                  <path d="M12 2v6l4 2v2l-4 2-4-2V10l4-2V2z" fill="currentColor" />
+                </svg>
+                <span><strong class="text-slate-900">99.9%</strong> uptime</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 2a10 10 0 100 20 10 10 0 000-20zM8 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Trusted by competitive teams</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- hero illustration made from SVG shapes: controller and chat bubble -->
+          <div class="z-10">
+            <div class="mx-auto max-w-md bg-white border soft-border rounded-xl shadow-lg p-6">
+              <div class="flex items-center gap-4">
+                <div class="p-3 rounded-md bg-slate-900 text-white">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                    <path d="M6 9v6a3 3 0 003 3h6a3 3 0 003-3V9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <circle cx="9" cy="12" r="1" fill="white" />
+                    <circle cx="15" cy="12" r="1" fill="white" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-sm font-semibold">Live Lobbies</div>
+                  <div class="text-sm text-slate-500">Create real-time matchmaking and chat for tournaments.</div>
+                </div>
+              </div>
+
+              <div class="mt-6 grid grid-cols-2 gap-3">
+                <div class="p-3 rounded-lg border soft-border">
+                  <div class="text-xs text-slate-500">Players</div>
+                  <div class="text-lg font-medium">1.2k</div>
+                </div>
+                <div class="p-3 rounded-lg border soft-border">
+                  <div class="text-xs text-slate-500">Matches today</div>
+                  <div class="text-lg font-medium">430</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof / logos -->
+    <section class="border-t soft-border">
+      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <p class="text-sm text-slate-600">Used by pro teams, tournament organizers, and indie studios</p>
+        <div class="flex items-center gap-6">
+          <!-- Inline logo placeholders (SVG) -->
+          <svg width="84" height="28" viewBox="0 0 84 28" fill="none" aria-hidden>
+            <rect width="84" height="28" rx="6" fill="#111827" />
+            <text x="10" y="18" fill="white" font-size="12" font-family="sans-serif">VORTEX</text>
+          </svg>
+          <svg width="84" height="28" viewBox="0 0 84 28" fill="none" aria-hidden>
+            <rect width="84" height="28" rx="6" fill="#111827" />
+            <text x="10" y="18" fill="white" font-size="12" font-family="sans-serif">RIVAL</text>
+          </svg>
+          <svg width="84" height="28" viewBox="0 0 84 28" fill="none" aria-hidden>
+            <rect width="84" height="28" rx="6" fill="#111827" />
+            <text x="10" y="18" fill="white" font-size="12" font-family="sans-serif">CLAN</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="max-w-7xl mx-auto px-6 py-16">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold">Everything teams need to thrive</h2>
+        <p class="mt-2 text-slate-600 max-w-2xl mx-auto">Integrated tools for management, communication, and competition — built for low latency and scale.</p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Feature card -->
+        <div class="p-5 bg-white border soft-border rounded-xl shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="p-3 rounded-md bg-slate-900 text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 12h18M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="font-semibold">Matchmaking & Lobbies</div>
+          </div>
+          <p class="mt-3 text-sm text-slate-600">Customizable matchmaking rules and private/public lobbies for events.</p>
+        </div>
+
+        <div class="p-5 bg-white border soft-border rounded-xl shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="p-3 rounded-md bg-slate-900 text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 20l9-5-9-5-9 5 9 5z" fill="currentColor" />
+                <path d="M12 12V4" stroke="#fff" stroke-width="1.2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="font-semibold">Event Management</div>
+          </div>
+          <p class="mt-3 text-sm text-slate-600">Schedule brackets, auto-run matches, and publish leaderboards.</p>
+        </div>
+
+        <div class="p-5 bg-white border soft-border rounded-xl shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="p-3 rounded-md bg-slate-900 text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M21 15v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M7 10l5-3 5 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="font-semibold">Moderation & Roles</div>
+          </div>
+          <p class="mt-3 text-sm text-slate-600">Flexible permissions, audit logs, and moderation workflows.</p>
+        </div>
+
+        <div class="p-5 bg-white border soft-border rounded-xl shadow-sm">
+          <div class="flex items-center gap-3">
+            <div class="p-3 rounded-md bg-slate-900 text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2l3 6 6 .5-4.5 4 1 6L12 17l-5.5 2.5 1-6L3 8.5 9 8 12 2z" fill="currentColor" />
+              </svg>
+            </div>
+            <div class="font-semibold">Integrations</div>
+          </div>
+          <p class="mt-3 text-sm text-slate-600">Twitch, Discord, matchmaking APIs, and analytics hooks out of the box.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="bg-slate-50 py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold">How ArenaLink works</h3>
+          <p class="mt-2 text-slate-600">Three simple steps to launch your first tournament or community event.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white border soft-border rounded-lg shadow-sm">
+            <div class="flex items-center justify-center w-12 h-12 bg-slate-900 text-white rounded-md mx-auto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h4 class="mt-4 text-lg font-semibold text-center">Create</h4>
+            <p class="mt-2 text-sm text-slate-600 text-center">Define rules, set prizes, and invite players in a few clicks.</p>
+          </div>
+
+          <div class="p-6 bg-white border soft-border rounded-lg shadow-sm">
+            <div class="flex items-center justify-center w-12 h-12 bg-slate-900 text-white rounded-md mx-auto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M8 7l8 5-8 5V7z" fill="currentColor" />
+              </svg>
+            </div>
+            <h4 class="mt-4 text-lg font-semibold text-center">Run</h4>
+            <p class="mt-2 text-sm text-slate-600 text-center">Automated brackets and live lobbies keep events moving.</p>
+          </div>
+
+          <div class="p-6 bg-white border soft-border rounded-lg shadow-sm">
+            <div class="flex items-center justify-center w-12 h-12 bg-slate-900 text-white rounded-md mx-auto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 20c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z" stroke="currentColor" stroke-width="1.2" fill="none" />
+                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h4 class="mt-4 text-lg font-semibold text-center">Grow</h4>
+            <p class="mt-2 text-sm text-slate-600 text-center">Analytics, replays, and integrations to expand your reach.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="max-w-7xl mx-auto px-6 py-16">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold">What organizers say</h3>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white border soft-border rounded-lg shadow-sm relative">
+          <svg class="absolute right-4 top-4 quote-mark" width="72" height="72" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M7 7h3v7H7zM14 7h3v7h-3z" fill="currentColor" />
+          </svg>
+          <p class="text-slate-700">ArenaLink handled our regional qualifiers flawlessly. Match automation saved time and reduced disputes.</p>
+          <div class="mt-4 flex items-center gap-3">
+            <div class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white">AK</div>
+            <div>
+              <div class="text-sm font-semibold">Ari K.</div>
+              <div class="text-xs text-slate-500">Tournament Director</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-white border soft-border rounded-lg shadow-sm relative">
+          <svg class="absolute right-4 top-4 quote-mark" width="72" height="72" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M7 7h3v7H7zM14 7h3v7h-3z" fill="currentColor" />
+          </svg>
+          <p class="text-slate-700">Great moderation tools and role controls — our community feels safer and more engaged.</p>
+          <div class="mt-4 flex items-center gap-3">
+            <div class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white">MN</div>
+            <div>
+              <div class="text-sm font-semibold">Mina N.</div>
+              <div class="text-xs text-slate-500">Community Manager</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 bg-white border soft-border rounded-lg shadow-sm relative">
+          <svg class="absolute right-4 top-4 quote-mark" width="72" height="72" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M7 7h3v7H7zM14 7h3v7h-3z" fill="currentColor" />
+          </svg>
+          <p class="text-slate-700">APIs and Twitch integration were simple to connect. Our viewership and retention both increased.</p>
+          <div class="mt-4 flex items-center gap-3">
+            <div class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white">XR</div>
+            <div>
+              <div class="text-sm font-semibold">Xan R.</div>
+              <div class="text-xs text-slate-500">Streamer & Organizer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="pricing" class="bg-slate-900 text-white py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center">
+          <h3 class="text-2xl font-bold">Simple pricing</h3>
+          <p class="mt-2 text-slate-300 max-w-2xl mx-auto">Flexible plans for hobby groups to enterprise esports organizations.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white text-slate-900 rounded-lg shadow-sm border soft-border">
+            <div class="text-sm font-semibold">Starter</div>
+            <div class="mt-2 text-3xl font-bold">Free</div>
+            <p class="mt-3 text-sm text-slate-600">Up to 200 players • Basic lobbies • Community support</p>
+            <a href="#" class="mt-6 inline-block px-4 py-2 rounded-md bg-slate-900 text-white text-sm">Create workspace</a>
+          </div>
+
+          <div class="p-6 bg-white text-slate-900 rounded-lg shadow-lg border-2 border-slate-900">
+            <div class="text-sm font-semibold">Pro</div>
+            <div class="mt-2 text-3xl font-bold">$49<span class="text-sm font-medium">/mo</span></div>
+            <p class="mt-3 text-sm text-slate-600">Advanced matchmaking • Priority support • Integrations</p>
+            <a href="#" class="mt-6 inline-block px-4 py-2 rounded-md bg-slate-900 text-white text-sm">Start free trial</a>
+          </div>
+
+          <div class="p-6 bg-white text-slate-900 rounded-lg shadow-sm border soft-border">
+            <div class="text-sm font-semibold">Enterprise</div>
+            <div class="mt-2 text-3xl font-bold">Custom</div>
+            <p class="mt-3 text-sm text-slate-600">SLA, dedicated support, custom integrations and on-prem options</p>
+            <a href="#" class="mt-6 inline-block px-4 py-2 rounded-md bg-slate-900 text-white text-sm">Contact sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-6xl mx-auto px-6 py-16">
+      <div class="text-center">
+        <h3 class="text-2xl font-bold">Frequently asked questions</h3>
+        <p class="mt-2 text-slate-600">Answers to common questions about ArenaLink.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <details class="p-5 bg-white border soft-border rounded-lg">
+          <summary class="font-medium">Can I integrate with my Twitch stream?</summary>
+          <p class="mt-3 text-sm text-slate-600">Yes. ArenaLink includes native Twitch authentication and overlays for match info and viewer interaction.</p>
+        </details>
+
+        <details class="p-5 bg-white border soft-border rounded-lg">
+          <summary class="font-medium">Is my data secure?</summary>
+          <p class="mt-3 text-sm text-slate-600">All data is encrypted in transit and at rest. Enterprise plans include additional compliance options.</p>
+        </details>
+
+        <details class="p-5 bg-white border soft-border rounded-lg">
+          <summary class="font-medium">Do you offer SSO for teams?</summary>
+          <p class="mt-3 text-sm text-slate-600">Enterprise customers can enable SAML/SSO and private network options for single-tenant deployments.</p>
+        </details>
+
+        <details class="p-5 bg-white border soft-border rounded-lg">
+          <summary class="font-medium">Can I self-host?</summary>
+          <p class="mt-3 text-sm text-slate-600">Self-hosting and on-premises options are available for enterprise customers. Contact sales for details.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t soft-border bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <div class="flex items-center gap-3">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect x="2" y="2" width="20" height="20" rx="4" fill="var(--bg)" />
+            <path d="M7 9L12 6l5 3v6l-5 3-5-3V9z" fill="white" />
+          </svg>
+          <div>
+            <div class="font-semibold">ArenaLink</div>
+            <div class="text-xs text-slate-500">Community platform for competitive gaming</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-6 justify-center">
+        <div>
+          <div class="text-sm font-semibold">Product</div>
+          <ul class="mt-3 text-sm text-slate-600 space-y-2">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="text-sm font-semibold">Company</div>
+          <ul class="mt-3 text-sm text-slate-600 space-y-2">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-right">
+        <div class="text-sm font-semibold">Stay in the loop</div>
+        <p class="mt-2 text-sm text-slate-600">Get product updates and event tips.</p>
+        <form class="mt-3 flex gap-2 justify-end" onsubmit="return false;">
+          <input class="px-3 py-2 rounded-md border border-slate-200 text-sm" placeholder="Email address" aria-label="Email" />
+          <button class="px-4 py-2 rounded-md bg-slate-900 text-white text-sm">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="border-t soft-border py-4">
+      <div class="max-w-7xl mx-auto px-6 text-sm text-slate-500 flex items-center justify-between">
+        <div>© <span id="year">2026</span> ArenaLink. All rights reserved.</div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-slate-600 hover:text-slate-900" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M22 5.92a6.6 6.6 0 01-1.88.52 3.3 3.3 0 001.45-1.82 6.6 6.6 0 01-2.09.8A3.3 3.3 0 0016.5 4c-1.82 0-3.3 1.47-3.3 3.3 0 .26.03.52.09.77A9.36 9.36 0 013 5.17a3.3 3.3 0 001.02 4.4 3.27 3.27 0 01-1.5-.41v.04c0 1.63 1.16 2.98 2.7 3.29a3.3 3.3 0 01-1.49.06c.42 1.3 1.63 2.25 3.06 2.28A6.62 6.62 0 012 19.54 9.34 9.34 0 008.29 21c5.55 0 8.58-4.6 8.58-8.58v-.39A6.12 6.12 0 0022 5.92z" fill="currentColor" />
+            </svg>
+          </a>
+          <a href="#" class="text-slate-600 hover:text-slate-900" aria-label="Discord">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M7.5 11a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM16.5 11a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" fill="currentColor" />
+              <path d="M21 4a15 15 0 00-3-1.5l-.2.5A11 11 0 0017.5 6l-1-.5-.3.4a12 12 0 00-5.4 0l-.3-.4-1 .5A11 11 0 006.2 3l-.2-.5A15 15 0 003 4c-1 4 0 7 0 7a8 8 0 002 3.5c1 1 4 2 4 2l1-1.5s-2-1-2.5-2c3.5 2 9 0 9-6 0 0 1-3 0-7z" fill="currentColor" opacity="0.9" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fuel — Fitness Coaching App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for decorative layout and accessible focus rings */
+    :root{--accent:#0f766e;--muted:#6b7280}
+    .hero-blob{opacity:.06}
+    .card-border{border:1px solid rgba(15,118,110,.06)}
+    a:focus{outline:3px solid rgba(15,118,110,.12);outline-offset:3px}
+    /* Keep hero illustration responsive */
+    .illustration svg{max-width:520px;width:100%;height:auto}
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-white">
+  <!-- Navbar -->
+  <header class="bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-[color:var(--accent)] flex items-center justify-center">
+            <!-- Simple flame / energy mark -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <path d="M12 2s4 4 4 8a4 4 0 0 1-8 0C8 6 12 2 12 2z" fill="#fff" />
+              <path d="M8.5 14.5C9.5 16 11 18 11 20a1 1 0 0 1-2 0c0-1.333-.8-2.5-1.5-3.5" fill="#fff" opacity=".06"/>
+            </svg>
+          </div>
+          <span class="font-semibold text-lg">Fuel</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#features" class="text-slate-600 hover:text-slate-900">Features</a>
+          <a href="#how" class="text-slate-600 hover:text-slate-900">How it works</a>
+          <a href="#pricing" class="text-slate-600 hover:text-slate-900">Pricing</a>
+          <a href="#faq" class="text-slate-600 hover:text-slate-900">FAQ</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="#signup" class="hidden md:inline-block px-4 py-2 text-sm font-medium text-[color:var(--accent)] border border-[color:var(--accent)] rounded-md hover:bg-[color:var(--accent)] hover:text-white transition">Get Started</a>
+          <a href="#" class="inline-flex items-center justify-center w-10 h-10 rounded-md bg-slate-50 border border-slate-100 hover:bg-slate-100">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 2v20" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 12h14" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6">
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">Personal coaching that adapts to you — not the other way around.</h1>
+          <p class="mt-6 text-lg text-slate-600">Fuel pairs smart training plans with expert coaches and daily accountability. Build strength, stay consistent, and reach goals with fewer plateaus.</p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a id="signup" href="#pricing" class="inline-flex items-center justify-center px-5 py-3 rounded-md bg-[color:var(--accent)] text-white font-semibold shadow hover:brightness-105 transition">Start free trial</a>
+            <a href="#how" class="inline-flex items-center gap-2 justify-center px-5 py-3 rounded-md border border-slate-200 text-slate-700 hover:bg-slate-50 transition">See how it works</a>
+          </div>
+          <div class="mt-8 flex items-center gap-6">
+            <div class="flex items-center gap-3">
+              <svg class="w-8 h-8 text-[color:var(--accent)]" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="#0f766e" stroke-width="1.5"/>
+                <path d="M7 13l3 3 7-9" stroke="#0f766e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <div class="text-sm font-semibold">Personalized plans</div>
+                <div class="text-sm text-slate-500">Programs that evolve with your progress.</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg class="w-8 h-8 text-indigo-600" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <circle cx="12" cy="12" r="9" stroke="#3730a3" stroke-width="1.5"/>
+                <path d="M8 12h8" stroke="#3730a3" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M12 8v8" stroke="#3730a3" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <div class="text-sm font-semibold">Coach-backed</div>
+                <div class="text-sm text-slate-500">Real coaches available for feedback.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 illustration relative">
+          <!-- decorative soft blob behind card (solid color with low opacity) -->
+          <svg class="hero-blob absolute -right-10 -top-10 w-72 h-72" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <circle cx="100" cy="100" r="100" fill="var(--accent)" />
+          </svg>
+
+          <div class="relative bg-white rounded-2xl shadow-lg card-border p-6 sm:p-8 max-w-xl ml-auto">
+            <!-- phone mockup with workout card inside -->
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <div class="text-sm font-medium">Mon, 6:00AM</div>
+                <div class="text-xs text-slate-500">Strength — Upper Body</div>
+              </div>
+              <div class="text-sm font-semibold text-[color:var(--accent)]">Active</div>
+            </div>
+            <div class="h-44 bg-slate-50 rounded-xl p-4 flex flex-col justify-between">
+              <div class="flex items-center gap-3">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <rect x="2" y="2" width="20" height="20" rx="6" fill="#eef2f2" stroke="#e5e7eb"/>
+                  <path d="M8 14s1-2 4-2 4 2 4 2" stroke="#0f766e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div>
+                  <div class="text-sm font-semibold">Bench press</div>
+                  <div class="text-xs text-slate-500">3 sets × 8–10 reps</div>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="text-xs text-slate-500">Coach notes: focus on control and full range.</div>
+                <div class="text-sm font-medium">+5kg</div>
+              </div>
+            </div>
+          </div>
+          <!-- small badges under card -->
+          <div class="mt-6 flex gap-4 justify-end">
+            <div class="text-xs text-slate-500">Trusted by</div>
+            <div class="text-sm font-semibold">Coaches • Gyms • Athletes</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos / Social proof -->
+    <section class="border-t border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8 flex items-center justify-center gap-10 flex-wrap">
+        <!-- Inline brand-like marks (SVG only) -->
+        <svg width="90" height="28" viewBox="0 0 90 28" fill="none" aria-hidden>
+          <rect width="90" height="28" rx="6" fill="#f8fafb" stroke="#e6eef0"/>
+          <text x="14" y="19" fill="#475569" font-size="12" font-family="Inter, Arial">Athletics Co</text>
+        </svg>
+        <svg width="90" height="28" viewBox="0 0 90 28" fill="none" aria-hidden>
+          <rect width="90" height="28" rx="6" fill="#f8fafb" stroke="#e6eef0"/>
+          <text x="20" y="19" fill="#475569" font-size="12" font-family="Inter, Arial">Peak</text>
+        </svg>
+        <svg width="90" height="28" viewBox="0 0 90 28" fill="none" aria-hidden>
+          <rect width="90" height="28" rx="6" fill="#f8fafb" stroke="#e6eef0"/>
+          <text x="16" y="19" fill="#475569" font-size="12" font-family="Inter, Arial">GymHouse</text>
+        </svg>
+        <svg width="90" height="28" viewBox="0 0 90 28" fill="none" aria-hidden>
+          <rect width="90" height="28" rx="6" fill="#f8fafb" stroke="#e6eef0"/>
+          <text x="6" y="19" fill="#475569" font-size="12" font-family="Inter, Arial">Pro Trainers</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="text-center">
+        <h2 class="text-2xl font-semibold">Everything you need to stay consistent</h2>
+        <p class="mt-2 text-slate-500">Tools and coaching built for real progress — clean, measurable, and sustainable.</p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Feature 1 -->
+        <div class="p-6 bg-white rounded-2xl shadow card-border">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-md bg-slate-50 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2v20" stroke="#0f766e" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M4 12h16" stroke="#0f766e" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Adaptive programs</h3>
+              <p class="mt-1 text-sm text-slate-500">Workouts adjust to your recovery and performance data.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-6 bg-white rounded-2xl shadow card-border">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-md bg-slate-50 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" stroke="#3730a3" stroke-width="1.5"/>
+                <path d="M6 20c1.333-3 4-5 6-5s4.667 2 6 5" stroke="#3730a3" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Coach feedback</h3>
+              <p class="mt-1 text-sm text-slate-500">Upload videos and get form cues from certified coaches.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-6 bg-white rounded-2xl shadow card-border">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-md bg-slate-50 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="3" width="18" height="18" rx="3" stroke="#0f172a" stroke-width="1.2"/>
+                <path d="M8 12h8" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M8 16h5" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Progress tracking</h3>
+              <p class="mt-1 text-sm text-slate-500">Clear metrics, history, and strength curves you can rely on.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="p-6 bg-white rounded-2xl shadow card-border">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-md bg-slate-50 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2l3 7h7l-5.5 4L20 22l-8-5-8 5 1.5-9L0 9h7z" stroke="#0f766e" stroke-width="0.8" fill="none"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Nutrition pairing</h3>
+              <p class="mt-1 text-sm text-slate-500">Macronutrient targets that match your energy output.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="text-center">
+        <h2 class="text-2xl font-semibold">How Fuel works</h2>
+        <p class="mt-2 text-slate-500">Three clear steps from sign-up to sustained progress.</p>
+      </div>
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white rounded-2xl shadow card-border text-center">
+          <div class="mx-auto w-14 h-14 rounded-full bg-slate-50 flex items-center justify-center mb-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2v20" stroke="#0f766e" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="font-semibold">Create profile</h3>
+          <p class="mt-2 text-sm text-slate-500">Tell us goals, schedule, and injuries — we build the plan.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-2xl shadow card-border text-center">
+          <div class="mx-auto w-14 h-14 rounded-full bg-slate-50 flex items-center justify-center mb-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h9" stroke="#3730a3" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="font-semibold">Train & sync</h3>
+          <p class="mt-2 text-sm text-slate-500">Follow workouts, log sessions and upload quick videos for review.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-2xl shadow card-border text-center">
+          <div class="mx-auto w-14 h-14 rounded-full bg-slate-50 flex items-center justify-center mb-4">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="font-semibold">Improve with coach</h3>
+          <p class="mt-2 text-sm text-slate-500">Receive weekly adjustments, accountability, and long-term planning.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-slate-50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold">Real results from real people</h2>
+          <p class="mt-2 text-slate-500">Small, consistent changes add up. Stories from members who stayed the course.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <blockquote class="bg-white p-6 rounded-2xl shadow card-border">
+            <div class="flex items-start gap-4">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" class="rounded-full bg-slate-50 p-2">
+                <circle cx="12" cy="8" r="3" stroke="#0f172a" stroke-width="1.2"/>
+                <path d="M5 20c3-3 11-3 14 0" stroke="#0f172a" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <div class="font-semibold">Alex P.</div>
+                <div class="text-xs text-slate-500">Lost 12kg and added 20% strength</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-600">"The coaches helped me dial in form and progress. The plan adapted when life got busy — I didn't burn out."</p>
+          </blockquote>
+
+          <blockquote class="bg-white p-6 rounded-2xl shadow card-border">
+            <div class="flex items-start gap-4">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" class="rounded-full bg-slate-50 p-2">
+                <circle cx="12" cy="8" r="3" stroke="#0f172a" stroke-width="1.2"/>
+                <path d="M5 20c3-3 11-3 14 0" stroke="#0f172a" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <div class="font-semibold">Samira K.</div>
+                <div class="text-xs text-slate-500">Strength & mobility gains</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-600">"Video feedback was a game-changer. My deadlift form improved fast and my coach set realistic targets."</p>
+          </blockquote>
+
+          <blockquote class="bg-white p-6 rounded-2xl shadow card-border">
+            <div class="flex items-start gap-4">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" class="rounded-full bg-slate-50 p-2">
+                <circle cx="12" cy="8" r="3" stroke="#0f172a" stroke-width="1.2"/>
+                <path d="M5 20c3-3 11-3 14 0" stroke="#0f172a" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <div class="font-semibold">Jordan L.</div>
+                <div class="text-xs text-slate-500">Athlete performance</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-600">"The program fit around my season. Coaches prepared me for peak and recovery phases precisely."</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="pricing" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="text-center">
+        <h2 class="text-2xl font-semibold">Plans that scale with you</h2>
+        <p class="mt-2 text-slate-500">Transparent pricing. No surprise fees. Start with a trial and switch as you progress.</p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl shadow card-border">
+          <div class="text-sm font-semibold text-slate-600">Starter</div>
+          <div class="mt-4 text-3xl font-bold">Free</div>
+          <div class="mt-2 text-sm text-slate-500">Basic plan with community programs and tracking.</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>Access to base programs</li>
+            <li>Progress tracking</li>
+            <li>Weekly automated adjustments</li>
+          </ul>
+          <a href="#signup" class="mt-6 inline-block w-full text-center px-4 py-2 rounded-md border border-slate-200 hover:bg-slate-50">Get started</a>
+        </div>
+
+        <div class="p-6 rounded-2xl shadow-lg border-2 border-[color:var(--accent)] bg-white">
+          <div class="text-sm font-semibold text-[color:var(--accent)]">Recommended</div>
+          <div class="mt-4 text-3xl font-bold">Pro — $29/mo</div>
+          <div class="mt-2 text-sm text-slate-500">Personalized coaching, video review, and priority messaging.</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>Adaptive plan & weekly coach check-ins</li>
+            <li>Video feedback</li>
+            <li>Nutrition targets</li>
+          </ul>
+          <a href="#signup" class="mt-6 inline-block w-full text-center px-4 py-2 rounded-md bg-[color:var(--accent)] text-white font-semibold shadow">Start trial</a>
+        </div>
+
+        <div class="p-6 rounded-2xl shadow card-border">
+          <div class="text-sm font-semibold text-slate-600">Team</div>
+          <div class="mt-4 text-3xl font-bold">Custom</div>
+          <div class="mt-2 text-sm text-slate-500">Solutions for small gyms and trainer teams.</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>Multi-coach management</li>
+            <li>Client analytics</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block w-full text-center px-4 py-2 rounded-md border border-slate-200 hover:bg-slate-50">Contact sales</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-4xl mx-auto px-6 lg:px-8 py-16">
+      <h2 class="text-2xl font-semibold text-center">Frequently asked questions</h2>
+      <div class="mt-8 space-y-4">
+        <details class="p-4 rounded-lg bg-white shadow card-border">
+          <summary class="font-medium">Do I need equipment?</summary>
+          <div class="mt-2 text-sm text-slate-600">No — plans are customizable for home, gym, or bodyweight-only programs.</div>
+        </details>
+
+        <details class="p-4 rounded-lg bg-white shadow card-border">
+          <summary class="font-medium">Can I switch coaches?</summary>
+          <div class="mt-2 text-sm text-slate-600">Yes. You can change coaches or upgrade to team-level support at any time.</div>
+        </details>
+
+        <details class="p-4 rounded-lg bg-white shadow card-border">
+          <summary class="font-medium">How long is the trial?</summary>
+          <div class="mt-2 text-sm text-slate-600">Trials are 14 days with full access to Pro features.</div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-100 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-10 h-10 rounded-lg bg-[color:var(--accent)] flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2s4 4 4 8a4 4 0 0 1-8 0C8 6 12 2 12 2z" fill="#fff"/></svg>
+          </div>
+          <div>
+            <div class="font-semibold">Fuel</div>
+            <div class="text-sm text-slate-500">Train smarter. Stay consistent.</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-6 text-sm text-slate-600">
+          <a href="#" class="hover:text-slate-900">Privacy</a>
+          <a href="#" class="hover:text-slate-900">Terms</a>
+          <a href="#" class="hover:text-slate-900">Support</a>
+        </div>
+      </div>
+
+      <div class="mt-8 text-sm text-slate-400">© 2026 Fuel. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>

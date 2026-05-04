@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>La Brisa — Grand Opening</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for detail touches */
+    :root{--brand:#1f2937;--accent:#b45309;--muted:#6b7280;--card:#ffffff}
+    body{background-color:#f8fafc;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
+    /* subtle card border */
+    .card {background:var(--card);border:1px solid rgba(15,23,42,0.06);box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+    /* accessible focus for links/buttons */
+    .focus-ring:focus{outline:3px solid rgba(99,102,241,0.12);outline-offset:2px}
+  </style>
+</head>
+<body class="text-gray-800">
+
+  <!-- NAVBAR -->
+  <header class="bg-white sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a class="flex items-center gap-3" href="#">
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="48" height="48" rx="8" fill="#0f172a"/>
+            <path d="M24 12c3.866 0 7 3.134 7 7 0 5.25-7 13-7 13s-7-7.75-7-13c0-3.866 3.134-7 7-7z" fill="#f8fafc"/>
+            <circle cx="24" cy="19" r="2" fill="#b45309"/>
+          </svg>
+          <span class="font-semibold text-xl leading-none" style="color:var(--brand)">La Brisa</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm text-gray-600">
+          <a href="#about" class="hover:text-gray-900 focus-ring">About</a>
+          <a href="#menu" class="hover:text-gray-900 focus-ring">Menu</a>
+          <a href="#events" class="hover:text-gray-900 focus-ring">Events</a>
+          <a href="#contact" class="hover:text-gray-900 focus-ring">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="#reserve" class="hidden md:inline-block px-4 py-2 border border-transparent rounded-md text-sm font-medium text-white bg-[#1f2937] hover:bg-[#111827] focus-ring">Reserve</a>
+          <button class="md:hidden p-2 rounded-md border focus-ring" aria-label="Open menu">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 5h14M3 10h14M3 15h14" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 pt-12 lg:pt-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7">
+          <p class="inline-flex items-center text-xs font-medium uppercase tracking-wide text-[#b45309] bg-[#fff4e6] px-2.5 py-1 rounded">Grand Opening</p>
+          <h1 class="mt-6 text-4xl sm:text-5xl font-extrabold leading-tight text-[#0f172a]">A modern taste of tradition — La Brisa opens its doors</h1>
+          <p class="mt-4 text-lg text-gray-600 max-w-prose">Join us for an elevated dining experience blending seasonal ingredients with coastal flavors. Reserve a table for opening week and enjoy a complimentary welcome amuse-bouche.</p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a id="reserve" href="#pricing" class="px-5 py-3 bg-[#1f2937] text-white rounded-md text-sm font-semibold hover:bg-[#111827] focus-ring">Reserve a Table</a>
+            <a href="#menu" class="px-5 py-3 border border-gray-200 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus-ring">View Menu</a>
+          </div>
+
+          <div class="mt-8 flex items-center gap-6">
+            <div class="flex items-center gap-3">
+              <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <rect width="24" height="24" rx="4" fill="#ffffff" stroke="#e6e7ea"/>
+                <path d="M7 13h10M7 9h10M7 17h6" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <div class="text-sm font-semibold">Seasonal Menu</div>
+                <div class="text-sm text-gray-500">Locally sourced produce</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <rect width="24" height="24" rx="4" fill="#ffffff" stroke="#e6e7ea"/>
+                <path d="M12 7v10M7 12h10" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <div class="text-sm font-semibold">Chef-driven</div>
+                <div class="text-sm text-gray-500">Tasting menu & a la carte</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="card p-6">
+            <!-- Illustration: plate and utensils -->
+            <svg viewBox="0 0 360 280" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect width="360" height="280" rx="12" fill="#ffffff" stroke="#e6e7ea"/>
+              <circle cx="180" cy="140" r="64" fill="#f8fafc" stroke="#e6e7ea"/>
+              <path d="M140 70c0-22 18-40 40-40s40 18 40 40" stroke="#1f2937" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <path d="M170 150c6 8 18 8 24 0" stroke="#b45309" stroke-width="4" stroke-linecap="round"/>
+              <rect x="40" y="32" width="16" height="120" rx="3" fill="#111827"/>
+              <rect x="304" y="32" width="16" height="120" rx="3" fill="#111827"/>
+            </svg>
+            <p class="mt-4 text-sm text-gray-600">Warm, modern dining room with an open kitchen. Capacity for private events and chef's table experiences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / LOGOS -->
+    <section class="mt-12">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="bg-white card p-6 flex items-center justify-between gap-6 overflow-auto">
+          <div class="text-sm text-gray-500">Featured in</div>
+          <div class="flex items-center gap-6 flex-shrink-0">
+            <!-- Inline simple logos -->
+            <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect width="80" height="28" rx="4" fill="#f3f4f6"/>
+              <text x="12" y="19" fill="#374151" font-family="Arial" font-size="10">GourmetMag</text>
+            </svg>
+            <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect width="80" height="28" rx="4" fill="#f3f4f6"/>
+              <text x="10" y="19" fill="#374151" font-family="Arial" font-size="10">CityEats</text>
+            </svg>
+            <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect width="80" height="28" rx="4" fill="#f3f4f6"/>
+              <text x="14" y="19" fill="#374151" font-family="Arial" font-size="10">FoodList</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="about" class="max-w-7xl mx-auto px-6 lg:px-8 mt-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="card p-6">
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-[#fff4e6] rounded-md">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2v6" stroke="#b45309" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M6 8v9a6 6 0 0012 0V8" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Craft Cocktails</h3>
+              <p class="mt-2 text-sm text-gray-600">House cocktails crafted with seasonal syrups and artisan spirits.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-6">
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-[#eef2ff] rounded-md">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3v18" stroke="#4338ca" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M7 7h10" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Open Kitchen</h3>
+              <p class="mt-2 text-sm text-gray-600">Watch the chefs compose each plate from a curated menu.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-6">
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-[#ecfccb] rounded-md">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12h16" stroke="#65a30d" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M6 8l4 8 4-6 4 6" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Private Events</h3>
+              <p class="mt-2 text-sm text-gray-600">Custom menus and spaces for intimate gatherings and celebrations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="menu" class="max-w-7xl mx-auto px-6 lg:px-8 mt-12">
+      <div class="text-center">
+        <h2 class="text-2xl font-semibold">How It Works</h2>
+        <p class="mt-2 text-gray-600">Three simple steps to enjoy an exceptional night out.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card p-6 text-center">
+          <div class="text-xl font-bold text-[#1f2937]">1</div>
+          <h4 class="mt-4 font-semibold">Choose Your Date</h4>
+          <p class="mt-2 text-sm text-gray-600">Select an available seating and party size.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-xl font-bold text-[#1f2937]">2</div>
+          <h4 class="mt-4 font-semibold">Select Menu</h4>
+          <p class="mt-2 text-sm text-gray-600">Pick a la carte or chef's tasting for the evening.</p>
+        </div>
+        <div class="card p-6 text-center">
+          <div class="text-xl font-bold text-[#1f2937]">3</div>
+          <h4 class="mt-4 font-semibold">Dine & Enjoy</h4>
+          <p class="mt-2 text-sm text-gray-600">Relax in our dining room — we'll take care of the rest.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 mt-12">
+      <div class="text-center">
+        <h2 class="text-2xl font-semibold">What Early Guests Say</h2>
+        <p class="mt-2 text-gray-600">Feedback from our soft-release tastings.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="card p-6">
+          <div class="flex items-center gap-4">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="rounded-full" aria-hidden>
+              <rect width="48" height="48" rx="24" fill="#fde68a"/>
+              <text x="24" y="30" text-anchor="middle" fill="#92400e" font-size="18" font-family="Arial">A</text>
+            </svg>
+            <div>
+              <div class="font-semibold">Alex Moreno</div>
+              <div class="text-sm text-gray-500">Chef & Food Critic</div>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-700">"Inventive flavors and precise technique. La Brisa brings something fresh to the city's dining scene."</p>
+        </blockquote>
+
+        <blockquote class="card p-6">
+          <div class="flex items-center gap-4">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="rounded-full" aria-hidden>
+              <rect width="48" height="48" rx="24" fill="#dbeafe"/>
+              <text x="24" y="30" text-anchor="middle" fill="#1e3a8a" font-size="18" font-family="Arial">M</text>
+            </svg>
+            <div>
+              <div class="font-semibold">Maya Lin</div>
+              <div class="text-sm text-gray-500">Event Planner</div>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-700">"Excellent service and a beautiful private dining option that impressed our guests."</p>
+        </blockquote>
+
+        <blockquote class="card p-6">
+          <div class="flex items-center gap-4">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="rounded-full" aria-hidden>
+              <rect width="48" height="48" rx="24" fill="#e9d5ff"/>
+              <text x="24" y="30" text-anchor="middle" fill="#5b21b6" font-size="18" font-family="Arial">J</text>
+            </svg>
+            <div>
+              <div class="font-semibold">Jordan Smith</div>
+              <div class="text-sm text-gray-500">Local Resident</div>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-700">"A refined neighborhood spot with honest flavors. We'll be back every month."</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section id="pricing" class="max-w-7xl mx-auto px-6 lg:px-8 mt-12">
+      <div class="text-center">
+        <h2 class="text-2xl font-semibold">Reserve Your Experience</h2>
+        <p class="mt-2 text-gray-600">Flexible options for every occasion.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card p-6 text-center">
+          <div class="text-xs font-semibold text-gray-500">Classic</div>
+          <div class="text-3xl font-bold mt-2">$45</div>
+          <div class="text-sm text-gray-500">per person</div>
+          <ul class="mt-4 text-sm text-gray-600 text-left space-y-2">
+            <li>3-course a la carte</li>
+            <li>Seasonal dessert</li>
+            <li>Standard seating</li>
+          </ul>
+          <a href="#contact" class="mt-6 block px-4 py-2 bg-[#1f2937] text-white rounded-md text-sm font-medium hover:bg-[#111827] focus-ring">Book Classic</a>
+        </div>
+
+        <div class="card p-6 text-center border-2 border-[#b45309]">
+          <div class="text-xs font-semibold text-gray-500">Tasting</div>
+          <div class="text-3xl font-bold mt-2">$90</div>
+          <div class="text-sm text-gray-500">per person</div>
+          <ul class="mt-4 text-sm text-gray-600 text-left space-y-2">
+            <li>6-course chef's tasting</li>
+            <li>Amuse-bouche & wine pairing</li>
+            <li>Chef's table option</li>
+          </ul>
+          <a href="#contact" class="mt-6 block px-4 py-2 bg-[#b45309] text-white rounded-md text-sm font-medium hover:bg-[#923d05] focus-ring">Book Tasting</a>
+        </div>
+
+        <div class="card p-6 text-center">
+          <div class="text-xs font-semibold text-gray-500">Private</div>
+          <div class="text-3xl font-bold mt-2">Custom</div>
+          <div class="text-sm text-gray-500">contact us</div>
+          <ul class="mt-4 text-sm text-gray-600 text-left space-y-2">
+            <li>Custom menus</li>
+            <li>Private room</li>
+            <li>Dedicated service</li>
+          </ul>
+          <a href="#contact" class="mt-6 block px-4 py-2 border border-gray-200 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-50 focus-ring">Inquire</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 mt-12">
+      <div class="text-center">
+        <h2 class="text-2xl font-semibold">FAQ</h2>
+        <p class="mt-2 text-gray-600">Quick answers to common questions.</p>
+      </div>
+
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <details class="card p-4">
+          <summary class="font-medium cursor-pointer">Do you accommodate dietary restrictions?</summary>
+          <p class="mt-2 text-sm text-gray-600">Yes. Please note dietary restrictions when booking and our team will work with the chef to accommodate.</p>
+        </details>
+
+        <details class="card p-4">
+          <summary class="font-medium cursor-pointer">Is there parking available?</summary>
+          <p class="mt-2 text-sm text-gray-600">Valet service is available on weekends. Street parking and nearby lots are also options.</p>
+        </details>
+
+        <details class="card p-4">
+          <summary class="font-medium cursor-pointer">Can I host private events?</summary>
+          <p class="mt-2 text-sm text-gray-600">Yes. We offer customizable private dining experiences for small groups to large parties.</p>
+        </details>
+
+        <details class="card p-4">
+          <summary class="font-medium cursor-pointer">What is your cancellation policy?</summary>
+          <p class="mt-2 text-sm text-gray-600">Reservations may be canceled up to 24 hours in advance for a full refund of deposits.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <div class="flex items-center gap-3">
+              <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="10" fill="#0f172a"/>
+                <path d="M24 15c2.5 0 4.5 2 4.5 4.5S26.5 24 24 24s-4.5-2-4.5-4.5S21.5 15 24 15z" fill="#fff"/>
+              </svg>
+              <div>
+                <div class="font-semibold">La Brisa</div>
+                <div class="text-sm text-gray-500">Modern coastal dining</div>
+              </div>
+            </div>
+            <p class="mt-4 text-sm text-gray-600">123 Harbor Road<br/>Cityname, ST 12345<br/>Open Tue–Sun: 5pm–11pm</p>
+          </div>
+
+          <div class="text-sm text-gray-600">
+            <div class="font-semibold">Links</div>
+            <ul class="mt-3 space-y-2">
+              <li><a href="#about" class="hover:text-gray-900">About</a></li>
+              <li><a href="#menu" class="hover:text-gray-900">Menu</a></li>
+              <li><a href="#events" class="hover:text-gray-900">Events</a></li>
+              <li><a href="#contact" class="hover:text-gray-900">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="font-semibold text-sm text-gray-600">Contact</div>
+            <div class="mt-3 text-sm text-gray-600">Email: hello@labrisa.example<br/>Phone: (555) 123‑4567</div>
+            <div class="mt-4 flex items-center gap-3">
+              <a href="#" class="p-2 rounded border border-gray-200 focus-ring" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="#111827"/>
+                  <circle cx="12" cy="12" r="3" stroke="#111827"/>
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="#111827"/>
+                </svg>
+              </a>
+              <a href="#" class="p-2 rounded border border-gray-200 focus-ring" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 2h-3a4 4 0 00-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 011-1h3V2z" fill="#111827"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 border-t pt-6 text-sm text-gray-500">© 2026 La Brisa. All rights reserved.</div>
+      </div>
+    </footer>
+  </main>
+
+</body>
+</html>

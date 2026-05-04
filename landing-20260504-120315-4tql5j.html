@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Insightly AI — AI Analytics for Product & Growth</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom rules for fine control */
+    :root{--navy:#0b1220;--accent:#06b6d4;--muted:#6b7280;--card:#f8fafc}
+    .focus-ring:focus{outline:2px solid #0000;box-shadow:0 0 0 4px rgba(6,182,212,0.12);}
+    /* subtle border on cards */
+    .card-border{border:1px solid rgba(15,23,42,0.06)}
+    /* Make code-like labels compact */
+    .pill{background:#111827;color:white;padding:.25rem .5rem;border-radius:.375rem;font-size:.75rem}
+  </style>
+</head>
+<body class="antialiased text-slate-900 bg-white">
+  <header class="bg-white border-b" role="banner">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a class="flex items-center gap-3" href="#">
+          <!-- Logo SVG -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect x="2" y="2" width="20" height="20" rx="4" fill="var(--navy)"/>
+            <path d="M6 14c1.5-3 4.5-5 8-5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 9c1 1.2 2.8 2 4.5 2" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <div class="text-lg font-semibold leading-tight">Insightly AI</div>
+            <div class="text-xs text-slate-500 -mt-0.5">AI analytics for growth teams</div>
+          </div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700">
+          <a href="#features" class="hover:text-slate-900">Features</a>
+          <a href="#how" class="hover:text-slate-900">How it works</a>
+          <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+          <a href="#faq" class="hover:text-slate-900">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a class="hidden md:inline-block text-sm text-slate-700 hover:text-slate-900" href="#">Sign in</a>
+          <a href="#pricing" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[color:var(--accent)] text-white text-sm font-medium hover:bg-teal-500 focus-ring">Get started</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-16 lg:py-24">
+          <div class="lg:col-span-7">
+            <p class="inline-flex items-center gap-2 text-sm text-slate-600 mb-4"><span class="pill">New</span> Real-time AI insights · 30 day free trial</p>
+            <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-slate-900">AI analytics that surface growth opportunities — without the noise</h1>
+            <p class="mt-6 text-lg text-slate-600 max-w-2xl">Connect product, usage, and marketing data to an AI layer that identifies leading indicators, churn risks, and high-impact experiments — presented in clear dashboards and one-click reports.</p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="#pricing" class="inline-flex items-center justify-center px-5 py-3 rounded-md bg-[color:var(--navy)] text-white font-medium hover:opacity-95">Start free trial</a>
+              <a href="#how" class="inline-flex items-center justify-center px-5 py-3 rounded-md border card-border text-slate-700 hover:bg-slate-50">See how it works</a>
+            </div>
+
+            <div class="mt-8 flex items-center gap-6">
+              <!-- Key stats -->
+              <div>
+                <div class="text-2xl font-semibold">400+</div>
+                <div class="text-sm text-slate-500">Teams onboarded</div>
+              </div>
+              <div>
+                <div class="text-2xl font-semibold">$12M</div>
+                <div class="text-sm text-slate-500">ARR influenced</div>
+              </div>
+              <div>
+                <div class="text-2xl font-semibold"><span class="text-[color:var(--accent)]">34%</span></div>
+                <div class="text-sm text-slate-500">Avg. retention uplift</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="w-full bg-card card-border rounded-xl p-6 shadow-sm">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="text-sm text-slate-500">Workspace • Acme Corp</div>
+                  <div class="mt-2 text-lg font-semibold">Growth dashboard</div>
+                </div>
+                <div class="text-sm text-slate-400">Updated 2h ago</div>
+              </div>
+
+              <div class="mt-4 grid grid-cols-2 gap-4">
+                <div class="bg-white card-border p-3 rounded">
+                  <div class="text-xs text-slate-500">Active users</div>
+                  <div class="mt-2 text-xl font-bold">18.3k</div>
+                </div>
+                <div class="bg-white card-border p-3 rounded">
+                  <div class="text-xs text-slate-500">Churn risk</div>
+                  <div class="mt-2 text-xl font-bold text-red-600">3.8%</div>
+                </div>
+                <div class="bg-white card-border p-3 rounded">
+                  <div class="text-xs text-slate-500">Top cohort LTV</div>
+                  <div class="mt-2 text-xl font-bold">$1,240</div>
+                </div>
+                <div class="bg-white card-border p-3 rounded">
+                  <div class="text-xs text-slate-500">Predicted MRR</div>
+                  <div class="mt-2 text-xl font-bold">$42.7k</div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <div class="text-xs text-slate-500">AI Alerts</div>
+                <ul class="mt-2 space-y-2">
+                  <li class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-[color:var(--accent)] mt-0.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                      <path d="M12 2v6" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                      <circle cx="12" cy="14" r="6" stroke="#0b1220" stroke-width="1.6"/>
+                    </svg>
+                    <div class="text-sm">Significant drop in onboarding completion for trial users.</div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof / logos -->
+    <section class="border-t">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8">
+        <div class="flex items-center justify-between flex-wrap gap-6">
+          <div class="text-sm text-slate-500">Trusted by teams at</div>
+          <div class="flex items-center gap-6 flex-wrap">
+            <!-- Simple monochrome SVG logos -->
+            <div class="flex items-center gap-2 text-slate-700">
+              <svg width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <rect width="80" height="28" rx="4" fill="#111827"/>
+              </svg>
+            </div>
+            <div class="flex items-center gap-2 text-slate-700">
+              <svg width="72" height="28" viewBox="0 0 72 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <rect width="72" height="28" rx="4" fill="#0b1220"/>
+              </svg>
+            </div>
+            <div class="flex items-center gap-2 text-slate-700">
+              <svg width="68" height="28" viewBox="0 0 68 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <rect width="68" height="28" rx="4" fill="#0f1724"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-2xl font-bold">Features built for measurable outcomes</h2>
+          <p class="mt-3 text-slate-600">We combine event-level tracing and an AI reasoning layer so teams get timely, actionable signals instead of more dashboards.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="p-6 bg-white card-border rounded-lg shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="bg-[color:var(--navy)] text-white rounded p-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M12 3v18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Automated insights</h3>
+                <p class="mt-1 text-sm text-slate-600">AI surfaces the metrics and segments that predict retention, conversion, and expansion.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="p-6 bg-white card-border rounded-lg shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="bg-[color:var(--accent)] text-white rounded p-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M6 19l6-6 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Cohort intelligence</h3>
+                <p class="mt-1 text-sm text-slate-600">Detect high-value cohorts and the product behaviors that drive LTV.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="p-6 bg-white card-border rounded-lg shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="bg-slate-800 text-white rounded p-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Real-time alerts</h3>
+                <p class="mt-1 text-sm text-slate-600">Get prioritized notifications when key metrics deviate from expected ranges.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="p-6 bg-white card-border rounded-lg shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="bg-slate-900 text-white rounded p-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">One-click reports</h3>
+                <p class="mt-1 text-sm text-slate-600">Turn insights into shareable reports for execs, PMs, and customer success.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="p-6 bg-white card-border rounded-lg shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="bg-[color:var(--accent)] text-white rounded p-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M3 12a9 9 0 109 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Integrations</h3>
+                <p class="mt-1 text-sm text-slate-600">Connect Snowflake, BigQuery, Postgres, Segment, and popular data pipelines.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="p-6 bg-white card-border rounded-lg shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="bg-[color:var(--navy)] text-white rounded p-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z" stroke="currentColor" stroke-width="0.6" fill="currentColor"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Security & privacy</h3>
+                <p class="mt-1 text-sm text-slate-600">Enterprise controls, IP protection, and VPC deployment options for sensitive data.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="bg-slate-50 border-t">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-2xl font-bold">How it works</h2>
+          <p class="mt-3 text-slate-600">Connect your data, map events, and let the AI layer prioritize signals so your team can move faster.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 bg-white card-border rounded-lg text-center">
+            <div class="flex items-center justify-center w-12 h-12 bg-[color:var(--navy)] text-white rounded-full mx-auto">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M12 3v18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="mt-4 font-semibold">Connect data</h3>
+            <p class="mt-2 text-sm text-slate-600">Secure connectors, or bring-your-own warehouse. No tracking limitations.</p>
+          </div>
+          <div class="p-6 bg-white card-border rounded-lg text-center">
+            <div class="flex items-center justify-center w-12 h-12 bg-[color:var(--accent)] text-white rounded-full mx-auto">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 3l9 6-9 6-9-6 9-6z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="mt-4 font-semibold">Analyze with AI</h3>
+            <p class="mt-2 text-sm text-slate-600">AI models detect anomalies, causal signals, and suggest experiments automatically.</p>
+          </div>
+          <div class="p-6 bg-white card-border rounded-lg text-center">
+            <div class="flex items-center justify-center w-12 h-12 bg-slate-800 text-white rounded-full mx-auto">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 12h8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="mt-4 font-semibold">Act & measure</h3>
+            <p class="mt-2 text-sm text-slate-600">Export insights, trigger experiments, and measure the impact across cohorts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-white border-t">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold">What customers say</h2>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <figure class="p-6 bg-card card-border rounded-lg">
+            <svg class="w-8 h-8 text-slate-400" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M7.17 6A4 4 0 0012 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M6 21v-2a4 4 0 014-4h0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            <blockquote class="mt-4 text-sm text-slate-700">"The AI surfaced a churn signal we hadn't noticed — the recommendation reduced churn by 18% in two months."</blockquote>
+            <figcaption class="mt-4 text-xs text-slate-500">— Priya S., VP Growth</figcaption>
+          </figure>
+
+          <figure class="p-6 bg-card card-border rounded-lg">
+            <svg class="w-8 h-8 text-slate-400" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M7.17 6A4 4 0 0012 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M6 21v-2a4 4 0 014-4h0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            <blockquote class="mt-4 text-sm text-slate-700">"Setup was straightforward and the automated reports saved our product team hours each week."</blockquote>
+            <figcaption class="mt-4 text-xs text-slate-500">— Marcus H., Head of Product</figcaption>
+          </figure>
+
+          <figure class="p-6 bg-card card-border rounded-lg">
+            <svg class="w-8 h-8 text-slate-400" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M7.17 6A4 4 0 0012 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M6 21v-2a4 4 0 014-4h0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+            <blockquote class="mt-4 text-sm text-slate-700">"The causal analysis feature helped prioritize experiments with the largest expected revenue impact."</blockquote>
+            <figcaption class="mt-4 text-xs text-slate-500">— Lena K., Data Science Lead</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="pricing" class="bg-slate-50 border-t">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold">Pick a plan that fits your team</h2>
+          <p class="mt-3 text-slate-600">Simple pricing. Scale to enterprise with SSO, audit logs, and SLA options.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white card-border rounded-lg shadow-sm">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-semibold">Starter</h3>
+                <div class="text-sm text-slate-500">For small teams</div>
+              </div>
+              <div class="text-lg font-bold">Free</div>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              <li>Up to 3 seats</li>
+              <li>Core dashboards</li>
+              <li>Community support</li>
+            </ul>
+            <a href="#" class="mt-6 inline-block w-full text-center px-4 py-2 rounded-md bg-[color:var(--navy)] text-white">Start free</a>
+          </div>
+
+          <div class="p-6 bg-white card-border rounded-lg shadow-md border-2 border-[color:var(--accent)]">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-semibold">Growth</h3>
+                <div class="text-sm text-slate-500">Best for growing teams</div>
+              </div>
+              <div class="text-lg font-bold">$99/mo</div>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              <li>All Starter features</li>
+              <li>AI insights & alerts</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#" class="mt-6 inline-block w-full text-center px-4 py-2 rounded-md bg-[color:var(--accent)] text-white">Start trial</a>
+          </div>
+
+          <div class="p-6 bg-white card-border rounded-lg shadow-sm">
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-semibold">Enterprise</h3>
+                <div class="text-sm text-slate-500">Custom deployments</div>
+              </div>
+              <div class="text-lg font-bold">Custom</div>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              <li>VPC & private networking</li>
+              <li>SSO, audit logs</li>
+              <li>Dedicated success manager</li>
+            </ul>
+            <a href="#" class="mt-6 inline-block w-full text-center px-4 py-2 rounded-md border card-border text-slate-700">Contact sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-white border-t">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="text-2xl font-bold text-center">Frequently asked questions</h2>
+          <dl class="mt-8 space-y-6">
+            <div>
+              <dt class="font-medium">What data sources do you support?</dt>
+              <dd class="mt-2 text-slate-600">We support data warehouses (BigQuery, Snowflake, Postgres), event-collections (Segment), and can ingest CSVs or event streams via connectors.</dd>
+            </div>
+            <div>
+              <dt class="font-medium">How long does setup take?</dt>
+              <dd class="mt-2 text-slate-600">Most teams are live within a week. Full warehouse-based analyses can be completed in under two weeks depending on data shape.</dd>
+            </div>
+            <div>
+              <dt class="font-medium">Do you expose raw model outputs?</dt>
+              <dd class="mt-2 text-slate-600">Yes. You can inspect model reasoning, confidence scores, and raw feature importance for every insight.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <a class="flex items-center gap-3" href="#">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <rect x="2" y="2" width="20" height="20" rx="4" fill="#0b1220"/>
+            </svg>
+            <div>
+              <div class="text-base font-semibold">Insightly AI</div>
+              <div class="text-xs text-slate-500">AI analytics for growth teams</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="flex items-center gap-6 text-sm text-slate-600">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+
+      <div class="mt-6 text-sm text-slate-500">© <span id="year">2026</span> Insightly AI — Built for teams that measure what matters.</div>
+    </div>
+  </footer>
+</body>
+</html>

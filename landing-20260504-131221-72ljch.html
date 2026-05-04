@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marrow Roastery — Premium Coffee</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for details summary and fine-tuned colors */
+    :root{
+      --brand-wood:#3b2f2b; /* deep brown */
+      --accent-gold:#b78b39; /* warm accent */
+      --muted:#6b6b6b;
+      --bg-cream:#fbf7f3;
+    }
+    body { background-color: var(--bg-cream); }
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    .card-border { border: 1px solid rgba(0,0,0,0.06); }
+    /* subtle focus outline for accessibility */
+    a:focus, button:focus, summary:focus { outline: 3px solid rgba(183,139,57,0.18); outline-offset: 2px; }
+  </style>
+</head>
+<body class="antialiased text-slate-800">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-6">
+      <nav class="flex items-center justify-between h-20">
+        <a href="#" class="flex items-center gap-3">
+          <!-- Bean logo -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <circle cx="12" cy="12" r="11" fill="var(--brand-wood)" />
+            <path d="M8 8c4 0 4-4 8 0-4 4-4 8-8 8-2 0-4-4 0-8z" fill="#fff" opacity="0.96" />
+          </svg>
+          <div class="text-sm font-semibold text-2xl tracking-tight" style="color:var(--brand-wood);">Marrow Roastery</div>
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a class="text-sm text-slate-600 hover:text-slate-800" href="#features">Menu</a>
+          <a class="text-sm text-slate-600 hover:text-slate-800" href="#how">How it works</a>
+          <a class="text-sm text-slate-600 hover:text-slate-800" href="#reviews">Reviews</a>
+          <a class="text-sm text-slate-600 hover:text-slate-800" href="#faq">FAQ</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#cta" class="hidden md:inline-block px-4 py-2 border rounded text-sm font-medium" style="border-color:rgba(59,47,43,0.06);">Order online</a>
+          <a href="#cta" class="inline-flex items-center gap-2 px-4 py-2 bg-[color:var(--brand-wood)] text-white rounded shadow hover:brightness-105 text-sm font-semibold">Shop
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <path d="M3 3h2l1 5h13l1-5h2v2l-2 12a2 2 0 0 1-2 1.6H8a2 2 0 0 1-2-1.6L4 5V3z" fill="white" opacity="0.95"/>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mt-10">
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div class="py-8">
+        <p class="inline-flex items-center text-xs font-medium uppercase tracking-wider px-3 py-1 rounded" style="background:#fff;border:1px solid rgba(0,0,0,0.04);color:var(--brand-wood)">Small-batch • Single origin</p>
+        <h1 class="mt-6 text-4xl sm:text-5xl font-extrabold leading-tight" style="color:var(--brand-wood);">A refined cup, roasted to reveal character</h1>
+        <p class="mt-4 text-lg text-slate-600">We source, roast, and deliver premium beans with transparent origins. Exceptional tasting notes, consistent freshness, and a simple subscription to fit how you drink.</p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a id="cta" href="#" class="inline-flex items-center gap-3 px-5 py-3 bg-[color:var(--accent-gold)] text-white rounded shadow hover:brightness-105 font-semibold">Start your subscription</a>
+          <a href="#how" class="inline-flex items-center gap-2 px-4 py-3 border rounded text-sm font-medium" style="border-color:rgba(0,0,0,0.06);">Learn how it works</a>
+        </div>
+
+        <div class="mt-8 flex items-center gap-6">
+          <div class="flex items-center gap-3">
+            <!-- star -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 17.3l6.18 3.7-1.64-7.03L21 9.24l-7.19-.61L12 2 10.19 8.63 3 9.24l4.46 4.73L5.82 21z" fill="var(--brand-wood)"/>
+            </svg>
+            <div class="text-sm">
+              <div class="text-slate-800 font-semibold">4.9</div>
+              <div class="text-xs text-slate-500">(2,189 reviews)</div>
+            </div>
+          </div>
+          <div class="hidden sm:flex items-center text-sm text-slate-600 gap-4">
+            <span>Fast local delivery</span>
+            <span class="h-4 w-px bg-slate-200"></span>
+            <span>Freshly roasted weekly</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center">
+        <div class="w-full max-w-md bg-white card-border rounded-2xl shadow-lg p-6">
+          <!-- Cup illustration -->
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 flex items-center justify-center rounded-lg bg-[color:var(--brand-wood)]">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 7h14v6a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V7z" fill="#fff" opacity="0.98"/>
+                <path d="M19 9a3 3 0 0 1 0 6" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-sm font-semibold" style="color:var(--brand-wood)">Featured Roast</div>
+              <div class="text-xs text-slate-500">Colombia • Honey Process</div>
+            </div>
+          </div>
+
+          <div class="mt-4 text-slate-700">
+            <p class="text-sm">Tasting notes: caramel, red apple, toasted almond. Roast level: medium. Roasted within 48 hours of shipping.</p>
+          </div>
+
+          <div class="mt-6 flex items-center justify-between">
+            <div>
+              <div class="text-lg font-bold" style="color:var(--brand-wood)">$18</div>
+              <div class="text-xs text-slate-500">per 12oz bag</div>
+            </div>
+            <a href="#" class="px-4 py-2 bg-[color:var(--accent-gold)] text-white rounded font-medium">Buy single</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 mt-12">
+      <!-- Social proof / logos -->
+      <div class="bg-white card-border rounded-lg p-6 flex items-center justify-between shadow-sm">
+        <div class="text-sm text-slate-600">Featured in</div>
+        <div class="flex gap-8 items-center">
+          <!-- simple logos as inline SVGs -->
+          <svg width="80" height="28" viewBox="0 0 100 28" fill="none" aria-hidden>
+            <rect width="100" height="28" rx="4" fill="#f3f4f6"/>
+            <text x="12" y="18" fill="#6b7280" font-family="sans-serif" font-size="10">BrewTimes</text>
+          </svg>
+          <svg width="80" height="28" viewBox="0 0 100 28" fill="none" aria-hidden>
+            <rect width="100" height="28" rx="4" fill="#f3f4f6"/>
+            <text x="10" y="18" fill="#6b7280" font-family="sans-serif" font-size="10">CafeReview</text>
+          </svg>
+          <svg width="80" height="28" viewBox="0 0 100 28" fill="none" aria-hidden>
+            <rect width="100" height="28" rx="4" fill="#f3f4f6"/>
+            <text x="14" y="18" fill="#6b7280" font-family="sans-serif" font-size="10">DailySip</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="max-w-7xl mx-auto px-6 mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white card-border rounded-lg p-6 shadow-sm">
+        <div class="flex items-center gap-4">
+          <div class="p-3 rounded bg-[color:var(--brand-wood)] text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 2v6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 8c0 1.464 2 3 4 3s4-1.536 4-3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-semibold" style="color:var(--brand-wood)">Single-origin traceability</div>
+            <div class="text-sm text-slate-600">Know the farm and the farmer on every bag.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white card-border rounded-lg p-6 shadow-sm">
+        <div class="flex items-center gap-4">
+          <div class="p-3 rounded bg-[color:var(--brand-wood)] text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 20v-6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 12c0-1.6 2-4 4-4s4 2.4 4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-semibold" style="color:var(--brand-wood)">Small-batch roasts</div>
+            <div class="text-sm text-slate-600">Batches roasted to order to preserve aroma.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white card-border rounded-lg p-6 shadow-sm">
+        <div class="flex items-center gap-4">
+          <div class="p-3 rounded bg-[color:var(--brand-wood)] text-white">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M3 12h18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7 6l5 6-5 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <div class="font-semibold" style="color:var(--brand-wood)">Flexible delivery</div>
+            <div class="text-sm text-slate-600">Pause, swap, or skip shipments anytime.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="max-w-7xl mx-auto px-6 mt-16">
+      <h2 class="text-2xl font-bold" style="color:var(--brand-wood)">How it works</h2>
+      <p class="mt-2 text-slate-600 max-w-2xl">Three simple steps from our roastery to your cup.</p>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white card-border rounded-lg p-6 shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="h-12 w-12 rounded-lg bg-[color:var(--brand-wood)] flex items-center justify-center text-white">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2l2 5h5l-4 3 2 5-5-3-5 3 2-5-4-3h5z" fill="white"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold" style="color:var(--brand-wood)">Choose your roast</div>
+              <div class="text-sm text-slate-600">Pick single bag or subscription, roast level, and grind.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white card-border rounded-lg p-6 shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="h-12 w-12 rounded-lg bg-[color:var(--brand-wood)] flex items-center justify-center text-white">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 7h18v10H3z" fill="white"/>
+                <path d="M8 7v-2a4 4 0 0 1 8 0v2" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold" style="color:var(--brand-wood)">Roasted to order</div>
+              <div class="text-sm text-slate-600">We roast in small batches and ship within 48 hours.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white card-border rounded-lg p-6 shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="h-12 w-12 rounded-lg bg-[color:var(--brand-wood)] flex items-center justify-center text-white">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 12h18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 3v18" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold" style="color:var(--brand-wood)">Brew and enjoy</div>
+              <div class="text-sm text-slate-600">Fresh beans, clear tasting notes, better mornings.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="max-w-7xl mx-auto px-6 mt-16">
+      <h2 class="text-2xl font-bold" style="color:var(--brand-wood)">What customers say</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="bg-white card-border rounded-lg p-6 shadow-sm">
+          <p class="text-slate-700">"Marrow's roasts highlight flavors I never noticed before. Smooth, balanced, and consistent every shipment."</p>
+          <div class="mt-4 flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-slate-200 flex items-center justify-center text-sm font-semibold text-slate-700">AL</div>
+            <div>
+              <div class="font-semibold" style="color:var(--brand-wood)">A. Lopez</div>
+              <div class="text-xs text-slate-500">Portland, OR</div>
+            </div>
+          </div>
+        </blockquote>
+
+        <blockquote class="bg-white card-border rounded-lg p-6 shadow-sm">
+          <p class="text-slate-700">"Easy subscription controls and the freshness is unreal. My espresso shots have never been better."</p>
+          <div class="mt-4 flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-slate-200 flex items-center justify-center text-sm font-semibold text-slate-700">MS</div>
+            <div>
+              <div class="font-semibold" style="color:var(--brand-wood)">M. Singh</div>
+              <div class="text-xs text-slate-500">Austin, TX</div>
+            </div>
+          </div>
+        </blockquote>
+
+        <blockquote class="bg-white card-border rounded-lg p-6 shadow-sm">
+          <p class="text-slate-700">"The tasting notes are accurate and the beans are always perfectly roasted. Recommend to fellow coffee lovers."</p>
+          <div class="mt-4 flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-slate-200 flex items-center justify-center text-sm font-semibold text-slate-700">KR</div>
+            <div>
+              <div class="font-semibold" style="color:var(--brand-wood)">K. Ruiz</div>
+              <div class="text-xs text-slate-500">Brooklyn, NY</div>
+            </div>
+          </div>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 mt-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <div class="md:col-span-2 bg-white card-border rounded-lg p-8 shadow-sm">
+          <h3 class="text-xl font-bold" style="color:var(--brand-wood)">Subscription plans</h3>
+          <p class="mt-2 text-slate-600">Hand-roasted beans delivered on your schedule. Swap origins or pause anytime.</p>
+
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="p-5 border rounded-lg text-center">
+              <div class="text-sm font-semibold text-slate-700">Trial</div>
+              <div class="mt-2 text-2xl font-bold" style="color:var(--brand-wood)">$12</div>
+              <div class="text-xs text-slate-500">Single 12oz bag</div>
+              <div class="mt-4"><a href="#" class="px-3 py-2 bg-[color:var(--accent-gold)] text-white rounded text-sm">Select</a></div>
+            </div>
+
+            <div class="p-5 border-2 border-[color:var(--brand-wood)] rounded-lg text-center">
+              <div class="text-sm font-semibold text-slate-700">Monthly</div>
+              <div class="mt-2 text-2xl font-bold" style="color:var(--brand-wood)">$18</div>
+              <div class="text-xs text-slate-500">12oz every month</div>
+              <div class="mt-4"><a href="#" class="px-3 py-2 bg-[color:var(--brand-wood)] text-white rounded text-sm">Select</a></div>
+            </div>
+
+            <div class="p-5 border rounded-lg text-center">
+              <div class="text-sm font-semibold text-slate-700">Bi-weekly</div>
+              <div class="mt-2 text-2xl font-bold" style="color:var(--brand-wood)">$34</div>
+              <div class="text-xs text-slate-500">2×12oz / month</div>
+              <div class="mt-4"><a href="#" class="px-3 py-2 bg-[color:var(--accent-gold)] text-white rounded text-sm">Select</a></div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="bg-white card-border rounded-lg p-6 shadow-sm">
+          <h4 class="font-semibold" style="color:var(--brand-wood)">Why choose Marrow?</h4>
+          <ul class="mt-3 text-sm text-slate-600 space-y-2">
+            <li>Farm-direct sourcing</li>
+            <li>Roast-on-demand freshness</li>
+            <li>Free shipping over $45</li>
+          </ul>
+          <div class="mt-6"><a href="#" class="block text-center px-4 py-2 bg-[color:var(--brand-wood)] text-white rounded">Get started</a></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="faq" class="max-w-7xl mx-auto px-6 mt-16">
+      <h2 class="text-2xl font-bold" style="color:var(--brand-wood)">Frequently asked questions</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <details class="bg-white card-border rounded-lg p-4 shadow-sm">
+          <summary class="font-semibold">How fresh is the coffee?</summary>
+          <div class="mt-2 text-sm text-slate-600">We roast in small batches and ship within 48 hours for subscriptions; single orders are roasted immediately upon request.</div>
+        </details>
+
+        <details class="bg-white card-border rounded-lg p-4 shadow-sm">
+          <summary class="font-semibold">Can I change my grind or schedule?</summary>
+          <div class="mt-2 text-sm text-slate-600">Yes — your subscription portal lets you swap grind, swap origin, skip, or pause deliveries any time.</div>
+        </details>
+
+        <details class="bg-white card-border rounded-lg p-4 shadow-sm">
+          <summary class="font-semibold">Do you offer wholesale?</summary>
+          <div class="mt-2 text-sm text-slate-600">We partner with select cafes. Contact our wholesale team via email and include your business details.</div>
+        </details>
+
+        <details class="bg-white card-border rounded-lg p-4 shadow-sm">
+          <summary class="font-semibold">What are the shipping options?</summary>
+          <div class="mt-2 text-sm text-slate-600">Standard and expedited within the continental U.S. Free shipping on orders over $45.</div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-16 bg-white border-t">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <div class="flex items-center gap-3">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <circle cx="12" cy="12" r="11" fill="var(--brand-wood)" />
+            <path d="M8 8c4 0 4-4 8 0-4 4-4 8-8 8-2 0-4-4 0-8z" fill="#fff" opacity="0.96" />
+          </svg>
+          <div class="font-semibold" style="color:var(--brand-wood)">Marrow Roastery</div>
+        </div>
+        <p class="mt-4 text-sm text-slate-600">Small-batch roastery delivering thoughtfully sourced coffee. Crafted for those who care about flavor.</p>
+      </div>
+
+      <div class="md:col-span-2 flex justify-between">
+        <div>
+          <div class="font-semibold" style="color:var(--brand-wood)">Contact</div>
+          <div class="mt-2 text-sm text-slate-600">hello@marrowroastery.example • (555) 123-4567</div>
+        </div>
+
+        <div class="text-right">
+          <div class="font-semibold" style="color:var(--brand-wood)">Follow</div>
+          <div class="mt-2 flex gap-3 justify-end">
+            <a href="#" class="p-2 rounded bg-slate-100"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 4.01c-.77.35-1.6.59-2.47.7a4.28 4.28 0 0 0-7.3 3.9A12.13 12.13 0 0 1 3.1 3.86 4.28 4.28 0 0 0 4.1 9.7 4.27 4.27 0 0 1 2 9.3v.05a4.28 4.28 0 0 0 3.43 4.2c-.5.14-1.03.17-1.56.06a4.28 4.28 0 0 0 4 2.98A8.57 8.57 0 0 1 2 18.57a12.09 12.09 0 0 0 6.55 1.92c7.86 0 12.16-6.51 12.16-12.16v-.55A8.64 8.64 0 0 0 22 4.01z" fill="#6b7280"/></svg></a>
+            <a href="#" class="p-2 rounded bg-slate-100"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2.04c-5.52 0-10 4.48-10 10 0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.6-3.37-1.34-3.37-1.34-.45-1.14-1.11-1.45-1.11-1.45-.91-.62.07-.6.07-.6 1 .07 1.52 1.03 1.52 1.03.9 1.53 2.36 1.09 2.94.84.09-.66.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.93 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.8c.85.004 1.71.115 2.51.337 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.83-2.34 4.68-4.57 4.93.36.31.69.92.69 1.85 0 1.33-.01 2.4-.01 2.72 0 .27.18.58.69.48A10.02 10.02 0 0 0 22 12.04c0-5.52-4.48-10-10-10z" fill="#6b7280"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center text-xs text-slate-500 py-4">© 2026 Marrow Roastery. All rights reserved.</div>
+  </footer>
+</body>
+</html>

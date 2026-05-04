@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aurea Travel — Luxury Trips & Bespoke Experiences</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom rules for visuals Tailwind doesn't cover concisely */
+    .glass-card { background-color: rgba(255,255,255,0.85); backdrop-filter: blur(6px); }
+    .brand-color { color: #0f172a; } /* deep slate */
+    .accent { color: #b2872b; background-color: #b2872b; } /* warm gold */
+    .no-outline:focus { outline: none; box-shadow: 0 0 0 3px rgba(178,135,43,0.15); }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-slate-50">
+
+  <!-- NAVBAR -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#" class="flex items-center gap-3">
+          <!-- logo: compass + wordmark -->
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="48" height="48" rx="8" fill="#0f172a"/>
+            <path d="M24 12L30 30L18 24L24 12Z" fill="#F8E7B0"/>
+            <circle cx="24" cy="24" r="10" stroke="#F8E7B0" stroke-width="1.5"/>
+          </svg>
+          <span class="text-lg font-semibold brand-color">Aurea Travel</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#features" class="text-slate-600 hover:text-slate-900">Services</a>
+          <a href="#how" class="text-slate-600 hover:text-slate-900">How it works</a>
+          <a href="#testimonials" class="text-slate-600 hover:text-slate-900">Testimonials</a>
+          <a href="#faq" class="text-slate-600 hover:text-slate-900">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <a href="#contact" class="hidden md:inline-block px-4 py-2 border border-slate-200 rounded-md text-sm text-slate-700 hover:bg-slate-50">Contact</a>
+          <a href="#book" class="inline-flex items-center px-4 py-2 bg-[#b2872b] text-white rounded-md text-sm hover:bg-[#9a6f21] no-outline" aria-label="Book now">Book a Trip</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-16 lg:py-24">
+          <div class="lg:col-span-7">
+            <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight brand-color">Luxury journeys handcrafted for discerning travelers</h1>
+            <p class="mt-4 text-slate-600 max-w-2xl">Exclusive access, private guides, and seamless logistics — we design every detail so you can travel with confidence, comfort, and discovery.</p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a href="#book" class="inline-flex items-center px-5 py-3 bg-[#b2872b] text-white rounded-md font-medium hover:bg-[#9a6f21]">Start planning</a>
+              <a href="#features" class="inline-flex items-center px-5 py-3 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-100">View services</a>
+            </div>
+
+            <div class="mt-8 grid grid-cols-3 gap-4 max-w-md">
+              <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+                <div class="text-sm text-slate-500">Private trips</div>
+                <div class="mt-2 font-semibold">Custom itineraries</div>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+                <div class="text-sm text-slate-500">Exclusive</div>
+                <div class="mt-2 font-semibold">VIP access</div>
+              </div>
+              <div class="bg-white border border-slate-200 rounded-lg p-4 shadow-sm">
+                <div class="text-sm text-slate-500">Support</div>
+                <div class="mt-2 font-semibold">24/7 concierge</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="glass-card border border-slate-200 rounded-xl shadow-xl p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <div class="text-xs text-slate-500">Tailor your journey</div>
+                  <h3 class="mt-1 text-lg font-semibold brand-color">Request a complimentary consultation</h3>
+                </div>
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M2 12s4-3 10-3 10 3 10 3-4 3-10 3S2 12 2 12z" fill="#b2872b"/>
+                  <path d="M12 9v6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+
+              <form class="mt-4 space-y-3">
+                <div>
+                  <label class="block text-xs text-slate-600">Destination</label>
+                  <input class="mt-1 w-full border border-slate-200 rounded-md px-3 py-2 text-sm focus:ring-0 no-outline" placeholder="e.g. Amalfi Coast" />
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                  <div>
+                    <label class="block text-xs text-slate-600">Depart</label>
+                    <input type="date" class="mt-1 w-full border border-slate-200 rounded-md px-3 py-2 text-sm no-outline" />
+                  </div>
+                  <div>
+                    <label class="block text-xs text-slate-600">Return</label>
+                    <input type="date" class="mt-1 w-full border border-slate-200 rounded-md px-3 py-2 text-sm no-outline" />
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-xs text-slate-600">Guest count</label>
+                  <select class="mt-1 w-full border border-slate-200 rounded-md px-3 py-2 text-sm no-outline">
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4+</option>
+                  </select>
+                </div>
+                <div class="pt-2">
+                  <button type="button" class="w-full inline-flex justify-center px-4 py-2 bg-[#0f172a] text-white rounded-md hover:bg-slate-900">Request Consultation</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / LOGOS -->
+    <section class="py-8">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-center gap-8 flex-wrap">
+          <!-- simple SVG logo marks -->
+          <svg width="96" height="32" viewBox="0 0 96 32" fill="none" aria-hidden>
+            <rect width="96" height="32" rx="4" fill="#fff" stroke="#e6e7eb"/>
+            <text x="48" y="20" text-anchor="middle" fill="#94a3b8" font-size="10">The Concierge</text>
+          </svg>
+          <svg width="96" height="32" viewBox="0 0 96 32" fill="none" aria-hidden>
+            <rect width="96" height="32" rx="4" fill="#fff" stroke="#e6e7eb"/>
+            <text x="48" y="20" text-anchor="middle" fill="#94a3b8" font-size="10">Voyage Club</text>
+          </svg>
+          <svg width="96" height="32" viewBox="0 0 96 32" fill="none" aria-hidden>
+            <rect width="96" height="32" rx="4" fill="#fff" stroke="#e6e7eb"/>
+            <text x="48" y="20" text-anchor="middle" fill="#94a3b8" font-size="10">Atlas Group</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-12">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold brand-color">What we provide</h2>
+          <p class="mt-2 text-slate-600 max-w-2xl mx-auto">Bespoke travel planning with local experts — curated stays, private experiences, and elevated support.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
+            <div class="flex items-center gap-4">
+              <div class="p-3 rounded-md bg-[#0f172a]"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z" fill="#F8E7B0"/></svg></div>
+              <div>
+                <h3 class="font-semibold">Curated experiences</h3>
+                <p class="text-sm text-slate-600 mt-1">Private access, bespoke activities, and cultural immersion.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
+            <div class="flex items-center gap-4">
+              <div class="p-3 rounded-md bg-[#0f172a]"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3v18" stroke="#F8E7B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+              <div>
+                <h3 class="font-semibold">Seamless logistics</h3>
+                <p class="text-sm text-slate-600 mt-1">Private transfers, fast reservations, and 24/7 support.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
+            <div class="flex items-center gap-4">
+              <div class="p-3 rounded-md bg-[#0f172a]"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#F8E7B0" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+              <div>
+                <h3 class="font-semibold">Trusted partners</h3>
+                <p class="text-sm text-slate-600 mt-1">High-touch hotels, hand-picked guides, and vetted experiences.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="py-12 bg-slate-50">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold brand-color">How it works</h2>
+          <p class="mt-2 text-slate-600">Three clear steps from idea to arrival — we handle everything in between.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white border border-slate-200 rounded-lg text-center shadow-sm">
+            <div class="mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-[#b2872b] text-white font-semibold">1</div>
+            <h3 class="mt-4 font-semibold">Consultation</h3>
+            <p class="mt-2 text-sm text-slate-600">Tell us your preferences, pace, and priorities.</p>
+          </div>
+
+          <div class="p-6 bg-white border border-slate-200 rounded-lg text-center shadow-sm">
+            <div class="mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-[#b2872b] text-white font-semibold">2</div>
+            <h3 class="mt-4 font-semibold">Design</h3>
+            <p class="mt-2 text-sm text-slate-600">We craft a tailored itinerary with exclusive options.</p>
+          </div>
+
+          <div class="p-6 bg-white border border-slate-200 rounded-lg text-center shadow-sm">
+            <div class="mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-[#b2872b] text-white font-semibold">3</div>
+            <h3 class="mt-4 font-semibold">Execute</h3>
+            <p class="mt-2 text-sm text-slate-600">Confirm bookings and travel with 24/7 concierge care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="py-12">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold brand-color">What clients say</h2>
+          <p class="mt-2 text-slate-600">Real feedback from our most recent journeys.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">KM</div>
+              <div>
+                <div class="font-semibold">K. Moreno</div>
+                <div class="text-xs text-slate-500">Founder, Lumina</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-600">"Aurea arranged an unforgettable private tour on short notice. Every detail was flawless — highly recommended."</p>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">AR</div>
+              <div>
+                <div class="font-semibold">A. Reynolds</div>
+                <div class="text-xs text-slate-500">Entrepreneur</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-600">"The itinerary mixed privacy and discovery perfectly. The local guide was exceptional."</p>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600">SD</div>
+              <div>
+                <div class="font-semibold">S. Duval</div>
+                <div class="text-xs text-slate-500">Creative Director</div>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-600">"Attention to detail from booking to farewell. Luxury without fuss."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section id="book" class="py-12 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold brand-color">Packages & Bespoke Planning</h2>
+          <p class="mt-2 text-slate-600">Transparent options — or contact us for a fully bespoke program.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
+            <div class="text-sm text-slate-500">Starter</div>
+            <div class="mt-2 text-3xl font-bold brand-color">From $4,500</div>
+            <p class="mt-3 text-sm text-slate-600">Curated 5-7 day trips with luxury stays and private transfers.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              <li>Private accommodations</li>
+              <li>Local guide for select days</li>
+              <li>Concierge support</li>
+            </ul>
+            <div class="mt-6">
+              <a href="#contact" class="inline-block w-full text-center px-4 py-2 border border-slate-200 rounded-md hover:bg-slate-100">Request pricing</a>
+            </div>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-lg">
+            <div class="text-sm text-slate-500">Signature</div>
+            <div class="mt-2 text-3xl font-bold brand-color">From $12,000</div>
+            <p class="mt-3 text-sm text-slate-600">Tailored itineraries, VIP access, private guides, and 24/7 concierge.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              <li>Fully bespoke design</li>
+              <li>Exclusive experiences</li>
+              <li>On-trip support</li>
+            </ul>
+            <div class="mt-6">
+              <a href="#contact" class="inline-block w-full text-center px-4 py-2 bg-[#0f172a] text-white rounded-md hover:bg-slate-900">Talk to a planner</a>
+            </div>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
+            <div class="text-sm text-slate-500">Elite</div>
+            <div class="mt-2 text-3xl font-bold brand-color">Custom quote</div>
+            <p class="mt-3 text-sm text-slate-600">For ultra-luxury programs, charters, and long-form explorations.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              <li>Charter & VIP services</li>
+              <li>Private villas & estates</li>
+              <li>Bespoke cultural programs</li>
+            </ul>
+            <div class="mt-6">
+              <a href="#contact" class="inline-block w-full text-center px-4 py-2 border border-slate-200 rounded-md hover:bg-slate-100">Request proposal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-12">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        <h2 class="text-2xl font-semibold brand-color text-center">Frequently asked questions</h2>
+        <div class="mt-6 space-y-4">
+          <details class="p-4 border border-slate-200 rounded-lg bg-white">
+            <summary class="cursor-pointer font-medium">How long does planning typically take?</summary>
+            <div class="mt-2 text-sm text-slate-600">We can assemble a proposal within 3-5 business days. Complex itineraries may require additional time for availability and bespoke requests.</div>
+          </details>
+
+          <details class="p-4 border border-slate-200 rounded-lg bg-white">
+            <summary class="cursor-pointer font-medium">Can you accommodate dietary and medical needs?</summary>
+            <div class="mt-2 text-sm text-slate-600">Yes — we coordinate directly with hotels and local partners to ensure appropriate arrangements for any dietary restrictions or medical requirements.</div>
+          </details>
+
+          <details class="p-4 border border-slate-200 rounded-lg bg-white">
+            <summary class="cursor-pointer font-medium">What is your cancellation policy?</summary>
+            <div class="mt-2 text-sm text-slate-600">Cancellation terms vary by supplier. We provide full transparency at booking and will advise on refunds and alternatives if plans change.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <div class="flex items-center gap-3">
+            <svg width="36" height="36" viewBox="0 0 48 48" fill="none" aria-hidden>
+              <rect width="48" height="48" rx="8" fill="#0f172a"/>
+              <path d="M24 12L30 30L18 24L24 12Z" fill="#F8E7B0"/>
+            </svg>
+            <div>
+              <div class="font-semibold brand-color">Aurea Travel</div>
+              <div class="text-sm text-slate-500">Bespoke luxury travel</div>
+            </div>
+          </div>
+          <p class="mt-4 text-sm text-slate-600">Email: hello@aureatravel.example<br/>Phone: +1 (555) 123-4567</p>
+        </div>
+
+        <div class="flex gap-8">
+          <div>
+            <div class="font-semibold text-sm text-slate-700">Company</div>
+            <ul class="mt-3 text-sm text-slate-600 space-y-2">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-semibold text-sm text-slate-700">Support</div>
+            <ul class="mt-3 text-sm text-slate-600 space-y-2">
+              <li><a href="#">Help center</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Privacy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="font-semibold text-sm text-slate-700">Newsletter</div>
+          <p class="text-sm text-slate-600 mt-2">Receive occasional trip ideas and invitations.</p>
+          <form class="mt-3 flex gap-2">
+            <input aria-label="Email" type="email" placeholder="Email address" class="px-3 py-2 border border-slate-200 rounded-md text-sm w-full no-outline" />
+            <button class="px-4 py-2 bg-[#0f172a] text-white rounded-md text-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="mt-8 border-t border-slate-100 pt-6 text-sm text-slate-500 text-center">© 2026 Aurea Travel. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

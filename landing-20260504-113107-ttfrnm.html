@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aurora Coffee — Premium Specialty Coffee</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for things Tailwind doesn't cover easily */
+    :root{
+      --bg:#f7f5f2; /* warm light */
+      --accent:#3b2f2f; /* deep espresso */
+      --muted:#6b6b6b; /* neutral text */
+      --card:#ffffff; /* card background */
+      --gold:#b78a39; /* premium accent */
+    }
+    html,body{background-color:var(--bg);}
+    /* Decorative coffee steam lines using CSS path stroke-dasharray would be overkill — keep simple */
+    .focus-ring:focus{outline:3px solid rgba(183,138,57,0.18); outline-offset:2px}
+  </style>
+</head>
+<body class="antialiased text-slate-900">
+  <header class="bg-transparent">
+    <nav class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <!-- Logo: coffee bean + wordmark -->
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect width="24" height="24" rx="6" fill="var(--card)" />
+          <path d="M7 8c2-3 8-3 10 0-2 3-8 3-10 0z" fill="var(--accent)" />
+          <path d="M12 6c1 2 1 3 0 5-2 0-3-1-4-3 2-1 3-2 4-2z" fill="#fff" opacity="0.06" />
+        </svg>
+        <span class="font-semibold text-lg" style="color:var(--accent)">Aurora Coffee</span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm">
+        <a href="#features" class="text-slate-700 hover:text-slate-900">Our Coffee</a>
+        <a href="#how" class="text-slate-700 hover:text-slate-900">How it Works</a>
+        <a href="#testimonials" class="text-slate-700 hover:text-slate-900">Testimonials</a>
+        <a href="#faq" class="text-slate-700 hover:text-slate-900">FAQ</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="#pricing" class="hidden md:inline-block px-4 py-2 border rounded-md text-sm font-medium" style="border-color:rgba(59,47,47,0.08)">Subscribe</a>
+        <a href="#cta" class="inline-flex items-center px-4 py-2 bg-[var(--accent)] text-white rounded-md text-sm font-medium hover:bg-black focus-ring">Order Online</a>
+        <button class="md:hidden ml-2 p-2 rounded-md border" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main class="max-w-7xl mx-auto px-6">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-12">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight" style="color:var(--accent)">Exceptional coffee, roasted for the bold.</h1>
+        <p class="mt-4 text-lg text-slate-700 max-w-xl">Single-origin beans, precise small-batch roasting, and curated blends — delivered to your door or served slow at our flagship café. Taste clarity and depth in every cup.</p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#cta" class="inline-flex items-center gap-3 px-5 py-3 bg-[var(--accent)] text-white rounded-md font-medium hover:brightness-95 focus-ring">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M3 10c0 3.866 3.582 7 8 7s8-3.134 8-7H3z" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 7H3" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            Order Now
+          </a>
+
+          <a href="#features" class="inline-flex items-center gap-2 px-5 py-3 border rounded-md text-sm font-medium" style="border-color:rgba(59,47,47,0.08)">Explore Blends</a>
+        </div>
+
+        <div class="mt-8 flex items-center gap-6">
+          <div class="flex items-center gap-3">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <rect width="24" height="24" rx="6" fill="var(--card)" />
+              <path d="M8 13s1.5 2 4 2 4-2 4-2" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <path d="M12 9v-3" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <div class="text-sm font-semibold">Roasted Weekly</div>
+              <div class="text-xs text-slate-600">Freshness prioritized for depth and clarity</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <rect width="24" height="24" rx="6" fill="var(--card)" />
+              <path d="M7 12h10" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M7 15h6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <div class="text-sm font-semibold">Sourced Responsibly</div>
+              <div class="text-xs text-slate-600">Direct relationships with growers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero illustration using SVG coffee cup -->
+      <div class="order-first md:order-last flex justify-center md:justify-end">
+        <div class="w-80 h-80 bg-[var(--card)] rounded-2xl shadow-lg border" style="border-color:rgba(59,47,47,0.06)">
+          <svg viewBox="0 0 200 200" class="w-full h-full p-6" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="200" height="200" rx="20" fill="none" />
+            <g transform="translate(10,10)">
+              <path d="M40 120c0-22 18-40 40-40h34c22 0 40 18 40 40v6H40v-6z" fill="#fff" stroke="var(--accent)" stroke-width="3"/>
+              <path d="M40 120h118" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/>
+              <path d="M80 60c0-12 10-22 22-22s22 10 22 22" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M110 38c0 6-4 10-8 12" stroke="var(--gold)" stroke-width="2" fill="none"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos / social proof -->
+    <section class="py-6">
+      <div class="bg-[var(--card)] border rounded-lg p-6 flex flex-wrap items-center justify-between gap-4 shadow-sm" style="border-color:rgba(59,47,47,0.04)">
+        <div class="flex items-center gap-6">
+          <span class="text-sm text-slate-500">Trusted by</span>
+          <div class="flex gap-6 items-center">
+            <!-- Inline minimal logos as SVGs -->
+            <svg width="80" height="28" viewBox="0 0 90 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect width="90" height="28" rx="6" fill="none" />
+              <text x="4" y="18" fill="#6b6b6b" font-family="sans-serif" font-size="12">The Roaster</text>
+            </svg>
+            <svg width="80" height="28" viewBox="0 0 90 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <text x="4" y="18" fill="#6b6b6b" font-family="sans-serif" font-size="12">Bistro Co.</text>
+            </svg>
+            <svg width="80" height="28" viewBox="0 0 90 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <text x="4" y="18" fill="#6b6b6b" font-family="sans-serif" font-size="12">Cloud Cafe</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="text-sm text-slate-600">Over <strong class="text-[var(--accent)]">120k</strong> cups served this year</div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-12">
+      <h2 class="text-2xl font-semibold" style="color:var(--accent)">What makes our coffee different</h2>
+      <p class="text-sm text-slate-600 mt-2 max-w-2xl">We focus on clarity — through sourcing, roasting, and brewing — so the origin and flavor shine through.</p>
+
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-[var(--card)] p-6 rounded-xl shadow-sm border" style="border-color:rgba(59,47,47,0.04)">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-[var(--gold)] flex items-center justify-center text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2v6" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M6.5 9.5C8 12 10 13 12 13s4-1 5.5-3.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Direct Trade</h3>
+              <p class="text-sm text-slate-600 mt-1">Partnered farms, transparent pricing, and quality-first relationships.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[var(--card)] p-6 rounded-xl shadow-sm border" style="border-color:rgba(59,47,47,0.04)">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-[var(--accent)] flex items-center justify-center text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M4 7h16M6 11h12M8 15h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Small-Batch Roasting</h3>
+              <p class="text-sm text-slate-600 mt-1">Roasts tuned to bring out origin characteristics and sweetness.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-[var(--card)] p-6 rounded-xl shadow-sm border" style="border-color:rgba(59,47,47,0.04)">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-lg bg-[var(--gold)] flex items-center justify-center text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 12h18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M12 3v18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Crafted Experiences</h3>
+              <p class="text-sm text-slate-600 mt-1">Tasting notes, brewing guides, and engaging café service.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="py-12">
+      <div class="grid md:grid-cols-3 gap-6 items-start">
+        <div class="md:col-span-1">
+          <h2 class="text-2xl font-semibold" style="color:var(--accent)">How it works</h2>
+          <p class="text-sm text-slate-600 mt-2">Three simple steps to get premium coffee at home or in your café.</p>
+        </div>
+
+        <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-[var(--card)] p-5 rounded-xl border shadow-sm" style="border-color:rgba(59,47,47,0.04)">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[var(--accent)] text-white flex items-center justify-center">1</div>
+              <div>
+                <h4 class="font-semibold">Choose a roast</h4>
+                <p class="text-sm text-slate-600">Single origin or our signature blends, with tasting notes.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[var(--card)] p-5 rounded-xl border shadow-sm" style="border-color:rgba(59,47,47,0.04)">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[var(--gold)] text-white flex items-center justify-center">2</div>
+              <div>
+                <h4 class="font-semibold">Roasted to order</h4>
+                <p class="text-sm text-slate-600">Small batches roasted the week you order for maximum freshness.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-[var(--card)] p-5 rounded-xl border shadow-sm" style="border-color:rgba(59,47,47,0.04)">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-[var(--accent)] text-white flex items-center justify-center">3</div>
+              <div>
+                <h4 class="font-semibold">Brew & enjoy</h4>
+                <p class="text-sm text-slate-600">Brew guides included. Sip to discover the origin story behind every cup.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-12">
+      <h2 class="text-2xl font-semibold" style="color:var(--accent)">What fans say</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="bg-[var(--card)] p-6 rounded-xl shadow-sm border" style="border-color:rgba(59,47,47,0.04)">
+          <p class="text-slate-700">"The clarity of the cup is unmatched — floral notes with a clean finish. Their subscription makes mornings effortless."</p>
+          <footer class="mt-4 text-sm text-slate-600 flex items-center gap-3">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <circle cx="12" cy="12" r="10" fill="#efe6d8" />
+              <text x="12" y="16" text-anchor="middle" font-size="10" fill="#6b6b6b" font-family="sans-serif">AM</text>
+            </svg>
+            <div>
+              <div class="font-semibold">A. Morgan</div>
+              <div class="text-xs">Barista & Home Brewer</div>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="bg-[var(--card)] p-6 rounded-xl shadow-sm border" style="border-color:rgba(59,47,47,0.04)">
+          <p class="text-slate-700">"Great packaging, clear tasting notes, and the beans arrive perfectly roasted. A new favorite for our café menu."</p>
+          <footer class="mt-4 text-sm text-slate-600 flex items-center gap-3">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <circle cx="12" cy="12" r="10" fill="#efe6d8" />
+              <text x="12" y="16" text-anchor="middle" font-size="10" fill="#6b6b6b" font-family="sans-serif">RK</text>
+            </svg>
+            <div>
+              <div class="font-semibold">R. Kwan</div>
+              <div class="text-xs">Café Owner</div>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="bg-[var(--card)] p-6 rounded-xl shadow-sm border" style="border-color:rgba(59,47,47,0.04)">
+          <p class="text-slate-700">"Subscription flexibility is excellent and the brewing tips helped me clean up my extraction. Highly recommend."</p>
+          <footer class="mt-4 text-sm text-slate-600 flex items-center gap-3">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <circle cx="12" cy="12" r="10" fill="#efe6d8" />
+              <text x="12" y="16" text-anchor="middle" font-size="10" fill="#6b6b6b" font-family="sans-serif">CS</text>
+            </svg>
+            <div>
+              <div class="font-semibold">C. Silva</div>
+              <div class="text-xs">Home Brewer</div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="pricing" class="py-12">
+      <div class="bg-[var(--card)] p-8 rounded-xl border shadow-lg" style="border-color:rgba(59,47,47,0.04)">
+        <div class="md:flex md:items-center md:justify-between">
+          <div>
+            <h3 class="text-xl font-semibold" style="color:var(--accent)">Subscription starting at <span class="text-[var(--gold)]">$14</span>/month</h3>
+            <p class="text-sm text-slate-600 mt-1">Customize frequency, grind, and blends. Pause or cancel anytime.</p>
+          </div>
+
+          <div class="mt-4 md:mt-0 flex gap-3 items-center">
+            <a id="cta" href="#" class="px-5 py-3 bg-[var(--accent)] text-white rounded-md font-medium hover:brightness-95 focus-ring">Get Started</a>
+            <a href="#features" class="px-4 py-3 border rounded-md text-sm" style="border-color:rgba(59,47,47,0.08)">See Plans</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-12">
+      <h2 class="text-2xl font-semibold" style="color:var(--accent)">Frequently asked questions</h2>
+      <dl class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-[var(--card)] p-5 rounded-lg border" style="border-color:rgba(59,47,47,0.04)">
+          <dt class="font-semibold">Do you offer single-origin beans?</dt>
+          <dd class="text-sm text-slate-600 mt-2">Yes — we rotate single origins seasonally and provide tasting notes for each lot.</dd>
+        </div>
+        <div class="bg-[var(--card)] p-5 rounded-lg border" style="border-color:rgba(59,47,47,0.04)">
+          <dt class="font-semibold">Can I change my subscription?</dt>
+          <dd class="text-sm text-slate-600 mt-2">You can change grind, frequency, and pause/cancel from your account dashboard at any time.</dd>
+        </div>
+
+        <div class="bg-[var(--card)] p-5 rounded-lg border" style="border-color:rgba(59,47,47,0.04)">
+          <dt class="font-semibold">How quickly do you ship?</dt>
+          <dd class="text-sm text-slate-600 mt-2">Orders roast the week they ship. Standard delivery is 2–5 business days within the region.</dd>
+        </div>
+        <div class="bg-[var(--card)] p-5 rounded-lg border" style="border-color:rgba(59,47,47,0.04)">
+          <dt class="font-semibold">Do you provide brewing guides?</dt>
+          <dd class="text-sm text-slate-600 mt-2">Every order includes tuning notes and a brew guide optimized for that roast.</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-12 border-t" style="border-color:rgba(59,47,47,0.04)">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <div class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect width="24" height="24" rx="6" fill="var(--card)" />
+            <path d="M7 8c2-3 8-3 10 0-2 3-8 3-10 0z" fill="var(--accent)" />
+          </svg>
+          <div>
+            <div class="font-semibold" style="color:var(--accent)">Aurora Coffee</div>
+            <div class="text-sm text-slate-600">Small-batch roastery & café</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-8 justify-center">
+        <div>
+          <h4 class="font-semibold">Company</h4>
+          <ul class="text-sm text-slate-600 mt-2 space-y-2">
+            <li><a href="#" class="hover:text-slate-900">About</a></li>
+            <li><a href="#" class="hover:text-slate-900">Careers</a></li>
+            <li><a href="#" class="hover:text-slate-900">Wholesale</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold">Support</h4>
+          <ul class="text-sm text-slate-600 mt-2 space-y-2">
+            <li><a href="#" class="hover:text-slate-900">Contact</a></li>
+            <li><a href="#" class="hover:text-slate-900">Shipping</a></li>
+            <li><a href="#" class="hover:text-slate-900">Returns</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-sm text-slate-600 flex flex-col items-start md:items-end">
+        <div>123 Roaster Lane<br/>Coffee City, CC 12345</div>
+        <div class="mt-4">© <span id="year">2026</span> Aurora Coffee</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pennywise — Personal Finance That Fits Your Life</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Minor detail styling for <details> and accessibility touches */
+    details summary::-webkit-details-marker { display:none }
+    summary { list-style: none; }
+    details summary { cursor: pointer; }
+    details[open] summary .chev { transform: rotate(90deg); }
+    .chev { transition: transform .2s ease; }
+    /* small phone mock shadow tweak */
+    .phone-mock { box-shadow: 0 12px 30px rgba(16,24,40,0.12); }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-slate-50">
+
+  <!-- NAVBAR -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <!-- logo -->
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect width="24" height="24" rx="6" fill="#0EA5A4"/>
+          <path d="M7 13c1.5-3 4-5 7-5v6" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="font-semibold text-lg">Pennywise</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-600">
+        <a href="#features" class="hover:text-slate-900">Features</a>
+        <a href="#how" class="hover:text-slate-900">How it works</a>
+        <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+        <a href="#faq" class="hover:text-slate-900">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden md:inline-block px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900">Log in</a>
+        <a href="#cta" class="inline-block px-4 py-2 bg-emerald-500 text-white text-sm font-semibold rounded-md shadow-sm hover:bg-emerald-600">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="max-w-7xl mx-auto px-6 py-16 lg:py-24 grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div>
+        <p class="inline-flex items-center text-xs font-medium uppercase tracking-wide text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded">New — mobile budgeting</p>
+        <h1 class="mt-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">Personal finance made simple — on your phone</h1>
+        <p class="mt-4 text-lg text-slate-600 max-w-xl">Pennywise helps you track spending, build savings, and reach goals with clear, friendly tools that work automatically. No clutter — just better decisions.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a id="cta" href="#pricing" class="inline-flex items-center gap-2 px-5 py-3 bg-emerald-500 text-white rounded-md font-semibold shadow-sm hover:bg-emerald-600">Create free account
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a href="#how" class="inline-flex items-center gap-2 px-5 py-3 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-50">How it works</a>
+        </div>
+
+        <!-- social proof -->
+        <div class="mt-8">
+          <p class="text-sm text-slate-500">Trusted by teams and individuals at</p>
+          <div class="mt-4 flex items-center gap-6">
+            <!-- Logos: simple inline SVGs -->
+            <svg width="84" height="28" viewBox="0 0 84 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-80">
+              <rect width="84" height="28" rx="4" fill="#111827"/>
+            </svg>
+            <svg width="84" height="28" viewBox="0 0 84 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-60">
+              <rect width="84" height="28" rx="4" fill="#0EA5A4"/>
+            </svg>
+            <svg width="84" height="28" viewBox="0 0 84 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-60">
+              <rect width="84" height="28" rx="4" fill="#3730A3"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- phone mockup / features preview -->
+      <div class="flex justify-center lg:justify-end">
+        <div class="w-72 phone-mock bg-white border border-slate-200 rounded-3xl overflow-hidden">
+          <div class="p-4 bg-slate-100 border-b border-slate-200">
+            <div class="w-14 h-2 bg-slate-300 rounded mx-auto"></div>
+          </div>
+          <div class="p-4">
+            <!-- mini dashboard -->
+            <div class="bg-white rounded-lg p-4 shadow-inner">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-sm text-slate-500">Balance</p>
+                  <p class="mt-1 text-xl font-semibold text-slate-900">$8,420.25</p>
+                </div>
+                <div class="text-right">
+                  <p class="text-sm text-emerald-600 font-semibold">+3.6%</p>
+                  <p class="text-xs text-slate-400">since last week</p>
+                </div>
+              </div>
+
+              <div class="mt-4 grid grid-cols-3 gap-2 text-center">
+                <div class="p-2 bg-emerald-50 rounded">
+                  <p class="text-xs text-slate-600">Saved</p>
+                  <p class="mt-1 text-sm font-semibold">$1,250</p>
+                </div>
+                <div class="p-2 bg-slate-50 rounded">
+                  <p class="text-xs text-slate-600">Spent</p>
+                  <p class="mt-1 text-sm font-semibold">$320</p>
+                </div>
+                <div class="p-2 bg-slate-50 rounded">
+                  <p class="text-xs text-slate-600">Budget</p>
+                  <p class="mt-1 text-sm font-semibold">$420</p>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <div class="h-2 bg-slate-200 rounded-full overflow-hidden">
+                  <div class="h-2 bg-emerald-500" style="width:46%"></div>
+                </div>
+                <p class="mt-2 text-xs text-slate-500">Goal: Emergency Fund — 46% complete</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="max-w-7xl mx-auto px-6 py-12">
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="p-6 bg-white border border-slate-200 rounded-lg shadow-sm">
+          <div class="w-12 h-12 rounded-md bg-emerald-50 flex items-center justify-center">
+            <svg class="w-6 h-6 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v8m-4-4h8" />
+            </svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-slate-900">Automatic budgets</h3>
+          <p class="mt-2 text-sm text-slate-600">Smart categories that adapt to your spending — and gently keep you on track.</p>
+        </div>
+
+        <div class="p-6 bg-white border border-slate-200 rounded-lg shadow-sm">
+          <div class="w-12 h-12 rounded-md bg-emerald-50 flex items-center justify-center">
+            <svg class="w-6 h-6 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 10h18M12 3v18" />
+            </svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-slate-900">Clear insights</h3>
+          <p class="mt-2 text-sm text-slate-600">Visual breakdowns, trends, and alerts that highlight what matters most.</p>
+        </div>
+
+        <div class="p-6 bg-white border border-slate-200 rounded-lg shadow-sm">
+          <div class="w-12 h-12 rounded-md bg-emerald-50 flex items-center justify-center">
+            <svg class="w-6 h-6 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3zM6 20v-1a4 4 0 014-4h4a4 4 0 014 4v1" />
+            </svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-slate-900">Bank-level security</h3>
+          <p class="mt-2 text-sm text-slate-600">Encrypted connections and read-only integrations keep your data safe.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="bg-white border-t border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-semibold text-slate-900">How Pennywise works</h2>
+        <p class="mt-2 text-sm text-slate-600">Three simple steps to smarter money.</p>
+
+        <div class="mt-8 grid gap-8 md:grid-cols-3">
+          <div class="flex gap-4">
+            <div class="flex-none w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-semibold">1</div>
+            <div>
+              <h4 class="font-semibold text-slate-900">Connect your accounts</h4>
+              <p class="mt-2 text-sm text-slate-600">Securely sync your accounts in read-only mode — no manual imports.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-none w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-semibold">2</div>
+            <div>
+              <h4 class="font-semibold text-slate-900">Set goals & budgets</h4>
+              <p class="mt-2 text-sm text-slate-600">Create goals for rent, travel, or rainy days — we help you stay on track.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-none w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-semibold">3</div>
+            <div>
+              <h4 class="font-semibold text-slate-900">Watch progress</h4>
+              <p class="mt-2 text-sm text-slate-600">Daily insights and simple recommendations to improve your financial health.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-semibold text-slate-900">What our customers say</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        <blockquote class="p-6 bg-white border border-slate-200 rounded-lg shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 font-semibold">AH</div>
+            <div>
+              <p class="font-semibold text-slate-900">Aisha H.</p>
+              <p class="text-xs text-slate-500">Freelancer</p>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-600">"Pennywise made my monthly budget painless. I finally feel in control of my spending without tedious spreadsheets."</p>
+        </blockquote>
+
+        <blockquote class="p-6 bg-white border border-slate-200 rounded-lg shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 font-semibold">JM</div>
+            <div>
+              <p class="font-semibold text-slate-900">James M.</p>
+              <p class="text-xs text-slate-500">Product Manager</p>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-600">"The insights are concise and genuinely useful. I saved more in three months than I thought possible."</p>
+        </blockquote>
+
+        <blockquote class="p-6 bg-white border border-slate-200 rounded-lg shadow-sm">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-700 font-semibold">LR</div>
+            <div>
+              <p class="font-semibold text-slate-900">Lina R.</p>
+              <p class="text-xs text-slate-500">Designer</p>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-600">"Beautiful UI and smart recommendations. The app made it easy to build an emergency fund."</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section id="pricing" class="max-w-7xl mx-auto px-6 py-12 bg-white border-t border-b border-slate-200">
+      <div class="grid gap-8 lg:grid-cols-2 items-center">
+        <div>
+          <h2 class="text-2xl font-semibold text-slate-900">Simple pricing. Start free.</h2>
+          <p class="mt-2 text-sm text-slate-600">Free plan includes budgeting, insights, and basic goals. Upgrade for advanced features and priority support.</p>
+          <div class="mt-6 flex gap-3">
+            <a href="#" class="inline-flex items-center gap-2 px-4 py-3 bg-emerald-500 text-white rounded-md font-semibold hover:bg-emerald-600">Start free</a>
+            <a href="#" class="inline-flex items-center gap-2 px-4 py-3 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-50">Compare plans</a>
+          </div>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <div class="p-6 bg-white border border-slate-200 rounded-lg">
+            <h3 class="font-semibold text-slate-900">Free</h3>
+            <p class="mt-1 text-3xl font-extrabold text-slate-900">$0<span class="text-sm font-medium text-slate-500">/mo</span></p>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>Unlimited budgeting</li>
+              <li>Spending insights</li>
+              <li>Basic goals</li>
+            </ul>
+            <div class="mt-4">
+              <a href="#" class="inline-block w-full text-center px-3 py-2 bg-slate-100 rounded-md text-slate-700">Create account</a>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white border border-slate-200 rounded-lg">
+            <h3 class="font-semibold text-slate-900">Pro</h3>
+            <p class="mt-1 text-3xl font-extrabold text-slate-900">$9<span class="text-sm font-medium text-slate-500">/mo</span></p>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>Advanced reports</li>
+              <li>Priority support</li>
+              <li>Multi-device syncing</li>
+            </ul>
+            <div class="mt-4">
+              <a href="#" class="inline-block w-full text-center px-3 py-2 bg-emerald-500 text-white rounded-md hover:bg-emerald-600">Upgrade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-7xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-semibold text-slate-900">Frequently asked questions</h2>
+      <div class="mt-6 grid gap-4 md:grid-cols-2">
+        <details class="p-4 bg-white border border-slate-200 rounded-lg">
+          <summary class="flex justify-between items-center">
+            <span class="text-slate-800 font-medium">Is my data safe?</span>
+            <svg class="chev w-5 h-5 text-slate-500" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 8l4 4 4-4" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-600">We use bank-level encryption and read-only integrations. We never store your bank credentials.</p>
+        </details>
+
+        <details class="p-4 bg-white border border-slate-200 rounded-lg">
+          <summary class="flex justify-between items-center">
+            <span class="text-slate-800 font-medium">Which banks are supported?</span>
+            <svg class="chev w-5 h-5 text-slate-500" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 8l4 4 4-4" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-600">We support thousands of institutions through secure partners. If yours is missing, contact support and we’ll add it.</p>
+        </details>
+
+        <details class="p-4 bg-white border border-slate-200 rounded-lg">
+          <summary class="flex justify-between items-center">
+            <span class="text-slate-800 font-medium">Can I cancel anytime?</span>
+            <svg class="chev w-5 h-5 text-slate-500" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 8l4 4 4-4" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-600">Yes. Billing is monthly and you can cancel from your account settings at any time.</p>
+        </details>
+
+        <details class="p-4 bg-white border border-slate-200 rounded-lg">
+          <summary class="flex justify-between items-center">
+            <span class="text-slate-800 font-medium">Do you offer family plans?</span>
+            <svg class="chev w-5 h-5 text-slate-500" viewBox="0 0 20 20" fill="none" stroke="currentColor" aria-hidden>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 8l4 4 4-4" />
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-600">Family plans are available for teams and households — contact sales for larger accounts and custom pricing.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-6 py-10 grid gap-8 md:grid-cols-3">
+        <div>
+          <a href="#" class="flex items-center gap-3">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect width="24" height="24" rx="6" fill="#0EA5A4"/>
+              <path d="M7 13c1.5-3 4-5 7-5v6" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="font-semibold text-lg">Pennywise</span>
+          </a>
+          <p class="mt-4 text-sm text-slate-600">A simple, secure mobile app to help you control spending and save more.</p>
+        </div>
+
+        <div class="text-sm text-slate-600">
+          <h4 class="font-semibold text-slate-900">Product</h4>
+          <ul class="mt-3 space-y-2">
+            <li><a href="#features" class="hover:text-slate-900">Features</a></li>
+            <li><a href="#how" class="hover:text-slate-900">How it works</a></li>
+            <li><a href="#pricing" class="hover:text-slate-900">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="text-sm text-slate-600">
+          <h4 class="font-semibold text-slate-900">Company</h4>
+          <ul class="mt-3 space-y-2">
+            <li><a href="#" class="hover:text-slate-900">About</a></li>
+            <li><a href="#" class="hover:text-slate-900">Careers</a></li>
+            <li><a href="#" class="hover:text-slate-900">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between text-sm text-slate-500">
+          <p>&copy; 2026 Pennywise, Inc. All rights reserved.</p>
+          <div class="mt-3 md:mt-0 flex items-center gap-4">
+            <a href="#" class="hover:text-slate-700">Privacy</a>
+            <a href="#" class="hover:text-slate-700">Terms</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PeakForm — Personal Fitness Coaching App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Small custom styles for elements Tailwind doesn't cover succinctly */
+      .phone-mock svg { width: 280px; height: auto; }
+      @media (min-width: 768px) { .phone-mock svg { width: 360px; } }
+      .card-border { border-color: rgba(15,23,42,0.06); }
+      /* subtle focus ring for keyboard users */
+      .focus-ring:focus { outline: 2px solid rgba(99,102,241,0.18); outline-offset: 2px; }
+      /* ensure details summary caret is subtle */
+      details summary::-webkit-details-marker { display: none; }
+    </style>
+  </head>
+  <body class="antialiased text-slate-800 bg-white">
+    <!-- NAVBAR -->
+    <header class="border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <!-- Logo: abstract peak + text -->
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0">
+            <rect width="24" height="24" rx="6" fill="#111827"></rect>
+            <path d="M6 15L10 9L14 13L18 7" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="text-lg font-semibold tracking-tight">PeakForm</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm text-slate-600">
+          <a href="#features" class="hover:text-slate-900">Features</a>
+          <a href="#how" class="hover:text-slate-900">How it works</a>
+          <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+          <a href="#faq" class="hover:text-slate-900">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="#" class="text-sm text-slate-600 hover:text-slate-900">Sign in</a>
+          <a href="#pricing" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md shadow-sm hover:bg-indigo-700 focus-ring">Start free trial</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section class="max-w-7xl mx-auto px-6 py-14 grid gap-12 md:grid-cols-2 items-center">
+        <div>
+          <p class="inline-flex items-center text-sm text-green-600 font-semibold gap-2 mb-4">
+            <span class="sr-only">New</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="flex-shrink-0">
+              <circle cx="12" cy="12" r="10" stroke="#10B981" stroke-width="1.5"></circle>
+              <path d="M8 12l2 2 6-6" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Personalized coaching — now with live form feedback
+          </p>
+
+          <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">Train smarter, stay consistent, and reach peak form.</h1>
+
+          <p class="mt-4 text-slate-600 max-w-xl">PeakForm pairs adaptive training plans, short guided workouts, and real-time form cues — all in a clean, coach-first mobile experience designed to get results without overcomplicating your day.</p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#pricing" class="inline-flex items-center px-5 py-3 bg-indigo-600 text-white rounded-md text-sm font-medium hover:bg-indigo-700 shadow">Start 14-day trial</a>
+            <a href="#how" class="inline-flex items-center px-5 py-3 border border-slate-200 rounded-md text-sm text-slate-700 hover:bg-slate-50">See how it works</a>
+          </div>
+
+          <div class="mt-8 flex items-center gap-6">
+            <div class="flex items-center gap-3">
+              <div class="p-3 bg-slate-50 rounded-md border card-border">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 3v9" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19 21H5" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M7 10c1.5-1 2-3 5-3s3.5 2 5 3" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-sm font-semibold">AI-powered plans</div>
+                <div class="text-sm text-slate-500">Adaptive workouts based on progress</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="p-3 bg-slate-50 rounded-md border card-border">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2v6" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4 21h16" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20 8l-8 6-8-6" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <div class="text-sm font-semibold">Live form cues</div>
+                <div class="text-sm text-slate-500">Real-time feedback to avoid injury</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone mockup -->
+        <div class="flex justify-center md:justify-end">
+          <div class="phone-mock drop-shadow-lg">
+            <!-- stylized phone with simple UI using SVG shapes -->
+            <svg viewBox="0 0 320 640" xmlns="http://www.w3.org/2000/svg" class="rounded-2xl" role="img" aria-labelledby="mockTitle" >
+              <title id="mockTitle">PeakForm app mockup</title>
+              <rect x="4" y="4" width="312" height="632" rx="36" fill="#0F172A" />
+              <rect x="26" y="48" width="268" height="520" rx="18" fill="#FFFFFF" />
+
+              <!-- header inside phone -->
+              <rect x="40" y="68" width="220" height="28" rx="6" fill="#111827" opacity="0.95" />
+              <rect x="40" y="106" width="240" height="14" rx="4" fill="#E6E7EB" />
+
+              <!-- metrics cards -->
+              <rect x="40" y="136" width="116" height="76" rx="10" fill="#F8FAFC" />
+              <rect x="164" y="136" width="116" height="76" rx="10" fill="#F8FAFC" />
+              <text x="98" y="176" font-size="18" fill="#111827" font-family="sans-serif" font-weight="700" text-anchor="middle">42</text>
+              <text x="98" y="192" font-size="10" fill="#6B7280" font-family="sans-serif" text-anchor="middle">min</text>
+              <text x="226" y="176" font-size="18" fill="#111827" font-family="sans-serif" font-weight="700" text-anchor="middle">3</text>
+              <text x="226" y="192" font-size="10" fill="#6B7280" font-family="sans-serif" text-anchor="middle">workouts</text>
+
+              <!-- progress ring simplified -->
+              <circle cx="100" cy="260" r="36" stroke="#10B981" stroke-width="6" fill="none" />
+              <text x="100" y="268" font-size="12" fill="#111827" font-family="sans-serif" font-weight="700" text-anchor="middle">72%</text>
+
+              <!-- list of workouts -->
+              <rect x="40" y="308" width="240" height="12" rx="6" fill="#F3F4F6" />
+              <rect x="40" y="332" width="180" height="12" rx="6" fill="#F3F4F6" />
+              <rect x="40" y="356" width="220" height="12" rx="6" fill="#F3F4F6" />
+
+              <!-- play button at bottom -->
+              <rect x="88" y="404" width="144" height="44" rx="10" fill="#111827" />
+              <path d="M114 430l20-12v24l-20-12z" fill="#10B981" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOCIAL PROOF / LOGOS -->
+      <section class="border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-8 flex items-center justify-center gap-10 flex-wrap">
+          <!-- Inline logos as simple monograms -->
+          <div class="flex items-center gap-6 opacity-90">
+            <svg width="84" height="24" viewBox="0 0 84 24" fill="none"><rect width="84" height="24" fill="transparent"/><text x="0" y="16" font-size="14" fill="#374151" font-family="sans-serif">Used by teams at</text></svg>
+            <svg width="64" height="24" viewBox="0 0 64 24" fill="none"><rect width="24" height="24" rx="4" fill="#111827"/><text x="32" y="16" font-size="12" fill="#111827" font-family="sans-serif">FitCo</text></svg>
+            <svg width="64" height="24" viewBox="0 0 64 24" fill="none"><rect width="24" height="24" rx="4" fill="#111827"/><text x="32" y="16" font-size="12" fill="#111827" font-family="sans-serif">GymX</text></svg>
+            <svg width="64" height="24" viewBox="0 0 64 24" fill="none"><rect width="24" height="24" rx="4" fill="#111827"/><text x="32" y="16" font-size="12" fill="#111827" font-family="sans-serif">Well</text></svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section id="features" class="max-w-7xl mx-auto px-6 py-16">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-2xl font-bold">Everything you need to train consistently</h2>
+          <p class="mt-3 text-slate-600">A single app for programs, short guidance, and data that actually helps you improve.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="p-6 bg-white border card-border rounded-lg shadow-sm">
+            <div class="mb-4 p-3 inline-flex items-center justify-center rounded-md bg-green-50">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12h14" stroke="#059669" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="text-sm font-semibold">Adaptive training</h3>
+            <p class="mt-2 text-sm text-slate-500">Plans that evolve with your progress and schedule.</p>
+          </div>
+
+          <div class="p-6 bg-white border card-border rounded-lg shadow-sm">
+            <div class="mb-4 p-3 inline-flex items-center justify-center rounded-md bg-indigo-50">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2v20" stroke="#4F46E5" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="text-sm font-semibold">Form feedback</h3>
+            <p class="mt-2 text-sm text-slate-500">Short cues to keep every rep safe and effective.</p>
+          </div>
+
+          <div class="p-6 bg-white border card-border rounded-lg shadow-sm">
+            <div class="mb-4 p-3 inline-flex items-center justify-center rounded-md bg-slate-50">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#111827" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="text-sm font-semibold">Short guided workouts</h3>
+            <p class="mt-2 text-sm text-slate-500">10–30 minute sessions you can finish anywhere.</p>
+          </div>
+
+          <div class="p-6 bg-white border card-border rounded-lg shadow-sm">
+            <div class="mb-4 p-3 inline-flex items-center justify-center rounded-md bg-slate-50">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2" stroke="#111827" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="text-sm font-semibold">Coach dashboard</h3>
+            <p class="mt-2 text-sm text-slate-500">Insightful metrics so coaches scale without losing quality.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section id="how" class="bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 py-16">
+          <div class="text-center max-w-2xl mx-auto">
+            <h2 class="text-2xl font-bold">How PeakForm works</h2>
+            <p class="mt-3 text-slate-600">Three steps to a smarter training cycle.</p>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <div class="p-6 bg-white rounded-lg border card-border">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center bg-indigo-600 text-white font-semibold">1</div>
+              <h3 class="mt-4 font-semibold">Tell us your goal</h3>
+              <p class="mt-2 text-sm text-slate-500">Choose strength, endurance, or mobility. We'll create a weekly plan.</p>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg border card-border">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center bg-green-600 text-white font-semibold">2</div>
+              <h3 class="mt-4 font-semibold">Follow guided sessions</h3>
+              <p class="mt-2 text-sm text-slate-500">Short coach-led workouts with form cues and progress tracking.</p>
+            </div>
+
+            <div class="p-6 bg-white rounded-lg border card-border">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center bg-slate-700 text-white font-semibold">3</div>
+              <h3 class="mt-4 font-semibold">See measurable progress</h3>
+              <p class="mt-2 text-sm text-slate-500">Adjust intensity automatically as you improve, keep momentum.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-2xl font-bold">Trusted by athletes and coaches</h2>
+          <p class="mt-3 text-slate-600">Real results from real people using PeakForm in their training.</p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <blockquote class="p-6 bg-white border card-border rounded-lg">
+            <p class="text-slate-700">"PeakForm taught me to focus on consistent progress instead of chasing PRs. My lifting technique improved and so did my confidence."</p>
+            <div class="mt-4 flex items-center gap-3">
+              <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-700">AH</div>
+              <div>
+                <div class="text-sm font-semibold">Alex H., Competitive lifter</div>
+                <div class="text-xs text-slate-500">Member since 2023</div>
+              </div>
+            </div>
+          </blockquote>
+
+          <blockquote class="p-6 bg-white border card-border rounded-lg">
+            <p class="text-slate-700">"As a coach, PeakForm helps me scale personalized programs. The dashboard saves me hours each week."</p>
+            <div class="mt-4 flex items-center gap-3">
+              <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-700">KM</div>
+              <div>
+                <div class="text-sm font-semibold">Kate M., Strength coach</div>
+                <div class="text-xs text-slate-500">Coach since 2022</div>
+              </div>
+            </div>
+          </blockquote>
+
+          <blockquote class="p-6 bg-white border card-border rounded-lg">
+            <p class="text-slate-700">"The short workouts make it easy to stay consistent with my busy schedule — and the live cues keep me safe."</p>
+            <div class="mt-4 flex items-center gap-3">
+              <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-700">RB</div>
+              <div>
+                <div class="text-sm font-semibold">R. Brown, Weekend warrior</div>
+                <div class="text-xs text-slate-500">Member since 2024</div>
+              </div>
+            </div>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- PRICING / CTA -->
+      <section id="pricing" class="bg-gradient-to-b from-transparent to-transparent">
+        <div class="max-w-7xl mx-auto px-6 py-16">
+          <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-2xl font-bold">Simple pricing, all features included</h2>
+            <p class="mt-2 text-slate-600">No surprise fees. Upgrade for coaching features and athlete management.</p>
+          </div>
+
+          <div class="mt-8 grid gap-6 md:grid-cols-3 items-start">
+            <div class="p-6 rounded-lg border card-border bg-white">
+              <div class="text-sm font-semibold text-slate-500">Starter</div>
+              <div class="mt-4 flex items-baseline gap-2">
+                <span class="text-3xl font-bold">$0</span>
+                <span class="text-sm text-slate-500">/ month</span>
+              </div>
+              <p class="mt-3 text-sm text-slate-600">Personal plan, guided workouts, basic metrics.</p>
+              <a href="#" class="mt-6 inline-block px-4 py-2 border rounded-md text-sm hover:bg-slate-50">Get started</a>
+            </div>
+
+            <div class="p-6 rounded-lg border card-border bg-white shadow-md transform md:scale-105">
+              <div class="text-sm font-semibold text-indigo-600">Most popular</div>
+              <div class="mt-4 flex items-baseline gap-2">
+                <span class="text-3xl font-bold">$12</span>
+                <span class="text-sm text-slate-500">/ month</span>
+              </div>
+              <p class="mt-3 text-sm text-slate-600">Adaptive plans, form cues, priority support.</p>
+              <a href="#" class="mt-6 inline-block px-4 py-2 bg-indigo-600 text-white rounded-md text-sm hover:bg-indigo-700">Start trial</a>
+            </div>
+
+            <div class="p-6 rounded-lg border card-border bg-white">
+              <div class="text-sm font-semibold text-slate-500">Coach</div>
+              <div class="mt-4 flex items-baseline gap-2">
+                <span class="text-3xl font-bold">$49</span>
+                <span class="text-sm text-slate-500">/ month</span>
+              </div>
+              <p class="mt-3 text-sm text-slate-600">Team tools, athlete management, bulk uploads.</p>
+              <a href="#" class="mt-6 inline-block px-4 py-2 border rounded-md text-sm hover:bg-slate-50">Request demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="max-w-7xl mx-auto px-6 py-16">
+        <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-2xl font-bold">Frequently asked questions</h2>
+        </div>
+
+        <div class="mt-8 max-w-3xl mx-auto space-y-4">
+          <details class="p-5 border card-border rounded-md">
+            <summary class="cursor-pointer text-sm font-medium">Do you need any equipment?</summary>
+            <div class="mt-3 text-sm text-slate-600">No — many workouts require only bodyweight. We provide equipment filters for kettlebells, barbells, and bands.</div>
+          </details>
+
+          <details class="p-5 border card-border rounded-md">
+            <summary class="cursor-pointer text-sm font-medium">How accurate are the form cues?</summary>
+            <div class="mt-3 text-sm text-slate-600">Form cues combine camera-based posture cues with your coach's guidance. They are meant as a supplement, not a medical device.</div>
+          </details>
+
+          <details class="p-5 border card-border rounded-md">
+            <summary class="cursor-pointer text-sm font-medium">What's the refund policy?</summary>
+            <div class="mt-3 text-sm text-slate-600">We offer a 14-day money-back guarantee on paid plans. Contact support to request a refund.</div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-100 bg-white">
+      <div class="max-w-7xl mx-auto px-6 py-10 grid gap-8 md:grid-cols-3">
+        <div>
+          <a href="#" class="flex items-center gap-3">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#111827"/></svg>
+            <span class="text-lg font-semibold">PeakForm</span>
+          </a>
+          <p class="mt-4 text-sm text-slate-500">Science-backed coaching and practical tools to make training consistent and safe.</p>
+        </div>
+
+        <div class="flex gap-8">
+          <div>
+            <h4 class="text-sm font-semibold">Product</h4>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li><a href="#features" class="hover:text-slate-900">Features</a></li>
+              <li><a href="#how" class="hover:text-slate-900">How it works</a></li>
+              <li><a href="#pricing" class="hover:text-slate-900">Pricing</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-sm font-semibold">Company</h4>
+            <ul class="mt-3 space-y-2 text-sm text-slate-600">
+              <li><a href="#" class="hover:text-slate-900">About</a></li>
+              <li><a href="#" class="hover:text-slate-900">Careers</a></li>
+              <li><a href="#" class="hover:text-slate-900">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold">Get started</h4>
+          <p class="mt-3 text-sm text-slate-600">Start your 14-day free trial and get a personalized plan today.</p>
+          <div class="mt-4">
+            <a href="#pricing" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-md text-sm hover:bg-indigo-700">Start trial</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 text-sm text-slate-500 flex justify-between">
+          <div>© 2026 PeakForm Inc.</div>
+          <div class="flex gap-4">
+            <a href="#" class="hover:text-slate-700">Terms</a>
+            <a href="#" class="hover:text-slate-700">Privacy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

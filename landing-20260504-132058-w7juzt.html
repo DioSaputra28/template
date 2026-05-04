@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CarePoint — Easy Medical Appointments</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="CarePoint makes booking medical appointments fast and simple — secure scheduling, trusted clinicians, and reminders so you never miss a visit.">
+  <style>
+    /* small custom styles for details/summary and consistent focus outlines */
+    :root{--brand:#0f172a;--accent:#0ea5a4;--muted:#64748b}
+    summary::-webkit-details-marker{display:none}
+    summary{list-style:none; cursor:pointer}
+    summary:focus{outline:none}
+    summary .marker{transition:transform .2s}
+    details[open] summary .marker{transform:rotate(90deg)}
+    /* subtle card border color */
+    .card-border{border-color:rgba(15,23,42,0.06)}
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-white">
+  <!-- NAVBAR -->
+  <header class="bg-white border-b card-border">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between py-6">
+        <a href="#" class="flex items-center gap-3">
+          <!-- Logo SVG -->
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="24" height="24" rx="6" fill="#0f172a" />
+            <path d="M12 6v12" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 12h12" stroke="#0ea5a4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="text-lg font-semibold text-slate-900">CarePoint</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700">
+          <a href="#features" class="hover:text-slate-900">Features</a>
+          <a href="#how" class="hover:text-slate-900">How it Works</a>
+          <a href="#testimonials" class="hover:text-slate-900">Testimonials</a>
+          <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+          <a href="#faq" class="hover:text-slate-900">FAQ</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="#book" class="hidden md:inline-block px-4 py-2 border rounded-md text-sm font-medium text-slate-700 hover:bg-slate-50">Sign in</a>
+          <a href="#book" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-md text-sm font-semibold shadow">Book Appointment
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="opacity-90" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <path d="M5 12h14" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 5v14" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center py-16">
+          <div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight">Effortless medical appointments — trusted care, right when you need it.</h1>
+            <p class="mt-6 text-lg text-slate-600 max-w-xl">CarePoint helps patients find available clinicians, book secure appointments, and get timely reminders — all in a few clicks. Focus on health, we’ll handle the logistics.</p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+              <a href="#book" class="inline-flex items-center justify-center px-5 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-md font-semibold shadow">Book an appointment</a>
+              <a href="#how" class="inline-flex items-center justify-center px-5 py-3 border rounded-md text-slate-700 hover:bg-slate-50">Learn how it works</a>
+            </div>
+
+            <ul class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <li class="flex items-start gap-3">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 2v20" stroke="#0ea5a4" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M6 8h12" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                <div>
+                  <p class="text-sm font-semibold text-slate-900">Secure & compliant</p>
+                  <p class="text-sm text-slate-600">Protected patient data and HIPAA-aware workflows.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <rect x="3" y="3" width="18" height="18" rx="2" stroke="#0f172a" stroke-width="1.4"/>
+                  <path d="M8 11h8M8 15h5" stroke="#0ea5a4" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                <div>
+                  <p class="text-sm font-semibold text-slate-900">Fast booking</p>
+                  <p class="text-sm text-slate-600">Find and reserve the next available appointment instantly.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <circle cx="12" cy="12" r="9" stroke="#0f172a" stroke-width="1.4"/>
+                  <path d="M12 8v5l3 2" stroke="#0ea5a4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div>
+                  <p class="text-sm font-semibold text-slate-900">Reminders & follow-up</p>
+                  <p class="text-sm text-slate-600">Automated notifications so patients never miss visits.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Appointment card -->
+          <aside class="bg-white border card-border rounded-2xl p-6 shadow-sm">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs text-slate-500">Next available</p>
+                <p class="text-sm font-medium text-slate-900">Dr. Amira Khalid — General Practitioner</p>
+              </div>
+              <div class="text-right">
+                <p class="text-sm font-semibold text-slate-900">Tue, May 12</p>
+                <p class="text-xs text-slate-500">10:30 AM</p>
+              </div>
+            </div>
+
+            <form class="mt-6 grid gap-3">
+              <label class="sr-only">Full name</label>
+              <input type="text" placeholder="Full name" class="w-full px-4 py-3 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-emerald-200"/>
+              <label class="sr-only">Phone or email</label>
+              <input type="text" placeholder="Phone or email" class="w-full px-4 py-3 border rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-emerald-200"/>
+
+              <button type="button" class="mt-2 w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-md font-semibold">Confirm appointment</button>
+              <p class="text-xs text-slate-500">No payment required to book. Manage or cancel anytime.</p>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / LOGOS -->
+    <section class="border-t card-border">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8">
+        <p class="text-center text-sm text-slate-500">Trusted by clinics and hospitals</p>
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-6 items-center">
+          <div class="flex items-center justify-center p-4 bg-slate-50 rounded-md">
+            <svg width="88" height="24" viewBox="0 0 88 24" fill="none" aria-hidden>
+              <rect width="88" height="24" rx="4" fill="#fff"/>
+              <path d="M10 6h8v12h-8zM30 6h8v12h-8zM50 6h8v12h-8z" stroke="#94a3b8" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <div class="flex items-center justify-center p-4 bg-slate-50 rounded-md">
+            <svg width="88" height="24" viewBox="0 0 88 24" fill="none" aria-hidden>
+              <rect width="88" height="24" rx="4" fill="#fff"/>
+              <circle cx="14" cy="12" r="6" stroke="#94a3b8" stroke-width="1.2"/>
+              <path d="M36 6h32" stroke="#94a3b8" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <div class="flex items-center justify-center p-4 bg-slate-50 rounded-md">
+            <svg width="88" height="24" viewBox="0 0 88 24" fill="none" aria-hidden>
+              <rect width="88" height="24" rx="4" fill="#fff"/>
+              <rect x="8" y="6" width="18" height="12" rx="2" stroke="#94a3b8" stroke-width="1.2"/>
+              <path d="M36 12h32" stroke="#94a3b8" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <div class="flex items-center justify-center p-4 bg-slate-50 rounded-md">
+            <svg width="88" height="24" viewBox="0 0 88 24" fill="none" aria-hidden>
+              <rect width="88" height="24" rx="4" fill="#fff"/>
+              <path d="M10 18h68" stroke="#94a3b8" stroke-width="1.2"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="bg-slate-50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-2xl font-bold text-slate-900">Everything your clinic needs to manage appointments</h2>
+          <p class="mt-3 text-slate-600">From patient intake to reminders and reporting — CarePoint centralizes scheduling with a modern, secure interface.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white border card-border rounded-lg p-6 shadow-sm">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 flex items-center justify-center bg-emerald-50 rounded-md">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M7 7h10v10H7z" stroke="#0ea5a4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900">Centralized calendar</h3>
+                <p class="text-sm text-slate-600">One view for all staff, with color-coded clinicians and room availability.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border card-border rounded-lg p-6 shadow-sm">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 flex items-center justify-center bg-emerald-50 rounded-md">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 2v20" stroke="#0ea5a4" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M6 12h12" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900">Patient intake forms</h3>
+                <p class="text-sm text-slate-600">Customizable forms and secure document uploads before visits.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white border card-border rounded-lg p-6 shadow-sm">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 flex items-center justify-center bg-emerald-50 rounded-md">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 6v6l3 3" stroke="#0ea5a4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-slate-900">Automated reminders</h3>
+                <p class="text-sm text-slate-600">SMS and email reminders reduce no-shows and improve patient experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 class="text-2xl font-bold text-slate-900">How it works</h2>
+            <p class="mt-3 text-slate-600">Simple steps to get your clinic and patients up and running quickly.</p>
+
+            <ol class="mt-8 space-y-6">
+              <li class="flex gap-4">
+                <div class="flex-none w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-semibold">1</div>
+                <div>
+                  <p class="font-semibold text-slate-900">Create your clinic profile</p>
+                  <p class="text-slate-600 text-sm">Set hours, clinicians, and appointment types in minutes.</p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <div class="flex-none w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-semibold">2</div>
+                <div>
+                  <p class="font-semibold text-slate-900">Share a booking link</p>
+                  <p class="text-slate-600 text-sm">Patients can book online or staff can schedule on their behalf.</p>
+                </div>
+              </li>
+              <li class="flex gap-4">
+                <div class="flex-none w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-semibold">3</div>
+                <div>
+                  <p class="font-semibold text-slate-900">Receive and confirm</p>
+                  <p class="text-slate-600 text-sm">Automated reminders and secure intake streamline visits.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <div class="bg-white border card-border rounded-2xl p-6 shadow-sm">
+            <div class="h-60 flex items-center justify-center bg-emerald-50 rounded-lg">
+              <!-- Illustration SVG -->
+              <svg width="220" height="140" viewBox="0 0 220 140" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <rect x="6" y="6" width="208" height="128" rx="10" fill="#ffffff" stroke="#e2e8f0"/>
+                <rect x="24" y="28" width="60" height="84" rx="6" fill="#ecfeff" stroke="#0ea5a4"/>
+                <rect x="96" y="28" width="100" height="18" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+                <rect x="96" y="54" width="100" height="14" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+                <rect x="96" y="76" width="70" height="12" rx="4" fill="#f8fafc" stroke="#e2e8f0"/>
+                <circle cx="38" cy="70" r="8" fill="#0ea5a4"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="bg-slate-50">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold text-slate-900">Clinics love CarePoint</h2>
+          <p class="mt-2 text-slate-600">Real feedback from teams using our scheduling tools.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <blockquote class="bg-white border card-border rounded-lg p-6 shadow-sm">
+            <p class="text-slate-700">"CarePoint reduced our no-show rate by 40% — reminders and an easy booking flow made all the difference."</p>
+            <footer class="mt-4 text-sm text-slate-600">— Alameda Family Clinic</footer>
+          </blockquote>
+
+          <blockquote class="bg-white border card-border rounded-lg p-6 shadow-sm">
+            <p class="text-slate-700">"The team setup is intuitive. We assigned clinicians and rooms the same day and had bookings within hours."</p>
+            <footer class="mt-4 text-sm text-slate-600">— Dr. Lin, Pediatrics</footer>
+          </blockquote>
+
+          <blockquote class="bg-white border card-border rounded-lg p-6 shadow-sm">
+            <p class="text-slate-700">"Excellent reporting and patient intake forms — everything we need for a modern outpatient workflow."</p>
+            <footer class="mt-4 text-sm text-slate-600">— Horizon Medical Group</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section id="pricing" class="">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold text-slate-900">Simple, transparent pricing</h2>
+          <p class="mt-2 text-slate-600">Choose a plan that fits your clinic — no hidden fees. Try a free demo with your staff.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white border card-border rounded-lg p-6 text-center shadow-sm">
+            <div class="text-sm font-semibold text-slate-900">Starter</div>
+            <div class="mt-4 text-3xl font-extrabold text-slate-900">Free</div>
+            <p class="mt-3 text-sm text-slate-600">Basic booking for small practices. Up to 3 clinicians.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              <li>Online booking</li>
+              <li>Automated reminders</li>
+              <li>Basic reporting</li>
+            </ul>
+            <a href="#book" class="mt-6 inline-block px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-md font-medium">Start free</a>
+          </div>
+
+          <div class="bg-white border-2 border-emerald-500 rounded-lg p-6 text-center shadow-md">
+            <div class="text-sm font-semibold text-slate-900">Professional</div>
+            <div class="mt-4 text-3xl font-extrabold text-slate-900">$89<span class="text-sm font-medium">/mo</span></div>
+            <p class="mt-3 text-sm text-slate-600">For growing clinics that need advanced features and support.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              <li>All Starter features</li>
+              <li>Custom intake forms</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#book" class="mt-6 inline-block px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-md font-medium">Get Professional</a>
+          </div>
+
+          <div class="bg-white border card-border rounded-lg p-6 text-center shadow-sm">
+            <div class="text-sm font-semibold text-slate-900">Enterprise</div>
+            <div class="mt-4 text-3xl font-extrabold text-slate-900">Custom</div>
+            <p class="mt-3 text-sm text-slate-600">Advanced integrations, onboarding, and SLA-backed uptime.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              <li>EMR integrations</li>
+              <li>Dedicated success manager</li>
+              <li>Advanced analytics</li>
+            </ul>
+            <a href="#book" class="mt-6 inline-block px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-md font-medium">Contact sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-slate-50">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8 py-14">
+        <h2 class="text-2xl font-bold text-slate-900 text-center">Frequently asked questions</h2>
+        <div class="mt-8 space-y-4">
+          <details class="bg-white border card-border rounded-lg p-4">
+            <summary class="flex items-center justify-between">
+              <span class="font-semibold text-slate-900">Is CarePoint HIPAA compliant?</span>
+              <svg class="marker" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M9 6l6 6-6 6" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </summary>
+            <p class="mt-3 text-sm text-slate-600">Yes. We provide secure storage and processes designed to support HIPAA workflows. Contact sales for enterprise-level BAAs.</p>
+          </details>
+
+          <details class="bg-white border card-border rounded-lg p-4">
+            <summary class="flex items-center justify-between">
+              <span class="font-semibold text-slate-900">Can I integrate with my EMR?</span>
+              <svg class="marker" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M9 6l6 6-6 6" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </summary>
+            <p class="mt-3 text-sm text-slate-600">We support common integrations via secure APIs. Enterprise plans include custom integration support and onboarding assistance.</p>
+          </details>
+
+          <details class="bg-white border card-border rounded-lg p-4">
+            <summary class="flex items-center justify-between">
+              <span class="font-semibold text-slate-900">How do reminders work?</span>
+              <svg class="marker" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M9 6l6 6-6 6" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </summary>
+            <p class="mt-3 text-sm text-slate-600">Reminders are configurable per clinic — choose SMS, email, or both, and set timing relative to the appointment.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t card-border bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+      <div class="md:flex md:items-center md:justify-between">
+        <div class="flex items-center gap-4">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect width="24" height="24" rx="6" fill="#0f172a" />
+            <path d="M12 6v12" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 12h12" stroke="#0ea5a4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <div class="text-sm font-semibold text-slate-900">CarePoint</div>
+            <div class="text-xs text-slate-500">Modern appointment scheduling for clinics</div>
+          </div>
+        </div>
+
+        <div class="mt-6 md:mt-0 flex gap-6 text-sm text-slate-600">
+          <a href="#" class="hover:text-slate-900">Terms</a>
+          <a href="#" class="hover:text-slate-900">Privacy</a>
+          <a href="#" class="hover:text-slate-900">Contact</a>
+        </div>
+      </div>
+
+      <div class="mt-6 text-xs text-slate-500">© 2026 CarePoint, Inc. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>

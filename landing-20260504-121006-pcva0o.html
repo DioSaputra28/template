@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocalPoint | Master Your Focus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        indigo: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            200: '#c7d2fe',
+                            300: '#a5b4fc',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                        },
+                        slate: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        rose: {
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Details marker hiding for FAQ */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-icon {
+            transition: transform 0.2s ease-in-out;
+        }
+        details[open] summary .faq-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v4m0 12v4m10-10h-4M6 12H2"></path>
+                    </svg>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">FocalPoint</span>
+                </div>
+                <!-- Links (Desktop) -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#features" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Features</a>
+                    <a href="#how-it-works" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">How it Works</a>
+                    <a href="#pricing" class="text-slate-600 hover:text-indigo-600 font-medium transition-colors">Pricing</a>
+                </div>
+                <!-- CTA -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Log in</a>
+                    <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-full font-medium transition-colors shadow-sm">Get Started Free</a>
+                </div>
+                <!-- Mobile Menu Button (Visual Only) -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <!-- Hero Content -->
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-sm font-semibold mb-6">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        FocalPoint 2.0 is out now
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+                        Master your focus. <br>
+                        <span class="text-indigo-600">Conquer your tasks.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
+                        The premium productivity manager designed to eliminate distractions. Organize your workflow, prioritize deep work, and achieve more in less time.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#" class="inline-flex justify-center items-center bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-full font-semibold transition-colors shadow-md text-lg">
+                            Start for free
+                        </a>
+                        <a href="#how-it-works" class="inline-flex justify-center items-center bg-white border-2 border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-slate-700 px-8 py-4 rounded-full font-semibold transition-colors text-lg">
+                            See how it works
+                        </a>
+                    </div>
+                    <p class="mt-4 text-sm text-slate-500 font-medium">No credit card required. Free 14-day Pro trial.</p>
+                </div>
+                
+                <!-- Hero Image/Illustration (Inline SVG) -->
+                <div class="relative w-full drop-shadow-2xl">
+                    <svg viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto rounded-2xl">
+                        <!-- Window Frame -->
+                        <rect x="0" y="0" width="800" height="600" rx="24" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+                        <rect x="0" y="0" width="800" height="60" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2" rx="24"/>
+                        <rect x="0" y="58" width="800" height="4" fill="#ffffff"/> <!-- Hide bottom curve of header -->
+                        
+                        <!-- Window Controls -->
+                        <circle cx="30" cy="30" r="6" fill="#cbd5e1"/>
+                        <circle cx="50" cy="30" r="6" fill="#cbd5e1"/>
+                        <circle cx="70" cy="30" r="6" fill="#cbd5e1"/>
+
+                        <!-- Sidebar -->
+                        <rect x="0" y="60" width="220" height="540" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+                        <rect x="20" y="90" width="140" height="20" rx="6" fill="#cbd5e1"/>
+                        <rect x="20" y="140" width="180" height="30" rx="8" fill="#e0e7ff"/>
+                        <rect x="20" y="190" width="160" height="20" rx="6" fill="#f1f5f9"/>
+                        <rect x="20" y="230" width="150" height="20" rx="6" fill="#f1f5f9"/>
+                        <rect x="20" y="270" width="170" height="20" rx="6" fill="#f1f5f9"/>
+
+                        <!-- Main Content Area -->
+                        <!-- Header Text -->
+                        <rect x="280" y="110" width="250" height="32" rx="8" fill="#0f172a"/>
+                        <rect x="280" y="150" width="400" height="16" rx="4" fill="#94a3b8"/>
+
+                        <!-- Task Card 1 (Completed) -->
+                        <rect x="280" y="210" width="460" height="80" rx="12" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+                        <circle cx="320" cy="250" r="12" fill="#10b981"/>
+                        <path d="M315 250l4 4 8-8" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="350" y="235" width="200" height="12" rx="4" fill="#94a3b8"/>
+                        <rect x="350" y="255" width="150" height="8" rx="4" fill="#cbd5e1"/>
+
+                        <!-- Task Card 2 (Active) -->
+                        <rect x="280" y="310" width="460" height="80" rx="12" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+                        <circle cx="320" cy="350" r="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+                        <rect x="350" y="335" width="280" height="12" rx="4" fill="#0f172a"/>
+                        <rect x="350" y="355" width="180" height="8" rx="4" fill="#94a3b8"/>
+                        <!-- Tag -->
+                        <rect x="650" y="330" width="60" height="24" rx="12" fill="#fef2f2"/>
+                        <rect x="660" y="338" width="40" height="8" rx="4" fill="#f43f5e"/>
+
+                        <!-- Task Card 3 -->
+                        <rect x="280" y="410" width="460" height="80" rx="12" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+                        <circle cx="320" cy="450" r="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+                        <rect x="350" y="435" width="220" height="12" rx="4" fill="#334155"/>
+                        <rect x="350" y="455" width="140" height="8" rx="4" fill="#cbd5e1"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Logos -->
+    <section class="py-10 border-y border-slate-200 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm font-semibold text-slate-500 uppercase tracking-widest mb-6">Trusted by highly productive teams</p>
+            <div class="flex flex-wrap justify-center gap-10 md:gap-20 items-center opacity-60">
+                <!-- Logo 1 -->
+                <div class="flex items-center gap-2 text-slate-900 font-bold text-xl">
+                    <svg class="w-8 h-8" viewBox="0 0 32 32" fill="currentColor">
+                        <polygon points="16,2 30,16 16,30 2,16"></polygon>
+                    </svg>
+                    AcmeCorp
+                </div>
+                <!-- Logo 2 -->
+                <div class="flex items-center gap-2 text-slate-900 font-bold text-xl">
+                    <svg class="w-8 h-8" viewBox="0 0 32 32" fill="currentColor">
+                        <circle cx="16" cy="16" r="14"></circle>
+                        <circle cx="16" cy="16" r="6" fill="#f8fafc"></circle>
+                    </svg>
+                    Nexus
+                </div>
+                <!-- Logo 3 -->
+                <div class="flex items-center gap-2 text-slate-900 font-bold text-xl">
+                    <svg class="w-8 h-8" viewBox="0 0 32 32" fill="currentColor">
+                        <rect x="4" y="4" width="10" height="24"></rect>
+                        <rect x="18" y="4" width="10" height="24"></rect>
+                    </svg>
+                    Parallel
+                </div>
+                <!-- Logo 4 -->
+                <div class="flex items-center gap-2 text-slate-900 font-bold text-xl">
+                    <svg class="w-8 h-8" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M2,28 L16,4 L30,28 Z"></path>
+                    </svg>
+                    Apex
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-indigo-600 font-semibold tracking-wide uppercase text-sm mb-3">Core Features</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">Built for clarity and velocity</h3>
+                <p class="text-lg text-slate-600">Everything you need to manage complex projects without the clutter. Just pure, focused productivity.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-indigo-600 mb-6 shadow-sm">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Smart Prioritization</h4>
+                    <p class="text-slate-600 leading-relaxed">Automatically surface your most critical tasks based on deadlines and effort levels. Never wonder what to do next.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-indigo-600 mb-6 shadow-sm">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Time Blocking</h4>
+                    <p class="text-slate-600 leading-relaxed">Schedule tasks directly onto your calendar. Protect your time and establish a flow state with integrated pomodoro timers.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-white border border-slate-200 rounded-xl flex items-center justify-center text-indigo-600 mb-6 shadow-sm">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Frictionless Capture</h4>
+                    <p class="text-slate-600 leading-relaxed">Add tasks at the speed of thought with global keyboard shortcuts and natural language processing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="how-it-works" class="py-24 bg-slate-900 text-white overflow-hidden relative">
+        <!-- Abstract Background Shape -->
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 text-slate-800 opacity-50">
+            <svg width="400" height="400" viewBox="0 0 400 400" fill="none">
+                <circle cx="200" cy="200" r="180" stroke="currentColor" stroke-width="40"/>
+                <circle cx="200" cy="200" r="100" stroke="currentColor" stroke-width="40"/>
+            </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-indigo-400 font-semibold tracking-wide uppercase text-sm mb-3">Workflow</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold mb-6">Three steps to pure productivity</h3>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 text-center relative mt-12">
+                <!-- Line connecting steps (hidden on mobile) -->
+                <div class="hidden md:block absolute top-12 left-[16.5%] right-[16.5%] h-0.5 bg-slate-800" style="width: 67%; z-index: -1;"></div>
+                
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 bg-slate-800 border-4 border-slate-900 rounded-full flex items-center justify-center mb-6 text-indigo-400 shadow-xl relative">
+                        <span class="absolute -top-3 -right-3 w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm border-2 border-slate-900">1</span>
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Brain Dump</h4>
+                    <p class="text-slate-400">Empty your mind. Quickly log everything into your inbox using natural language parsing.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 bg-slate-800 border-4 border-slate-900 rounded-full flex items-center justify-center mb-6 text-indigo-400 shadow-xl relative">
+                        <span class="absolute -top-3 -right-3 w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm border-2 border-slate-900">2</span>
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Organize & Prioritize</h4>
+                    <p class="text-slate-400">Sort tasks into projects, tag them, and assign realistic effort scores and deadlines.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="w-24 h-24 bg-indigo-600 border-4 border-slate-900 rounded-full flex items-center justify-center mb-6 text-white shadow-xl relative">
+                        <span class="absolute -top-3 -right-3 w-8 h-8 bg-rose-500 rounded-full flex items-center justify-center text-white font-bold text-sm border-2 border-slate-900">3</span>
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Deep Execution</h4>
+                    <p class="text-slate-300">Enter focus mode. We hide the noise and only show you the one task that matters right now.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900">Loved by high performers</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <!-- SVG Quotes -->
+                    <div class="absolute top-8 right-8 text-slate-100">
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex gap-1 text-rose-500 mb-6 relative z-10">
+                        <!-- 5 Stars SVG -->
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-slate-700 text-lg mb-8 relative z-10 leading-relaxed">"Before FocalPoint, I was drowning in a sea of post-it notes and endless to-do lists. Now, my entire team operates with incredible clarity. It's the only tool that truly understands deep work."</p>
+                    <div class="flex items-center gap-4 relative z-10">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-700 font-bold text-lg">SH</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Sarah Harding</h4>
+                            <p class="text-sm text-slate-500">Product Manager, Nexus</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm relative">
+                    <!-- SVG Quotes -->
+                    <div class="absolute top-8 right-8 text-slate-100">
+                        <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path>
+                        </svg>
+                    </div>
+                    <div class="flex gap-1 text-rose-500 mb-6 relative z-10">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-slate-700 text-lg mb-8 relative z-10 leading-relaxed">"The simplicity is deceptive. Under the hood, it's a powerhouse that forces you to prioritize. My daily output has literally doubled since I switched to this system."</p>
+                    <div class="flex items-center gap-4 relative z-10">
+                        <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-700 font-bold text-lg">MD</div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Marcus Davis</h4>
+                            <p class="text-sm text-slate-500">Freelance Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">Simple, transparent pricing</h2>
+                <p class="text-lg text-slate-600">Start for free, upgrade when you need superpowers.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-center">
+                <!-- Free Plan -->
+                <div class="bg-white rounded-3xl p-10 border border-slate-200 shadow-sm flex flex-col h-full">
+                    <h3 class="text-2xl font-bold text-slate-900">Basic</h3>
+                    <p class="text-slate-500 mt-2">Perfect for individuals organizing their life.</p>
+                    <div class="text-5xl font-extrabold text-slate-900 mt-8 mb-8">$0<span class="text-xl font-medium text-slate-400">/mo</span></div>
+                    <ul class="space-y-4 mb-10 flex-1">
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Up to 5 Projects
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Basic Task Management
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-700">
+                            <svg class="w-5 h-5 text-indigo-500 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Web & Mobile Apps
+                        </li>
+                    </ul>
+                    <a href="#" class="block w-full text-center bg-slate-100 hover:bg-slate-200 text-slate-900 font-semibold py-4 rounded-xl transition-colors">Start Free</a>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="bg-indigo-600 rounded-3xl p-10 border-2 border-indigo-600 shadow-2xl flex flex-col relative text-white h-[105%] z-10 transform md:-scale-y-100 md:scale-y-100">
+                    <div class="absolute top-0 right-8 transform -translate-y-1/2 bg-rose-500 text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">Most Popular</div>
+                    <h3 class="text-2xl font-bold">Pro</h3>
+                    <p class="text-indigo-200 mt-2">For professionals demanding absolute focus.</p>
+                    <div class="text-5xl font-extrabold mt-8 mb-8">$12<span class="text-xl font-medium text-indigo-300">/mo</span></div>
+                    <ul class="space-y-4 mb-10 flex-1">
+                        <li class="flex items-center gap-3 text-white">
+                            <svg class="w-5 h-5 text-indigo-200 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Unlimited Projects
+                        </li>
+                        <li class="flex items-center gap-3 text-white">
+                            <svg class="w-5 h-5 text-indigo-200 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Calendar Integration
+                        </li>
+                        <li class="flex items-center gap-3 text-white">
+                            <svg class="w-5 h-5 text-indigo-200 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Advanced Analytics
+                        </li>
+                        <li class="flex items-center gap-3 text-white">
+                            <svg class="w-5 h-5 text-indigo-200 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                            Collaborative Workspaces
+                        </li>
+                    </ul>
+                    <a href="#" class="block w-full text-center bg-white hover:bg-slate-50 text-indigo-600 font-bold py-4 rounded-xl transition-colors shadow-sm">Start 14-Day Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-extrabold text-slate-900 text-center mb-12">Frequently Asked Questions</h2>
+            
+            <div class="divide-y divide-slate-200">
+                <!-- FAQ Item 1 -->
+                <details class="group py-6" open>
+                    <summary class="flex justify-between items-center font-medium cursor-pointer text-slate-900 text-lg hover:text-indigo-600 transition-colors">
+                        <span>Is there a desktop app available?</span>
+                        <span class="faq-icon text-indigo-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 mt-4 leading-relaxed">
+                        Yes. FocalPoint is available as a native desktop application for macOS and Windows, designed for minimum latency and maximum performance.
+                    </div>
+                </details>
+                <!-- FAQ Item 2 -->
+                <details class="group py-6">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer text-slate-900 text-lg hover:text-indigo-600 transition-colors">
+                        <span>Can I sync my Google Calendar?</span>
+                        <span class="faq-icon text-indigo-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 mt-4 leading-relaxed">
+                        Absolutely. Our Pro plan includes real-time, two-way sync with Google Calendar, Outlook, and Apple Calendar. Time blocking has never been easier.
+                    </div>
+                </details>
+                <!-- FAQ Item 3 -->
+                <details class="group py-6">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer text-slate-900 text-lg hover:text-indigo-600 transition-colors">
+                        <span>How does the free trial work?</span>
+                        <span class="faq-icon text-indigo-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 mt-4 leading-relaxed">
+                        You get full access to all Pro features for 14 days, completely free. No credit card is required to start your trial. If you choose not to upgrade, you'll be gracefully downgraded to the Basic plan.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <!-- Logo -->
+                    <div class="flex items-center gap-2 mb-6">
+                        <svg class="w-6 h-6 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v4m0 12v4m10-10h-4M6 12H2"></path>
+                        </svg>
+                        <span class="font-bold text-xl tracking-tight text-white">FocalPoint</span>
+                    </div>
+                    <p class="text-sm text-slate-500 max-w-xs leading-relaxed">Building software that respects your time and amplifies your focus. Say goodbye to busywork.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Integrations</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Changelog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Productivity Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Community</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">API Docs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 text-sm text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 FocalPoint Inc. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <!-- Twitter SVG -->
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    </a>
+                    <!-- GitHub SVG -->
+                    <a href="#" class="text-slate-500 hover:text-white transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

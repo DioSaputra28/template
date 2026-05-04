@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>La Rive — Grand Opening</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="La Rive — Join us for the grand opening. Modern dining, seasonal menu, and an exquisite atmosphere." />
+  <style>
+    /* Small custom tweaks not convenient in Tailwind utility form */
+    .soft-border { border-color: rgba(15,23,42,0.06); }
+    .logo-mark { width: 36px; height: 36px; }
+    .card-accent { height: 4px; width: 48px; border-radius: 4px; }
+    /* Keep focus outlines visible and subtle */
+    :focus { outline: 3px solid rgba(99,102,241,0.15); outline-offset: 2px; }
+  </style>
+</head>
+<body class="antialiased text-gray-900 bg-white">
+
+  <!-- NAVBAR -->
+  <header class="border-b soft-border bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect width="48" height="48" rx="8" fill="#1F2937" />
+          <path d="M14 32c6-8 20-8 20-16" stroke="#F8FAFC" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="16" cy="18" r="2.5" fill="#F8FAFC"/>
+        </svg>
+        <span class="text-lg font-semibold">La Rive</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#about" class="text-gray-600 hover:text-indigo-600">About</a>
+        <a href="#menu" class="text-gray-600 hover:text-indigo-600">Menu</a>
+        <a href="#reservations" class="text-gray-600 hover:text-indigo-600">Reservations</a>
+        <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#reservations" class="hidden md:inline-block px-4 py-2 rounded-md bg-indigo-600 text-white text-sm font-medium shadow hover:bg-indigo-700">Reserve Table</a>
+        <button class="md:hidden p-2 rounded-md border soft-border" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="bg-slate-50">
+      <div class="max-w-7xl mx-auto px-6 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6">
+          <p class="inline-flex items-center gap-3 bg-white px-3 py-1 rounded-full text-sm font-medium shadow-sm border soft-border">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 2v4M12 18v4M4 12H2M22 12h-2M5 5l-2-2M21 21l-2-2M19 5l2-2M3 21l2-2" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Grand Opening — May 30</p>
+
+          <h1 class="mt-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">La Rive — A New Coastal Dining Experience</h1>
+          <p class="mt-5 text-gray-600 max-w-xl">Join us for our grand opening night. Seasonal dishes crafted by our head chef, an intimate dining room, and a curated wine selection. Limited seatings — reserve now.</p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#reservations" class="px-5 py-3 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700 text-sm font-medium">Reserve Table</a>
+            <a href="#menu" class="px-5 py-3 border rounded-md text-gray-700 bg-white hover:bg-slate-100 text-sm font-medium">View Menu</a>
+          </div>
+
+          <div class="mt-8 flex items-center gap-6">
+            <div class="flex items-center gap-3">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="2" y="3" width="20" height="14" rx="2" stroke="#0F172A" stroke-width="1.5"/>
+                <path d="M7 21h10" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <div class="text-sm font-semibold">Indoor Seating</div>
+                <div class="text-xs text-gray-500">Elegant, climate controlled</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 7h18M6 7v10a6 6 0 0012 0V7" stroke="#0F172A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 11h4" stroke="#0F172A" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <div class="text-sm font-semibold">Chef's Seasonal Menu</div>
+                <div class="text-xs text-gray-500">Locally sourced produce</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6">
+          <!-- Illustration: stylized dining interior using SVG shapes -->
+          <div class="w-full rounded-xl shadow-md overflow-hidden border soft-border bg-white">
+            <svg viewBox="0 0 800 520" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden>
+              <rect width="800" height="520" fill="#FFFFFF" />
+              <!-- Floor -->
+              <rect x="0" y="360" width="800" height="160" fill="#F8FAFC" />
+              <!-- Back wall -->
+              <rect x="0" y="0" width="800" height="360" fill="#E6EEF8" />
+              <!-- Window panes -->
+              <g fill="#CFE3F8">
+                <rect x="60" y="30" width="140" height="120" rx="6" />
+                <rect x="220" y="30" width="140" height="120" rx="6" />
+                <rect x="380" y="30" width="140" height="120" rx="6" />
+              </g>
+              <!-- Table and chairs -->
+              <g transform="translate(520,220)">
+                <rect x="-110" y="40" width="220" height="8" rx="4" fill="#D1E7FF" />
+                <rect x="-70" y="-20" width="140" height="70" rx="8" fill="#FFFFFF" stroke="#9FBCE6" stroke-width="2" />
+                <circle cx="0" cy="0" r="6" fill="#F97316" />
+              </g>
+              <!-- Pendant lights -->
+              <g stroke="#0F172A" stroke-width="1.2" stroke-linecap="round" fill="none">
+                <path d="M140 0v80" />
+                <circle cx="140" cy="92" r="14" fill="#FFF7ED" stroke="#F59E0B" />
+                <path d="M330 0v80" />
+                <circle cx="330" cy="92" r="14" fill="#FFF7ED" stroke="#F59E0B" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / LOGOS -->
+    <section class="py-8">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="bg-white rounded-lg border soft-border px-6 py-5 flex items-center justify-between gap-6 shadow-sm">
+          <div class="text-sm text-gray-600">Featured in</div>
+          <div class="flex items-center gap-6">
+            <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden>
+              <rect width="92" height="28" rx="6" fill="#111827"/>
+            </svg>
+            <svg width="80" height="28" viewBox="0 0 80 28" fill="none" aria-hidden>
+              <rect width="80" height="28" rx="6" fill="#0F172A"/>
+            </svg>
+            <svg width="64" height="28" viewBox="0 0 64 28" fill="none" aria-hidden>
+              <rect width="64" height="28" rx="6" fill="#111827"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="about" class="py-12 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="bg-white rounded-lg border soft-border p-6 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-md bg-indigo-50">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 2v6" stroke="#4F46E5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6 8l6 6 6-6" stroke="#4F46E5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Seasonal & Local</h3>
+                <p class="mt-2 text-sm text-gray-600">Menus updated weekly to showcase local producers and peak flavors.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-lg border soft-border p-6 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-md bg-amber-50">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 3v10" stroke="#D97706" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M5 12h14" stroke="#D97706" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Curated Wine List</h3>
+                <p class="mt-2 text-sm text-gray-600">Thoughtful pairings selected by our sommelier to match seasonal dishes.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-lg border soft-border p-6 shadow-sm">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-md bg-emerald-50">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M3 12h18" stroke="#059669" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M8 6v12" stroke="#059669" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Private Dining</h3>
+                <p class="mt-2 text-sm text-gray-600">Private bookings for special occasions with bespoke menus.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="menu" class="py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-2xl font-semibold">How It Works</h2>
+          <p class="mt-3 text-gray-600">Three simple steps to enjoy our opening nights — from reservation to the last course.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg border soft-border p-6 text-center shadow-sm">
+            <div class="mx-auto w-14 h-14 rounded-full bg-indigo-50 flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2v6l4 4" stroke="#4F46E5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="mt-4 font-semibold">Reserve Online</h3>
+            <p class="mt-2 text-sm text-gray-600">Choose a date and time. We keep seatings small for an intimate experience.</p>
+          </div>
+
+          <div class="bg-white rounded-lg border soft-border p-6 text-center shadow-sm">
+            <div class="mx-auto w-14 h-14 rounded-full bg-amber-50 flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M4 7h16v10H4z" stroke="#D97706" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="mt-4 font-semibold">Arrive & Enjoy</h3>
+            <p class="mt-2 text-sm text-gray-600">Our team will seat you and guide you through the curated menu.</p>
+          </div>
+
+          <div class="bg-white rounded-lg border soft-border p-6 text-center shadow-sm">
+            <div class="mx-auto w-14 h-14 rounded-full bg-emerald-50 flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M20 6L9 17l-5-5" stroke="#059669" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="mt-4 font-semibold">Share The Night</h3>
+            <p class="mt-2 text-sm text-gray-600">Enjoy exceptional service and flavors — memories that linger.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto">
+          <h2 class="text-2xl font-semibold">What People Are Saying</h2>
+          <p class="mt-3 text-gray-600">Early guests praise the atmosphere and the cuisine.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <figure class="bg-white rounded-lg border soft-border p-6 shadow-sm">
+            <blockquote class="text-sm text-gray-700">"An unforgettable evening — the tasting menu was elevated and perfectly paced. Service was warm and attentive."</blockquote>
+            <figcaption class="mt-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-sm font-semibold">A</div>
+              <div>
+                <div class="text-sm font-semibold">Alex P.</div>
+                <div class="text-xs text-gray-500">Food Critic</div>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="bg-white rounded-lg border soft-border p-6 shadow-sm">
+            <blockquote class="text-sm text-gray-700">"The wine pairings were exceptional. Cozy dining room with a calm, refined vibe."</blockquote>
+            <figcaption class="mt-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-sm font-semibold">M</div>
+              <div>
+                <div class="text-sm font-semibold">Maya R.</div>
+                <div class="text-xs text-gray-500">Sommelier</div>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="bg-white rounded-lg border soft-border p-6 shadow-sm">
+            <blockquote class="text-sm text-gray-700">"Perfect for a special night out. The staff curated each course with care."</blockquote>
+            <figcaption class="mt-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-sm font-semibold">T</div>
+              <div>
+                <div class="text-sm font-semibold">Tom S.</div>
+                <div class="text-xs text-gray-500">Local Guide</div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section id="reservations" class="py-16">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="bg-white rounded-xl border soft-border p-8 shadow-sm">
+          <div class="flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-1 text-left">
+              <h3 class="text-2xl font-semibold">Opening Night Special</h3>
+              <p class="mt-2 text-gray-600">A three-course menu with paired wine for a fixed price. Limited availability.</p>
+            </div>
+            <div class="text-center md:text-right">
+              <div class="text-3xl font-extrabold">$95</div>
+              <div class="text-sm text-gray-500">per person • includes pairing</div>
+              <div class="mt-4">
+                <a href="#" class="inline-block px-6 py-3 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700">Book Opening Night</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-slate-50">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl font-semibold">Frequently Asked Questions</h2>
+          <p class="mt-2 text-gray-600">Answers to common questions about seating, menu, and accessibility.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <details class="bg-white rounded-lg border soft-border p-5 shadow-sm">
+            <summary class="font-medium">Do you offer vegetarian options?</summary>
+            <p class="mt-3 text-sm text-gray-600">Yes. Our chef prepares vegetarian and vegan options upon request. Please indicate dietary needs when reserving.</p>
+          </details>
+
+          <details class="bg-white rounded-lg border soft-border p-5 shadow-sm">
+            <summary class="font-medium">Is there street parking nearby?</summary>
+            <p class="mt-3 text-sm text-gray-600">Limited street parking is available. We recommend ride-share or nearby public parking for opening nights.</p>
+          </details>
+
+          <details class="bg-white rounded-lg border soft-border p-5 shadow-sm">
+            <summary class="font-medium">Can we host private events?</summary>
+            <p class="mt-3 text-sm text-gray-600">Yes. We offer private dining packages for groups. Contact our events manager for options and availability.</p>
+          </details>
+
+          <details class="bg-white rounded-lg border soft-border p-5 shadow-sm">
+            <summary class="font-medium">What is your cancellation policy?</summary>
+            <p class="mt-3 text-sm text-gray-600">Cancellations within 24 hours of the reservation may be subject to a fee. Please review terms when booking.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-white border-t soft-border">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <a href="#" class="flex items-center gap-3">
+          <svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="48" height="48" rx="8" fill="#111827" />
+            <path d="M14 32c6-8 20-8 20-16" stroke="#F8FAFC" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="16" cy="18" r="2.5" fill="#F8FAFC"/>
+          </svg>
+          <span class="text-lg font-semibold">La Rive</span>
+        </a>
+        <p class="mt-4 text-sm text-gray-600">123 Harbour Lane<br/>City — 00000</p>
+        <p class="mt-3 text-sm text-gray-600">Open Tue–Sun • 5pm – 11pm</p>
+      </div>
+
+      <div class="md:col-span-2 flex justify-between">
+        <div>
+          <h4 class="font-medium">Contact</h4>
+          <p class="mt-2 text-sm text-gray-600">hello@larive.example<br/>+1 (555) 123-4567</p>
+        </div>
+
+        <div>
+          <h4 class="font-medium">Follow</h4>
+          <div class="mt-3 flex items-center gap-3">
+            <a href="#" class="p-2 rounded-md border soft-border hover:bg-slate-50" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="3" width="18" height="18" rx="4" stroke="#111827" stroke-width="1.2"/>
+                <circle cx="12" cy="12" r="3" stroke="#111827" stroke-width="1.2"/>
+                <circle cx="17.5" cy="6.5" r="0.8" fill="#111827"/>
+              </svg>
+            </a>
+            <a href="#" class="p-2 rounded-md border soft-border hover:bg-slate-50" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M15 8h2V5h-2a3 3 0 00-3 3v1H10v3h2v7h3v-7h2.5L18 11h-2v-1a1 1 0 011-1z" fill="#111827"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t soft-border bg-white">
+      <div class="max-w-7xl mx-auto px-6 py-4 text-sm text-gray-500">© 2026 La Rive. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PulseFit — Fitness Coaching App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom CSS for fine control not easily expressed in Tailwind classes */
+    :root{
+      --brand:#0f172a; /* slate-900-like */
+      --accent:#0ea5a4; /* teal-500-ish */
+      --muted:#6b7280; /* gray-500 */
+    }
+    /* Subtle focus ring consistent across elements */
+    .focus-ring:focus{outline:2px solid rgba(14,165,164,0.18);outline-offset:3px}
+    /* Constrain hero illustration on very wide screens */
+    .hero-illustration{max-width:520px}
+    /* Improve details element appearance in some browsers */
+    details summary::-webkit-details-marker{display:none}
+  </style>
+</head>
+<body class="antialiased text-slate-900 bg-white">
+
+  <!-- Navbar -->
+  <header class="border-b border-slate-100">
+    <nav class="max-w-7xl mx-auto px-6 lg:px-8 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="24" height="24" rx="6" fill="var(--brand)" />
+            <path d="M7 13c1.5-3 4-5 6-6 1.8 1 4 3 5 6-2 0-5 1-8 1s-6-1-9-1z" fill="white"/>
+          </svg>
+          <span class="font-semibold text-lg text-slate-900">PulseFit</span>
+        </a>
+        <ul class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+          <li><a href="#features" class="hover:text-slate-900">Features</a></li>
+          <li><a href="#how" class="hover:text-slate-900">How it Works</a></li>
+          <li><a href="#pricing" class="hover:text-slate-900">Pricing</a></li>
+          <li><a href="#faq" class="hover:text-slate-900">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="#login" class="text-sm text-slate-600 hover:text-slate-900">Log in</a>
+        <a href="#signup" class="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[var(--accent)] text-white text-sm shadow-sm hover:bg-teal-600 focus-ring">Get Started</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-14 lg:py-20 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-6">
+        <p class="inline-flex items-center gap-2 text-xs font-medium text-[var(--accent)] bg-[rgba(14,165,164,0.08)] rounded-full px-3 py-1 mb-4"> 
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M12 2v10l3 3" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="9" stroke="var(--accent)" stroke-width="1.5"/>
+          </svg>
+          Personalized coaching · Track progress
+        </p>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-slate-900">Train smarter with a coach in your pocket</h1>
+
+        <p class="mt-6 text-slate-600 max-w-xl">PulseFit pairs AI-driven planning with expert human coaches to deliver adaptive workouts, nutrition guidance, and recovery plans. Built for busy people who want consistent results.</p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#signup" class="inline-flex items-center justify-center px-6 py-3 rounded-md bg-[var(--brand)] text-white font-medium hover:bg-black focus-ring">Start free trial</a>
+          <a href="#how" class="inline-flex items-center justify-center px-6 py-3 rounded-md border border-slate-200 text-slate-700 hover:bg-slate-50 focus-ring">How it works</a>
+        </div>
+
+        <div class="mt-8 flex items-center gap-6">
+          <div class="flex items-center gap-3">
+            <svg class="w-10 h-10 p-2 rounded-md bg-slate-50" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 2v20" stroke="var(--brand)" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M4 12h16" stroke="var(--brand)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <div class="text-sm font-semibold text-slate-900">12-week average</div>
+              <div class="text-sm text-slate-600">Users drop 6–8% body fat</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg class="w-10 h-10 p-2 rounded-md bg-slate-50" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M3 12h18" stroke="var(--brand)" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M12 3v18" stroke="var(--brand)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <div class="text-sm font-semibold text-slate-900">1:1 Coaches</div>
+              <div class="text-sm text-slate-600">Real pros, curated to your goals</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 flex justify-center lg:justify-end">
+        <!-- Hero illustration made with inline SVG, solid color shapes only -->
+        <div class="hero-illustration w-full sm:w-4/5 lg:w-full">
+          <svg viewBox="0 0 600 420" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration">
+            <rect x="0" y="0" width="600" height="420" rx="16" fill="#f8fafc" />
+            <g transform="translate(40,40)" fill="none" stroke="#0f172a" stroke-width="1.4">
+              <rect x="0" y="0" width="520" height="340" rx="12" fill="#ffffff" stroke="#e6eef0" stroke-width="1"/>
+            </g>
+            <!-- Simple scene: coach avatar and progress card -->
+            <circle cx="160" cy="170" r="54" fill="#0f172a"/>
+            <rect x="250" y="120" width="260" height="160" rx="10" fill="#ffffff" stroke="#e6eef0"/>
+            <rect x="270" y="140" width="220" height="18" rx="6" fill="#0f172a"/>
+            <rect x="270" y="170" width="160" height="12" rx="6" fill="#94a3b8"/>
+            <rect x="270" y="190" width="190" height="12" rx="6" fill="#94a3b8"/>
+            <rect x="270" y="210" width="110" height="12" rx="6" fill="#94a3b8"/>
+            <!-- pulse graph -->
+            <polyline points="80,280 120,240 160,260 200,220 240,240" fill="none" stroke="#0ea5a4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof / logos -->
+    <section class="border-t border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8 flex items-center justify-center gap-8 flex-wrap">
+        <!-- Logos are monochrome SVGs (solid colors) -->
+        <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden><rect width="92" height="28" rx="4" fill="#eef2ff"/><text x="46" y="18" fill="#0f172a" font-size="12" text-anchor="middle" font-family="sans-serif">GloboGym</text></svg>
+        <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden><rect width="92" height="28" rx="4" fill="#f0fdf4"/><text x="46" y="18" fill="#0f172a" font-size="12" text-anchor="middle" font-family="sans-serif">PeakLab</text></svg>
+        <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden><rect width="92" height="28" rx="4" fill="#fff7ed"/><text x="46" y="18" fill="#0f172a" font-size="12" text-anchor="middle" font-family="sans-serif">VentureFit</text></svg>
+        <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden><rect width="92" height="28" rx="4" fill="#f8fafc"/><text x="46" y="18" fill="#0f172a" font-size="12" text-anchor="middle" font-family="sans-serif">StudioX</text></svg>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-slate-900">Everything you need to reach your goals</h2>
+        <p class="mt-3 text-slate-600">Workouts, recovery, nutrition, and a human coach — organized into a single plan that adapts as you improve.</p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="p-6 bg-white border border-slate-100 rounded-lg shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-slate-50 rounded-md">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2v4" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/><path d="M12 18v4" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Adaptive training</h3>
+              <p class="mt-2 text-sm text-slate-600">Plans update automatically based on your progress, schedule, and feedback.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="p-6 bg-white border border-slate-100 rounded-lg shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-slate-50 rounded-md">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 8v8" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="6" r="2" fill="#0f172a"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Coach network</h3>
+              <p class="mt-2 text-sm text-slate-600">Hand-picked coaches provide weekly check-ins and tailored guidance.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="p-6 bg-white border border-slate-100 rounded-lg shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-slate-50 rounded-md">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" stroke="#0f172a" stroke-width="1.5"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Data & tracking</h3>
+              <p class="mt-2 text-sm text-slate-600">Sync devices, log workouts, and view clear progress graphs.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="p-6 bg-white border border-slate-100 rounded-lg shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-slate-50 rounded-md">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M4 12h16" stroke="#0f172a" stroke-width="1.5"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Nutrition tools</h3>
+              <p class="mt-2 text-sm text-slate-600">Meal plans that match your goals, with grocery lists and timelines.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="p-6 bg-white border border-slate-100 rounded-lg shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-slate-50 rounded-md">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3c4 4 6 12 6 12s-8-2-12-6" stroke="#0f172a" stroke-width="1.5"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Recovery guidance</h3>
+              <p class="mt-2 text-sm text-slate-600">Sleep, mobility, and deload suggestions to keep you consistent.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="p-6 bg-white border border-slate-100 rounded-lg shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="p-3 bg-slate-50 rounded-md">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7h7l-5.5 4 2 7-6-4.5L6 20l2-7L2.5 9h7z" stroke="#0f172a" stroke-width="1" fill="#e6f6f5"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Community</h3>
+              <p class="mt-2 text-sm text-slate-600">Join group challenges and meet peers for accountability.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="bg-slate-50 py-16">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-2xl font-bold text-slate-900">How PulseFit works</h2>
+          <p class="mt-3 text-slate-600">Three simple steps to a consistent, measurable fitness routine.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white border border-slate-100 rounded-lg shadow-sm">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-[var(--accent)] text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="mt-4 font-semibold text-slate-900">1. Tell us your goals</h3>
+            <p class="mt-2 text-sm text-slate-600">Answer a short questionnaire and connect devices you use.</p>
+          </div>
+
+          <div class="p-6 bg-white border border-slate-100 rounded-lg shadow-sm">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-[var(--brand)] text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="mt-4 font-semibold text-slate-900">2. Get a tailored plan</h3>
+            <p class="mt-2 text-sm text-slate-600">Your plan blends automated periodization with weekly coach reviews.</p>
+          </div>
+
+          <div class="p-6 bg-white border border-slate-100 rounded-lg shadow-sm">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-slate-700 text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12h14" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="mt-4 font-semibold text-slate-900">3. Train and improve</h3>
+            <p class="mt-2 text-sm text-slate-600">Log workouts, review feedback, and update goals — we adjust the plan automatically.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-slate-900">What our members say</h2>
+        <p class="mt-3 text-slate-600">Real stories from people who made progress with PulseFit.</p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <figure class="p-6 bg-white rounded-lg border border-slate-100 shadow-sm">
+          <blockquote class="text-sm text-slate-700">"My coach helped me finally break through plateaus. The plan adapts and I always know what to do next."</blockquote>
+          <figcaption class="mt-4 flex items-center gap-3">
+            <svg width="44" height="44" viewBox="0 0 24 24" class="rounded-full bg-slate-50 p-2" aria-hidden><circle cx="12" cy="12" r="9" fill="#0f172a"/></svg>
+            <div>
+              <div class="font-semibold text-slate-900">Jordan M.</div>
+              <div class="text-sm text-slate-500">Lost 14 lbs in 12 weeks</div>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure class="p-6 bg-white rounded-lg border border-slate-100 shadow-sm">
+          <blockquote class="text-sm text-slate-700">"The nutrition plans were realistic and matched my taste. Coaches check in and actually listen."</blockquote>
+          <figcaption class="mt-4 flex items-center gap-3">
+            <svg width="44" height="44" viewBox="0 0 24 24" class="rounded-full bg-slate-50 p-2" aria-hidden><circle cx="12" cy="12" r="9" fill="#0f172a"/></svg>
+            <div>
+              <div class="font-semibold text-slate-900">Aisha R.</div>
+              <div class="text-sm text-slate-500">Maintains strength while leaning out</div>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure class="p-6 bg-white rounded-lg border border-slate-100 shadow-sm">
+          <blockquote class="text-sm text-slate-700">"I love the accountability — group challenges keep me consistent. The app is clean and fast."</blockquote>
+          <figcaption class="mt-4 flex items-center gap-3">
+            <svg width="44" height="44" viewBox="0 0 24 24" class="rounded-full bg-slate-50 p-2" aria-hidden><circle cx="12" cy="12" r="9" fill="#0f172a"/></svg>
+            <div>
+              <div class="font-semibold text-slate-900">Miguel P.</div>
+              <div class="text-sm text-slate-500">Consistent 5x week training</div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="pricing" class="bg-slate-50 py-16">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-2xl font-bold text-slate-900">Simple pricing, serious results</h2>
+          <p class="mt-3 text-slate-600">Start with a free trial. Upgrade when you're ready for a dedicated coach.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          <div class="md:col-span-2 p-6 bg-white border border-slate-100 rounded-lg shadow-sm">
+            <div class="flex items-baseline gap-4">
+              <div>
+                <div class="text-3xl font-extrabold text-slate-900">$19</div>
+                <div class="text-sm text-slate-600">/ month • Self-guided</div>
+              </div>
+              <div class="ml-auto text-sm text-slate-600">Best for solo users</div>
+            </div>
+
+            <ul class="mt-6 space-y-3 text-sm text-slate-600">
+              <li class="flex items-start gap-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#0ea5a4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Adaptive plans</li>
+              <li class="flex items-start gap-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#0ea5a4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Workout tracking</li>
+              <li class="flex items-start gap-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#0ea5a4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Community challenges</li>
+            </ul>
+
+            <div class="mt-6">
+              <a href="#signup" class="inline-block px-6 py-3 rounded-md bg-[var(--brand)] text-white font-medium hover:bg-black focus-ring">Start free trial</a>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white border border-slate-100 rounded-lg shadow-sm">
+            <div class="text-sm text-slate-600">Pro — Coaching</div>
+            <div class="mt-2 text-2xl font-extrabold text-slate-900">$89<span class="text-sm font-medium">/ month</span></div>
+            <p class="mt-3 text-sm text-slate-600">Dedicated coach, weekly check-ins, and premium support.</p>
+
+            <ul class="mt-6 space-y-3 text-sm text-slate-600">
+              <li class="flex items-start gap-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#0ea5a4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Weekly 1:1 check-ins</li>
+              <li class="flex items-start gap-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#0ea5a4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Personalized nutrition</li>
+              <li class="flex items-start gap-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="#0ea5a4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Priority messaging</li>
+            </ul>
+
+            <div class="mt-6">
+              <a href="#signup" class="inline-block px-6 py-3 rounded-md border border-[var(--brand)] text-[var(--brand)] font-medium hover:bg-slate-50 focus-ring">Talk to sales</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-slate-900">Frequently asked questions</h2>
+        <p class="mt-3 text-slate-600">Short answers to common questions about PulseFit.</p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <details class="p-6 bg-white border border-slate-100 rounded-lg" open>
+          <summary class="font-semibold text-slate-900 cursor-pointer">Is there a free trial?</summary>
+          <div class="mt-3 text-sm text-slate-600">Yes — start with a 14-day free trial of the Pro features. No credit card required.</div>
+        </details>
+
+        <details class="p-6 bg-white border border-slate-100 rounded-lg">
+          <summary class="font-semibold text-slate-900 cursor-pointer">Can I switch coaches?</summary>
+          <div class="mt-3 text-sm text-slate-600">Absolutely. If your coach isn’t the right fit, we’ll help you find another one from our vetted network.</div>
+        </details>
+
+        <details class="p-6 bg-white border border-slate-100 rounded-lg">
+          <summary class="font-semibold text-slate-900 cursor-pointer">Do you integrate with wearables?</summary>
+          <div class="mt-3 text-sm text-slate-600">Yes. Connect Apple Health, Google Fit, or popular wearables to automatically import activity.</div>
+        </details>
+
+        <details class="p-6 bg-white border border-slate-100 rounded-lg">
+          <summary class="font-semibold text-slate-900 cursor-pointer">What if I need a refund?</summary>
+          <div class="mt-3 text-sm text-slate-600">We offer a 30-day money-back guarantee on annual plans and case-by-case refunds on monthly plans.</div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-100 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <a href="#" class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="var(--brand)"/><path d="M7 13c1.5-3 4-5 6-6 1.8 1 4 3 5 6-2 0-5 1-8 1s-6-1-9-1z" fill="white"/></svg>
+          <span class="font-semibold">PulseFit</span>
+        </a>
+        <p class="mt-4 text-sm text-slate-600">Personalized coaching and data-driven plans to help you build lasting habits.</p>
+      </div>
+
+      <div class="flex justify-between md:justify-center">
+        <div>
+          <h4 class="text-sm font-semibold text-slate-900">Product</h4>
+          <ul class="mt-3 text-sm text-slate-600 space-y-2">
+            <li><a href="#features" class="hover:text-slate-900">Features</a></li>
+            <li><a href="#how" class="hover:text-slate-900">How it works</a></li>
+            <li><a href="#pricing" class="hover:text-slate-900">Pricing</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-sm text-slate-600">
+        <h4 class="text-sm font-semibold text-slate-900">Contact</h4>
+        <p class="mt-3">support@pulsefit.example</p>
+        <p class="mt-2">© 2026 PulseFit, Inc.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

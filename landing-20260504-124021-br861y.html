@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SentinelShield — Enterprise Cybersecurity Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom details not easily handled by utility classes */
+    :root{
+      --bg:#f8fafc; /* cool neutral background */
+      --card:#ffffff;
+      --muted:#6b7280;
+      --primary:#0f172a; /* deep navy */
+      --accent:#0ea5a4; /* teal */
+    }
+    body{background:var(--bg);color:var(--primary);font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+    .card-shadow{box-shadow:0 8px 30px rgba(15,23,42,0.06)}
+    /* subtle focus for accessibility */
+    a:focus, button:focus {outline:2px solid rgba(14,165,164,0.18); outline-offset:3px}
+    /* ensure hero illustration scales nicely */
+    .illus-scale{max-width:520px;width:100%}
+  </style>
+</head>
+<body class="antialiased">
+  <header class="bg-transparent">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect x="1.5" y="6" width="21" height="13" rx="2" stroke="#0f172a" stroke-width="1.5" fill="#0ea5a4" />
+          <path d="M7 10v-2a5 5 0 0110 0v2" stroke="#071033" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="font-semibold text-lg">SentinelShield</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700">
+        <a href="#features" class="hover:text-black">Features</a>
+        <a href="#how" class="hover:text-black">How it works</a>
+        <a href="#pricing" class="hover:text-black">Pricing</a>
+        <a href="#faq" class="hover:text-black">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#demo" class="hidden md:inline-block px-4 py-2 border border-slate-200 rounded text-sm hover:bg-slate-50">Request demo</a>
+        <a href="#get-started" class="inline-block px-4 py-2 bg-[#0f172a] text-white rounded shadow-sm text-sm hover:opacity-95">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="inline-flex items-center text-xs font-medium uppercase text-gray-600 tracking-wide bg-white/60 px-2 py-1 rounded">Enterprise cybersecurity</p>
+          <h1 class="mt-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight">Comprehensive threat protection, tailored for modern enterprise</h1>
+          <p class="mt-4 text-gray-600 max-w-xl">SentinelShield delivers managed detection, rapid incident response, and continuous risk reduction. We protect your critical systems with proactive monitoring and human-led threat hunting.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a id="get-started" href="#pricing" class="px-5 py-3 bg-[#0f172a] text-white rounded-md shadow card-shadow text-sm hover:opacity-95">Start free trial</a>
+            <a href="#demo" class="px-5 py-3 border border-slate-200 rounded-md text-sm hover:bg-slate-50">Schedule a demo</a>
+          </div>
+
+          <div class="mt-8">
+            <div class="flex items-center gap-4 flex-wrap text-sm text-gray-600">
+              <div class="flex items-center gap-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 2v6" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6 9v10a2 2 0 002 2h8a2 2 0 002-2V9" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8 13h8" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>99.99% uptime SLA • 24/7 monitoring</span>
+              </div>
+              <div class="h-6 w-px bg-slate-200" aria-hidden></div>
+              <div class="flex items-center gap-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 2a10 10 0 100 20 10 10 0 000-20z" stroke="#0f172a" stroke-width="1.2"/>
+                  <path d="M8 12l2 2 4-4" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Certified SOC analysts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center lg:justify-end">
+          <!-- Illustration: shield + network nodes (inline SVG) -->
+          <svg class="illus-scale" viewBox="0 0 600 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Network security illustration">
+            <rect width="600" height="420" rx="12" fill="#ffffff" class="card-shadow"/>
+            <g transform="translate(40,30)">
+              <rect x="0" y="0" width="520" height="360" rx="8" fill="#0f172a" opacity="0.06"/>
+              <g transform="translate(40,30)">
+                <circle cx="80" cy="80" r="34" fill="#0ea5a4"/>
+                <circle cx="80" cy="80" r="14" fill="#ffffff"/>
+
+                <circle cx="220" cy="60" r="24" fill="#0f172a"/>
+                <circle cx="220" cy="60" r="10" fill="#ffffff"/>
+
+                <circle cx="360" cy="120" r="28" fill="#0ea5a4"/>
+                <circle cx="360" cy="120" r="12" fill="#ffffff"/>
+
+                <circle cx="160" cy="200" r="22" fill="#0f172a"/>
+                <circle cx="160" cy="200" r="9" fill="#ffffff"/>
+
+                <path d="M100 94 L206 74" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M230 72 L320 112" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M200 78 L170 190" stroke="#0f172a" stroke-width="2.5" stroke-linecap="round"/>
+
+                <!-- central shield -->
+                <g transform="translate(240,168)">
+                  <path d="M0 -40 L40 -24 V8 C40 36 16 56 0 64 C-16 56 -40 36 -40 8 V-24 Z" fill="#0f172a"/>
+                  <rect x="-18" y="-18" width="36" height="24" rx="4" fill="#ffffff"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos / social proof -->
+    <section class="border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <p class="text-sm text-gray-600">Trusted by enterprises worldwide</p>
+        <div class="flex items-center gap-6">
+          <!-- simple logo placeholders as inline SVG circles -->
+          <svg width="88" height="28" aria-hidden>
+            <rect width="88" height="28" rx="6" fill="#fff" class="card-shadow"/>
+            <text x="14" y="19" font-size="12" fill="#0f172a" font-family="sans-serif">AcmeCorp</text>
+          </svg>
+          <svg width="88" height="28" aria-hidden>
+            <rect width="88" height="28" rx="6" fill="#fff" class="card-shadow"/>
+            <text x="12" y="19" font-size="12" fill="#0f172a" font-family="sans-serif">FinTrust</text>
+          </svg>
+          <svg width="88" height="28" aria-hidden>
+            <rect width="88" height="28" rx="6" fill="#fff" class="card-shadow"/>
+            <text x="12" y="19" font-size="12" fill="#0f172a" font-family="sans-serif">CloudPro</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="max-w-7xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-semibold">Platform features</h2>
+      <p class="mt-2 text-gray-600 max-w-2xl">Everything you need to detect, investigate, and respond to threats across cloud, hybrid, and on-prem environments.</p>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="bg-white p-6 rounded-lg card-shadow border border-slate-100">
+          <div class="flex items-center gap-4">
+            <div class="p-3 bg-[#0ea5a4] rounded-md">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2v6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M6 9v10a2 2 0 002 2h8a2 2 0 002-2V9" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-medium">Managed Detection & Response</h3>
+              <p class="mt-2 text-sm text-gray-600">24/7 monitoring by a certified SOC, with human-led threat hunting and automated containment.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-white p-6 rounded-lg card-shadow border border-slate-100">
+          <div class="flex items-center gap-4">
+            <div class="p-3 bg-[#0f172a] rounded-md">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 8v4l2 2" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-medium">Incident Response</h3>
+              <p class="mt-2 text-sm text-gray-600">Rapid containment and remediation playbooks tailored to your stack and compliance needs.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-white p-6 rounded-lg card-shadow border border-slate-100">
+          <div class="flex items-center gap-4">
+            <div class="p-3 bg-[#f3f4f6] rounded-md">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 7h18" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M3 12h18" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M3 17h18" stroke="#0f172a" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-medium">Compliance & Reporting</h3>
+              <p class="mt-2 text-sm text-gray-600">Automated evidence collection and clear reports to support audits and executive dashboards.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="bg-white border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-semibold">How SentinelShield works</h2>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 border rounded-lg">
+            <div class="w-12 h-12 flex items-center justify-center rounded-md bg-[#0f172a] text-white">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M5 7v6c0 5 7 8 7 8s7-3 7-8V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="mt-4 font-medium">Connect & Onboard</h3>
+            <p class="mt-2 text-sm text-gray-600">Quick integrations with SIEM, cloud providers, endpoints, and identity systems with minimal disruption.</p>
+          </div>
+
+          <div class="p-6 border rounded-lg">
+            <div class="w-12 h-12 flex items-center justify-center rounded-md bg-[#0ea5a4] text-white">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M12 3v18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="mt-4 font-medium">Detect & Hunt</h3>
+            <p class="mt-2 text-sm text-gray-600">Continuous detection with threat intelligence and manual hunting to find stealthy attackers.</p>
+          </div>
+
+          <div class="p-6 border rounded-lg">
+            <div class="w-12 h-12 flex items-center justify-center rounded-md bg-[#0f172a] text-white">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 8v4l2 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="mt-4 font-medium">Respond & Remediate</h3>
+            <p class="mt-2 text-sm text-gray-600">Automated containment plus expert-led incident response to restore operations quickly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-semibold">Customer stories</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="bg-white p-6 rounded-lg card-shadow border border-slate-100">
+          <p class="text-gray-700">"SentinelShield reduced our mean time to detect from days to minutes. Their team integrated seamlessly with our security stack and acted decisively when we needed them most."</p>
+          <footer class="mt-4 text-sm text-gray-600">— Head of Security, FinTrust</footer>
+        </blockquote>
+
+        <blockquote class="bg-white p-6 rounded-lg card-shadow border border-slate-100">
+          <p class="text-gray-700">"The playbooks and reporting made audit season straightforward. We now have continuous coverage and confidence in our controls."</p>
+          <footer class="mt-4 text-sm text-gray-600">— CTO, AcmeCorp</footer>
+        </blockquote>
+
+        <blockquote class="bg-white p-6 rounded-lg card-shadow border border-slate-100">
+          <p class="text-gray-700">"Fast incident response and clear communication helped us contain a breach without customer impact. Highly recommend their team."</p>
+          <footer class="mt-4 text-sm text-gray-600">— VP Engineering, CloudPro</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="pricing" class="bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="text-center">
+          <h2 class="text-2xl font-semibold">Plans that scale with your needs</h2>
+          <p class="mt-2 text-gray-600 max-w-2xl mx-auto">Transparent pricing for small teams up to global enterprises. Start with a trial and scale as you grow.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white rounded-lg border card-shadow">
+            <h3 class="font-semibold">Core</h3>
+            <p class="mt-2 text-3xl font-bold">$3,000<span class="text-sm font-medium">/mo</span></p>
+            <ul class="mt-4 text-sm text-gray-600 space-y-2">
+              <li>24/7 monitoring</li>
+              <li>Baseline detection rules</li>
+              <li>Monthly reports</li>
+            </ul>
+            <a href="#get-started" class="mt-6 inline-block px-4 py-2 bg-[#0f172a] text-white rounded">Choose Core</a>
+          </div>
+
+          <div class="p-6 bg-white rounded-lg border-2 border-[#0ea5a4]">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#0ea5a4] text-white rounded text-sm">Most popular</div>
+            <h3 class="mt-4 font-semibold">Advanced</h3>
+            <p class="mt-2 text-3xl font-bold">$7,500<span class="text-sm font-medium">/mo</span></p>
+            <ul class="mt-4 text-sm text-gray-600 space-y-2">
+              <li>Everything in Core</li>
+              <li>Threat hunting & IR support</li>
+              <li>Custom playbooks</li>
+            </ul>
+            <a href="#get-started" class="mt-6 inline-block px-4 py-2 bg-[#0f172a] text-white rounded">Choose Advanced</a>
+          </div>
+
+          <div class="p-6 bg-white rounded-lg border card-shadow">
+            <h3 class="font-semibold">Enterprise</h3>
+            <p class="mt-2 text-3xl font-bold">Custom</p>
+            <ul class="mt-4 text-sm text-gray-600 space-y-2">
+              <li>Dedicated SOC team</li>
+              <li>On-site support option</li>
+              <li>Compliance & audit assistance</li>
+            </ul>
+            <a href="#demo" class="mt-6 inline-block px-4 py-2 border border-slate-200 rounded">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-7xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-semibold">Frequently asked questions</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <details class="bg-white p-5 rounded-lg border card-shadow">
+          <summary class="cursor-pointer font-medium">How long does onboarding take?</summary>
+          <p class="mt-2 text-gray-600 text-sm">Typical onboarding is 2–4 weeks depending on integrations and environment complexity. We provide a dedicated onboarding lead.</p>
+        </details>
+
+        <details class="bg-white p-5 rounded-lg border card-shadow">
+          <summary class="cursor-pointer font-medium">Do you support hybrid cloud environments?</summary>
+          <p class="mt-2 text-gray-600 text-sm">Yes. We support public cloud providers, private cloud, and on-prem systems with tailored connectors and collectors.</p>
+        </details>
+
+        <details class="bg-white p-5 rounded-lg border card-shadow">
+          <summary class="cursor-pointer font-medium">What compliance frameworks do you assist with?</summary>
+          <p class="mt-2 text-gray-600 text-sm">We help with SOC 2, ISO 27001, PCI-DSS, and HIPAA reporting; we produce evidence packages and executive-ready reports.</p>
+        </details>
+
+        <details class="bg-white p-5 rounded-lg border card-shadow">
+          <summary class="cursor-pointer font-medium">Is there a trial available?</summary>
+          <p class="mt-2 text-gray-600 text-sm">Yes — request a 14-day trial with live monitoring and limited remediation capabilities to evaluate our platform.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <a href="#" class="flex items-center gap-3">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect x="1.5" y="6" width="21" height="13" rx="2" stroke="#0f172a" stroke-width="1.2" fill="#0ea5a4" />
+            <path d="M7 10v-2a5 5 0 0110 0v2" stroke="#071033" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-semibold">SentinelShield</span>
+        </a>
+        <p class="mt-3 text-sm text-gray-600 max-w-md">Proactive security, human-led response, and predictable pricing for enterprise-grade protection.</p>
+      </div>
+
+      <div class="flex gap-8">
+        <div>
+          <h4 class="text-sm font-medium">Product</h4>
+          <ul class="mt-3 text-sm text-gray-600 space-y-2">
+            <li><a href="#features" class="hover:text-black">Features</a></li>
+            <li><a href="#how" class="hover:text-black">How it works</a></li>
+            <li><a href="#pricing" class="hover:text-black">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-medium">Company</h4>
+          <ul class="mt-3 text-sm text-gray-600 space-y-2">
+            <li><a href="#" class="hover:text-black">About</a></li>
+            <li><a href="#" class="hover:text-black">Careers</a></li>
+            <li><a href="#" class="hover:text-black">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-slate-100 mt-6">
+      <div class="max-w-7xl mx-auto px-6 py-4 text-sm text-gray-500">© <span id="year">2026</span> SentinelShield. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // set current year
+    try{document.getElementById('year').textContent = new Date().getFullYear();}catch(e){}
+  </script>
+</body>
+</html>

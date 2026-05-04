@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elevate — Online Course Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for details that Tailwind doesn't cover easily */
+    :root{--brand:#0f1724;--accent:#0ea5a4;--muted:#6b7280;--card:#f8fafc}
+    .brand-gradient{background:var(--brand)}
+    .focus-ring:focus{outline:2px solid rgba(14,165,164,0.18);outline-offset:2px}
+    /* subtle card border */
+    .card { background: white; border: 1px solid rgba(15,23,36,0.06); box-shadow: 0 6px 18px rgba(2,6,23,0.06); }
+    /* limit long paragraphs for nicer layout */
+    .measure { max-width: 64ch; }
+  </style>
+</head>
+<body class="antialiased text-slate-900 bg-slate-50">
+  <!-- NAVBAR -->
+  <header class="bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+          <rect x="2" y="2" width="20" height="20" rx="4" fill="#0f1724" />
+          <path d="M7 15l4-7 4 7" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="font-semibold text-lg text-slate-900">Elevate</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-700">
+        <a href="#features" class="hover:text-slate-900">Features</a>
+        <a href="#how" class="hover:text-slate-900">How it works</a>
+        <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+        <a href="#faq" class="hover:text-slate-900">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden md:inline-block text-sm font-medium text-slate-700 hover:text-slate-900">Sign in</a>
+        <a href="#pricing" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500 text-white text-sm font-semibold rounded-md hover:bg-emerald-600 focus-ring">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="max-w-7xl mx-auto px-6 pt-12 lg:pt-20">
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight text-slate-900">Build, launch, and scale online courses your learners love</h1>
+        <p class="mt-6 text-lg text-slate-600 measure">Create structured learning experiences with video, quizzes, and community — all in one modern platform built for creators and enterprises.</p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#pricing" class="inline-flex items-center justify-center px-5 py-3 bg-emerald-500 text-white rounded-md text-sm font-semibold hover:bg-emerald-600">Start free trial</a>
+          <a href="#how" class="inline-flex items-center gap-2 px-5 py-3 border border-slate-200 bg-white rounded-md text-sm font-medium hover:bg-slate-50">See how it works
+            <svg class="w-4 h-4 text-slate-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="mt-8 flex items-center gap-6">
+          <div class="flex items-center gap-3">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="#e6fffa"/><path d="M8 12h8" stroke="#0ea5a4" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <div>
+              <div class="text-sm font-semibold text-slate-900">2,400+</div>
+              <div class="text-sm text-slate-600">Courses launched</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="4" fill="#eef2ff"/><path d="M8 14s1.5-2 4-2 4 2 4 2" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div>
+              <div class="text-sm font-semibold text-slate-900">$12M+</div>
+              <div class="text-sm text-slate-600">Revenue to creators</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-first lg:order-last">
+        <div class="card p-6">
+          <svg viewBox="0 0 800 520" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration">
+            <rect x="0" y="0" width="800" height="520" rx="10" fill="#ffffff" stroke="#0f1724" stroke-opacity="0.04"/>
+            <g transform="translate(36,36)">
+              <rect x="0" y="0" width="728" height="160" rx="8" fill="#0f1724"/>
+              <rect x="0" y="190" width="300" height="220" rx="8" fill="#f8fafc" stroke="#e6e9ef"/>
+              <rect x="320" y="190" width="400" height="220" rx="8" fill="#f8fafc" stroke="#e6e9ef"/>
+              <path d="M24 36h120" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="64" cy="80" r="34" fill="#fff" />
+            </g>
+            <!-- simple play icon -->
+            <g transform="translate(260,48)">
+              <rect width="280" height="120" rx="6" fill="#0ea5a4" />
+              <path d="M110 30 L170 60 L110 90 z" fill="#04202b"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LOGOS / SOCIAL PROOF -->
+  <section class="mt-12 border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between gap-6">
+      <p class="text-sm text-slate-500">Trusted by teams at</p>
+      <div class="flex items-center gap-8">
+        <!-- Inline logos -->
+        <svg width="92" height="28" viewBox="0 0 92 28" fill="none"><rect width="92" height="28" rx="4" fill="#fff"/></svg>
+        <svg width="92" height="28" viewBox="0 0 92 28" fill="none"><rect width="92" height="28" rx="4" fill="#fff"/></svg>
+        <svg width="92" height="28" viewBox="0 0 92 28" fill="none"><rect width="92" height="28" rx="4" fill="#fff"/></svg>
+        <svg width="92" height="28" viewBox="0 0 92 28" fill="none"><rect width="92" height="28" rx="4" fill="#fff"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="col-span-1">
+        <h2 class="text-2xl font-bold text-slate-900">Everything you need to teach online</h2>
+        <p class="mt-3 text-slate-600 measure">Powerful content tools, student engagement features, and analytics so you can focus on creating great learning experiences.</p>
+      </div>
+
+      <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card p-5">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-md bg-emerald-50 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3v18" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/><path d="M3 8h18" stroke="#059669" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Video, audio & text</h3>
+              <p class="mt-1 text-sm text-slate-600">Deliver lessons with flexible content blocks and built-in captions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-5">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-md bg-indigo-50 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M6 7v10a6 6 0 006 6v0a6 6 0 006-6V7" stroke="#7c3aed" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Quizzes & assignments</h3>
+              <p class="mt-1 text-sm text-slate-600">Assess mastery with auto-graded quizzes and manual assignments.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-5">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-md bg-sky-50 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l4 7H8l4-7zM6 21a6 6 0 0012 0" stroke="#0ea5a4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Community & cohorts</h3>
+              <p class="mt-1 text-sm text-slate-600">Run cohorted programs with discussion boards and chained content.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card p-5">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-md bg-amber-50 flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 13h18M12 3v18" stroke="#d97706" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Insights & certificates</h3>
+              <p class="mt-1 text-sm text-slate-600">Track learner progress and issue completion certificates automatically.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <h2 class="text-2xl font-bold text-slate-900">How it works</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 card">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-slate-900 text-white grid place-items-center font-semibold">1</div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Create your course</h3>
+              <p class="mt-1 text-sm text-slate-600">Upload videos, add modules, and build assessments with our editor.</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 card">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-slate-900 text-white grid place-items-center font-semibold">2</div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Launch with ease</h3>
+              <p class="mt-1 text-sm text-slate-600">Use built-in landing pages, coupons, and checkout to go live fast.</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 card">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-slate-900 text-white grid place-items-center font-semibold">3</div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Grow your audience</h3>
+              <p class="mt-1 text-sm text-slate-600">Analyze engagement and iterate to scale revenue and impact.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="text-2xl font-bold text-slate-900">What creators say</h2>
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <blockquote class="card p-6">
+        <p class="text-slate-700">"Elevate transformed how I structure my content — students complete courses faster and engagement is through the roof."</p>
+        <footer class="mt-4 flex items-center gap-3">
+          <svg width="44" height="44" viewBox="0 0 44 44" class="rounded-full bg-slate-100 p-1"><circle cx="22" cy="22" r="20" fill="#fff" stroke="#e6e9ef"/></svg>
+          <div>
+            <div class="font-semibold text-slate-900">Marisol K.</div>
+            <div class="text-sm text-slate-600">Founder, DataCraft</div>
+          </div>
+        </footer>
+      </blockquote>
+
+      <blockquote class="card p-6">
+        <p class="text-slate-700">"The cohort tools allowed us to run high-touch programs without hiring more staff. Support is top-notch."</p>
+        <footer class="mt-4 flex items-center gap-3">
+          <svg width="44" height="44" viewBox="0 0 44 44" class="rounded-full bg-slate-100 p-1"><circle cx="22" cy="22" r="20" fill="#fff" stroke="#e6e9ef"/></svg>
+          <div>
+            <div class="font-semibold text-slate-900">Jon P.</div>
+            <div class="text-sm text-slate-600">Head of Learning, Pulse</div>
+          </div>
+        </footer>
+      </blockquote>
+
+      <blockquote class="card p-6">
+        <p class="text-slate-700">"We migrated from multiple tools to Elevate — simpler workflow, clearer analytics, and better student outcomes."</p>
+        <footer class="mt-4 flex items-center gap-3">
+          <svg width="44" height="44" viewBox="0 0 44 44" class="rounded-full bg-slate-100 p-1"><circle cx="22" cy="22" r="20" fill="#fff" stroke="#e6e9ef"/></svg>
+          <div>
+            <div class="font-semibold text-slate-900">Aisha R.</div>
+            <div class="text-sm text-slate-600">CEO, BrightPath</div>
+          </div>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- PRICING / CTA -->
+  <section id="pricing" class="bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <h2 class="text-2xl font-bold text-slate-900">Simple pricing for creators & teams</h2>
+      <p class="mt-2 text-slate-600">No surprises. Cancel anytime. Annual plans include a discount and priority support.</p>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card p-6">
+          <div class="text-sm font-semibold text-slate-900">Starter</div>
+          <div class="mt-4 text-3xl font-extrabold">$0 <span class="text-sm font-medium text-slate-600">/ month</span></div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>Unlimited students</li>
+            <li>Basic analytics</li>
+            <li>Email support</li>
+          </ul>
+          <a href="#" class="mt-6 inline-block px-4 py-2 bg-white border border-slate-200 rounded-md text-sm font-semibold hover:bg-slate-50">Get started</a>
+        </div>
+
+        <div class="card p-6 border-2 border-emerald-500">
+          <div class="text-sm font-semibold text-slate-900">Professional</div>
+          <div class="mt-4 text-3xl font-extrabold">$49 <span class="text-sm font-medium text-slate-600">/ month</span></div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>All Starter features</li>
+            <li>Cohorts & assignments</li>
+            <li>Advanced analytics</li>
+          </ul>
+          <a href="#" class="mt-6 inline-block px-4 py-2 bg-emerald-500 text-white rounded-md text-sm font-semibold hover:bg-emerald-600">Start trial</a>
+        </div>
+
+        <div class="card p-6">
+          <div class="text-sm font-semibold text-slate-900">Enterprise</div>
+          <div class="mt-4 text-3xl font-extrabold">Custom</div>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>SSO & advanced security</li>
+            <li>Dedicated onboarding</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#" class="mt-6 inline-block px-4 py-2 bg-white border border-slate-200 rounded-md text-sm font-semibold hover:bg-slate-50">Contact sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="text-2xl font-bold text-slate-900">Frequently asked questions</h2>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <details class="p-5 card">
+        <summary class="font-medium cursor-pointer">Can I switch plans later?</summary>
+        <p class="mt-3 text-sm text-slate-600">Yes. You can upgrade or downgrade at any time from billing settings without losing your content.</p>
+      </details>
+
+      <details class="p-5 card">
+        <summary class="font-medium cursor-pointer">Do you offer refunds?</summary>
+        <p class="mt-3 text-sm text-slate-600">We provide refunds for annual plans within 30 days in most cases. Contact support for help.</p>
+      </details>
+
+      <details class="p-5 card">
+        <summary class="font-medium cursor-pointer">Can I run cohort-based courses?</summary>
+        <p class="mt-3 text-sm text-slate-600">Yes, cohort and drip-schedule features are included in Professional and Enterprise plans.</p>
+      </details>
+
+      <details class="p-5 card">
+        <summary class="font-medium cursor-pointer">Is learner data exportable?</summary>
+        <p class="mt-3 text-sm text-slate-600">You can export learner progress and reports as CSV for integrations and compliance.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-200">
+    <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <div class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="4" fill="#fff"/></svg>
+          <div>
+            <div class="font-semibold">Elevate</div>
+            <div class="text-sm text-slate-400">Teach better. Scale smarter.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:col-span-2 flex justify-between">
+        <div>
+          <div class="font-semibold">Product</div>
+          <ul class="mt-3 text-sm text-slate-400 space-y-2">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold">Company</div>
+          <ul class="mt-3 text-sm text-slate-400 space-y-2">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold">Legal</div>
+          <ul class="mt-3 text-sm text-slate-400 space-y-2">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-slate-800/50">
+      <div class="max-w-7xl mx-auto px-6 py-4 text-sm text-slate-500">© 2026 Elevate. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
