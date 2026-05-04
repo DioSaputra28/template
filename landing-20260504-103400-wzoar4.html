@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SentinelEdge — Enterprise Cybersecurity Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for layout polish */
+    :root{
+      --brand-600:#0f172a; /* slate-900 like */
+      --accent:#0066ff;
+      --muted:#64748b;
+      --card:#ffffff;
+      --bg:#f8fafc;
+    }
+    html,body{background:var(--bg);}
+    .glass-card{background:var(--card);box-shadow:0 6px 20px rgba(15,23,42,0.06);}
+    .focus-ring:focus{outline:2px solid rgba(0,102,255,0.15);outline-offset:2px}
+    /* prevent gradients from tailwind CDN utilities (we won't use them) */
+  </style>
+</head>
+<body class="antialiased text-slate-800">
+
+  <!-- Navbar -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+      <a href="#" class="flex items-center gap-3">
+        <!-- Logo: shield + S -->
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect width="24" height="24" rx="6" fill="var(--brand-600)" />
+          <path d="M7 9c0-1.657 1.567-3 3.5-3S14 7.343 14 9c0 1.657-1.567 3-3.5 3S7 10.657 7 9z" fill="#fff" />
+          <path d="M12 13c-3 1-4 3-4 5h8c0-2-1-4-4-5z" fill="#fff" opacity="0.95" />
+        </svg>
+        <span class="font-semibold text-lg text-slate-900">SentinelEdge</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+        <a href="#features" class="hover:text-slate-900">Features</a>
+        <a href="#how" class="hover:text-slate-900">How it works</a>
+        <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+        <a href="#faq" class="hover:text-slate-900">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="hidden md:inline-block text-sm px-4 py-2 border border-slate-200 rounded-md hover:bg-slate-50">Contact Sales</a>
+        <a href="#" class="inline-flex items-center gap-2 bg-slate-900 text-white text-sm px-4 py-2 rounded-md hover:opacity-95">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="-ml-0.5" aria-hidden>
+            <path d="M12 2L3 7v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V7l-9-5z" fill="#fff" opacity="0.96"/>
+            <path d="M12 11a3 3 0 100-6 3 3 0 000 6z" fill="#000" opacity="0.05"/>
+          </svg>
+          Get Started
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main class="max-w-7xl mx-auto px-6 py-12 lg:py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight">Enterprise cybersecurity that stops threats before they touch your business</h1>
+        <p class="mt-4 text-slate-600 max-w-prose">SentinelEdge provides managed detection & response, proactive threat hunting, and compliance-ready controls — tailored for mid-market and enterprise teams who need simple, accountable security.</p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <form class="flex w-full sm:w-auto gap-2 items-center glass-card px-2 py-2 rounded-md border border-slate-100">
+            <label for="email" class="sr-only">Work email</label>
+            <input id="email" type="email" placeholder="your@company.com" class="flex-1 px-3 py-2 text-sm bg-transparent border-none focus:ring-0 focus:outline-none" />
+            <button class="bg-slate-900 text-white px-4 py-2 rounded-md text-sm">Request Demo</button>
+          </form>
+          <a href="#pricing" class="inline-flex items-center gap-3 text-sm px-4 py-2 border border-slate-200 rounded-md hover:bg-slate-50">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 2l7 4v6c0 5-3.8 9.7-7 11-3.2-1.3-7-6-7-11V6l7-4z" fill="var(--brand-600)"/>
+              <path d="M12 7a3 3 0 100-6 3 3 0 000 6z" fill="#fff" opacity="0.06"/>
+            </svg>
+            View Pricing
+          </a>
+        </div>
+
+        <ul class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-600">
+          <li class="flex items-start gap-3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="mt-1" aria-hidden>
+              <circle cx="12" cy="12" r="10" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+              <path d="M7 12l3 3 7-7" stroke="#0f172a" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            24/7 monitoring with SLA-backed response
+          </li>
+          <li class="flex items-start gap-3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="mt-1" aria-hidden>
+              <rect x="3" y="4" width="18" height="12" rx="2" stroke="#94a3b8" stroke-width="1.5" fill="none"/>
+              <path d="M8 16v2a2 2 0 002 2h4a2 2 0 002-2v-2" stroke="#0f172a" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+            </svg>
+            SOC analysts and threat hunters
+          </li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="glass-card p-6 rounded-xl border border-slate-100">
+          <!-- Illustration: lock + network nodes -->
+          <div class="flex items-center justify-center">
+            <svg viewBox="0 0 360 240" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect x="0" y="0" width="360" height="240" rx="12" fill="#fff"/>
+              <g transform="translate(40,30)">
+                <rect x="0" y="0" width="280" height="180" rx="10" fill="#f8fafc" stroke="#e6eef8"/>
+                <g transform="translate(20,20)" fill="none" stroke="#0f172a">
+                  <circle cx="40" cy="40" r="22" fill="#0f172a" opacity="0.06"/>
+                  <path d="M40 30v-6" stroke="#0f172a" stroke-width="2"/>
+                  <rect x="110" y="22" width="56" height="36" rx="6" fill="#0f172a" opacity="0.04" stroke="#0f172a"/>
+                  <path d="M138 22v-6" stroke="#0f172a" stroke-width="2"/>
+                  <circle cx="200" cy="60" r="12" fill="#0f172a" opacity="0.04"/>
+                  <path d="M62 52h40" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M146 40h44" stroke="#0f172a" stroke-width="2" stroke-linecap="round"/>
+                  <g transform="translate(32,76)">
+                    <rect x="0" y="0" width="120" height="48" rx="6" fill="#fff" stroke="#cbd5e1"/>
+                    <path d="M12 18h48" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M12 30h36" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+                  </g>
+                </g>
+                <g transform="translate(90,28)">
+                  <rect x="0" y="0" width="56" height="56" rx="10" fill="#0f172a"/>
+                  <path d="M28 18v10" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M20 28h16" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Social proof / logos -->
+  <section class="max-w-7xl mx-auto px-6 py-6">
+    <div class="bg-white glass-card p-6 rounded-lg border border-slate-100 flex items-center justify-between gap-6">
+      <p class="text-sm text-slate-600">Trusted by security teams at</p>
+      <div class="flex items-center gap-6">
+        <!-- simple logo placeholders as SVGs -->
+        <svg width="90" height="28" viewBox="0 0 90 28" aria-hidden>
+          <rect width="90" height="28" rx="4" fill="#111827" fill-opacity="0.06"/>
+          <text x="10" y="18" fill="#0f172a" font-size="10" font-family="sans-serif">Acme Corp</text>
+        </svg>
+        <svg width="90" height="28" viewBox="0 0 90 28" aria-hidden>
+          <rect width="90" height="28" rx="4" fill="#111827" fill-opacity="0.06"/>
+          <text x="10" y="18" fill="#0f172a" font-size="10" font-family="sans-serif">BlueFin</text>
+        </svg>
+        <svg width="90" height="28" viewBox="0 0 90 28" aria-hidden>
+          <rect width="90" height="28" rx="4" fill="#111827" fill-opacity="0.06"/>
+          <text x="10" y="18" fill="#0f172a" font-size="10" font-family="sans-serif">Harbor</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-1">
+        <h2 class="text-2xl font-bold text-slate-900">Complete protection, clear outcomes</h2>
+        <p class="mt-3 text-slate-600">We combine human-led threat hunting with automated detection to reduce mean time to containment and provide security you can measure.</p>
+      </div>
+
+      <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <article class="glass-card p-5 rounded-lg border border-slate-100">
+          <div class="flex items-start gap-4">
+            <div class="p-2 rounded-md bg-slate-900 text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 1l3 2v3" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 8v6a7 7 0 007 7 7 7 0 007-7V8" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-slate-900 font-semibold">Managed Detection & Response</h3>
+              <p class="mt-1 text-sm text-slate-600">24/7 monitoring, triage, and containment guided by experienced SOC analysts.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass-card p-5 rounded-lg border border-slate-100">
+          <div class="flex items-start gap-4">
+            <div class="p-2 rounded-md bg-slate-900 text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 12h18" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M6 6l6 6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-slate-900 font-semibold">Threat Hunting</h3>
+              <p class="mt-1 text-sm text-slate-600">Proactive investigations to find stealthy adversaries before they escalate.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass-card p-5 rounded-lg border border-slate-100">
+          <div class="flex items-start gap-4">
+            <div class="p-2 rounded-md bg-slate-900 text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2v6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M7 12h10" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M4 20h16" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-slate-900 font-semibold">Compliance & Reporting</h3>
+              <p class="mt-1 text-sm text-slate-600">Pre-built evidence collection and auditor-ready reports for common frameworks.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass-card p-5 rounded-lg border border-slate-100">
+          <div class="flex items-start gap-4">
+            <div class="p-2 rounded-md bg-slate-900 text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M4 7h16" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M12 11v6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-slate-900 font-semibold">Integration & Automation</h3>
+              <p class="mt-1 text-sm text-slate-600">Connect existing telemetry and automate containment workflows.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="max-w-7xl mx-auto px-6 py-12">
+    <div class="bg-white glass-card p-8 rounded-lg border border-slate-100">
+      <h2 class="text-2xl font-semibold text-slate-900">How it works</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-4 border border-slate-100 rounded-lg">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center">1</div>
+            <h3 class="font-semibold text-slate-900">Connect telemetry</h3>
+          </div>
+          <p class="mt-3 text-sm text-slate-600">Ship logs, endpoints, and cloud telemetry to our ingest pipeline. Our on-boarding team helps with integrations.</p>
+        </div>
+
+        <div class="p-4 border border-slate-100 rounded-lg">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center">2</div>
+            <h3 class="font-semibold text-slate-900">Detect & analyze</h3>
+          </div>
+          <p class="mt-3 text-sm text-slate-600">Machine detection surfaces alerts, then our analysts investigate and validate high-confidence incidents.</p>
+        </div>
+
+        <div class="p-4 border border-slate-100 rounded-lg">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center">3</div>
+            <h3 class="font-semibold text-slate-900">Contain & report</h3>
+          </div>
+          <p class="mt-3 text-sm text-slate-600">We guide containment actions, run automated playbooks, and deliver post-incident reports for follow-up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-semibold text-slate-900">What security leaders say</h2>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <blockquote class="glass-card p-6 rounded-lg border border-slate-100">
+        <p class="text-slate-700">"SentinelEdge reduced our alert fatigue and gave us a predictable plan for incident response. The SOC team is fast and thorough."</p>
+        <footer class="mt-4 flex items-center gap-3">
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden>
+            <circle cx="20" cy="20" r="20" fill="#0f172a" opacity="0.08"/>
+            <text x="50%" y="54%" text-anchor="middle" fill="#0f172a" font-size="14" font-family="sans-serif">JS</text>
+          </svg>
+          <div>
+            <div class="font-semibold text-slate-900">Jordan Smith</div>
+            <div class="text-sm text-slate-600">CISO, Acme Corp</div>
+          </div>
+        </footer>
+      </blockquote>
+
+      <blockquote class="glass-card p-6 rounded-lg border border-slate-100">
+        <p class="text-slate-700">"The threat hunting reports surfaced issues we weren't aware of and materially improved our posture."</p>
+        <footer class="mt-4 flex items-center gap-3">
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden>
+            <circle cx="20" cy="20" r="20" fill="#0f172a" opacity="0.08"/>
+            <text x="50%" y="54%" text-anchor="middle" fill="#0f172a" font-size="14" font-family="sans-serif">LM</text>
+          </svg>
+          <div>
+            <div class="font-semibold text-slate-900">Lena Morales</div>
+            <div class="text-sm text-slate-600">VP Security, BlueFin</div>
+          </div>
+        </footer>
+      </blockquote>
+
+      <blockquote class="glass-card p-6 rounded-lg border border-slate-100">
+        <p class="text-slate-700">"Clear SLAs and measurable outcomes — finally a security partner that feels accountable."</p>
+        <footer class="mt-4 flex items-center gap-3">
+          <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden>
+            <circle cx="20" cy="20" r="20" fill="#0f172a" opacity="0.08"/>
+            <text x="50%" y="54%" text-anchor="middle" fill="#0f172a" font-size="14" font-family="sans-serif">RK</text>
+          </svg>
+          <div>
+            <div class="font-semibold text-slate-900">Ravi Kapoor</div>
+            <div class="text-sm text-slate-600">Director IT, Harbor</div>
+          </div>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Pricing / CTA -->
+  <section id="pricing" class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-1">
+        <h2 class="text-2xl font-semibold text-slate-900">Simple plans. Measurable security.</h2>
+        <p class="mt-3 text-slate-600">Choose a plan that fits your telemetry volume and support needs. All plans include 24/7 monitoring and analyst access.</p>
+      </div>
+
+      <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 glass-card rounded-lg border border-slate-100">
+          <div class="text-sm font-semibold text-slate-700">Starter</div>
+          <div class="mt-4 text-3xl font-extrabold text-slate-900">$3k<span class="text-base font-medium">/mo</span></div>
+          <ul class="mt-4 text-sm text-slate-600 space-y-2">
+            <li>Essential telemetry ingestion</li>
+            <li>Basic alerting</li>
+            <li>Email support</li>
+          </ul>
+          <button class="mt-6 w-full bg-slate-900 text-white py-2 rounded-md">Start Trial</button>
+        </div>
+
+        <div class="p-6 glass-card rounded-lg border border-slate-900"> <!-- emphasized -->
+          <div class="text-sm font-semibold text-white bg-slate-900 inline-block px-3 py-1 rounded">Popular</div>
+          <div class="mt-4 text-3xl font-extrabold text-slate-900">$8k<span class="text-base font-medium">/mo</span></div>
+          <ul class="mt-4 text-sm text-slate-600 space-y-2">
+            <li>Full telemetry + EDR</li>
+            <li>Dedicated SOC analyst</li>
+            <li>Threat hunting & playbooks</li>
+          </ul>
+          <button class="mt-6 w-full bg-slate-900 text-white py-2 rounded-md">Talk to Sales</button>
+        </div>
+
+        <div class="p-6 glass-card rounded-lg border border-slate-100">
+          <div class="text-sm font-semibold text-slate-700">Enterprise</div>
+          <div class="mt-4 text-3xl font-extrabold text-slate-900">Custom</div>
+          <ul class="mt-4 text-sm text-slate-600 space-y-2">
+            <li>Private SOC</li>
+            <li>Compliance programs</li>
+            <li>On-site support options</li>
+          </ul>
+          <button class="mt-6 w-full bg-slate-900 text-white py-2 rounded-md">Request Quote</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="max-w-7xl mx-auto px-6 py-12">
+    <h2 class="text-2xl font-semibold text-slate-900">Frequently asked questions</h2>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <details class="p-4 glass-card rounded-lg border border-slate-100">
+        <summary class="font-medium cursor-pointer">How long does onboarding take?</summary>
+        <div class="mt-2 text-sm text-slate-600">Typical onboarding is 2-6 weeks depending on telemetry and integrations. Our onboarding team handles ingestion, tuning, and a readiness review.</div>
+      </details>
+
+      <details class="p-4 glass-card rounded-lg border border-slate-100">
+        <summary class="font-medium cursor-pointer">Do you support cloud platforms?</summary>
+        <div class="mt-2 text-sm text-slate-600">Yes. We ingest telemetry from major cloud providers, containers, and SaaS apps. We also provide managed detection for hybrid environments.</div>
+      </details>
+
+      <details class="p-4 glass-card rounded-lg border border-slate-100">
+        <summary class="font-medium cursor-pointer">What are your SLAs?</summary>
+        <div class="mt-2 text-sm text-slate-600">We offer SLA-backed response times for incidents and regular reporting. Specifics vary by plan; contact sales for a service-level addendum.</div>
+      </details>
+
+      <details class="p-4 glass-card rounded-lg border border-slate-100">
+        <summary class="font-medium cursor-pointer">Can we keep data on-prem?</summary>
+        <div class="mt-2 text-sm text-slate-600">We provide hybrid options including on-prem collectors and private cloud deployments for customers with strict data residency requirements.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <a href="#" class="flex items-center gap-3 mb-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect width="24" height="24" rx="6" fill="var(--brand-600)" />
+            <path d="M7 9c0-1.657 1.567-3 3.5-3S14 7.343 14 9c0 1.657-1.567 3-3.5 3S7 10.657 7 9z" fill="#fff" />
+          </svg>
+          <span class="font-semibold text-slate-900">SentinelEdge</span>
+        </a>
+        <p class="text-sm text-slate-600">Managed detection & response with human-led threat hunting and compliance-ready controls.</p>
+      </div>
+
+      <div class="text-sm text-slate-600">
+        <div class="font-semibold text-slate-900">Product</div>
+        <nav class="mt-3 flex flex-col gap-2">
+          <a href="#features" class="hover:text-slate-900">Features</a>
+          <a href="#how" class="hover:text-slate-900">How it works</a>
+          <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+        </nav>
+      </div>
+
+      <div>
+        <div class="font-semibold text-slate-900 text-sm">Get updates</div>
+        <form class="mt-3 flex gap-2" action="#" onsubmit="return false;">
+          <input class="flex-1 px-3 py-2 border border-slate-200 rounded-md text-sm focus-ring" placeholder="Email address" />
+          <button class="bg-slate-900 text-white px-3 py-2 rounded-md text-sm">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 py-4 border-t border-slate-100 text-sm text-slate-500 flex items-center justify-between">
+      <div>© <span id="year">2026</span> SentinelEdge. All rights reserved.</div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="hover:text-slate-900">Privacy</a>
+        <a href="#" class="hover:text-slate-900">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
