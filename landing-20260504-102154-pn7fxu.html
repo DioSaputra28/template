@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Alara Travel — Curated Luxury Journeys</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for polished layout */
+    :root{
+      --brand-navy:#07203a;
+      --brand-gold:#b98b2e;
+      --muted:#617084;
+      --card:#ffffff;
+    }
+    .brand-navy{background-color:var(--brand-navy)}
+    .text-gold{color:var(--brand-gold)}
+    .ring-gold:focus{outline:2px solid transparent; box-shadow:0 0 0 4px rgba(185,139,46,0.12)}
+    /* Simple decorative wave made with SVG so avoid gradients */
+    .hero-illustration svg{width:100%;height:auto}
+    /* Keep hero image from overflowing on small screens */
+    .hero-illustration{max-width:680px}
+    /* Slight card shadow */
+    .card-shadow{box-shadow:0 6px 24px rgba(7,32,58,0.08)}
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-slate-50">
+
+  <!-- NAVBAR -->
+  <header class="brand-navy text-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-20" aria-label="Top">
+        <div class="flex items-center gap-4">
+          <a href="#" class="flex items-center gap-3">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect x="1" y="1" width="22" height="22" rx="6" fill="#ffffff"/>
+              <path d="M6 15c2-6 11-9 12-9" stroke="#b98b2e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 7l3 1-1 3" stroke="#07203a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="font-semibold text-lg tracking-tight">Alara Travel</span>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#why" class="hover:underline">Why Alara</a>
+          <a href="#how" class="hover:underline">How it Works</a>
+          <a href="#testimonials" class="hover:underline">Testimonials</a>
+          <a href="#pricing" class="hover:underline">Plans</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#contact" class="hidden md:inline-block px-4 py-2 border border-white/10 rounded-md hover:bg-white/5">Contact</a>
+          <a href="#book" class="inline-flex items-center gap-2 bg-amber-500 text-slate-900 px-4 py-2 rounded-md font-medium hover:bg-amber-400 transition shadow">Book A Consultation
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" class="ml-1" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <path d="M5 12h14" stroke="#07203a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 5l7 7-7 7" stroke="#07203a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-14 lg:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6">
+          <p class="inline-flex items-center gap-2 text-amber-500 font-semibold mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-7z" stroke="#b98b2e" stroke-width="1.2" stroke-linejoin="round" fill="none"/>
+            </svg>
+            Bespoke Luxury Journeys
+          </p>
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight">Exceptional travel, curated for the discerning explorer</h1>
+          <p class="mt-6 text-slate-600 max-w-xl">Alara crafts private, fully escorted trips to the world's most desirable destinations. From secluded villas to private charters — everything planned with care, privacy, and elevated service.</p>
+
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#book" class="inline-flex items-center gap-3 bg-amber-500 text-slate-900 px-5 py-3 rounded-md font-semibold hover:bg-amber-400 transition shadow">Schedule Consultation
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M5 12h14" stroke="#07203a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 5l7 7-7 7" stroke="#07203a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#why" class="inline-flex items-center gap-3 px-5 py-3 border border-slate-200 rounded-md hover:bg-slate-100">View Sample Itineraries
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M8 5v14l11-7L8 5z" stroke="#475569" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+            </a>
+          </div>
+
+          <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div class="flex items-start gap-3">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2v4" stroke="#0b2447" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M6 7l4 1 2 8 4-10 2 1" stroke="#0b2447" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              </svg>
+              <div>
+                <div class="text-sm font-semibold">Private Guides</div>
+                <div class="text-sm text-slate-500">Local experts, curated routes</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="4" width="18" height="14" rx="2" stroke="#0b2447" stroke-width="1.4" fill="none"/>
+                <path d="M7 10h10" stroke="#0b2447" stroke-width="1.4" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <div class="text-sm font-semibold">Seamless Logistics</div>
+                <div class="text-sm text-slate-500">Transfers, bookings, and concierge</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <circle cx="12" cy="12" r="8" stroke="#0b2447" stroke-width="1.4" fill="none"/>
+                <path d="M12 8v4l3 1" stroke="#0b2447" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <div class="text-sm font-semibold">24/7 Support</div>
+                <div class="text-sm text-slate-500">Always reachable on your journey</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 flex justify-center lg:justify-end">
+          <div class="hero-illustration card-shadow bg-white rounded-xl p-6">
+            <!-- Decorative inline SVG scene (no external assets) -->
+            <svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Luxury travel illustration">
+              <rect width="800" height="520" fill="#ffffff" rx="12"/>
+              <g transform="translate(40,40)">
+                <rect x="0" y="0" width="320" height="240" rx="10" fill="#f8fafc" stroke="#e6eef5"/>
+                <path d="M30 200 L70 60 L120 140 L170 40 L220 180" stroke="#0b2447" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="260" cy="60" r="28" fill="#b98b2e"/>
+                <path d="M270 40 L300 60 L270 80" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <rect x="360" y="0" width="240" height="320" rx="12" fill="#f1f5f9" stroke="#e2e8f0"/>
+                <path d="M420 40 L540 40" stroke="#0b2447" stroke-width="4"/>
+                <path d="M420 80 L540 80" stroke="#0b2447" stroke-width="4" stroke-dasharray="8 8"/>
+                <g transform="translate(380,220)">
+                  <rect x="0" y="0" width="220" height="40" rx="8" fill="#ffffff" stroke="#e6eef5"/>
+                  <text x="16" y="26" font-size="14" fill="#475569" font-family="sans-serif">Private villa with ocean view</text>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / LOGOS -->
+    <section class="border-t border-slate-100 py-8">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between gap-6 flex-wrap">
+          <div class="text-sm text-slate-500">Trusted by discerning clients and partners</div>
+          <div class="flex gap-6 items-center">
+            <!-- simple neutral logos -->
+            <svg width="96" height="28" viewBox="0 0 96 28" fill="none" aria-hidden>
+              <rect width="96" height="28" rx="4" fill="#ffffff" stroke="#e6eef5"/>
+              <path d="M12 20v-8h4l6 8v-8h4" stroke="#475569" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            <svg width="96" height="28" viewBox="0 0 96 28" fill="none" aria-hidden>
+              <rect width="96" height="28" rx="4" fill="#ffffff" stroke="#e6eef5"/>
+              <circle cx="20" cy="14" r="6" stroke="#475569" stroke-width="1.6"/>
+              <path d="M36 14h28" stroke="#475569" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+            <svg width="96" height="28" viewBox="0 0 96 28" fill="none" aria-hidden>
+              <rect width="96" height="28" rx="4" fill="#ffffff" stroke="#e6eef5"/>
+              <path d="M18 8h10v12H18z" stroke="#475569" stroke-width="1.6" fill="none"/>
+              <path d="M36 8h10v12H36z" stroke="#475569" stroke-width="1.6" fill="none"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="why" class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-1">
+          <h3 class="text-2xl font-semibold">Why choose Alara</h3>
+          <p class="mt-3 text-slate-600">We combine deep local knowledge with discreet, white-glove service. Every detail is anticipated and executed to match your taste and timing.</p>
+        </div>
+
+        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg p-6 card-shadow border border-slate-100">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-md bg-amber-50">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-7z" stroke="#b98b2e" stroke-width="1.4" fill="none"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold">Tailored Itineraries</h4>
+                <p class="text-sm text-slate-500 mt-1">Each trip designed around your rhythm, interests, and privacy requirements.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-shadow border border-slate-100">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-md bg-sky-50">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M20 8l-8 8-4-4" stroke="#0b2447" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold">Exclusive Access</h4>
+                <p class="text-sm text-slate-500 mt-1">Private encounters, closed-door experiences, and reserved times at sought-after venues.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-shadow border border-slate-100">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-md bg-emerald-50">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M12 3v18" stroke="#059669" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M3 12h18" stroke="#059669" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold">Responsible Travel</h4>
+                <p class="text-sm text-slate-500 mt-1">Thoughtful itineraries that respect local communities and conserve natural environments.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 card-shadow border border-slate-100">
+            <div class="flex items-start gap-4">
+              <div class="p-3 rounded-md bg-violet-50">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path d="M4 6h16M4 12h16M4 18h10" stroke="#6d28d9" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-semibold">Seamless Planning</h4>
+                <p class="text-sm text-slate-500 mt-1">From permits to private dining, we manage every confirmation and contingency.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="bg-white border-t border-slate-100 py-12">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold">How it Works</h3>
+          <p class="mt-2 text-slate-500">A short, simple process to plan an unforgettable trip.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-slate-50 rounded-lg border border-slate-100">
+            <div class="flex items-center gap-4">
+              <div class="h-12 w-12 rounded-full bg-amber-50 flex items-center justify-center font-semibold text-amber-600">1</div>
+              <div>
+                <h4 class="font-semibold">Consultation</h4>
+                <p class="text-sm text-slate-500 mt-1">Tell us your preferences and expectations on a private call.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-slate-50 rounded-lg border border-slate-100">
+            <div class="flex items-center gap-4">
+              <div class="h-12 w-12 rounded-full bg-amber-50 flex items-center justify-center font-semibold text-amber-600">2</div>
+              <div>
+                <h4 class="font-semibold">Craft & Refine</h4>
+                <p class="text-sm text-slate-500 mt-1">We propose an itinerary and refine it until it is flawless.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-slate-50 rounded-lg border border-slate-100">
+            <div class="flex items-center gap-4">
+              <div class="h-12 w-12 rounded-full bg-amber-50 flex items-center justify-center font-semibold text-amber-600">3</div>
+              <div>
+                <h4 class="font-semibold">Travel & Support</h4>
+                <p class="text-sm text-slate-500 mt-1">Enjoy your journey with full concierge support at every step.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+      <div class="text-center">
+        <h3 class="text-2xl font-semibold">What our clients say</h3>
+        <p class="mt-2 text-slate-500">Personal notes from travelers who experienced Alara trips.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="bg-white p-6 rounded-lg border border-slate-100 card-shadow">
+          <div class="flex items-start gap-4">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <circle cx="12" cy="12" r="10" stroke="#e2e8f0" stroke-width="1.6" fill="#f8fafc"/>
+              <path d="M8 10h2v6H8zM14 8h2v8h-2z" fill="#475569"/>
+            </svg>
+            <div>
+              <div class="font-semibold">Isabella M.</div>
+              <div class="text-sm text-slate-500">Founder & Collector</div>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-600">"Alara assembled a private Sardinia escape that exceeded our expectations. From a remote villa to a chef who knew our preferences—thoughtful, discreet, and impeccably handled."</p>
+        </blockquote>
+
+        <blockquote class="bg-white p-6 rounded-lg border border-slate-100 card-shadow">
+          <div class="flex items-start gap-4">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <circle cx="12" cy="12" r="10" stroke="#e2e8f0" stroke-width="1.6" fill="#f8fafc"/>
+              <path d="M9 15c1.5-2 6-2 7-3" stroke="#475569" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            <div>
+              <div class="font-semibold">James K.</div>
+              <div class="text-sm text-slate-500">Private Client</div>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-600">"Flawless planning and extraordinary local access. We felt supported the whole way without any fuss."</p>
+        </blockquote>
+
+        <blockquote class="bg-white p-6 rounded-lg border border-slate-100 card-shadow">
+          <div class="flex items-start gap-4">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <circle cx="12" cy="12" r="10" stroke="#e2e8f0" stroke-width="1.6" fill="#f8fafc"/>
+              <path d="M8 9h8M8 13h5" stroke="#475569" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div>
+              <div class="font-semibold">Sophie R.</div>
+              <div class="text-sm text-slate-500">Editor</div>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-600">"Every moment felt curated. The small gestures—surprise dinners, private viewings—made the trip unforgettable."</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section id="pricing" class="bg-slate-50 border-t border-slate-100 py-14">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="lg:col-span-1">
+            <h3 class="text-2xl font-semibold">Plans & Bespoke Service</h3>
+            <p class="mt-3 text-slate-600">We offer planning models to suit different needs — from single-trip planning to an annual membership for frequent travelers.</p>
+            <a href="#book" class="mt-6 inline-block bg-amber-500 text-slate-900 px-5 py-3 rounded-md font-semibold hover:bg-amber-400">Start Your Journey</a>
+          </div>
+
+          <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg p-6 border border-slate-100 card-shadow">
+              <div class="text-sm text-slate-500">A LA CARTE</div>
+              <div class="mt-4 text-2xl font-bold">$3,500+</div>
+              <div class="mt-2 text-sm text-slate-500">Per trip planning fee, starting price</div>
+              <ul class="mt-4 space-y-2 text-sm text-slate-600">
+                <li>Personal consultation</li>
+                <li>Itinerary design</li>
+                <li>Booking coordination</li>
+              </ul>
+              <div class="mt-6">
+                <a href="#book" class="block w-full text-center px-4 py-2 rounded-md bg-slate-900 text-white hover:bg-slate-800">Request Quote</a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border border-slate-100 card-shadow">
+              <div class="text-sm text-slate-500">MEMBERSHIP</div>
+              <div class="mt-4 text-2xl font-bold">$18,000 / year</div>
+              <div class="mt-2 text-sm text-slate-500">Annual access & bespoke benefits</div>
+              <ul class="mt-4 space-y-2 text-sm text-slate-600">
+                <li>Priority planning</li>
+                <li>Complimentary concierge</li>
+                <li>Exclusive partner privileges</li>
+              </ul>
+              <div class="mt-6">
+                <a href="#book" class="block w-full text-center px-4 py-2 rounded-md bg-amber-500 text-slate-900 font-semibold hover:bg-amber-400">Become a Member</a>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border border-slate-100 card-shadow">
+              <div class="text-sm text-slate-500">PRIVATE PROGRAM</div>
+              <div class="mt-4 text-2xl font-bold">Bespoke</div>
+              <div class="mt-2 text-sm text-slate-500">Fully private discovery programs</div>
+              <ul class="mt-4 space-y-2 text-sm text-slate-600">
+                <li>Dedicated travel director</li>
+                <li>Custom experiences</li>
+                <li>Confidential arrangements</li>
+              </ul>
+              <div class="mt-6">
+                <a href="#book" class="block w-full text-center px-4 py-2 rounded-md border border-slate-900 text-slate-900 hover:bg-slate-100">Inquire</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-7xl mx-auto px-6 lg:px-8 py-14">
+      <div class="text-center">
+        <h3 class="text-2xl font-semibold">Frequently Asked Questions</h3>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <details class="bg-white p-5 rounded-lg border border-slate-100">
+          <summary class="font-semibold">How far in advance should I book?</summary>
+          <p class="mt-3 text-slate-600">For peak seasons and exclusive access experiences, we recommend booking 4–8 months in advance. We can still design exceptional last-minute travel when feasible.</p>
+        </details>
+
+        <details class="bg-white p-5 rounded-lg border border-slate-100">
+          <summary class="font-semibold">Do you handle group travel?</summary>
+          <p class="mt-3 text-slate-600">Yes. From intimate family gatherings to private corporate retreats, we plan logistics and bespoke programming for groups of any size.</p>
+        </details>
+
+        <details class="bg-white p-5 rounded-lg border border-slate-100">
+          <summary class="font-semibold">Can you manage special dietary requirements?</summary>
+          <p class="mt-3 text-slate-600">Absolutely. We coordinate with chefs, restaurants, and service providers to ensure all dietary and medical needs are met.</p>
+        </details>
+
+        <details class="bg-white p-5 rounded-lg border border-slate-100">
+          <summary class="font-semibold">What is your cancellation policy?</summary>
+          <p class="mt-3 text-slate-600">Policies vary by component. We'll outline terms clearly in your proposal and manage any change requests on your behalf.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-navy text-white mt-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect x="1" y="1" width="22" height="22" rx="6" fill="#ffffff"/>
+            <path d="M6 15c2-6 11-9 12-9" stroke="#b98b2e" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <div class="font-semibold text-lg">Alara Travel</div>
+            <div class="text-sm text-slate-200">Curated luxury journeys</div>
+          </div>
+        </div>
+        <p class="text-sm text-slate-200 max-w-xs">Private planning, discreet service, and exceptional experiences tailored to you.</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Contact</h4>
+        <p class="mt-2 text-sm text-slate-200">hello@alaratravel.example</p>
+        <p class="text-sm text-slate-200">+1 555 012 3456</p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold">Legal</h4>
+        <nav class="mt-2 text-sm text-slate-200 space-y-1">
+          <a href="#" class="block hover:underline">Privacy</a>
+          <a href="#" class="block hover:underline">Terms</a>
+          <a href="#" class="block hover:underline">Accessibility</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4 text-sm text-slate-200 flex items-center justify-between">
+        <div>© <span id="year">2026</span> Alara Travel. All rights reserved.</div>
+        <div class="text-slate-300">Designed for privacy and refinement</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
