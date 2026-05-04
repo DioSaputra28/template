@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arbor Creative — Agency Portfolio</title>
+  <meta name="description" content="Arbor Creative — premium creative agency. Brand, product, and motion design for ambitious teams." />
+  <script>
+    // no external JS other than tailwind CDN per requirements
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for details Tailwind doesn't handle easily */
+    :root{--card-border: rgba(15,23,42,0.06)}
+    .soft-ring{box-shadow:0 6px 18px rgba(2,6,23,0.12)}
+    .brand-shadow{box-shadow:0 10px 30px rgba(2,6,23,0.16)}
+    /* Keep details summary arrow aligned */
+    details summary::-webkit-details-marker{display:none}
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-slate-50">
+  <!-- Navbar -->
+  <header class="bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#" class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="24" height="24" rx="6" fill="#0F172A"></rect>
+            <path d="M6 15L10 9l4 6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="font-semibold text-lg tracking-tight text-slate-900">Arbor Creative</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#work" class="text-slate-600 hover:text-slate-900">Work</a>
+          <a href="#services" class="text-slate-600 hover:text-slate-900">Services</a>
+          <a href="#process" class="text-slate-600 hover:text-slate-900">Process</a>
+          <a href="#pricing" class="text-slate-600 hover:text-slate-900">Pricing</a>
+          <a href="#faq" class="text-slate-600 hover:text-slate-900">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden md:inline-block text-sm px-4 py-2 border border-transparent rounded-md text-slate-700 hover:bg-slate-100">Contact</a>
+          <a href="#contact" class="inline-flex items-center px-4 py-2 rounded-md bg-[#ff6b5f] text-white text-sm font-medium shadow-sm hover:bg-[#ff5a4b]">Start a Project</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7">
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight">Design that moves brands forward.</h1>
+          <p class="mt-6 text-lg text-slate-600 max-w-xl">We are a creative studio crafting brand systems, product experiences, and motion that make ambitious companies feel unmistakable.</p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#work" class="inline-flex items-center justify-center px-5 py-3 rounded-md bg-[#0f172a] text-white font-semibold hover:bg-slate-800">See Our Work</a>
+            <a href="#services" class="inline-flex items-center justify-center px-5 py-3 rounded-md border border-slate-200 bg-white text-slate-800 hover:bg-slate-50">Our Services</a>
+          </div>
+
+          <div class="mt-8 flex items-center gap-6">
+            <div class="flex -space-x-3">
+              <!-- Avatars inline svg -->
+              <div class="w-10 h-10 rounded-full bg-[#0f172a] flex items-center justify-center text-white text-xs font-semibold">JM</div>
+              <div class="w-10 h-10 rounded-full bg-[#ff6b5f] flex items-center justify-center text-white text-xs font-semibold">AL</div>
+              <div class="w-10 h-10 rounded-full bg-[#f6c546] flex items-center justify-center text-slate-900 text-xs font-semibold">RK</div>
+            </div>
+            <div class="text-sm text-slate-600">Trusted by product teams at modern companies — scaling design systems to launch faster.</div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="w-full bg-white rounded-2xl border" style="border-color:var(--card-border);">
+            <div class="p-6 sm:p-8 brand-shadow rounded-2xl bg-white">
+              <!-- Illustration - abstract solid-shape (no gradients) -->
+              <svg viewBox="0 0 600 360" class="w-full h-64 sm:h-72" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden>
+                <rect x="0" y="0" width="600" height="360" fill="#fff" />
+                <rect x="24" y="40" width="240" height="120" rx="12" fill="#0f172a" />
+                <rect x="320" y="28" width="240" height="92" rx="10" fill="#ff6b5f" />
+                <rect x="40" y="180" width="520" height="140" rx="14" fill="#f1f5f9" />
+                <circle cx="140" cy="90" r="6" fill="#f6c546" />
+                <circle cx="200" cy="72" r="6" fill="#fff" />
+              </svg>
+              <div class="mt-4 text-sm text-slate-600">Recent project: Product identity & motion for a fintech platform — 6-week sprint, delivered design system and interactive prototypes.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof / Logos -->
+    <section class="border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8">
+        <div class="flex items-center justify-between gap-6 flex-wrap">
+          <div class="flex items-center gap-6 flex-wrap">
+            <!-- Simple monochrome logo blocks as inline svg -->
+            <svg width="92" height="28" viewBox="0 0 92 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="92" height="28" rx="4" fill="#fff" stroke="#e6eef7"/><text x="12" y="18" fill="#475569" font-size="12" font-family="Inter, sans-serif">Acme</text></svg>
+            <svg width="92" height="28" viewBox="0 0 92 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="92" height="28" rx="4" fill="#fff" stroke="#e6eef7"/><text x="10" y="18" fill="#475569" font-size="12" font-family="Inter, sans-serif">Nimble</text></svg>
+            <svg width="92" height="28" viewBox="0 0 92 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="92" height="28" rx="4" fill="#fff" stroke="#e6eef7"/><text x="12" y="18" fill="#475569" font-size="12" font-family="Inter, sans-serif">Pulse</text></svg>
+            <svg width="92" height="28" viewBox="0 0 92 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="92" height="28" rx="4" fill="#fff" stroke="#e6eef7"/><text x="8" y="18" fill="#475569" font-size="12" font-family="Inter, sans-serif">Maven</text></svg>
+          </div>
+
+          <div class="text-sm text-slate-500">Featured in Product Design Weekly</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="services" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold text-slate-900">What we do</h2>
+        <p class="mt-2 text-slate-600 max-w-2xl mx-auto">A full-service creative team focused on brand strategy, product UX, and motion — executed with craft and speed.</p>
+      </div>
+
+      <div class="mt-10 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="p-6 bg-white rounded-lg border" style="border-color:var(--card-border);">
+          <div class="w-12 h-12 rounded-md bg-[#0f172a] flex items-center justify-center text-white">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="inline-block"><path d="M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-slate-900">Brand Identity</h3>
+          <p class="mt-2 text-sm text-slate-600">Naming, visual systems, and guidelines that scale across platforms.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-lg border" style="border-color:var(--card-border);">
+          <div class="w-12 h-12 rounded-md bg-[#ff6b5f] flex items-center justify-center text-white">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 7h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M7 12h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-slate-900">Product Design</h3>
+          <p class="mt-2 text-sm text-slate-600">UX foundations, interaction design, and component libraries for rapid delivery.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-lg border" style="border-color:var(--card-border);">
+          <div class="w-12 h-12 rounded-md bg-[#f6c546] flex items-center justify-center text-slate-900">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-slate-900">Motion & Prototyping</h3>
+          <p class="mt-2 text-sm text-slate-600">Meaningful motion that clarifies interaction and delights users.</p>
+        </div>
+
+        <div class="p-6 bg-white rounded-lg border" style="border-color:var(--card-border);">
+          <div class="w-12 h-12 rounded-md bg-[#0ea5a4] flex items-center justify-center text-white">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 6h18v12H3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-slate-900">Design Systems</h3>
+          <p class="mt-2 text-sm text-slate-600">Reusable libraries and documentation to keep your product consistent and fast.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="process" class="bg-white border-t border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold text-slate-900">How we work</h2>
+          <p class="mt-2 text-slate-600 max-w-2xl mx-auto">A clear, collaborative process built to deliver value quickly and reduce risk.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6">
+            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-900 font-semibold">1</div>
+            <h3 class="mt-4 font-semibold">Discovery</h3>
+            <p class="mt-2 text-sm text-slate-600">Align on business goals, users, and measurable outcomes. Short discovery workshops.</p>
+          </div>
+
+          <div class="p-6">
+            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-900 font-semibold">2</div>
+            <h3 class="mt-4 font-semibold">Design Sprint</h3>
+            <p class="mt-2 text-sm text-slate-600">Rapid prototypes and validation to test assumptions before heavy investment.</p>
+          </div>
+
+          <div class="p-6">
+            <div class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-900 font-semibold">3</div>
+            <h3 class="mt-4 font-semibold">Ship & Scale</h3>
+            <p class="mt-2 text-sm text-slate-600">Deliver production-ready specs, motion, and a component library for engineers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold text-slate-900">Trusted by teams</h2>
+        <p class="mt-2 text-slate-600">Stories from product leads we've partnered with.</p>
+      </div>
+
+      <div class="mt-10 grid gap-6 grid-cols-1 md:grid-cols-3">
+        <blockquote class="p-6 bg-white rounded-lg border" style="border-color:var(--card-border);">
+          <p class="text-slate-700">"Arbor helped us reshape our onboarding experience — conversion improved immediately and engineering handoff was flawless."</p>
+          <footer class="mt-4 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#0f172a] text-white flex items-center justify-center text-sm font-semibold">KB</div>
+            <div>
+              <div class="font-semibold text-slate-900">Kara Bryant</div>
+              <div class="text-sm text-slate-500">Head of Product, Pulse</div>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="p-6 bg-white rounded-lg border" style="border-color:var(--card-border);">
+          <p class="text-slate-700">"A focused team that understands business and craft. The brand system they made scaled across our web and mobile apps."</p>
+          <footer class="mt-4 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#ff6b5f] text-white flex items-center justify-center text-sm font-semibold">ML</div>
+            <div>
+              <div class="font-semibold text-slate-900">Maya Lopez</div>
+              <div class="text-sm text-slate-500">VP Design, Nimble</div>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="p-6 bg-white rounded-lg border" style="border-color:var(--card-border);">
+          <p class="text-slate-700">"They shipped an end-to-end visual language and a component library in weeks. The motion felt thoughtful and purposeful."</p>
+          <footer class="mt-4 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-[#f6c546] text-slate-900 flex items-center justify-center text-sm font-semibold">SD</div>
+            <div>
+              <div class="font-semibold text-slate-900">Samir Dutta</div>
+              <div class="text-sm text-slate-500">Founder, Maven</div>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="pricing" class="bg-slate-50 border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold text-slate-900">Pricing built for teams</h2>
+          <p class="mt-2 text-slate-600">Flexible engagement models — starting with short sprints to long-term partnerships.</p>
+        </div>
+
+        <div class="mt-8 grid gap-6 grid-cols-1 md:grid-cols-3">
+          <div class="p-6 bg-white rounded-lg border" style="border-color:var(--card-border);">
+            <div class="text-sm font-semibold text-slate-700">Starter</div>
+            <div class="mt-4 text-3xl font-bold text-slate-900">$8k</div>
+            <div class="text-sm text-slate-500">Design sprint — 4 weeks</div>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>Discovery workshop</li>
+              <li>Prototype & validation</li>
+              <li>Design handoff</li>
+            </ul>
+            <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-md bg-[#0f172a] text-white font-medium">Book Sprint</a>
+          </div>
+
+          <div class="p-6 bg-white rounded-lg border ring-1 ring-[#ff6b5f]" style="border-color:var(--card-border);">
+            <div class="text-sm font-semibold text-slate-700">Growth</div>
+            <div class="mt-4 text-3xl font-bold text-slate-900">$25k</div>
+            <div class="text-sm text-slate-500">Full product phase — 8–12 weeks</div>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>Brand & product design</li>
+              <li>Component library</li>
+              <li>Motion & prototypes</li>
+            </ul>
+            <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-md bg-[#ff6b5f] text-white font-medium">Start Project</a>
+          </div>
+
+          <div class="p-6 bg-white rounded-lg border" style="border-color:var(--card-border);">
+            <div class="text-sm font-semibold text-slate-700">Enterprise</div>
+            <div class="mt-4 text-3xl font-bold text-slate-900">Custom</div>
+            <div class="text-sm text-slate-500">Long-term partnerships & retained design</div>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>Dedicated team</li>
+              <li>Ongoing design ops</li>
+              <li>Governance & audits</li>
+            </ul>
+            <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-md border border-slate-200 text-slate-800 font-medium hover:bg-slate-50">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold text-slate-900">Frequently asked questions</h2>
+        <p class="mt-2 text-slate-600">Answers to common questions about how we work and what to expect.</p>
+      </div>
+
+      <div class="mt-8 grid gap-6 grid-cols-1 md:grid-cols-2">
+        <details class="p-6 bg-white rounded-lg border" style="border-color:var(--card-border);">
+          <summary class="cursor-pointer font-semibold">How long is a typical engagement?</summary>
+          <div class="mt-3 text-sm text-slate-600">Engagements range from 4-week discovery sprints to multi-month product phases tailored to scope and outcomes.</div>
+        </details>
+
+        <details class="p-6 bg-white rounded-lg border" style="border-color:var(--card-border);">
+          <summary class="cursor-pointer font-semibold">Do you work with remote teams?</summary>
+          <div class="mt-3 text-sm text-slate-600">Yes. We collaborate with distributed teams using Figma, Notion, and regular syncs to keep momentum.</div>
+        </details>
+
+        <details class="p-6 bg-white rounded-lg border" style="border-color:var(--card-border);">
+          <summary class="cursor-pointer font-semibold">How do you handle IP and ownership?</summary>
+          <div class="mt-3 text-sm text-slate-600">We transfer ownership of final assets and provide clear licensing in our agreements to ensure you own the outputs.</div>
+        </details>
+
+        <details class="p-6 bg-white rounded-lg border" style="border-color:var(--card-border);">
+          <summary class="cursor-pointer font-semibold">Can you integrate with our engineering team?</summary>
+          <div class="mt-3 text-sm text-slate-600">Absolutely — we design with engineers in mind, supply tokens, and collaborate on component implementation when needed.</div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <a href="#" class="flex items-center gap-3">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#0f172a"/><path d="M6 15L10 9l4 6" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            <span class="font-semibold text-slate-900">Arbor Creative</span>
+          </a>
+          <p class="mt-3 text-sm text-slate-500 max-w-sm">A focused creative studio for brands and products. Strategy, craft, and delivery.</p>
+        </div>
+
+        <div class="flex items-center gap-6">
+          <div class="text-sm text-slate-600">Follow</div>
+          <div class="flex items-center gap-3">
+            <a href="#" class="p-2 rounded-md hover:bg-slate-50" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M8 19c7.5 0 11.6-6.2 11.6-11.6v-.5A8.3 8.3 0 0 0 21 4.2a8 8 0 0 1-2.3.6A4 4 0 0 0 20.5 3a8 8 0 0 1-2.6 1A4 4 0 0 0 11 7.9 11.4 11.4 0 0 1 3 4.8 4 4 0 0 0 4.1 10a4 4 0 0 1-1.8-.5v.1A4 4 0 0 0 7.7 14a4 4 0 0 1-1.8.1A4 4 0 0 0 10 17a8.2 8.2 0 0 1-5 1.7" stroke="#0f172a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a href="#" class="p-2 rounded-md hover:bg-slate-50" aria-label="Dribbble"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0f172a" stroke-width="1.2"/><path d="M4.5 9.3a15 15 0 0 0 14 5.4" stroke="#0f172a" stroke-width="1.2" stroke-linecap="round"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 border-t border-slate-100 pt-6 text-sm text-slate-500">© 2026 Arbor Creative — All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
