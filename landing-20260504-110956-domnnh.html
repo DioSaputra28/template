@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sentinel Secure — Enterprise Cybersecurity Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small details not covered by utility classes */
+    :root{--nav-bg:#0f1724;--accent:#06b6d4;--muted:#6b7280;--card:#f8fafc}
+    .shadow-soft{box-shadow:0 8px 30px rgba(2,6,23,0.12)}
+    .focus-ring:focus{outline:2px solid rgba(6,182,212,0.18);outline-offset:3px}
+    /* Keep hero illustration svg responsive and centered */
+    .illus-svg{max-width:560px;width:100%;height:auto}
+  </style>
+</head>
+<body class="antialiased text-slate-900 bg-white">
+  <!-- NAVBAR -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#" class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="block">
+            <rect width="24" height="24" rx="6" fill="#0f1724"/>
+            <path d="M7 12h10" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M12 7v10" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <span class="text-lg font-semibold tracking-tight">Sentinel Secure</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm text-slate-700">
+          <a href="#features" class="hover:text-slate-900">Features</a>
+          <a href="#workflow" class="hover:text-slate-900">How it works</a>
+          <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+          <a href="#faq" class="hover:text-slate-900">FAQ</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="#contact" class="hidden md:inline-block text-sm font-medium text-slate-700 hover:text-slate-900">Contact sales</a>
+          <a href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-slate-900 text-white text-sm hover:bg-slate-800 focus-ring">Get started</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 pt-12 lg:pt-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6">
+          <p class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-700 mb-4">Trusted by enterprises • SOC-ready</p>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">Comprehensive cybersecurity, engineered for modern enterprises</h1>
+          <p class="mt-6 text-slate-600 max-w-xl">Sentinel Secure combines real-time threat detection, proactive response, and continuous compliance monitoring — so your teams focus on the business, not breaches.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#pricing" class="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-slate-900 text-white font-medium hover:bg-slate-800 focus-ring">Start free trial</a>
+            <a href="#workflow" class="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-slate-200 text-slate-800 hover:bg-slate-50 focus-ring">See how it works</a>
+          </div>
+          <div class="mt-8 flex items-center gap-6">
+            <div class="flex items-center gap-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2v4" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M6.5 5.5L9 8" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round"/>
+                <circle cx="12" cy="12" r="7" stroke="#0f1724" stroke-width="1.2" fill="#f8fafc"/>
+              </svg>
+              <div class="text-sm">
+                <div class="font-semibold">99.99% Uptime</div>
+                <div class="text-slate-500">Enterprise-grade SLA</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="7" width="18" height="13" rx="2" stroke="#0f1724" stroke-width="1.2" fill="#f8fafc"/>
+                <path d="M7 11h10" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round"/>
+              </svg>
+              <div class="text-sm">
+                <div class="font-semibold">SOC &amp; Compliance</div>
+                <div class="text-slate-500">ISO &amp; SOC ready</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-6 flex justify-center lg:justify-end">
+          <!-- Illustration: shield + circuit -->
+          <svg class="illus-svg" viewBox="0 0 800 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Security illustration">
+            <rect x="0" y="0" width="800" height="560" fill="white"/>
+            <g transform="translate(120,40)">
+              <rect x="0" y="0" width="560" height="480" rx="14" fill="#f8fafc" stroke="#e6eef2"/>
+              <g transform="translate(60,40)">
+                <path d="M200 12c-48 0-86 38-86 86v52c0 48 38 86 86 86s86-38 86-86v-52c0-48-38-86-86-86z" fill="#0f1724"/>
+                <rect x="120" y="110" width="160" height="6" rx="3" fill="#06b6d4"/>
+                <path d="M140 160v36c0 22 18 40 40 40s40-18 40-40v-36" stroke="#06b6d4" stroke-width="6" stroke-linecap="round"/>
+                <circle cx="200" cy="100" r="10" fill="#06b6d4"/>
+                <!-- simple network nodes -->
+                <g transform="translate(0,220)">
+                  <rect x="0" y="0" width="60" height="40" rx="6" fill="#ffffff" stroke="#e6eef2"/>
+                  <rect x="220" y="0" width="60" height="40" rx="6" fill="#ffffff" stroke="#e6eef2"/>
+                  <path d="M60 20h38" stroke="#0f1724" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M220 20h38" stroke="#0f1724" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M120 20h80" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGOS / SOCIAL PROOF -->
+    <section class="mt-12 border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8 flex items-center justify-between gap-6">
+        <p class="text-sm text-slate-500">Trusted by forward-thinking security teams</p>
+        <div class="flex items-center gap-6">
+          <!-- Inline simplified logos -->
+          <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden>
+            <rect width="92" height="28" rx="4" fill="#0f1724"/>
+            <text x="46" y="18" fill="#ffffff" font-size="10" font-family="sans-serif" text-anchor="middle">FINCORP</text>
+          </svg>
+          <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden>
+            <rect width="92" height="28" rx="4" fill="#e6eef2"/>
+            <text x="46" y="18" fill="#0f1724" font-size="10" font-family="sans-serif" text-anchor="middle">MIRA</text>
+          </svg>
+          <svg width="92" height="28" viewBox="0 0 92 28" fill="none" aria-hidden>
+            <rect width="92" height="28" rx="4" fill="#0f1724"/>
+            <text x="46" y="18" fill="#06b6d4" font-size="10" font-family="sans-serif" text-anchor="middle">NOVUS</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-1">
+          <h2 class="text-2xl font-bold">Core capabilities</h2>
+          <p class="mt-4 text-slate-600">A unified platform for detection, response, and compliance with clear SLAs and enterprise controls.</p>
+        </div>
+        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="p-5 bg-white border rounded-lg shadow-soft">
+            <div class="flex items-center gap-3">
+              <div class="p-2 bg-slate-900 rounded-md">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2v6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><path d="M6 8v10" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><path d="M18 8v6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Real-time threat detection</h3>
+                <p class="text-sm text-slate-500">Layered telemetry and ML-driven alerting to catch threats early.</p>
+              </div>
+            </div>
+          </article>
+          <article class="p-5 bg-white border rounded-lg shadow-soft">
+            <div class="flex items-center gap-3">
+              <div class="p-2 bg-slate-900 rounded-md">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3v3" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><path d="M8 7v6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><path d="M16 7v6" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Incident response</h3>
+                <p class="text-sm text-slate-500">Playbooks and 24/7 SOC support for rapid containment.</p>
+              </div>
+            </div>
+          </article>
+          <article class="p-5 bg-white border rounded-lg shadow-soft">
+            <div class="flex items-center gap-3">
+              <div class="p-2 bg-slate-900 rounded-md">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><path d="M12 3v18" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Compliance & reporting</h3>
+                <p class="text-sm text-slate-500">Automated evidence collection and reporting for audits.</p>
+              </div>
+            </div>
+          </article>
+          <article class="p-5 bg-white border rounded-lg shadow-soft">
+            <div class="flex items-center gap-3">
+              <div class="p-2 bg-slate-900 rounded-md">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.6"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Endpoint protection</h3>
+                <p class="text-sm text-slate-500">Full lifecycle protection for endpoints and servers.</p>
+              </div>
+            </div>
+          </article>
+          <article class="p-5 bg-white border rounded-lg shadow-soft">
+            <div class="flex items-center gap-3">
+              <div class="p-2 bg-slate-900 rounded-md">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 9h18" stroke="#fff" stroke-width="1.6"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Network monitoring</h3>
+                <p class="text-sm text-slate-500">Continuous visibility across cloud and on-prem networks.</p>
+              </div>
+            </div>
+          </article>
+          <article class="p-5 bg-white border rounded-lg shadow-soft">
+            <div class="flex items-center gap-3">
+              <div class="p-2 bg-slate-900 rounded-md">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="#fff" stroke-width="1.6"/></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Integrations</h3>
+                <p class="text-sm text-slate-500">Plug into SIEM, ticketing, and cloud providers via APIs.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="workflow" class="bg-slate-50 py-16">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-center">How Sentinel Secure protects your organization</h2>
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white border rounded-lg text-center shadow-soft">
+            <div class="flex items-center justify-center mb-4">
+              <div class="p-3 rounded-full bg-slate-900 text-white">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#fff" stroke-width="1.6"/></svg>
+              </div>
+            </div>
+            <h3 class="font-semibold">Connect</h3>
+            <p class="mt-2 text-slate-500">Deploy lightweight collectors and integrate cloud feeds in minutes.</p>
+          </div>
+          <div class="p-6 bg-white border rounded-lg text-center shadow-soft">
+            <div class="flex items-center justify-center mb-4">
+              <div class="p-3 rounded-full bg-slate-900 text-white">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3v6" stroke="#fff" stroke-width="1.6"/></svg>
+              </div>
+            </div>
+            <h3 class="font-semibold">Detect</h3>
+            <p class="mt-2 text-slate-500">Correlate signals and prioritize events with ML and expert rulesets.</p>
+          </div>
+          <div class="p-6 bg-white border rounded-lg text-center shadow-soft">
+            <div class="flex items-center justify-center mb-4">
+              <div class="p-3 rounded-full bg-slate-900 text-white">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 12h12" stroke="#fff" stroke-width="1.6"/></svg>
+              </div>
+            </div>
+            <h3 class="font-semibold">Respond</h3>
+            <p class="mt-2 text-slate-500">Automated playbooks and on-call SOC analysts accelerate remediation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <h2 class="text-2xl font-bold text-center">What security teams say</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <figure class="p-6 bg-white border rounded-lg shadow-soft">
+          <blockquote class="text-slate-700">"Sentinel reduced our mean time to detect from days to minutes. The SOC team is responsive and the tooling is excellent."</blockquote>
+          <figcaption class="mt-4 flex items-center gap-3">
+            <div class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white">A</div>
+            <div>
+              <div class="font-semibold">Amira Solano</div>
+              <div class="text-sm text-slate-500">CISO, Fincorp</div>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="p-6 bg-white border rounded-lg shadow-soft">
+          <blockquote class="text-slate-700">"The curated playbooks and integration with our tools made rollout painless. Excellent visibility and audit trails."</blockquote>
+          <figcaption class="mt-4 flex items-center gap-3">
+            <div class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white">B</div>
+            <div>
+              <div class="font-semibold">Ben Carter</div>
+              <div class="text-sm text-slate-500">Head of Security Ops, Mira</div>
+            </div>
+          </figcaption>
+        </figure>
+        <figure class="p-6 bg-white border rounded-lg shadow-soft">
+          <blockquote class="text-slate-700">"Clear compliance reports and an expert SOC that understands enterprise needs — highly recommended."</blockquote>
+          <figcaption class="mt-4 flex items-center gap-3">
+            <div class="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white">C</div>
+            <div>
+              <div class="font-semibold">Caroline Rhys</div>
+              <div class="text-sm text-slate-500">VP IT, Novus</div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section id="pricing" class="bg-slate-50 py-16">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <h2 class="text-2xl font-bold text-center">Pricing</h2>
+        <p class="text-center mt-2 text-slate-600">Simple predictable pricing with enterprise options and custom SLAs.</p>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white border rounded-lg shadow-soft">
+            <div class="text-sm font-semibold text-slate-700">Starter</div>
+            <div class="mt-4 text-3xl font-extrabold">$499<span class="text-base font-medium">/mo</span></div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              <li>Up to 250 endpoints</li>
+              <li>Basic alerts</li>
+              <li>Email support</li>
+            </ul>
+            <a href="#" class="mt-6 inline-block w-full text-center px-4 py-3 rounded-md border border-slate-900 text-slate-900 font-medium hover:bg-slate-900 hover:text-white transition">Choose Starter</a>
+          </div>
+          <div class="p-6 bg-white border-2 border-slate-900 rounded-lg shadow-soft transform scale-1 md:scale-105">
+            <div class="text-sm font-semibold text-slate-700">Business</div>
+            <div class="mt-4 text-3xl font-extrabold">$1,499<span class="text-base font-medium">/mo</span></div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              <li>Up to 2,000 endpoints</li>
+              <li>24/7 SOC access</li>
+              <li>Compliance reporting</li>
+            </ul>
+            <a href="#" class="mt-6 inline-block w-full text-center px-4 py-3 rounded-md bg-slate-900 text-white font-medium hover:bg-slate-800 transition">Get Business</a>
+          </div>
+          <div class="p-6 bg-white border rounded-lg shadow-soft">
+            <div class="text-sm font-semibold text-slate-700">Enterprise</div>
+            <div class="mt-4 text-3xl font-extrabold">Custom</div>
+            <ul class="mt-4 space-y-2 text-sm text-slate-600">
+              <li>Unlimited endpoints</li>
+              <li>Dedicated SOC</li>
+              <li>Custom SLAs &amp; integrations</li>
+            </ul>
+            <a href="#contact" class="mt-6 inline-block w-full text-center px-4 py-3 rounded-md border border-slate-900 text-slate-900 font-medium hover:bg-slate-900 hover:text-white transition">Contact sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <h2 class="text-2xl font-bold text-center">Frequently asked questions</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <details class="p-5 bg-white border rounded-lg" open>
+          <summary class="font-semibold cursor-pointer">How long does deployment take?</summary>
+          <div class="mt-3 text-slate-600">Most customers are collecting telemetry within 48 hours. Full enterprise rollout varies with scope; we provide a rollout plan and SOC onboarding to accelerate timelines.</div>
+        </details>
+        <details class="p-5 bg-white border rounded-lg">
+          <summary class="font-semibold cursor-pointer">Do you provide managed SOC services?</summary>
+          <div class="mt-3 text-slate-600">Yes. Our managed SOC operates 24/7 with tiered response options, playbooks, and integration into your ticketing and SIEM platforms.</div>
+        </details>
+        <details class="p-5 bg-white border rounded-lg">
+          <summary class="font-semibold cursor-pointer">How do you handle compliance?</summary>
+          <div class="mt-3 text-slate-600">We collect and retain audit logs, provide evidence exports, and ship compliance-ready reports for frameworks like SOC2 and ISO27001.</div>
+        </details>
+        <details class="p-5 bg-white border rounded-lg">
+          <summary class="font-semibold cursor-pointer">What integrations are supported?</summary>
+          <div class="mt-3 text-slate-600">We support cloud providers (AWS, Azure, GCP), common SIEMs, ticketing systems, and offer a robust API for custom integrations.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-100 bg-white">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <a href="#" class="flex items-center gap-3 mb-4">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="6" fill="#0f1724"/><path d="M7 12h10" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round"/><path d="M12 7v10" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span class="font-semibold">Sentinel Secure</span>
+          </a>
+          <p class="text-sm text-slate-500">Enterprise cybersecurity with predictable pricing and resilient operations.</p>
+        </div>
+        <div class="text-sm text-slate-600">
+          <div class="font-semibold mb-3">Company</div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-slate-900">About</a></li>
+            <li><a href="#" class="hover:text-slate-900">Careers</a></li>
+            <li><a href="#contact" class="hover:text-slate-900">Contact</a></li>
+          </ul>
+        </div>
+        <div class="text-sm text-slate-600">
+          <div class="font-semibold mb-3">Legal</div>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-slate-900">Privacy</a></li>
+            <li><a href="#" class="hover:text-slate-900">Terms</a></li>
+            <li><a href="#" class="hover:text-slate-900">Security</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between text-sm text-slate-500">
+          <div>© <span id="year">2026</span> Sentinel Secure. All rights reserved.</div>
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-slate-600 hover:text-slate-900" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 7.5c-.6.3-1.2.5-1.9.6.7-.4 1.2-1.1 1.4-1.8-.7.4-1.5.6-2.4.8C16.9 6 16 5.5 15 5.5c-1.8 0-3.1 1.7-2.7 3.4-2.3-.1-4.3-1.2-5.7-2.8-.8 1.3-.4 3 1 3.9-.5 0-1-.1-1.4-.4 0 1.5 1 2.9 2.6 3.3-.5.1-1 .1-1.5.1-.4 0-.8 0-1.1-.1.8 2.4 3 4.1 5.6 4.2-2 1.6-4.4 2.5-7 2.5-.5 0-1 0-1.5-.1 2.8 1.8 6.1 2.8 9.7 2.8 11.6 0 17.9-9.6 17.9-17.9v-.8c1-.7 1.8-1.6 2.5-2.6-.9.4-1.9.6-3 .8z" fill="#0f1724"/></svg>
+            </a>
+            <a href="#" class="text-slate-600 hover:text-slate-900" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C7 2 3.5 5 3.5 9.5c0 3.5 2.3 6.4 5.5 7.4.4.1.5-.2.5-.4v-1.5c-2.2.5-2.7-1-2.7-1-.4-1-1-1.3-1-1.3-.8-.6.1-.6.1-.6.9.1 1.4.9 1.4.9.8 1.4 2 1 2.5.8.1-.6.3-1 .6-1.3-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.2-.1-.2-.4-1.1.1-2.3 0 0 .7-.2 2.4.8.7-.2 1.6-.3 2.4-.3s1.7.1 2.4.3c1.7-1 2.4-.8 2.4-.8.5 1.2.2 2.1.1 2.3.5.6.8 1.3.8 2.2 0 3.1-1.8 3.8-3.6 4 .3.2.7.8.7 1.6v2.4c0 .2.1.5.6.4 3.2-1 5.5-3.9 5.5-7.4C20.5 5 17 2 12 2z" fill="#0f1724"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Set current year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
