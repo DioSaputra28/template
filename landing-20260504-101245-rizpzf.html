@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ForgeHub — Gaming Community Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for details not covered by Tailwind */
+    .glass-card { background-color: rgba(255,255,255,0.03); backdrop-filter: blur(6px); }
+    .soft-border { border: 1px solid rgba(255,255,255,0.06); }
+    .avatar-ring { box-shadow: 0 0 0 3px rgba(255,255,255,0.03); }
+    /* Ensure no gradients accidentally applied */
+    * { background-image: none !important; }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 antialiased">
+  <!-- NAVBAR -->
+  <header class="border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a class="flex items-center gap-3" href="#">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect x="2" y="3" width="20" height="14" rx="2" stroke="#FFFFFF" stroke-width="1.5"/>
+          <path d="M6 19c0-1.657 4-3 6-3s6 1.343 6 3" stroke="#9CA3AF" stroke-width="1.2" stroke-linecap="round"/>
+          <circle cx="8" cy="10" r="1.2" fill="#FFFFFF"/>
+          <circle cx="13" cy="8" r="1.2" fill="#FFFFFF"/>
+        </svg>
+        <span class="text-lg font-semibold tracking-tight">ForgeHub</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <a href="#features" class="hover:text-white">Features</a>
+        <a href="#how" class="hover:text-white">How it Works</a>
+        <a href="#pricing" class="hover:text-white">Pricing</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden md:inline-block px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded text-sm font-medium">Join Beta</a>
+        <button class="md:hidden p-2 rounded hover:bg-gray-800 soft-border" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="#D1D5DB" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="max-w-7xl mx-auto px-6 py-16 flex flex-col lg:flex-row items-center gap-12">
+      <div class="lg:w-6/12">
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Build, Compete, and Thrive — Your Gaming Community, One Platform</h1>
+        <p class="mt-4 text-gray-300 max-w-xl">ForgeHub brings guilds, tournaments, real-time chat, and player analytics into a single premium platform. Focus on play — we handle the infrastructure and engagement tools.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#pricing" class="px-5 py-3 bg-indigo-600 hover:bg-indigo-700 rounded text-sm font-semibold">Get Started</a>
+          <a href="#how" class="px-5 py-3 border border-gray-700 hover:border-gray-600 rounded text-sm text-gray-200">How it Works</a>
+        </div>
+
+        <div class="mt-8 grid grid-cols-3 gap-3 max-w-sm">
+          <div class="glass-card soft-border p-3 rounded flex flex-col items-start">
+            <span class="text-sm text-gray-300">Active Users</span>
+            <span class="mt-1 text-xl font-bold">24k+</span>
+          </div>
+          <div class="glass-card soft-border p-3 rounded flex flex-col items-start">
+            <span class="text-sm text-gray-300">Tournaments Hosted</span>
+            <span class="mt-1 text-xl font-bold">1.2k</span>
+          </div>
+          <div class="glass-card soft-border p-3 rounded flex flex-col items-start">
+            <span class="text-sm text-gray-300">Avg. Session</span>
+            <span class="mt-1 text-xl font-bold">2h 17m</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:w-6/12 w-full">
+        <div class="relative bg-gray-800 soft-border rounded-lg p-6 shadow-lg">
+          <!-- Illustration: control room / dashboard -->
+          <svg viewBox="0 0 640 360" class="w-full h-auto rounded" aria-hidden>
+            <rect x="0" y="0" width="640" height="360" fill="#0F172A" rx="10"/>
+            <!-- Panels -->
+            <g fill="#0B1220" stroke="#111827">
+              <rect x="16" y="20" width="280" height="120" rx="6" fill="#071129" stroke="#111827"/>
+              <rect x="320" y="20" width="304" height="120" rx="6" fill="#071129" stroke="#111827"/>
+              <rect x="16" y="156" width="608" height="180" rx="6" fill="#071129" stroke="#111827"/>
+            </g>
+            <!-- Mock UI elements -->
+            <g fill="#9CA3AF">
+              <circle cx="40" cy="40" r="6" fill="#EF4444"/>
+              <circle cx="60" cy="40" r="6" fill="#F59E0B"/>
+              <circle cx="80" cy="40" r="6" fill="#10B981"/>
+            </g>
+            <g fill="#D1D5DB">
+              <rect x="36" y="62" width="200" height="12" rx="3" fill="#9CA3AF"/>
+              <rect x="36" y="82" width="140" height="10" rx="3" fill="#374151"/>
+              <rect x="340" y="62" width="240" height="12" rx="3" fill="#9CA3AF"/>
+              <rect x="340" y="82" width="160" height="10" rx="3" fill="#374151"/>
+            </g>
+            <!-- Gameplay stats -->
+            <g fill="#E5E7EB">
+              <rect x="36" y="176" width="100" height="12" rx="6" fill="#111827"/>
+              <rect x="36" y="196" width="420" height="12" rx="6" fill="#111827"/>
+              <rect x="36" y="216" width="180" height="12" rx="6" fill="#111827"/>
+            </g>
+          </svg>
+
+          <div class="mt-4 flex items-center gap-3">
+            <div class="flex -space-x-3">
+              <img class="w-10 h-10 rounded-full avatar-ring" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect width='40' height='40' rx='8' fill='%23EF4444'/></svg>" alt="avatar">
+              <img class="w-10 h-10 rounded-full avatar-ring" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect width='40' height='40' rx='8' fill='%23106B62'/></svg>" alt="avatar">
+              <img class="w-10 h-10 rounded-full avatar-ring" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><rect width='40' height='40' rx='8' fill='%231F2937'/></svg>" alt="avatar">
+            </div>
+            <div class="text-sm text-gray-300">Community leaders online — <span class="text-white font-medium">6 chatting</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / LOGOS -->
+    <section class="border-t border-gray-800 mt-6">
+      <div class="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between gap-6">
+        <p class="text-sm text-gray-400">Trusted by gaming groups and studios</p>
+        <div class="flex items-center gap-6 opacity-85">
+          <div class="text-gray-400 flex items-center gap-2 text-sm">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 12l3 9 9-18 6 9-3 9H3z" stroke="#9CA3AF" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>ClanForge</span>
+          </div>
+          <div class="text-gray-400 flex items-center gap-2 text-sm">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#9CA3AF" stroke-width="1.2"/></svg>
+            <span>NightRift</span>
+          </div>
+          <div class="text-gray-400 flex items-center gap-2 text-sm">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" stroke="#9CA3AF" stroke-width="1.2" rx="3"/></svg>
+            <span>Echo Arena</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="max-w-7xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-bold">Platform Features</h2>
+      <p class="mt-2 text-gray-400 max-w-2xl">A complete toolkit for communities: moderation, leaderboards, event scheduling, analytics, and monetization — all built for competitive and casual play.</p>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-gray-800 soft-border rounded-lg shadow-sm">
+          <svg width="40" height="40" viewBox="0 0 24 24" class="text-indigo-500" fill="none"><path d="M12 2l3 6 6 .5-4.5 4 1 6L12 16 6.5 18.5 7.5 12 3 8l6-.5L12 2z" stroke="#6366F1" stroke-width="1" fill="#6366F1"/></svg>
+          <h3 class="mt-4 font-semibold">Tournaments & Ladders</h3>
+          <p class="mt-2 text-gray-400 text-sm">Create ranked ladders, bracketed tournaments, and automated match scheduling with rich rule support.</p>
+        </div>
+        <div class="p-6 bg-gray-800 soft-border rounded-lg shadow-sm">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 3v6l4 2" stroke="#06B6D4" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3 class="mt-4 font-semibold">Real-time Chat & Voice</h3>
+          <p class="mt-2 text-gray-400 text-sm">Low-latency channels with moderation tools, role-based rooms, and integrated voice for squads and teams.</p>
+        </div>
+        <div class="p-6 bg-gray-800 soft-border rounded-lg shadow-sm">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#F59E0B" stroke-width="1.2" stroke-linecap="round"/><path d="M12 3v18" stroke="#F59E0B" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <h3 class="mt-4 font-semibold">Player Analytics</h3>
+          <p class="mt-2 text-gray-400 text-sm">Understand retention, session times, and engagement drivers with easy exports and dashboards.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="bg-gray-850 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-bold">How It Works</h2>
+        <p class="mt-2 text-gray-400 max-w-2xl">Three simple steps to launch your community.</p>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-gray-800 soft-border rounded-lg">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white font-bold">1</div>
+            <h4 class="mt-4 font-semibold">Create Your Hub</h4>
+            <p class="mt-2 text-gray-400 text-sm">Set up servers, roles, and onboarding flows in minutes with templates.</p>
+          </div>
+          <div class="p-6 bg-gray-800 soft-border rounded-lg">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white font-bold">2</div>
+            <h4 class="mt-4 font-semibold">Invite Players</h4>
+            <p class="mt-2 text-gray-400 text-sm">Use invites, referral codes, and automatic verification to grow trusted members.</p>
+          </div>
+          <div class="p-6 bg-gray-800 soft-border rounded-lg">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-600 text-white font-bold">3</div>
+            <h4 class="mt-4 font-semibold">Run & Monetize</h4>
+            <p class="mt-2 text-gray-400 text-sm">Host events, sell passes, and offer subscriptions with built-in payout tools.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-bold">What Community Leaders Say</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="p-6 bg-gray-800 soft-border rounded-lg">
+          <p class="text-gray-200">"ForgeHub transformed how we run tournaments — scheduling and automatic score reports saved us hours every week."</p>
+          <div class="mt-4 flex items-center gap-3">
+            <svg width="44" height="44" viewBox="0 0 24 24" class="rounded-full bg-gray-700 p-1">
+              <circle cx="12" cy="12" r="9" fill="#374151"/>
+            </svg>
+            <div>
+              <div class="font-semibold">Alex Mercer</div>
+              <div class="text-sm text-gray-400">Founder, ClanForge</div>
+            </div>
+          </div>
+        </blockquote>
+        <blockquote class="p-6 bg-gray-800 soft-border rounded-lg">
+          <p class="text-gray-200">"The analytics helped us tune event times and saw a 30% spike in retention within weeks."</p>
+          <div class="mt-4 flex items-center gap-3">
+            <svg width="44" height="44" viewBox="0 0 24 24" class="rounded-full bg-gray-700 p-1">
+              <circle cx="12" cy="12" r="9" fill="#1F2937"/>
+            </svg>
+            <div>
+              <div class="font-semibold">Rina Park</div>
+              <div class="text-sm text-gray-400">Head of Community, NightRift</div>
+            </div>
+          </div>
+        </blockquote>
+        <blockquote class="p-6 bg-gray-800 soft-border rounded-lg">
+          <p class="text-gray-200">"Stability and voice channels are top-notch — we moved our whole guild onto ForgeHub."</p>
+          <div class="mt-4 flex items-center gap-3">
+            <svg width="44" height="44" viewBox="0 0 24 24" class="rounded-full bg-gray-700 p-1">
+              <circle cx="12" cy="12" r="9" fill="#111827"/>
+            </svg>
+            <div>
+              <div class="font-semibold">Marco Silva</div>
+              <div class="text-sm text-gray-400">Guild Lead, Echo Arena</div>
+            </div>
+          </div>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section id="pricing" class="bg-gray-850 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-bold">Pricing</h2>
+        <p class="mt-2 text-gray-400">Simple plans built for communities of all sizes. Switch or cancel anytime.</p>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-gray-800 soft-border rounded-lg">
+            <div class="text-sm text-gray-400">Starter</div>
+            <div class="mt-2 text-3xl font-extrabold">Free</div>
+            <ul class="mt-4 text-sm text-gray-300 space-y-2">
+              <li>Community hub</li>
+              <li>Basic chat</li>
+              <li>Limit 100 members</li>
+            </ul>
+            <button class="mt-6 w-full px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded">Create Free Hub</button>
+          </div>
+          <div class="p-6 bg-indigo-600 rounded-lg text-white shadow-lg">
+            <div class="text-sm">Pro</div>
+            <div class="mt-2 text-3xl font-extrabold">$29<span class="text-sm font-medium">/mo</span></div>
+            <ul class="mt-4 text-sm space-y-2">
+              <li>Up to 5k members</li>
+              <li>Tournaments & leaderboards</li>
+              <li>Priority support</li>
+            </ul>
+            <button class="mt-6 w-full px-4 py-2 bg-white text-indigo-700 font-semibold rounded">Start Free Trial</button>
+          </div>
+          <div class="p-6 bg-gray-800 soft-border rounded-lg">
+            <div class="text-sm text-gray-400">Enterprise</div>
+            <div class="mt-2 text-3xl font-extrabold">Custom</div>
+            <ul class="mt-4 text-sm text-gray-300 space-y-2">
+              <li>Dedicated hosting</li>
+              <li>Custom integrations</li>
+              <li>SLAs & support</li>
+            </ul>
+            <button class="mt-6 w-full px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded">Contact Sales</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-7xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-bold">Frequently Asked Questions</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-5 bg-gray-800 soft-border rounded-lg">
+          <h4 class="font-semibold">Can I migrate from other platforms?</h4>
+          <p class="mt-2 text-gray-400 text-sm">Yes. We provide migration tools and dedicated support for community data and roles.</p>
+        </div>
+        <div class="p-5 bg-gray-800 soft-border rounded-lg">
+          <h4 class="font-semibold">Do you support custom integrations?</h4>
+          <p class="mt-2 text-gray-400 text-sm">We support OAuth, webhooks, and SDKs for major engines and streaming services.</p>
+        </div>
+        <div class="p-5 bg-gray-800 soft-border rounded-lg">
+          <h4 class="font-semibold">What security features are included?</h4>
+          <p class="mt-2 text-gray-400 text-sm">Role-based permissions, 2FA for admins, audit logs, and encrypted backups are available on Pro and Enterprise plans.</p>
+        </div>
+        <div class="p-5 bg-gray-800 soft-border rounded-lg">
+          <h4 class="font-semibold">Can I host tournaments privately?</h4>
+          <p class="mt-2 text-gray-400 text-sm">Yes. Private brackets, invites, and spectator controls let you run closed competitions.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-800 mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <div class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" stroke="#FFFFFF" stroke-width="1.2"/></svg>
+          <div>
+            <div class="font-semibold">ForgeHub</div>
+            <div class="text-sm text-gray-400">Built for communities that care about play.</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-sm text-gray-400">
+        <div class="font-semibold">Product</div>
+        <ul class="mt-2 space-y-2">
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>Tutorials</li>
+        </ul>
+      </div>
+      <div class="text-sm text-gray-400">
+        <div class="font-semibold">Company</div>
+        <ul class="mt-2 space-y-2">
+          <li>About</li>
+          <li>Careers</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-6 py-6 text-sm text-gray-500">© 2026 ForgeHub. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
