@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FocusFlow — Productivity Task Manager</title>
+  <meta name="description" content="FocusFlow is a modern productivity task manager that helps teams and individuals plan, prioritize, and finish work faster.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom tweaks not covered by Tailwind utilities */
+    :root{--brand:#374151;--accent:#1f2937;--primary:#0f172a;--muted:#6b7280}
+    /* subtle card border */
+    .card-border { border: 1px solid rgba(15,23,42,0.06); }
+    /* Decorative focus ring for keyboard nav */
+    .focus-ring:focus { outline: 3px solid rgba(99,102,241,0.15); outline-offset: 2px; }
+    /* Limit content width for large screens */
+    .content-max { max-width: 1100px; }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-white">
+
+  <!-- Navbar -->
+  <header class="border-b border-slate-100">
+    <div class="mx-auto content-max px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect x="2" y="2" width="20" height="20" rx="5" fill="#111827" />
+          <path d="M7 14l3-6 4 8 3-10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="font-semibold text-lg text-slate-900">FocusFlow</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-600">
+        <a href="#features" class="hover:text-slate-900">Features</a>
+        <a href="#how" class="hover:text-slate-900">How it works</a>
+        <a href="#pricing" class="hover:text-slate-900">Pricing</a>
+        <a href="#faq" class="hover:text-slate-900">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#" class="text-sm px-3 py-2 rounded-md hover:bg-slate-50 focus-ring">Log in</a>
+        <a href="#pricing" class="inline-block bg-slate-900 text-white text-sm px-4 py-2 rounded-md shadow-sm hover:bg-slate-800 focus-ring">Start free</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="mx-auto content-max px-6 py-16 lg:py-24 flex flex-col lg:flex-row items-center gap-12">
+      <div class="lg:w-6/12">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">Organize your day. Finish what matters.</h1>
+        <p class="mt-4 text-slate-600 text-base sm:text-lg">FocusFlow combines lightweight task management, clear priorities, and effortless workflows so teams and individuals get more done with less friction.</p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="#pricing" class="inline-flex items-center justify-center bg-slate-900 text-white px-5 py-3 rounded-md text-sm font-medium shadow hover:bg-slate-800 focus-ring">Start free — No card</a>
+          <a href="#features" class="inline-flex items-center justify-center border border-slate-200 px-5 py-3 rounded-md text-sm text-slate-700 hover:bg-slate-50 focus-ring">See features</a>
+        </div>
+
+        <div class="mt-6 text-sm text-slate-500">Trusted by teams at:</div>
+        <div class="mt-4 flex flex-wrap items-center gap-4">
+          <!-- Logos (simple solid shapes) -->
+          <div class="flex items-center gap-2 p-2 card-border rounded bg-white shadow-sm">
+            <svg width="92" height="24" viewBox="0 0 92 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect width="18" height="18" rx="3" fill="#111827" x="0" y="3" />
+              <rect width="18" height="18" rx="3" fill="#374151" x="22" y="3" />
+              <rect width="18" height="18" rx="3" fill="#6b7280" x="44" y="3" />
+              <rect width="18" height="18" rx="3" fill="#111827" x="66" y="3" />
+            </svg>
+          </div>
+          <div class="text-sm text-slate-600">and many startups & teams worldwide</div>
+        </div>
+      </div>
+
+      <div class="lg:w-6/12 w-full">
+        <!-- Illustration: task board with cards -->
+        <div class="mx-auto max-w-md card-border rounded-lg shadow-lg bg-white p-6">
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-sm font-medium text-slate-700">Today • Project Alpha</div>
+            <div class="text-xs text-slate-400">Updated 2h ago</div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-3">
+            <div class="space-y-3">
+              <div class="text-xs font-semibold text-slate-600">To do</div>
+              <div class="space-y-2">
+                <div class="p-3 bg-slate-50 rounded border border-slate-100 text-sm">Design landing header</div>
+                <div class="p-3 bg-slate-50 rounded border border-slate-100 text-sm">Write copy for features</div>
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <div class="text-xs font-semibold text-slate-600">In progress</div>
+              <div class="space-y-2">
+                <div class="p-3 bg-white rounded border-l-4 border-indigo-600 shadow-sm text-sm">Prototype review</div>
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <div class="text-xs font-semibold text-slate-600">Done</div>
+              <div class="space-y-2">
+                <div class="p-3 bg-white rounded border border-slate-100 text-sm text-slate-500 line-through">Kickoff meeting</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5 flex items-center gap-3 text-sm">
+            <button class="flex-1 text-left px-3 py-2 bg-indigo-50 text-indigo-700 rounded-md focus-ring">Add task</button>
+            <button class="px-3 py-2 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-50 focus-ring">Sync</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social proof / logos strip -->
+    <section class="border-t border-b border-slate-100">
+      <div class="mx-auto content-max px-6 py-8 flex items-center justify-between gap-4">
+        <div class="text-sm text-slate-600">Used by teams at</div>
+        <div class="flex items-center gap-6">
+          <svg width="80" height="28" viewBox="0 0 80 28" aria-hidden>
+            <rect width="20" height="20" rx="3" fill="#0f172a" />
+            <rect width="20" height="20" rx="3" fill="#111827" x="24" />
+            <rect width="20" height="20" rx="3" fill="#374151" x="48" />
+          </svg>
+          <svg width="80" height="28" viewBox="0 0 80 28" aria-hidden>
+            <circle cx="12" cy="14" r="10" fill="#111827" />
+            <rect x="30" y="4" width="40" height="20" rx="4" fill="#374151" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="mx-auto content-max px-6 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-1">
+          <h2 class="text-2xl font-bold text-slate-900">Powerful features, calm UI</h2>
+          <p class="mt-3 text-slate-600">Everything teams need to plan work, track progress, and reduce context switching.</p>
+        </div>
+
+        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-5 bg-white card-border rounded-lg shadow-sm">
+            <div class="flex items-start gap-4">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="3" width="18" height="18" rx="4" fill="#eef2ff" />
+                <path d="M8 12l2.5 2L16 9" stroke="#4f46e5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <h3 class="text-base font-semibold text-slate-900">Focus lists</h3>
+                <p class="text-sm text-slate-600 mt-1">Create prioritized lists and view only what matters for the day.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 bg-white card-border rounded-lg shadow-sm">
+            <div class="flex items-start gap-4">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="3" width="18" height="18" rx="4" fill="#ecfeff" />
+                <path d="M7 12h10M7 16h6" stroke="#06b6d4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <h3 class="text-base font-semibold text-slate-900">Custom workflows</h3>
+                <p class="text-sm text-slate-600 mt-1">Tailor stages and views for your team's process without complexity.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 bg-white card-border rounded-lg shadow-sm">
+            <div class="flex items-start gap-4">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="3" width="18" height="18" rx="4" fill="#fff7ed" />
+                <path d="M12 7v6l4 2" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <h3 class="text-base font-semibold text-slate-900">Reminders & deadlines</h3>
+                <p class="text-sm text-slate-600 mt-1">Set reminders, deadlines, and get actionable daily summaries.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 bg-white card-border rounded-lg shadow-sm">
+            <div class="flex items-start gap-4">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="3" width="18" height="18" rx="4" fill="#f0fdf4" />
+                <path d="M8 12h8M8 16h5" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <h3 class="text-base font-semibold text-slate-900">Integrations</h3>
+                <p class="text-sm text-slate-600 mt-1">Connect calendars, chat tools, and source control for context where you work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="mx-auto content-max px-6 py-12 bg-slate-50 rounded-t-lg">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="md:col-span-1">
+          <h2 class="text-2xl font-bold text-slate-900">How FocusFlow works</h2>
+          <p class="mt-3 text-slate-600">A simple three-step flow to move from chaos to clarity.</p>
+        </div>
+
+        <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="p-4 bg-white card-border rounded-lg text-center">
+            <div class="flex items-center justify-center w-12 h-12 mx-auto rounded-full bg-white border border-slate-100 mb-3">
+              <div class="text-sm font-bold text-slate-800">1</div>
+            </div>
+            <h3 class="font-semibold text-slate-900">Capture</h3>
+            <p class="text-sm text-slate-600 mt-2">Quickly add tasks from any view — keyboard-first and minimal friction.</p>
+          </div>
+
+          <div class="p-4 bg-white card-border rounded-lg text-center">
+            <div class="flex items-center justify-center w-12 h-12 mx-auto rounded-full bg-white border border-slate-100 mb-3">
+              <div class="text-sm font-bold text-slate-800">2</div>
+            </div>
+            <h3 class="font-semibold text-slate-900">Prioritize</h3>
+            <p class="text-sm text-slate-600 mt-2">Order tasks by impact and effort, or use Focus lists to pick the day's top items.</p>
+          </div>
+
+          <div class="p-4 bg-white card-border rounded-lg text-center">
+            <div class="flex items-center justify-center w-12 h-12 mx-auto rounded-full bg-white border border-slate-100 mb-3">
+              <div class="text-sm font-bold text-slate-800">3</div>
+            </div>
+            <h3 class="font-semibold text-slate-900">Finish</h3>
+            <p class="text-sm text-slate-600 mt-2">Execute with clear context, fewer meetings, and actionable handoffs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="mx-auto content-max px-6 py-12">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold text-slate-900">What teams say</h2>
+        <p class="text-slate-600 mt-2">Real teams, real improvements in focus and throughput.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <figure class="p-6 bg-white card-border rounded-lg shadow-sm">
+          <svg class="mb-3" width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M7 8h10M7 12h8" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <blockquote class="text-slate-700">"FocusFlow reduced our weekly planning time by half and made it obvious what to work on next."</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-600">— Maria Lopez, Product Manager</figcaption>
+        </figure>
+
+        <figure class="p-6 bg-white card-border rounded-lg shadow-sm">
+          <svg class="mb-3" width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M12 5v14M5 12h14" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <blockquote class="text-slate-700">"The minimal interface helps engineers keep flow without distractions or micromanagement."</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-600">— Anil Gupta, Engineering Lead</figcaption>
+        </figure>
+
+        <figure class="p-6 bg-white card-border rounded-lg shadow-sm">
+          <svg class="mb-3" width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M3 12h18" stroke="#111827" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <blockquote class="text-slate-700">"We shipped twice as many small improvements each month after switching to FocusFlow."</blockquote>
+          <figcaption class="mt-4 text-sm text-slate-600">— Claire Zhang, Founder</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="pricing" class="mx-auto content-max px-6 py-12 bg-white">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold text-slate-900">Simple pricing, fast value</h2>
+        <p class="text-slate-600 mt-2">Free for personal use. Teams scale with transparent pricing and seat management.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 bg-white card-border rounded-lg text-center">
+          <div class="text-sm font-semibold text-slate-700">Starter</div>
+          <div class="mt-4 text-3xl font-extrabold text-slate-900">Free</div>
+          <div class="mt-2 text-slate-600">Personal use — unlimited tasks</div>
+          <ul class="mt-4 text-sm text-slate-600 space-y-2">
+            <li>Focus lists</li>
+            <li>Basic reminders</li>
+            <li>1 workspace</li>
+          </ul>
+          <a href="#" class="mt-6 inline-block bg-slate-100 text-slate-900 px-4 py-2 rounded-md focus-ring">Get started</a>
+        </div>
+
+        <div class="p-6 bg-white card-border rounded-lg shadow-lg transform scale-100 md:scale-105 text-center border-2 border-indigo-600">
+          <div class="text-sm font-semibold text-slate-700">Team</div>
+          <div class="mt-4 text-3xl font-extrabold text-slate-900">$8<span class="text-base font-medium">/seat</span></div>
+          <div class="mt-2 text-slate-600">Collaboration tools and priority support</div>
+          <ul class="mt-4 text-sm text-slate-600 space-y-2">
+            <li>Unlimited workspaces</li>
+            <li>Advanced workflows</li>
+            <li>SSO & audit logs</li>
+          </ul>
+          <a href="#" class="mt-6 inline-block bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 focus-ring">Start trial</a>
+        </div>
+
+        <div class="p-6 bg-white card-border rounded-lg text-center">
+          <div class="text-sm font-semibold text-slate-700">Enterprise</div>
+          <div class="mt-4 text-3xl font-extrabold text-slate-900">Custom</div>
+          <div class="mt-2 text-slate-600">For large organizations with security needs</div>
+          <ul class="mt-4 text-sm text-slate-600 space-y-2">
+            <li>Dedicated support</li>
+            <li>Custom SLAs</li>
+            <li>Onboarding & training</li>
+          </ul>
+          <a href="#" class="mt-6 inline-block border border-slate-200 text-slate-900 px-4 py-2 rounded-md focus-ring">Contact sales</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mx-auto content-max px-6 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">Frequently asked questions</h2>
+          <p class="mt-3 text-slate-600">Answers to common questions about onboarding, security, and workflows.</p>
+        </div>
+
+        <div class="space-y-4">
+          <details class="p-4 bg-white card-border rounded-md">
+            <summary class="font-semibold cursor-pointer">How do I migrate tasks from another tool?</summary>
+            <div class="mt-2 text-sm text-slate-600">Import via CSV or connect through our integrations for a guided migration. Our team can assist with larger imports.</div>
+          </details>
+
+          <details class="p-4 bg-white card-border rounded-md">
+            <summary class="font-semibold cursor-pointer">Is there SSO for teams?</summary>
+            <div class="mt-2 text-sm text-slate-600">Yes — team and enterprise plans support SAML and SCIM provisioning for user management.</div>
+          </details>
+
+          <details class="p-4 bg-white card-border rounded-md">
+            <summary class="font-semibold cursor-pointer">What about privacy and data ownership?</summary>
+            <div class="mt-2 text-sm text-slate-600">You retain ownership of your data. We provide export tools and a clear privacy policy.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-100 mt-12">
+    <div class="mx-auto content-max px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <a href="#" class="flex items-center gap-3">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect x="2" y="2" width="20" height="20" rx="5" fill="#111827" />
+            <path d="M7 14l3-6 4 8 3-10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="font-semibold text-slate-900">FocusFlow</span>
+        </a>
+        <p class="mt-3 text-sm text-slate-600">A focused task manager for teams who want to do their best work.</p>
+      </div>
+
+      <div class="text-sm text-slate-600">
+        <div class="font-semibold text-slate-800">Product</div>
+        <ul class="mt-3 space-y-2">
+          <li><a href="#features" class="hover:text-slate-900">Features</a></li>
+          <li><a href="#how" class="hover:text-slate-900">How it works</a></li>
+          <li><a href="#pricing" class="hover:text-slate-900">Pricing</a></li>
+        </ul>
+      </div>
+
+      <div class="text-sm text-slate-600">
+        <div class="font-semibold text-slate-800">Company</div>
+        <ul class="mt-3 space-y-2">
+          <li><a href="#" class="hover:text-slate-900">About</a></li>
+          <li><a href="#" class="hover:text-slate-900">Blog</a></li>
+          <li><a href="#" class="hover:text-slate-900">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-slate-50">
+      <div class="mx-auto content-max px-6 py-4 text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between">
+        <div>© <span id="year">2026</span> FocusFlow. All rights reserved.</div>
+        <div class="mt-2 md:mt-0">Built with focus, shipped with care.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
