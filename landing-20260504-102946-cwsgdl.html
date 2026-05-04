@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VerdantGoods — Eco-friendly Home & Personal Care</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Premium eco-friendly products crafted for a sustainable home. Clean ingredients, recyclable packaging, lasting design." />
+  <style>
+    /* Minor custom styles for subtle focus rings and consistent max-width */
+    :root{--brand: #0f766e;--accent:#16a34a;--muted:#6b7280}
+    .focus-ring:focus{outline:2px solid rgba(16,185,129,0.15);outline-offset:4px}
+    .card-hover:hover{transform:translateY(-6px)}
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-slate-50">
+  <!-- NAVBAR -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a class="flex items-center gap-3" href="#">
+          <!-- Logo: stylized leaf in circle -->
+          <div class="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M6 14c3-5 8-8 12-8-2 4-5 9-12 12V14z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="text-lg font-semibold">VerdantGoods</div>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#features" class="text-slate-600 hover:text-slate-900">Features</a>
+          <a href="#how" class="text-slate-600 hover:text-slate-900">How it works</a>
+          <a href="#testimonials" class="text-slate-600 hover:text-slate-900">Testimonials</a>
+          <a href="#pricing" class="text-slate-600 hover:text-slate-900">Pricing</a>
+          <a href="#faq" class="text-slate-600 hover:text-slate-900">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="#pricing" class="hidden md:inline-block px-4 py-2 rounded-md text-sm font-medium bg-emerald-600 text-white hover:bg-emerald-700 focus-ring">Shop Now</a>
+          <button class="md:hidden p-2 rounded-md border border-slate-200 bg-white focus-ring" aria-label="Open menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="mt-10">
+    <!-- HERO -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="inline-flex items-center gap-2 text-xs font-semibold uppercase text-emerald-600 tracking-wider mb-4">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M12 2l2 5 5 .5-4 3 1.2 5L12 14l-4.2 1.5L9 10 5 7l5-.5L12 2z" fill="currentColor"/></svg>
+            Sustainably made</p>
+
+          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">Elevate daily routines with planet-first essentials</h1>
+
+          <p class="mt-6 text-lg text-slate-600 max-w-xl">Premium household and personal-care products crafted from responsibly sourced materials. Refillable, recyclable, and designed to last — beauty without compromise.</p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#pricing" class="inline-flex items-center gap-2 px-5 py-3 bg-emerald-600 text-white rounded-md font-semibold shadow hover:bg-emerald-700 focus-ring">Shop Collection
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 5l6 7-6 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#features" class="inline-flex items-center gap-2 px-5 py-3 border border-slate-200 rounded-md text-slate-800 hover:bg-slate-50 focus-ring">Learn more</a>
+          </div>
+
+          <div class="mt-8 flex items-center gap-6">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-slate-100 rounded-md flex items-center justify-center">
+                <svg class="w-6 h-6 text-emerald-600" viewBox="0 0 24 24" fill="none"><path d="M5 12l4 4L19 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="text-sm font-semibold">Carbon-neutral deliveries</div>
+                <div class="text-xs text-slate-500">Offset shipping emissions by default</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-slate-100 rounded-md flex items-center justify-center">
+                <svg class="w-6 h-6 text-emerald-600" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M6 12h12M10 17h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="text-sm font-semibold">Refill system</div>
+                <div class="text-xs text-slate-500">Less waste, smarter value</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Illustration (inline SVG) -->
+        <div class="order-first lg:order-last flex justify-center lg:justify-end">
+          <div class="w-full max-w-md bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
+            <svg viewBox="0 0 520 360" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eco product illustration">
+              <rect width="100%" height="100%" rx="20" fill="#ffffff"/>
+              <!-- stylized product bottle and leaf -->
+              <g transform="translate(40,30)">
+                <rect x="160" y="40" width="120" height="180" rx="18" fill="#e9f7f2" stroke="#d1f0e6"/>
+                <rect x="170" y="20" width="100" height="28" rx="8" fill="#0f766e"/>
+                <circle cx="220" cy="120" r="28" fill="#16a34a" opacity="0.12"/>
+                <path d="M120 190c-20-40 0-80 40-100 30-15 60-8 80 10" stroke="#0f766e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M60 230c18-30 48-48 80-48s62 18 80 48" fill="#ecfdf5" stroke="#d1f7ea"/>
+                <!-- leaf -->
+                <path d="M230 70c18 10 40 32 36 60-6 40-56 58-92 52" fill="#10b981" opacity="0.95"/>
+                <path d="M230 70c-18 10-36 28-38 52-3 36 20 58 62 52" fill="#059669" opacity="0.95"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / LOGOS -->
+    <section class="mt-12 border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8">
+        <p class="text-center text-sm text-slate-500">Trusted by sustainability-focused teams and creators</p>
+        <div class="mt-6 grid grid-cols-2 md:grid-cols-6 gap-6 items-center">
+          <!-- logos as neutral SVGs -->
+          <div class="flex items-center justify-center p-3 bg-white border border-slate-100 rounded-md shadow-sm">
+            <svg width="90" height="28" viewBox="0 0 90 28" fill="none"><rect width="90" height="28" rx="4" fill="#f8fafb"/><text x="10" y="18" font-size="12" fill="#374151">GreenCo</text></svg>
+          </div>
+          <div class="flex items-center justify-center p-3 bg-white border border-slate-100 rounded-md shadow-sm">
+            <svg width="90" height="28" viewBox="0 0 90 28" fill="none"><rect width="90" height="28" rx="4" fill="#f8fafb"/><text x="10" y="18" font-size="12" fill="#374151">EarthLab</text></svg>
+          </div>
+          <div class="flex items-center justify-center p-3 bg-white border border-slate-100 rounded-md shadow-sm">
+            <svg width="90" height="28" viewBox="0 0 90 28" fill="none"><rect width="90" height="28" rx="4" fill="#f8fafb"/><text x="10" y="18" font-size="12" fill="#374151">PureHouse</text></svg>
+          </div>
+          <div class="flex items-center justify-center p-3 bg-white border border-slate-100 rounded-md shadow-sm">
+            <svg width="90" height="28" viewBox="0 0 90 28" fill="none"><rect width="90" height="28" rx="4" fill="#f8fafb"/><text x="10" y="18" font-size="12" fill="#374151">ReFillCo</text></svg>
+          </div>
+          <div class="flex items-center justify-center p-3 bg-white border border-slate-100 rounded-md shadow-sm">
+            <svg width="90" height="28" viewBox="0 0 90 28" fill="none"><rect width="90" height="28" rx="4" fill="#f8fafb"/><text x="10" y="18" font-size="12" fill="#374151">LoopLab</text></svg>
+          </div>
+          <div class="flex items-center justify-center p-3 bg-white border border-slate-100 rounded-md shadow-sm">
+            <svg width="90" height="28" viewBox="0 0 90 28" fill="none"><rect width="90" height="28" rx="4" fill="#f8fafb"/><text x="10" y="18" font-size="12" fill="#374151">CleanKit</text></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-lg border border-slate-100 shadow-sm card-hover transition-transform duration-200">
+          <div class="flex items-center gap-4">
+            <div class="p-3 bg-emerald-50 rounded-md text-emerald-600">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M12 2c3 3 6 6 6 10s-3 7-6 10c-3-3-6-6-6-10s3-7 6-10z" fill="currentColor"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Biodegradable formulas</h3>
+              <p class="text-sm text-slate-500 mt-1">Clean ingredients that break down safely without harming ecosystems.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg border border-slate-100 shadow-sm card-hover transition-transform duration-200">
+          <div class="flex items-center gap-4">
+            <div class="p-3 bg-emerald-50 rounded-md text-emerald-600">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M7 12h10M10 17h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Refill-friendly packaging</h3>
+              <p class="text-sm text-slate-500 mt-1">Durable containers designed for our home refill program.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg border border-slate-100 shadow-sm card-hover transition-transform duration-200">
+          <div class="flex items-center gap-4">
+            <div class="p-3 bg-emerald-50 rounded-md text-emerald-600">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-slate-900">Transparent sourcing</h3>
+              <p class="text-sm text-slate-500 mt-1">Full ingredient lists and supplier traceability for every product.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="bg-white border-t border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-semibold text-slate-900">How it works</h2>
+        <p class="text-sm text-slate-600 mt-2">A simple cycle: choose, refill, and keep waste out of landfills.</p>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-lg border border-slate-100 shadow-sm">
+            <div class="flex items-center justify-center w-12 h-12 rounded-md bg-emerald-50 text-emerald-600 mb-3">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h4 class="font-semibold">Pick your essentials</h4>
+            <p class="text-sm text-slate-500 mt-2">Select durable products designed for repeated use and refills.</p>
+          </div>
+
+          <div class="p-6 rounded-lg border border-slate-100 shadow-sm">
+            <div class="flex items-center justify-center w-12 h-12 rounded-md bg-emerald-50 text-emerald-600 mb-3">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5v14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h4 class="font-semibold">Subscribe for refills</h4>
+            <p class="text-sm text-slate-500 mt-2">Flexible plans deliver refills on your schedule — skip or cancel anytime.</p>
+          </div>
+
+          <div class="p-6 rounded-lg border border-slate-100 shadow-sm">
+            <div class="flex items-center justify-center w-12 h-12 rounded-md bg-emerald-50 text-emerald-600 mb-3">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"><path d="M12 2s4 6 10 6v8s-6 2-10 6c-4-4-10-6-10-6V8c6 0 10-6 10-6z" fill="currentColor"/></svg>
+            </div>
+            <h4 class="font-semibold">Return or recycle</h4>
+            <p class="text-sm text-slate-500 mt-2">Send containers back or recycle locally — we make it effortless.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <h2 class="text-2xl font-semibold text-slate-900">What customers say</h2>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="bg-white p-6 rounded-lg border border-slate-100 shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-emerald-600" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.5 0 4-1.5 4-3.5S14.5 5 12 5 8 6.5 8 8.5 9.5 12 12 12zM6 19c0-3 3-4.5 6-4.5s6 1.5 6 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <p class="font-semibold">"Feels premium — and it aligns with our values."</p>
+              <p class="text-sm text-slate-500 mt-1">Maya R., Brooklyn</p>
+            </div>
+          </div>
+        </blockquote>
+
+        <blockquote class="bg-white p-6 rounded-lg border border-slate-100 shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-emerald-600" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.5 0 4-1.5 4-3.5S14.5 5 12 5 8 6.5 8 8.5 9.5 12 12 12zM6 19c0-3 3-4.5 6-4.5s6 1.5 6 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <p class="font-semibold">"Refill program saved us tons of plastic waste."</p>
+              <p class="text-sm text-slate-500 mt-1">Sam K., San Diego</p>
+            </div>
+          </div>
+        </blockquote>
+
+        <blockquote class="bg-white p-6 rounded-lg border border-slate-100 shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 bg-slate-100 rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-emerald-600" viewBox="0 0 24 24" fill="none"><path d="M12 12c2.5 0 4-1.5 4-3.5S14.5 5 12 5 8 6.5 8 8.5 9.5 12 12 12zM6 19c0-3 3-4.5 6-4.5s6 1.5 6 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <p class="font-semibold">"Great scent and long-lasting — will reorder."</p>
+              <p class="text-sm text-slate-500 mt-1">Aisha T., London</p>
+            </div>
+          </div>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section id="pricing" class="bg-slate-50 border-t border-slate-100">
+      <div class="max-w-5xl mx-auto px-6 lg:px-8 py-12">
+        <h2 class="text-2xl font-semibold text-slate-900">Simple plans for everyday impact</h2>
+        <p class="text-sm text-slate-600 mt-2">No hidden fees, easy swaps, and discounts for refill subscribers.</p>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg border border-slate-100 shadow-sm">
+            <h3 class="text-xl font-semibold">Starter</h3>
+            <p class="mt-2 text-3xl font-bold">$9<span class="text-sm font-medium">/mo</span></p>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>1 product refill / month</li>
+              <li>Free shipping over $50</li>
+            </ul>
+            <a href="#" class="mt-6 inline-block w-full text-center px-4 py-3 bg-white border border-slate-200 rounded-md text-slate-900 hover:bg-slate-50 focus-ring">Choose Starter</a>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg border border-emerald-600 shadow-md transform scale-100 md:scale-105">
+            <h3 class="text-xl font-semibold">Refill</h3>
+            <p class="mt-2 text-3xl font-bold">$24<span class="text-sm font-medium">/mo</span></p>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>3 product refills / month</li>
+              <li>10% off one-time purchases</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#" class="mt-6 inline-block w-full text-center px-4 py-3 bg-emerald-600 text-white rounded-md hover:bg-emerald-700 focus-ring">Start Refill</a>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg border border-slate-100 shadow-sm">
+            <h3 class="text-xl font-semibold">Family</h3>
+            <p class="mt-2 text-3xl font-bold">$39<span class="text-sm font-medium">/mo</span></p>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>5 product refills / month</li>
+              <li>20% off refill accessories</li>
+            </ul>
+            <a href="#" class="mt-6 inline-block w-full text-center px-4 py-3 bg-white border border-slate-200 rounded-md text-slate-900 hover:bg-slate-50 focus-ring">Choose Family</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <h2 class="text-2xl font-semibold text-slate-900">Frequently asked questions</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <details class="bg-white p-5 rounded-lg border border-slate-100" open>
+          <summary class="font-semibold cursor-pointer">How do refills work?</summary>
+          <p class="mt-3 text-sm text-slate-600">Choose a plan or single refill. We'll send a refill pouch or bottle at the cadence you select. Return or recycle used containers with our prepaid mailers.</p>
+        </details>
+
+        <details class="bg-white p-5 rounded-lg border border-slate-100">
+          <summary class="font-semibold cursor-pointer">Are products safe for sensitive skin?</summary>
+          <p class="mt-3 text-sm text-slate-600">Yes — our formulas are dermatologically tested and free from harsh sulfates and parabens. Full ingredient lists are provided on each product page.</p>
+        </details>
+
+        <details class="bg-white p-5 rounded-lg border border-slate-100">
+          <summary class="font-semibold cursor-pointer">Can I cancel anytime?</summary>
+          <p class="mt-3 text-sm text-slate-600">Yes. Pause, skip, or cancel your subscription from your account dashboard without fees.</p>
+        </details>
+
+        <details class="bg-white p-5 rounded-lg border border-slate-100">
+          <summary class="font-semibold cursor-pointer">Do you ship internationally?</summary>
+          <p class="mt-3 text-sm text-slate-600">We ship to most countries. Shipping rates and delivery times vary by region — check the shipping page for full details.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+      <div class="flex flex-col md:flex-row justify-between gap-6">
+        <div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 14c3-5 8-8 12-8-2 4-5 9-12 12V14z" fill="currentColor"/></svg>
+            </div>
+            <div class="font-semibold">VerdantGoods</div>
+          </div>
+          <p class="mt-4 text-sm text-slate-600 max-w-md">Quality essentials that reduce waste and respect the planet. Join thousands making better daily choices.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div>
+            <h4 class="font-semibold">Product</h4>
+            <ul class="mt-3 text-sm text-slate-600 space-y-2">
+              <li><a href="#" class="hover:underline">All products</a></li>
+              <li><a href="#" class="hover:underline">Refill plans</a></li>
+              <li><a href="#" class="hover:underline">Sustainability</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold">Company</h4>
+            <ul class="mt-3 text-sm text-slate-600 space-y-2">
+              <li><a href="#" class="hover:underline">About us</a></li>
+              <li><a href="#" class="hover:underline">Careers</a></li>
+              <li><a href="#" class="hover:underline">Press</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold">Support</h4>
+            <ul class="mt-3 text-sm text-slate-600 space-y-2">
+              <li><a href="#" class="hover:underline">Help center</a></li>
+              <li><a href="#" class="hover:underline">Shipping</a></li>
+              <li><a href="#" class="hover:underline">Returns</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 border-t border-slate-100 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+        <div>© <span id="year">2026</span> VerdantGoods. All rights reserved.</div>
+        <div class="flex items-center gap-4 mt-4 md:mt-0">
+          <a href="#" class="text-slate-500 hover:text-slate-700" aria-label="Twitter">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M8 19c7.333 0 11.333-6 11.333-11.333v-.52A8.1 8.1 0 0021 4.1a8.093 8.093 0 01-2.357.647A4.05 4.05 0 0020.44 3a8.12 8.12 0 01-2.57.982A4.06 4.06 0 0011.7 7.6a11.53 11.53 0 01-8.38-4.25 4.06 4.06 0 001.25 5.42A4.02 4.02 0 012.8 8.6v.05A4.06 4.06 0 004.1 12a4.08 4.08 0 01-1.83.07A4.06 4.06 0 005.7 15.11 8.15 8.15 0 012 17.55 11.5 11.5 0 008 19" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="text-slate-500 hover:text-slate-700" aria-label="Instagram">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zM12 7.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9zM17.5 6.25h.01" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // small enhancement: set year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
