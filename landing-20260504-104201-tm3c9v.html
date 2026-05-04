@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Learnly — Online Course Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --muted:#64748b; /* slate-400 */
+      --accent:#0ea5a4; /* teal */
+      --card:#0b1220;
+    }
+    /* small custom tweaks beyond Tailwind */
+    .accent-ring:focus{outline:2px solid transparent;box-shadow:0 0 0 4px rgba(14,165,164,0.12)}
+    .logo-mark{fill:var(--accent)}
+    /* remove default summary marker for FAQ */
+    summary::-webkit-details-marker{display:none}
+    summary::marker{content:none}
+  </style>
+</head>
+<body class="antialiased text-slate-100 bg-gradient-to-b from-transparent to-transparent" style="background-color:var(--bg);">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- NAVBAR -->
+    <header class="flex items-center justify-between py-6">
+      <a href="#" class="flex items-center gap-3">
+        <svg width="38" height="38" viewBox="0 0 24 24" class="logo-mark" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect x="1" y="1" width="22" height="22" rx="5" fill="var(--card)" stroke="rgba(255,255,255,0.04)" />
+          <path d="M6 16v-8l6 4 6-4v8" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        </svg>
+        <span class="font-semibold text-lg tracking-tight">Learnly</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-slate-200">
+        <a href="#features" class="hover:text-white">Features</a>
+        <a href="#how" class="hover:text-white">How it Works</a>
+        <a href="#reviews" class="hover:text-white">Testimonials</a>
+        <a href="#pricing" class="hover:text-white">Pricing</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden md:inline-block px-4 py-2 rounded-md text-sm bg-transparent border border-slate-600 hover:border-slate-400">Log in</a>
+        <a href="#pricing" class="inline-block px-4 py-2 rounded-md text-sm font-medium text-slate-900 bg-white hover:opacity-95">Get Started</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="grid md:grid-cols-2 gap-12 items-center py-12">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Create and Sell Professional Online Courses</h1>
+        <p class="mt-4 text-slate-300 max-w-xl">Launch a premium learning experience with course hosting, student management, quizzes, and built-in analytics. Designed for creators, teams, and organizations who want clean design and reliable infrastructure.</p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#pricing" class="inline-flex items-center gap-3 px-5 py-3 bg-white text-slate-900 rounded-md font-semibold shadow-sm hover:shadow-md">Start Free Trial
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
+              <path fill-rule="evenodd" d="M10.293 15.707a1 1 0 010-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="#features" class="inline-flex items-center gap-2 px-4 py-3 border border-slate-600 rounded-md text-sm hover:border-slate-400">See Features</a>
+        </div>
+
+        <div class="mt-8 flex items-center gap-6">
+          <div class="flex items-center gap-3">
+            <svg width="40" height="40" viewBox="0 0 24 24" class="rounded-md bg-white p-1 text-slate-900" aria-hidden>
+              <path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+            <div>
+              <div class="text-sm font-semibold">1,200+</div>
+              <div class="text-xs text-slate-400">Creators onboarded</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg width="40" height="40" viewBox="0 0 24 24" class="rounded-md bg-white p-1 text-slate-900" aria-hidden>
+              <path d="M3 7h18M3 12h12M3 17h18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            </svg>
+            <div>
+              <div class="text-sm font-semibold">500k+</div>
+              <div class="text-xs text-slate-400">Students taught</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="bg-white rounded-2xl shadow-xl p-6 text-slate-900 border border-slate-700">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-xs text-slate-500">Course Preview</div>
+              <div class="mt-2 font-semibold">Mastering Product Design</div>
+            </div>
+            <div class="text-sm text-slate-500">4h 30m</div>
+          </div>
+          <div class="mt-4 w-full h-40 rounded-md overflow-hidden bg-slate-100 flex items-center justify-center text-slate-400">
+            <!-- illustration placeholder (SVG framed) -->
+            <svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect width="160" height="80" rx="8" fill="#e6eef0" />
+              <path d="M16 56h128v-8H16v8zM16 36h88v-8H16v8z" fill="#d1e6e6" />
+              <circle cx="132" cy="44" r="10" fill="#cbe7e7" />
+            </svg>
+          </div>
+
+          <div class="mt-4 flex items-center justify-between text-sm text-slate-500">
+            <div>Instructor • Emma Stone</div>
+            <div class="font-medium text-slate-700">Enroll • Free</div>
+          </div>
+        </div>
+
+        <div class="absolute -right-6 -bottom-6 w-44 p-3 bg-slate-800 border border-slate-700 rounded-xl shadow-md">
+          <div class="text-xs text-slate-400">Student Progress</div>
+          <div class="mt-2 flex items-center gap-2">
+            <div class="w-12 h-12 bg-white/8 rounded-full flex items-center justify-center text-sm font-semibold">82%</div>
+            <div class="text-sm">Average Completion</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGOS / SOCIAL PROOF -->
+    <section class="py-6">
+      <div class="flex items-center justify-between gap-6 flex-wrap">
+        <div class="text-slate-400 text-sm">Trusted by teams at</div>
+        <div class="flex gap-6 items-center flex-wrap">
+          <!-- simple logo lines as SVGs -->
+          <svg width="84" height="28" viewBox="0 0 84 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="84" height="28" rx="4" fill="#0b1220" stroke="rgba(255,255,255,0.04)" />
+            <path d="M10 20V8h6l6 12h-6l-2-4H14l-2 4H10z" fill="#9CA3AF"/>
+          </svg>
+          <svg width="84" height="28" viewBox="0 0 84 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="84" height="28" rx="4" fill="#0b1220" stroke="rgba(255,255,255,0.04)" />
+            <circle cx="20" cy="14" r="6" fill="#9CA3AF" />
+            <rect x="36" y="8" width="30" height="12" rx="2" fill="#9CA3AF" />
+          </svg>
+          <svg width="84" height="28" viewBox="0 0 84 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="84" height="28" rx="4" fill="#0b1220" stroke="rgba(255,255,255,0.04)" />
+            <path d="M16 8h12v12H16zM36 8h12v12H36z" fill="#9CA3AF" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-12">
+      <h2 class="text-2xl font-bold">Powerful features for creators</h2>
+      <p class="mt-2 text-slate-400 max-w-xl">Everything you need to build a beautiful course experience and grow your audience.</p>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="bg-slate-900 border border-slate-700 rounded-xl p-6">
+          <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-white" aria-hidden>
+              <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="mt-4 font-semibold">Course Builder</h3>
+          <p class="mt-2 text-sm text-slate-400">Drag-and-drop lessons, modules, and resources with an intuitive editor.</p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-700 rounded-xl p-6">
+          <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-white" aria-hidden>
+              <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.4" fill="none" />
+            </svg>
+          </div>
+          <h3 class="mt-4 font-semibold">Quizzes & Certificates</h3>
+          <p class="mt-2 text-sm text-slate-400">Assess students and reward completion with certificates and badges.</p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-700 rounded-xl p-6">
+          <div class="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" class="text-white" aria-hidden>
+              <path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="mt-4 font-semibold">Built-in Analytics</h3>
+          <p class="mt-2 text-sm text-slate-400">Track enrollments, progress, and revenue with clear dashboards.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="py-12">
+      <h2 class="text-2xl font-bold">How it works</h2>
+      <p class="mt-2 text-slate-400 max-w-xl">A straightforward three-step flow to go from idea to course launch.</p>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="bg-slate-800 border border-slate-700 rounded-xl p-6">
+          <div class="w-10 h-10 rounded-full bg-white text-slate-900 flex items-center justify-center font-semibold">1</div>
+          <h3 class="mt-4 font-semibold">Plan & Outline</h3>
+          <p class="mt-2 text-sm text-slate-400">Structure your modules, learning objectives, and assessments.</p>
+        </div>
+        <div class="bg-slate-800 border border-slate-700 rounded-xl p-6">
+          <div class="w-10 h-10 rounded-full bg-white text-slate-900 flex items-center justify-center font-semibold">2</div>
+          <h3 class="mt-4 font-semibold">Publish Content</h3>
+          <p class="mt-2 text-sm text-slate-400">Upload videos, resources, and quizzes. Set pricing and landing pages.</p>
+        </div>
+        <div class="bg-slate-800 border border-slate-700 rounded-xl p-6">
+          <div class="w-10 h-10 rounded-full bg-white text-slate-900 flex items-center justify-center font-semibold">3</div>
+          <h3 class="mt-4 font-semibold">Grow & Monetize</h3>
+          <p class="mt-2 text-sm text-slate-400">Onboard students, analyze performance, and scale with team features.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="reviews" class="py-12">
+      <h2 class="text-2xl font-bold">What creators say</h2>
+      <p class="mt-2 text-slate-400 max-w-xl">Real feedback from instructors who launched courses on Learnly.</p>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <blockquote class="bg-slate-900 border border-slate-700 rounded-xl p-6">
+          <p class="text-slate-300">"The editor is fast and the student analytics helped me improve completion rates by 30%. Support is excellent."</p>
+          <footer class="mt-4 text-sm text-slate-400">— Jordan Kim, UX Instructor</footer>
+        </blockquote>
+
+        <blockquote class="bg-slate-900 border border-slate-700 rounded-xl p-6">
+          <p class="text-slate-300">"Beautiful templates and reliable hosting. I was able to focus on content instead of infrastructure."</p>
+          <footer class="mt-4 text-sm text-slate-400">— Clara Reed, Product Strategist</footer>
+        </blockquote>
+
+        <blockquote class="bg-slate-900 border border-slate-700 rounded-xl p-6">
+          <p class="text-slate-300">"Students loved the quizzes and certificates. Payments integrated smoothly with our workflow."</p>
+          <footer class="mt-4 text-sm text-slate-400">— Miguel Ortega, Data Science Instructor</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section id="pricing" class="py-12">
+      <div class="bg-slate-900 border border-slate-700 rounded-2xl p-8 md:flex items-center justify-between gap-6">
+        <div class="max-w-xl">
+          <h2 class="text-2xl font-bold">Plans for every stage</h2>
+          <p class="mt-2 text-slate-400">From solo creators to growing teams. No long-term contracts — cancel anytime.</p>
+        </div>
+
+        <div class="mt-6 md:mt-0 flex gap-4">
+          <div class="p-4 bg-slate-800 border border-slate-700 rounded-lg text-center w-48">
+            <div class="text-sm text-slate-400">Starter</div>
+            <div class="mt-2 font-semibold text-xl">Free</div>
+            <div class="mt-4 text-sm text-slate-400">Basic course hosting • Up to 100 students</div>
+            <a href="#" class="mt-4 inline-block px-4 py-2 bg-white text-slate-900 rounded-md font-medium">Start</a>
+          </div>
+
+          <div class="p-4 bg-white text-slate-900 rounded-lg w-56 shadow-md border border-slate-200">
+            <div class="text-sm text-slate-600">Creator</div>
+            <div class="mt-2 font-semibold text-2xl">$29<span class="text-sm font-normal">/mo</span></div>
+            <div class="mt-4 text-sm text-slate-600">Unlimited students • Analytics • Payments</div>
+            <a href="#" class="mt-4 inline-block px-4 py-2 bg-slate-900 text-white rounded-md font-medium">Choose Plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-12">
+      <h2 class="text-2xl font-bold">Frequently asked questions</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-4">
+        <details class="bg-slate-900 border border-slate-700 rounded-lg p-4">
+          <summary class="cursor-pointer font-medium">Is there a free trial?</summary>
+          <p class="mt-2 text-sm text-slate-400">Yes — we offer a 14-day free trial on Creator plans. No credit card required to start.</p>
+        </details>
+
+        <details class="bg-slate-900 border border-slate-700 rounded-lg p-4">
+          <summary class="cursor-pointer font-medium">How do payments work?</summary>
+          <p class="mt-2 text-sm text-slate-400">Connect your Stripe account to receive payouts directly. We only charge platform fees if you use our checkout.</p>
+        </details>
+
+        <details class="bg-slate-900 border border-slate-700 rounded-lg p-4">
+          <summary class="cursor-pointer font-medium">Can I export student data?</summary>
+          <p class="mt-2 text-sm text-slate-400">Yes — export CSVs for enrollments, progress, and quiz results from the dashboard.</p>
+        </details>
+
+        <details class="bg-slate-900 border border-slate-700 rounded-lg p-4">
+          <summary class="cursor-pointer font-medium">Do you support teams?</summary>
+          <p class="mt-2 text-sm text-slate-400">Team plans include multiple instructors, shared resources, and organization-level billing.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 border-t border-slate-800 mt-12">
+      <div class="md:flex md:justify-between md:items-center">
+        <div class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" class="logo-mark" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect x="1" y="1" width="22" height="22" rx="5" fill="var(--card)" stroke="rgba(255,255,255,0.04)" />
+            <path d="M6 16v-8l6 4 6-4v8" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          </svg>
+          <div>
+            <div class="font-semibold">Learnly</div>
+            <div class="text-sm text-slate-400">Build courses that scale.</div>
+          </div>
+        </div>
+
+        <div class="mt-6 md:mt-0 flex gap-6 text-sm text-slate-400">
+          <a href="#" class="hover:text-white">Privacy</a>
+          <a href="#" class="hover:text-white">Terms</a>
+          <a href="#" class="hover:text-white">Contact</a>
+        </div>
+      </div>
+
+      <div class="mt-6 text-sm text-slate-500">© <span id="year">2026</span> Learnly, Inc. All rights reserved.</div>
+    </footer>
+  </div>
+
+  <script>
+    // small inline script only to set the year dynamically — not required but avoids stale year
+    try{document.getElementById('year').textContent=new Date().getFullYear();}catch(e){}
+  </script>
+</body>
+</html>
