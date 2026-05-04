@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ArenaHub — Gaming Community Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom styles for details Tailwind doesn't handle succinctly */
+    :root{--accent:#06b6d4;--muted:#6b7280;--navy:#0f172a}
+    .glass-border{background-clip:padding-box;border:1px solid rgba(15,23,42,0.06)}
+    .max-prose{max-width:78ch}
+    /* subtle focus ring for keyboard users */
+    .focus-ring:focus{outline:3px solid rgba(6,182,212,0.18);outline-offset:2px}
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+  <!-- NAVBAR -->
+  <header class="bg-white border-b border-gray-200">
+    <div class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <!-- Logo: shield + controller -->
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <rect x="2" y="3" width="20" height="18" rx="3" fill="var(--navy)"/>
+          <path d="M8 9h4M10 9v4M16 12h.01" stroke="#06b6d4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="font-semibold text-lg tracking-tight">ArenaHub</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm text-gray-600">
+        <a href="#features" class="hover:text-gray-900">Features</a>
+        <a href="#how" class="hover:text-gray-900">How it Works</a>
+        <a href="#testimonials" class="hover:text-gray-900">Testimonials</a>
+        <a href="#pricing" class="hover:text-gray-900">Pricing</a>
+        <a href="#faq" class="hover:text-gray-900">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden md:inline-block text-sm font-medium text-white bg-sky-600 hover:bg-sky-700 px-4 py-2 rounded shadow">Sign up</a>
+        <a href="#" class="text-sm text-gray-600 hover:text-gray-900">Log in</a>
+        <!-- Mobile menu button placeholder -->
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="mx-auto max-w-7xl px-6 py-16 lg:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7">
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 tracking-tight">Build, Compete, and Belong — Your Gaming Community, Elevated</h1>
+        <p class="mt-6 text-lg text-gray-600 max-prose">ArenaHub brings players, organizers, and creators together. Host tournaments, manage clans, chat in real-time, and turn matches into moments with tools built for serious communities.</p>
+
+        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+          <a href="#pricing" class="inline-flex items-center justify-center px-5 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded shadow focus-ring">Get Started — Free</a>
+          <a href="#how" class="inline-flex items-center gap-2 px-5 py-3 border border-gray-200 rounded text-gray-700 hover:bg-gray-100">Learn how
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="mt-8 flex items-center gap-6">
+          <div class="flex items-center gap-3">
+            <svg class="h-8 w-8 text-emerald-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 9v6a7 7 0 0 0 14 0V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div class="text-sm">
+              <div class="text-gray-900 font-semibold">250k+</div>
+              <div class="text-gray-500">Active players</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <svg class="h-8 w-8 text-sky-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3l2.09 6.26L20 10l-4.91 3.74L16.18 20 12 16.9 7.82 20l1.09-6.26L4 10l5.91-.74L12 3z" stroke="currentColor" stroke-width="0.5" fill="currentColor"/>
+            </svg>
+            <div class="text-sm">
+              <div class="text-gray-900 font-semibold">4.9/5</div>
+              <div class="text-gray-500">Average community rating</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero illustration -->
+      <div class="lg:col-span-5">
+        <div class="bg-white glass-border rounded-2xl p-6 shadow-lg">
+          <!-- Illustration: stylized controller and scoreboard -->
+          <svg viewBox="0 0 600 420" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gaming illustration">
+            <rect x="8" y="8" width="584" height="404" rx="20" fill="#0f172a" />
+            <rect x="44" y="52" width="512" height="124" rx="10" fill="#0ea5b5"/>
+            <rect x="64" y="78" width="180" height="16" rx="6" fill="#06283d"/>
+            <rect x="264" y="78" width="220" height="16" rx="6" fill="#06283d"/>
+            <g transform="translate(64,200)">
+              <rect width="472" height="136" rx="12" fill="#071126"/>
+              <g transform="translate(18,18)" fill="#93c5fd">
+                <circle cx="38" cy="40" r="28" fill="#06b6d4"/>
+                <rect x="92" y="26" width="264" height="28" rx="8" fill="#06b6d4"/>
+                <rect x="368" y="18" width="80" height="80" rx="12" fill="#06b6d4"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- SOCIAL PROOF / LOGOS -->
+  <section class="mx-auto max-w-7xl px-6 py-8">
+    <div class="flex items-center justify-between gap-6 flex-wrap">
+      <div class="flex items-center gap-6 opacity-90">
+        <!-- simple logo icons as placeholders (solid shapes) -->
+        <svg class="h-8 w-20" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="40" rx="6" fill="#111827"/></svg>
+        <svg class="h-8 w-20" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="40" rx="6" fill="#0ea5b5"/></svg>
+        <svg class="h-8 w-20" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="40" rx="6" fill="#06b6d4"/></svg>
+        <svg class="h-8 w-20" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="40" rx="6" fill="#14b8a6"/></svg>
+      </div>
+
+      <div class="text-sm text-gray-500">Trusted by tournament organizers and content creators worldwide</div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="mx-auto max-w-7xl px-6 py-12">
+    <h2 class="text-2xl font-bold text-gray-900">Platform Features</h2>
+    <p class="mt-2 text-gray-600 max-prose">Everything you need to run and grow a competitive gaming community.</p>
+
+    <div class="mt-8 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Feature 1 -->
+      <div class="bg-white glass-border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div class="flex items-center gap-4">
+          <div class="p-3 rounded-lg bg-emerald-50 text-emerald-500">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Tournament Builder</h3>
+            <p class="mt-1 text-sm text-gray-600">Create brackets, schedule matches, automate results, and sync with live streams.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="bg-white glass-border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div class="flex items-center gap-4">
+          <div class="p-3 rounded-lg bg-sky-50 text-sky-500">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 8l7-5 7 5v7l-7 5-7-5V8z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Guild & Clan Tools</h3>
+            <p class="mt-1 text-sm text-gray-600">Roles, recruitment funnels, private channels, and activity insights for groups.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="bg-white glass-border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div class="flex items-center gap-4">
+          <div class="p-3 rounded-lg bg-gray-800 text-white">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Live Match Tools</h3>
+            <p class="mt-1 text-sm text-gray-600">Scoreboards, overlays, referee controls, and instant replays — built-in and lightweight.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="bg-white glass-border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div class="flex items-center gap-4">
+          <div class="p-3 rounded-lg bg-emerald-50 text-emerald-500">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7h18M3 12h12M3 17h6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Community Chat</h3>
+            <p class="mt-1 text-sm text-gray-600">Persistent rooms, moderation tools, and voice integration for tight-knit groups.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="bg-white glass-border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div class="flex items-center gap-4">
+          <div class="p-3 rounded-lg bg-sky-50 text-sky-500">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Creator Monetization</h3>
+            <p class="mt-1 text-sm text-gray-600">Subscriptions, event tickets, and merchandising integrations without heavy fees.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="bg-white glass-border rounded-xl p-6 shadow-sm hover:shadow-md transition">
+        <div class="flex items-center gap-4">
+          <div class="p-3 rounded-lg bg-gray-100 text-gray-600">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h18v4H3zM3 17h18v4H3zM3 10h18v4H3z" fill="currentColor"/></svg>
+          </div>
+          <div>
+            <h3 class="font-semibold">Analytics & Reports</h3>
+            <p class="mt-1 text-sm text-gray-600">Understand engagement, growth, match stats, and revenue at a glance.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="mx-auto max-w-7xl px-6 py-12 bg-white border-t border-b border-gray-100">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-bold text-gray-900">How it Works</h2>
+      <p class="mt-2 text-gray-600">Three simple steps to launch your community and host your first event.</p>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      <div class="p-6 rounded-xl border border-gray-100 bg-gray-50 text-center">
+        <div class="mx-auto w-14 h-14 rounded-full flex items-center justify-center bg-emerald-500 text-white font-semibold">1</div>
+        <h3 class="mt-4 font-semibold">Create Your Space</h3>
+        <p class="mt-2 text-sm text-gray-600">Set up your guild, channels, roles, and branding in minutes.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-gray-100 bg-gray-50 text-center">
+        <div class="mx-auto w-14 h-14 rounded-full flex items-center justify-center bg-sky-500 text-white font-semibold">2</div>
+        <h3 class="mt-4 font-semibold">Organize Events</h3>
+        <p class="mt-2 text-sm text-gray-600">Use our builder to make brackets, schedule matches, and invite players.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-gray-100 bg-gray-50 text-center">
+        <div class="mx-auto w-14 h-14 rounded-full flex items-center justify-center bg-gray-800 text-white font-semibold">3</div>
+        <h3 class="mt-4 font-semibold">Grow The Community</h3>
+        <p class="mt-2 text-sm text-gray-600">Run matches, reward creators, and scale with built-in monetization.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="mx-auto max-w-7xl px-6 py-12">
+    <div class="text-center">
+      <h2 class="text-2xl font-bold">What Organizers Say</h2>
+      <p class="mt-2 text-gray-600">Real feedback from communities using ArenaHub.</p>
+    </div>
+
+    <div class="mt-8 grid gap-6 grid-cols-1 md:grid-cols-3">
+      <blockquote class="bg-white glass-border p-6 rounded-xl shadow-sm">
+        <div class="flex items-start gap-4">
+          <svg class="h-12 w-12 rounded-full bg-sky-500 p-2 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12a4 4 0 100-8 4 4 0 000 8z" fill="currentColor"/><path d="M6 20a6 6 0 1112 0H6z" fill="currentColor"/></svg>
+          <div>
+            <p class="text-gray-700">"ArenaHub cut our admin time in half and gave our viewers a sleek overlay. Our weekly cups are simpler and more polished."</p>
+            <footer class="mt-3 text-sm text-gray-500">— Maya R., Tournament Director</footer>
+          </div>
+        </div>
+      </blockquote>
+
+      <blockquote class="bg-white glass-border p-6 rounded-xl shadow-sm">
+        <div class="flex items-start gap-4">
+          <svg class="h-12 w-12 rounded-full bg-emerald-500 p-2 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12a4 4 0 100-8 4 4 0 000 8z" fill="currentColor"/><path d="M6 20a6 6 0 1112 0H6z" fill="currentColor"/></svg>
+          <div>
+            <p class="text-gray-700">"Our creators finally have a simple way to monetize events. Payouts are transparent and fast."</p>
+            <footer class="mt-3 text-sm text-gray-500">— Ken T., Content Creator</footer>
+          </div>
+        </div>
+      </blockquote>
+
+      <blockquote class="bg-white glass-border p-6 rounded-xl shadow-sm">
+        <div class="flex items-start gap-4">
+          <svg class="h-12 w-12 rounded-full bg-gray-800 p-2 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12a4 4 0 100-8 4 4 0 000 8z" fill="currentColor"/><path d="M6 20a6 6 0 1112 0H6z" fill="currentColor"/></svg>
+          <div>
+            <p class="text-gray-700">"The analytics helped us optimize match times and increase retention — clear, actionable data."</p>
+            <footer class="mt-3 text-sm text-gray-500">— Arjun P., Community Manager</footer>
+          </div>
+        </div>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- PRICING / CTA -->
+  <section id="pricing" class="mx-auto max-w-7xl px-6 py-12 bg-gradient-to-b from-white to-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-bold">Plans Built for Communities</h2>
+      <p class="mt-2 text-gray-600">Start free, scale as you grow — predictable pricing for organizers and creators.</p>
+    </div>
+
+    <div class="mt-8 max-w-5xl mx-auto grid gap-6 grid-cols-1 md:grid-cols-3">
+      <div class="p-6 rounded-xl border border-gray-100 bg-white text-center shadow-sm">
+        <div class="text-sm text-gray-500">Starter</div>
+        <div class="mt-4 text-3xl font-extrabold">Free</div>
+        <p class="mt-2 text-sm text-gray-600">Essential tools for new communities. Host up to 2 events / month.</p>
+        <a href="#" class="mt-6 inline-block px-4 py-2 bg-emerald-500 text-white rounded font-semibold">Start Free</a>
+      </div>
+
+      <div class="p-6 rounded-xl border-2 border-emerald-500 bg-white text-center shadow-md transform scale-102">
+        <div class="text-sm text-gray-500">Pro</div>
+        <div class="mt-4 text-3xl font-extrabold">$29<span class="text-base font-medium">/mo</span></div>
+        <p class="mt-2 text-sm text-gray-600">Advanced tournament features, creator payouts, and priority support.</p>
+        <a href="#" class="mt-6 inline-block px-4 py-2 bg-emerald-500 text-white rounded font-semibold">Try Pro</a>
+      </div>
+
+      <div class="p-6 rounded-xl border border-gray-100 bg-white text-center shadow-sm">
+        <div class="text-sm text-gray-500">Enterprise</div>
+        <div class="mt-4 text-3xl font-extrabold">Custom</div>
+        <p class="mt-2 text-sm text-gray-600">SLA, dedicated support, and custom integrations for leagues and platforms.</p>
+        <a href="#" class="mt-6 inline-block px-4 py-2 border border-gray-200 text-gray-700 rounded font-semibold">Contact Sales</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="mx-auto max-w-7xl px-6 py-12">
+    <h2 class="text-2xl font-bold">Frequently Asked Questions</h2>
+    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <details class="bg-white glass-border p-5 rounded-lg" open>
+        <summary class="font-medium cursor-pointer">Can I host tournaments for any game?</summary>
+        <p class="mt-3 text-sm text-gray-600">Yes. ArenaHub supports a wide range of game formats. Custom rulesets can be configured per event.</p>
+      </details>
+
+      <details class="bg-white glass-border p-5 rounded-lg">
+        <summary class="font-medium cursor-pointer">How do payouts work for creators?</summary>
+        <p class="mt-3 text-sm text-gray-600">Creators connect a payout method; revenue from tickets and subscriptions is split transparently and paid monthly.</p>
+      </details>
+
+      <details class="bg-white glass-border p-5 rounded-lg">
+        <summary class="font-medium cursor-pointer">Is there moderation and anti-cheat?</summary>
+        <p class="mt-3 text-sm text-gray-600">Moderation tools, referee roles, and match evidence logs are available. Anti-cheat integrations are available for enterprise tiers.</p>
+      </details>
+
+      <details class="bg-white glass-border p-5 rounded-lg">
+        <summary class="font-medium cursor-pointer">Can I white-label ArenaHub for my league?</summary>
+        <p class="mt-3 text-sm text-gray-600">Yes — white-labeling and custom integrations are provided on enterprise plans.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mx-auto max-w-7xl px-6 py-10 border-t border-gray-200">
+    <div class="flex flex-col md:flex-row md:justify-between gap-6">
+      <div>
+        <a href="#" class="flex items-center gap-3">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="20" height="18" rx="3" fill="#0f172a"/></svg>
+          <span class="font-semibold">ArenaHub</span>
+        </a>
+        <p class="mt-3 text-sm text-gray-500">Build competitive communities. Host events. Reward creators.</p>
+      </div>
+
+      <div class="flex gap-10">
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900">Product</h4>
+          <ul class="mt-3 text-sm text-gray-600 space-y-2">
+            <li><a href="#features" class="hover:text-gray-900">Features</a></li>
+            <li><a href="#pricing" class="hover:text-gray-900">Pricing</a></li>
+            <li><a href="#how" class="hover:text-gray-900">How it works</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900">Company</h4>
+          <ul class="mt-3 text-sm text-gray-600 space-y-2">
+            <li><a href="#" class="hover:text-gray-900">About</a></li>
+            <li><a href="#" class="hover:text-gray-900">Careers</a></li>
+            <li><a href="#" class="hover:text-gray-900">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 flex items-center justify-between text-sm text-gray-500">
+      <div>© 2026 ArenaHub — All rights reserved.</div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-gray-500 hover:text-gray-900">Terms</a>
+        <a href="#" class="text-gray-500 hover:text-gray-900">Privacy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Atlas Luxe Travels — Curated Luxury Journeys</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom adjustments for a premium feel */
+    :root{--navy:#0b1226;--accent:#C59D5F;--muted:#6b7280;--bg:#F7F7F6}
+    body{background-color:var(--bg)}
+    .glass-card{background-color:#ffffff;box-shadow:0 6px 24px rgba(11,18,38,0.08);border:1px solid rgba(11,18,38,0.06);}
+    .accent-border{border-color:var(--accent)}
+    /* subtle focus for keyboard users */
+    .focus-ring:focus{outline:2px solid rgba(197,157,95,0.18);outline-offset:2px}
+    /* Prevent gradients from utility classes if present */
+    .no-gradient{background-image:none !important}
+  </style>
+</head>
+<body class="text-slate-900 antialiased">
+
+  <!-- NAVBAR -->
+  <header class="bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#" class="flex items-center gap-3">
+          <!-- logo: monogram + wordmark -->
+          <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <rect width="48" height="48" rx="8" fill="#0B1226" />
+            <path d="M14 32L24 14L34 32H14Z" fill="#C59D5F" />
+          </svg>
+          <span class="font-semibold text-lg tracking-wide text-[var(--navy)]">Atlas Luxe</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm text-slate-700">
+          <a href="#features" class="hover:text-[var(--navy)]">Services</a>
+          <a href="#how" class="hover:text-[var(--navy)]">How it works</a>
+          <a href="#testimonials" class="hover:text-[var(--navy)]">Testimonials</a>
+          <a href="#faq" class="hover:text-[var(--navy)]">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden md:inline-block text-sm font-medium text-[var(--navy)] border border-transparent px-4 py-2 hover:bg-slate-50 focus-ring">Contact</a>
+          <a href="#book" class="inline-block px-4 py-2 rounded-md bg-[var(--accent)] text-white text-sm font-semibold shadow-sm hover:brightness-95 focus-ring">Book a Consultation</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 pt-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-[var(--navy)] leading-tight">Exclusive Journeys Curated For Discerning Travelers</h1>
+          <p class="mt-6 text-lg text-gray-600 max-w-xl">Bespoke itineraries, private guides, and hand-picked stays — we design luxury experiences that feel personal, effortless, and unforgettable.</p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="#book" class="inline-flex items-center gap-3 px-5 py-3 rounded-md bg-[var(--accent)] text-white font-semibold shadow glass-card no-gradient">Start Your Journey
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </a>
+            <a href="#features" class="inline-flex items-center gap-3 px-5 py-3 rounded-md border border-gray-200 text-sm font-medium hover:shadow-sm focus-ring">Explore Services</a>
+          </div>
+
+          <div class="mt-8 flex items-center gap-6">
+            <!-- social proof: small stats -->
+            <div class="flex items-center gap-3">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <circle cx="12" cy="12" r="10" stroke="#C59D5F" stroke-width="2" />
+                <path d="M8 13l2 2 4-6" stroke="#0B1226" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <div>
+                <div class="text-sm text-gray-500">Trips Designed</div>
+                <div class="font-semibold text-lg text-[var(--navy)]">1,200+</div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect x="3" y="5" width="18" height="14" rx="2" stroke="#C59D5F" stroke-width="2" />
+                <path d="M8 10h8" stroke="#0B1226" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+              <div>
+                <div class="text-sm text-gray-500">Avg. Booking Value</div>
+                <div class="font-semibold text-lg text-[var(--navy)]">$18,400</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-first lg:order-last">
+          <!-- Illustration: stylized map and compass -->
+          <div class="glass-card p-6 rounded-2xl">
+            <svg viewBox="0 0 600 420" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect x="0" y="0" width="600" height="420" rx="20" fill="#ffffff" />
+              <!-- map frame -->
+              <g transform="translate(40,40)">
+                <rect width="520" height="340" rx="12" fill="#F8FAFC" stroke="#E6E9EE" />
+                <!-- simplified route -->
+                <path d="M40 240 C120 120, 220 300, 300 180 C380 60, 460 260, 480 220" fill="none" stroke="#0B1226" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="40" cy="240" r="10" fill="#C59D5F" />
+                <circle cx="480" cy="220" r="12" fill="#0B1226" />
+                <!-- compass -->
+                <g transform="translate(420,40)">
+                  <circle cx="0" cy="0" r="36" fill="#fff" stroke="#E6E9EE" />
+                  <path d="M-6 0 L0 -26 L6 0 Z" fill="#0B1226" />
+                  <path d="M-6 0 L0 26 L6 0 Z" fill="#C59D5F" />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOGOS / SOCIAL PROOF -->
+    <section class="mt-12 border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8 flex items-center justify-between gap-6">
+        <div class="flex items-center gap-8 flex-wrap">
+          <!-- Four minimal logos -->
+          <svg class="w-24 h-8 text-gray-400" viewBox="0 0 120 32" fill="none" aria-hidden>
+            <rect width="120" height="32" rx="4" fill="#fff" />
+            <text x="6" y="20" fill="#6b7280" font-family="sans-serif" font-size="10">Hotel Partners</text>
+          </svg>
+          <svg class="w-24 h-8" viewBox="0 0 120 32" fill="none" aria-hidden>
+            <rect width="120" height="32" rx="4" fill="#fff" />
+            <text x="6" y="20" fill="#6b7280" font-family="sans-serif" font-size="10">Concierge</text>
+          </svg>
+          <svg class="w-24 h-8" viewBox="0 0 120 32" fill="none" aria-hidden>
+            <rect width="120" height="32" rx="4" fill="#fff" />
+            <text x="6" y="20" fill="#6b7280" font-family="sans-serif" font-size="10">Private A.</text>
+          </svg>
+          <svg class="w-24 h-8" viewBox="0 0 120 32" fill="none" aria-hidden>
+            <rect width="120" height="32" rx="4" fill="#fff" />
+            <text x="6" y="20" fill="#6b7280" font-family="sans-serif" font-size="10">Member Clubs</text>
+          </svg>
+        </div>
+        <div class="text-sm text-gray-500">Trusted by seasoned travelers and luxury partners worldwide</div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-2xl font-bold text-[var(--navy)]">What we offer</h2>
+        <p class="mt-3 text-gray-600">Full-service travel design with a focus on privacy, authenticity and seamless logistics.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="glass-card p-6 rounded-xl">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-[var(--accent)] flex items-center justify-center text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2v20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M5 8h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[var(--navy)]">Tailored Itineraries</h3>
+              <p class="mt-2 text-sm text-gray-600">Every trip is handcrafted to your preferences, pace and privacy requirements.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-xl">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-[var(--navy)] flex items-center justify-center text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 7h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M6 7v10a2 2 0 002 2h8a2 2 0 002-2V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[var(--navy)]">Private Access</h3>
+              <p class="mt-2 text-sm text-gray-600">Exclusive experiences and behind-the-scenes access at world-class properties.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6 rounded-xl">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center text-white">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 3v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M5 21h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-semibold text-[var(--navy)]">Concierge Support</h3>
+              <p class="mt-2 text-sm text-gray-600">24/7 contact and on-ground teams ensure flawless execution from arrival to departure.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="bg-white border-t border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold text-[var(--navy)]">How it works</h2>
+          <p class="mt-2 text-gray-600">Three simple steps to a refined journey.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 text-center glass-card rounded-xl">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full bg-[var(--accent)] text-white mx-auto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M4 22h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="mt-4 font-semibold text-[var(--navy)]">Consultation</h3>
+            <p class="mt-2 text-sm text-gray-600">Tell us your desires and rhythm; we'll craft an initial concept.</p>
+          </div>
+
+          <div class="p-6 text-center glass-card rounded-xl">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full bg-[var(--navy)] text-white mx-auto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 12h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M12 3v18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="mt-4 font-semibold text-[var(--navy)]">Design & Refine</h3>
+            <p class="mt-2 text-sm text-gray-600">We refine every detail including stays, transfers and private guides.</p>
+          </div>
+
+          <div class="p-6 text-center glass-card rounded-xl">
+            <div class="flex items-center justify-center w-14 h-14 rounded-full bg-gray-800 text-white mx-auto">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M5 12h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M12 5v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="mt-4 font-semibold text-[var(--navy)]">Travel</h3>
+            <p class="mt-2 text-sm text-gray-600">Relax — your itinerary and concierge are ready at every step.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold text-[var(--navy)]">Stories from our travelers</h2>
+        <p class="mt-2 text-gray-600">Authentic feedback from journeys we planned.</p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="glass-card p-6 rounded-xl">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden>
+                <circle cx="12" cy="8" r="3" fill="#0B1226" />
+                <path d="M4 20c1-4 7-6 8-6s7 2 8 6" fill="#0B1226" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-[var(--navy)]">Samantha R.</div>
+              <div class="text-sm text-gray-500">New York, USA</div>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-700">"Our Amalfi trip was beyond anything we imagined — private chef dinners, midnight boat rides and the utmost discretion. Flawless execution."</p>
+        </blockquote>
+
+        <blockquote class="glass-card p-6 rounded-xl">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden>
+                <circle cx="12" cy="8" r="3" fill="#0B1226" />
+                <path d="M4 20c1-4 7-6 8-6s7 2 8 6" fill="#0B1226" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-[var(--navy)]">Liam K.</div>
+              <div class="text-sm text-gray-500">London, UK</div>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-700">"The attention to detail was remarkable. Our guide anticipated everything and made local connections that transformed our experience."</p>
+        </blockquote>
+
+        <blockquote class="glass-card p-6 rounded-xl">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden>
+                <circle cx="12" cy="8" r="3" fill="#0B1226" />
+                <path d="M4 20c1-4 7-6 8-6s7 2 8 6" fill="#0B1226" />
+              </svg>
+            </div>
+            <div>
+              <div class="font-semibold text-[var(--navy)]">Hiroshi M.</div>
+              <div class="text-sm text-gray-500">Tokyo, JP</div>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-700">"Seamless from start to finish. The private transfer and early check-in made a long trip feel effortless."</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section id="book" class="bg-white border-t border-gray-100">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold text-[var(--navy)]">Ready to begin?</h2>
+          <p class="mt-2 text-gray-600">Start with a private consultation — no obligations, just possibilities.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl glass-card">
+            <div class="flex items-baseline justify-between">
+              <div>
+                <div class="text-sm text-gray-500">Essentials</div>
+                <div class="mt-1 text-2xl font-semibold text-[var(--navy)]">From $4,500</div>
+              </div>
+              <div class="text-sm text-gray-500">Short Getaways</div>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-gray-600">
+              <li>Curated 3–5 day itinerary</li>
+              <li>Hand-picked boutique hotels</li>
+            </ul>
+            <a href="#contact" class="mt-6 inline-block w-full text-center px-4 py-3 rounded-md bg-[var(--accent)] text-white font-semibold">Request Quote</a>
+          </div>
+
+          <div class="p-6 rounded-2xl glass-card border-2 accent-border">
+            <div class="flex items-baseline justify-between">
+              <div>
+                <div class="text-sm text-gray-500">Signature</div>
+                <div class="mt-1 text-2xl font-semibold text-[var(--navy)]">From $12,000</div>
+              </div>
+              <div class="text-sm text-gray-500">Most popular</div>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-gray-600">
+              <li>Fully bespoke 7–14 day journeys</li>
+              <li>Private guides and transfers</li>
+              <li>Exclusive experiences & upgrades</li>
+            </ul>
+            <a href="#contact" class="mt-6 inline-block w-full text-center px-4 py-3 rounded-md bg-[var(--navy)] text-white font-semibold">Book Consultation</a>
+          </div>
+
+          <div class="p-6 rounded-2xl glass-card">
+            <div class="flex items-baseline justify-between">
+              <div>
+                <div class="text-sm text-gray-500">Retainer</div>
+                <div class="mt-1 text-2xl font-semibold text-[var(--navy)]">Custom</div>
+              </div>
+              <div class="text-sm text-gray-500">Year-round support</div>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-gray-600">
+              <li>White-glove planning for frequent travelers</li>
+              <li>Priority access & dedicated team</li>
+            </ul>
+            <a href="#contact" class="mt-6 inline-block w-full text-center px-4 py-3 rounded-md border border-gray-200 font-semibold">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold text-[var(--navy)]">Frequently asked questions</h2>
+        <p class="mt-2 text-gray-600">Clear answers to common questions about our service.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <details class="glass-card p-5 rounded-lg" open>
+          <summary class="font-semibold text-[var(--navy)] cursor-pointer">What makes Atlas Luxe different?</summary>
+          <div class="mt-3 text-sm text-gray-600">We focus on privacy, personalized access and small group or private experiences curated with local partners and our network.</div>
+        </details>
+
+        <details class="glass-card p-5 rounded-lg">
+          <summary class="font-semibold text-[var(--navy)] cursor-pointer">How far in advance should I book?</summary>
+          <div class="mt-3 text-sm text-gray-600">For peak seasons and exclusive villas, 6–12 months is recommended. For shorter getaways, 4–8 weeks is often sufficient.</div>
+        </details>
+
+        <details class="glass-card p-5 rounded-lg">
+          <summary class="font-semibold text-[var(--navy)] cursor-pointer">Do you handle visas and travel documents?</summary>
+          <div class="mt-3 text-sm text-gray-600">We provide guidance and can coordinate with visa specialists, but clients are responsible for final submissions where required.</div>
+        </details>
+
+        <details class="glass-card p-5 rounded-lg">
+          <summary class="font-semibold text-[var(--navy)] cursor-pointer">What is your cancellation policy?</summary>
+          <div class="mt-3 text-sm text-gray-600">Policies vary by supplier. We share clear terms during booking and work to protect client deposits when possible.</div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[var(--navy)] text-white mt-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <div class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 48 48" aria-hidden>
+            <rect width="48" height="48" rx="8" fill="#FFFFFF" />
+            <path d="M14 32L24 14L34 32H14Z" fill="#0B1226" />
+          </svg>
+          <div>
+            <div class="font-semibold">Atlas Luxe</div>
+            <div class="text-sm text-gray-200">Bespoke luxury travel design</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-sm text-gray-300">
+        <div class="font-medium">Contact</div>
+        <div class="mt-2">hello@atlasluxe.example</div>
+        <div class="mt-1">+1 (555) 012-3456</div>
+      </div>
+
+      <div class="text-sm text-gray-300">
+        <div class="font-medium">Legal</div>
+        <div class="mt-2">Terms • Privacy</div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-4 text-center text-xs text-white/70">© 2026 Atlas Luxe. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

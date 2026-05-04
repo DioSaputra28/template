@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aurora Voyages — Bespoke Luxury Travel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{
+      --bg:#ffffff;
+      --muted:#f6f7fb;
+      --accent:#0f1724; /* near-black navy */
+      --gold:#b5892b; /* warm gold accent */
+      --soft:#eef2f7;
+    }
+    /* small custom touches Tailwind doesn't provide quickly */
+    .card-border { border: 1px solid rgba(15,23,36,0.06); }
+    .logo-slab svg { opacity: .9 }
+    /* Constrain hero illustration scaling */
+    .hero-illus { max-width: 460px }
+    /* subtle focus ring for accessibility */
+    .focus-ring:focus { outline: 3px solid rgba(181,145,59,0.18); outline-offset: 2px }
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-[color:var(--bg)]">
+
+  <!-- NAVBAR -->
+  <header class="border-b border-slate-100 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-md bg-[color:var(--gold)] flex items-center justify-center shadow-sm">
+            <!-- plane icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M2 11l20-7-8 8-4 8-1-7-7-2z" fill="#071126"/>
+            </svg>
+          </div>
+          <span class="text-lg font-semibold tracking-tight">Aurora Voyages</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#features" class="text-slate-600 hover:text-slate-900">Services</a>
+          <a href="#how" class="text-slate-600 hover:text-slate-900">How it Works</a>
+          <a href="#testimonials" class="text-slate-600 hover:text-slate-900">Testimonials</a>
+          <a href="#faq" class="text-slate-600 hover:text-slate-900">FAQ</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden md:inline-block px-4 py-2 text-sm rounded-md border border-slate-200 hover:bg-slate-50 focus-ring">Contact</a>
+          <a href="#book" class="inline-block px-4 py-2 bg-[color:var(--gold)] text-[color:var(--accent)] text-sm font-medium rounded-md shadow hover:brightness-95 focus-ring">Plan Your Trip</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="max-w-7xl mx-auto px-6 lg:px-8 pt-12 pb-16 lg:pb-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-sm font-semibold text-[color:var(--gold)] uppercase tracking-wider">Tailored Luxury Travel</p>
+          <h1 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-[color:var(--accent)]">Exceptional journeys curated for discerning travelers</h1>
+          <p class="mt-6 text-slate-600 max-w-xl">We design private, end-to-end luxury experiences — from remote island escapes to urban cultural immersions — crafted to your preferences with white-glove service and local expertise.</p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a href="#book" class="inline-flex items-center justify-center px-5 py-3 bg-[color:var(--accent)] text-white rounded-md shadow hover:opacity-95 focus-ring">Start a Consultation</a>
+            <a href="#how" class="inline-flex items-center justify-center px-5 py-3 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-50 focus-ring">How it Works</a>
+          </div>
+
+          <!-- quick stats -->
+          <div class="mt-10 grid grid-cols-3 sm:grid-cols-3 gap-4 max-w-md">
+            <div class="card-border rounded-md bg-white p-4 text-center shadow-sm">
+              <div class="text-xl font-semibold">500+</div>
+              <div class="text-xs text-slate-500 mt-1">Bespoke trips planned</div>
+            </div>
+            <div class="card-border rounded-md bg-white p-4 text-center shadow-sm">
+              <div class="text-xl font-semibold">40+</div>
+              <div class="text-xs text-slate-500 mt-1">Expert local partners</div>
+            </div>
+            <div class="card-border rounded-md bg-white p-4 text-center shadow-sm">
+              <div class="text-xl font-semibold">97%</div>
+              <div class="text-xs text-slate-500 mt-1">Client satisfaction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-center lg:justify-end">
+          <div class="hero-illus bg-[color:var(--muted)] rounded-2xl p-8 card-border shadow-lg">
+            <!-- stylized map/plane illustration (inline SVG) -->
+            <svg viewBox="0 0 680 520" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="destination illustration">
+              <rect width="100%" height="100%" fill="white" rx="14"/>
+              <g transform="translate(32,28)">
+                <rect x="0" y="0" width="616" height="420" rx="12" fill="var(--soft)" stroke="#e6eef7"/>
+                <path d="M40 320c40-80 120-120 220-120s180 40 220 120" fill="none" stroke="#0f1724" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="120" cy="220" r="6" fill="#0f1724"/>
+                <circle cx="340" cy="180" r="6" fill="#0f1724"/>
+                <circle cx="520" cy="290" r="6" fill="#0f1724"/>
+                <path d="M40 320c40-80 120-120 220-120s180 40 220 120" fill="none" stroke="#b5892b" stroke-width="2" stroke-dasharray="8 8" opacity="0.6"/>
+                <g transform="translate(40,40)">
+                  <g transform="translate(420,40)">
+                    <path d="M0 0 L28 10 L24 16 L4 8 Z" fill="#0f1724" transform="rotate(14 14 10) translate(0,10)"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF / LOGOS -->
+    <section class="border-t border-b border-slate-100 bg-[color:var(--muted)]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8">
+        <div class="flex items-center justify-between gap-6 flex-wrap">
+          <div class="text-sm text-slate-600">Trusted by discerning travelers and partners</div>
+          <div class="flex items-center gap-6 logo-slab">
+            <!-- simple logo blocks as inline svgs -->
+            <svg width="96" height="28" viewBox="0 0 96 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="96" height="28" rx="6" fill="#0f1724"/><text x="12" y="18" fill="#fff" font-size="11" font-family="sans-serif">MONOHOTEL</text></svg>
+            <svg width="96" height="28" viewBox="0 0 96 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="96" height="28" rx="6" fill="#e6eef7"/><text x="10" y="18" fill="#0f1724" font-size="11" font-family="sans-serif">THE YACHT</text></svg>
+            <svg width="96" height="28" viewBox="0 0 96 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="96" height="28" rx="6" fill="#e6eef7"/><text x="12" y="18" fill="#0f1724" font-size="11" font-family="sans-serif">ARTISAN TOURS</text></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="text-center max-w-2xl mx-auto">
+        <h2 class="text-2xl font-bold text-[color:var(--accent)]">Our Signature Services</h2>
+        <p class="mt-3 text-slate-600">Personalized itineraries, private guides, curated experiences and 24/7 concierge — every detail crafted for comfort and discovery.</p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card-border rounded-lg p-6 bg-white shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="flex-none w-12 h-12 rounded-md bg-[color:var(--muted)] flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2l4 9-4-1-4 1 4-9z" fill="#0f1724"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Bespoke Itineraries</h3>
+              <p class="text-sm text-slate-500 mt-1">Personal design sessions ensure your trip reflects your pace and interests.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-border rounded-lg p-6 bg-white shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="flex-none w-12 h-12 rounded-md bg-[color:var(--muted)] flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#0f1724" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Private Guides & Access</h3>
+              <p class="text-sm text-slate-500 mt-1">Skip the lines and meet local experts who bring destinations to life.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-border rounded-lg p-6 bg-white shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="flex-none w-12 h-12 rounded-md bg-[color:var(--muted)] flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0f1724" stroke-width="2"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Concierge & 24/7 Support</h3>
+              <p class="text-sm text-slate-500 mt-1">On-call assistance for any request, before and during travel.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-border rounded-lg p-6 bg-white shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="flex-none w-12 h-12 rounded-md bg-[color:var(--muted)] flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4z" stroke="#0f1724" stroke-width="2"/></svg>
+            </div>
+            <div>
+              <h3 class="font-semibold">Sustainable & Local</h3>
+              <p class="text-sm text-slate-500 mt-1">We partner with vetted local operators who practice responsible tourism.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="bg-[color:var(--muted)] py-16">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold">How It Works</h2>
+          <p class="mt-2 text-slate-600 max-w-2xl mx-auto">A four-step design and delivery process that keeps you informed and relaxed from the first call to your return home.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="p-6 bg-white card-border rounded-lg shadow-sm text-center">
+            <div class="mx-auto w-12 h-12 rounded-full bg-[color:var(--gold)] text-[color:var(--accent)] flex items-center justify-center font-bold">1</div>
+            <h4 class="mt-4 font-semibold">Discovery</h4>
+            <p class="mt-2 text-sm text-slate-500">Private consultation to set goals, style and must-sees.</p>
+          </div>
+          <div class="p-6 bg-white card-border rounded-lg shadow-sm text-center">
+            <div class="mx-auto w-12 h-12 rounded-full bg-[color:var(--gold)] text-[color:var(--accent)] flex items-center justify-center font-bold">2</div>
+            <h4 class="mt-4 font-semibold">Design</h4>
+            <p class="mt-2 text-sm text-slate-500">We build a day-by-day bespoke plan with flexible options.</p>
+          </div>
+          <div class="p-6 bg-white card-border rounded-lg shadow-sm text-center">
+            <div class="mx-auto w-12 h-12 rounded-full bg-[color:var(--gold)] text-[color:var(--accent)] flex items-center justify-center font-bold">3</div>
+            <h4 class="mt-4 font-semibold">Confirm</h4>
+            <p class="mt-2 text-sm text-slate-500">Bookings, VIP access and final logistics confirmed in writing.</p>
+          </div>
+          <div class="p-6 bg-white card-border rounded-lg shadow-sm text-center">
+            <div class="mx-auto w-12 h-12 rounded-full bg-[color:var(--gold)] text-[color:var(--accent)] flex items-center justify-center font-bold">4</div>
+            <h4 class="mt-4 font-semibold">Travel</h4>
+            <p class="mt-2 text-sm text-slate-500">On-call concierge and local support ensure everything flows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold">Stories From Our Travelers</h2>
+        <p class="mt-2 text-slate-600">Real trips, real care — our clients return with richer memories.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="p-6 bg-white card-border rounded-lg shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="rounded-full w-12 h-12 bg-[color:var(--muted)] flex items-center justify-center text-[color:var(--accent)] font-semibold">AM</div>
+            <div>
+              <div class="text-sm font-semibold">A. Marchand</div>
+              <div class="text-xs text-slate-500">Founder, Atelier Goods</div>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-600">"Aurora created a private art tour and after-hours access that felt effortless. Every detail was anticipated."</p>
+        </blockquote>
+
+        <blockquote class="p-6 bg-white card-border rounded-lg shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="rounded-full w-12 h-12 bg-[color:var(--muted)] flex items-center justify-center text-[color:var(--accent)] font-semibold">RZ</div>
+            <div>
+              <div class="text-sm font-semibold">R. Zhou</div>
+              <div class="text-xs text-slate-500">CEO, VentureCo</div>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-600">"Exceptional logistics and a flawlessly planned family trip. The kids loved the private boat day."</p>
+        </blockquote>
+
+        <blockquote class="p-6 bg-white card-border rounded-lg shadow-sm">
+          <div class="flex items-start gap-4">
+            <div class="rounded-full w-12 h-12 bg-[color:var(--muted)] flex items-center justify-center text-[color:var(--accent)] font-semibold">LS</div>
+            <div>
+              <div class="text-sm font-semibold">L. Smith</div>
+              <div class="text-xs text-slate-500">Traveler</div>
+            </div>
+          </div>
+          <p class="mt-4 text-slate-600">"Every day was curated yet flexible. The local guide was charming and deeply knowledgeable."</p>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- PRICING / CTA -->
+    <section id="book" class="bg-[color:var(--muted)] py-16">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl font-bold">Bespoke Planning — Simple Pricing</h2>
+          <p class="mt-2 text-slate-600 max-w-2xl mx-auto">We offer transparent planning fees and can design around any travel budget. Below are sample starting points.</p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-white card-border rounded-lg shadow-sm text-center">
+            <div class="text-sm text-slate-500">Classic</div>
+            <div class="mt-3 text-3xl font-extrabold">$2,500</div>
+            <div class="text-sm text-slate-500 mt-2">Starting fee — ideal for short escapes</div>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>2 design consultations</li>
+              <li>Concierge support</li>
+              <li>Local recommendations</li>
+            </ul>
+            <a href="#contact" class="mt-6 inline-block px-4 py-2 bg-[color:var(--gold)] text-[color:var(--accent)] rounded-md font-medium">Request Quote</a>
+          </div>
+
+          <div class="p-6 bg-white card-border rounded-lg shadow-lg text-center">
+            <div class="text-sm text-slate-500">Signature</div>
+            <div class="mt-3 text-3xl font-extrabold">$6,500</div>
+            <div class="text-sm text-slate-500 mt-2">Most popular — multi-city and private access</div>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>Full itinerary design</li>
+              <li>Private guides & transfers</li>
+              <li>VIP entry & upgrades</li>
+            </ul>
+            <a href="#contact" class="mt-6 inline-block px-4 py-2 bg-[color:var(--accent)] text-white rounded-md font-medium">Start Planning</a>
+          </div>
+
+          <div class="p-6 bg-white card-border rounded-lg shadow-sm text-center">
+            <div class="text-sm text-slate-500">Bespoke</div>
+            <div class="mt-3 text-3xl font-extrabold">Custom</div>
+            <div class="text-sm text-slate-500 mt-2">Fully tailored luxury experiences</div>
+            <ul class="mt-4 text-sm text-slate-600 space-y-2">
+              <li>Private access & events</li>
+              <li>On-call concierge</li>
+              <li>Complete customization</li>
+            </ul>
+            <a href="#contact" class="mt-6 inline-block px-4 py-2 border border-slate-200 rounded-md text-slate-700 font-medium">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+      <div class="text-center">
+        <h2 class="text-2xl font-bold">Frequently Asked Questions</h2>
+        <p class="mt-2 text-slate-600">If you have other questions, our team is available to assist.</p>
+      </div>
+
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <details class="p-5 bg-white card-border rounded-lg" open>
+          <summary class="font-semibold cursor-pointer">What destinations do you specialize in?</summary>
+          <p class="mt-3 text-sm text-slate-600">We craft trips worldwide with deep expertise in Europe, the Mediterranean, Asia and remote islands. Recommendations are tailored to your interests.</p>
+        </details>
+
+        <details class="p-5 bg-white card-border rounded-lg">
+          <summary class="font-semibold cursor-pointer">How far in advance should I book?</summary>
+          <p class="mt-3 text-sm text-slate-600">For peak season travel we recommend 4-6 months lead time. For exclusive events and yachts, earlier planning provides the best availability.</p>
+        </details>
+
+        <details class="p-5 bg-white card-border rounded-lg">
+          <summary class="font-semibold cursor-pointer">Do you handle group travel?</summary>
+          <p class="mt-3 text-sm text-slate-600">Yes — we plan family gatherings, small private groups and corporate retreats with bespoke programming and logistics.</p>
+        </details>
+
+        <details class="p-5 bg-white card-border rounded-lg">
+          <summary class="font-semibold cursor-pointer">What is your cancellation policy?</summary>
+          <p class="mt-3 text-sm text-slate-600">Cancellation terms vary by supplier; we aim to secure refundable options when possible and will outline terms during booking.</p>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-100 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-10">
+      <div class="flex flex-col md:flex-row md:justify-between gap-6">
+        <div>
+          <a href="#" class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-md bg-[color:var(--gold)] flex items-center justify-center">
+              <svg width="16" height="16" viewBox="0 0 24 24"><path d="M2 11l20-7-8 8-4 8-1-7-7-2z" fill="#071126"/></svg>
+            </div>
+            <span class="font-semibold">Aurora Voyages</span>
+          </a>
+          <p class="mt-4 text-sm text-slate-600 max-w-sm">White-glove travel design for profound, memorable journeys.</p>
+        </div>
+
+        <div class="flex gap-12">
+          <div>
+            <h4 class="font-semibold text-slate-700">Company</h4>
+            <ul class="mt-3 text-sm text-slate-600 space-y-2">
+              <li><a href="#about" class="hover:underline">About</a></li>
+              <li><a href="#careers" class="hover:underline">Careers</a></li>
+              <li><a href="#press" class="hover:underline">Press</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-slate-700">Contact</h4>
+            <ul class="mt-3 text-sm text-slate-600 space-y-2">
+              <li>Email: <a href="mailto:hello@auroravoyages.example" class="text-slate-700">hello@auroravoyages.example</a></li>
+              <li>Phone: <a href="tel:+18005550123" class="text-slate-700">+1 (800) 555-0123</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 border-t border-slate-100 pt-6 text-sm text-slate-500 flex items-center justify-between">
+        <div>© <span id="year">2026</span> Aurora Voyages. All rights reserved.</div>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-slate-600 hover:text-slate-800" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="#0f1724"/></svg>
+          </a>
+          <a href="#" class="text-slate-600 hover:text-slate-800" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="#0f1724"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
