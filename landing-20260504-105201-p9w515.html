@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Verdant — Eco-friendly Essentials</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small custom tweaks outside Tailwind */
+    html,body{height:100%}
+    /* Smooth card hover lift */
+    .card-hover{transition:transform .18s cubic-bezier(.2,.8,.2,1),box-shadow .18s}
+    .card-hover:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(16,24,40,0.08)}
+    /* Style for disclosure summary to match design */
+    details summary::-webkit-details-marker{display:none}
+    details summary{list-style:none}
+  </style>
+</head>
+<body class="antialiased text-slate-800 bg-slate-50">
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <nav class="flex items-center justify-between h-20">
+        <a href="#" class="flex items-center gap-3">
+          <!-- Logo: solid green leaf -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <circle cx="12" cy="12" r="12" fill="#E6F6EC" />
+            <path d="M6 14c2-4 8-8 12-8-2 4-8 8-12 8z" fill="#1E7A3A"/>
+            <path d="M9 16c1.8-1 5-2.5 10-6-1 3-3.5 6.5-7 8-2.2.9-3.8.5-3-.5z" fill="#14532D" opacity="0.08"/>
+          </svg>
+          <span class="font-semibold text-lg tracking-tight">Verdant</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 text-sm">
+          <a href="#features" class="text-slate-600 hover:text-slate-800">Features</a>
+          <a href="#how" class="text-slate-600 hover:text-slate-800">How it works</a>
+          <a href="#testimonials" class="text-slate-600 hover:text-slate-800">Testimonials</a>
+          <a href="#pricing" class="text-slate-600 hover:text-slate-800">Pricing</a>
+          <a href="#faq" class="text-slate-600 hover:text-slate-800">FAQ</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="#cta" class="hidden md:inline-block px-4 py-2 border border-green-700 text-green-700 rounded-md text-sm hover:bg-green-50">Buy Now</a>
+          <a href="#" class="text-sm text-slate-500 hover:text-slate-700">Sign in</a>
+          <button class="md:hidden p-2 rounded-md border border-slate-200" aria-label="Open menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight">Premium eco-friendly essentials, built for modern life</h1>
+          <p class="mt-6 text-lg text-slate-600 max-w-xl">Sustainably sourced materials, minimal packaging, and carbon-aware shipping. Small changes that make a measurable impact — beautiful products you can trust.</p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#pricing" class="inline-flex items-center px-5 py-3 bg-green-700 text-white rounded-md shadow-sm text-sm font-medium hover:bg-green-800">Shop Collection</a>
+            <a href="#how" class="inline-flex items-center px-5 py-3 border border-slate-200 rounded-md text-sm text-slate-700 hover:bg-slate-50">Learn how it works</a>
+          </div>
+
+          <div class="mt-8 flex items-center gap-6">
+            <!-- Social proof small badges -->
+            <div class="flex items-center gap-3">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <rect width="24" height="24" rx="6" fill="#074A2E"/>
+                <path d="M7 12l2.5 2.5L17 7" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <div class="text-sm font-semibold">92% Recycled Packaging</div>
+                <div class="text-xs text-slate-500">From responsibly sourced materials</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-first lg:order-last">
+          <!-- Illustration: eco box and leaf -->
+          <div class="w-full flex justify-center">
+            <svg width="420" height="300" viewBox="0 0 420 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of product box and leaf">
+              <rect x="40" y="90" width="220" height="140" rx="12" fill="#E6F6EC"/>
+              <rect x="60" y="110" width="180" height="100" rx="8" fill="#fff" stroke="#D1FAE5"/>
+              <path d="M90 120c18-12 60-30 100-10 24 13 40 36 40 36s-28-6-48 2c-36 14-86 14-132-28" fill="#DFF6E8"/>
+              <path d="M310 40c-36 12-48 48-48 48s34 6 56-6c22-12 32-40 32-40s-18-6-40-2z" fill="#1E7A3A"/>
+              <path d="M295 55c-12 4-24 14-28 28 12-8 28-8 40-2 0-12-4-22-12-26z" fill="#14532D" opacity="0.12"/>
+              <g transform="translate(90,70)">
+                <path d="M40 6c-6 8-18 12-22 20-4 8 2 18 12 18s36-10 46-18c8-6 6-18-4-22-8-3-14-3-32 2z" fill="#1E7A3A"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos / Social proof -->
+    <section class="bg-white border-t border-b border-slate-100">
+      <div class="max-w-6xl mx-auto px-6 py-8 flex flex-wrap items-center justify-between gap-6">
+        <div class="flex items-center gap-8">
+          <!-- Simple inline SVG logos - abstract partners -->
+          <svg width="96" height="28" viewBox="0 0 96 28" fill="none" aria-hidden>
+            <rect width="96" height="28" rx="6" fill="#F1F5F9"/>
+            <path d="M12 18c6-8 28-14 48-8" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <svg width="96" height="28" viewBox="0 0 96 28" fill="none" aria-hidden>
+            <rect width="96" height="28" rx="6" fill="#F1F5F9"/>
+            <circle cx="20" cy="14" r="6" fill="#1E7A3A"/>
+          </svg>
+          <svg width="96" height="28" viewBox="0 0 96 28" fill="none" aria-hidden>
+            <rect width="96" height="28" rx="6" fill="#F1F5F9"/>
+            <path d="M18 8h24M18 14h24M18 20h20" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="text-sm text-slate-500">Trusted by conscious brands and customers worldwide</div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl border border-slate-100 card-hover">
+          <div class="w-10 h-10 flex items-center justify-center bg-green-50 rounded-md">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 2v20" stroke="#065F46" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M5 12h14" stroke="#065F46" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-lg">Sustainably Sourced</h3>
+          <p class="mt-2 text-sm text-slate-600">Materials selected for low environmental impact and high durability.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-100 card-hover">
+          <div class="w-10 h-10 flex items-center justify-center bg-green-50 rounded-md">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <rect x="3" y="3" width="18" height="18" rx="3" stroke="#065F46" stroke-width="1.5"/>
+              <path d="M7 12h10" stroke="#065F46" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-lg">Minimal Packaging</h3>
+          <p class="mt-2 text-sm text-slate-600">Compact, recyclable packaging designed to remove waste.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl border border-slate-100 card-hover">
+          <div class="w-10 h-10 flex items-center justify-center bg-green-50 rounded-md">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M12 3v6l4 2" stroke="#065F46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#065F46" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="mt-4 font-semibold text-lg">Carbon-aware Delivery</h3>
+          <p class="mt-2 text-sm text-slate-600">We optimize routes and offset emissions where possible.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="bg-white border-t border-b border-slate-100">
+      <div class="max-w-5xl mx-auto px-6 py-16">
+        <h2 class="text-2xl font-semibold">How it works</h2>
+        <p class="mt-3 text-slate-600 max-w-2xl">A simple, transparent process designed for trust and impact.</p>
+
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-lg border border-slate-100 bg-slate-50">
+            <div class="flex items-center justify-center w-12 h-12 rounded-md bg-white border border-slate-100">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2L12 12" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M7 8l5-6 5 6" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h4 class="mt-4 font-semibold">1. Pick your essentials</h4>
+            <p class="mt-2 text-sm text-slate-600">Choose from thoughtfully designed products made to last.</p>
+          </div>
+
+          <div class="p-6 rounded-lg border border-slate-100 bg-slate-50">
+            <div class="flex items-center justify-center w-12 h-12 rounded-md bg-white border border-slate-100">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M3 12h18" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M12 3v18" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h4 class="mt-4 font-semibold">2. Pack with purpose</h4>
+            <p class="mt-2 text-sm text-slate-600">We use recyclable materials and minimal fillers to reduce waste.</p>
+          </div>
+
+          <div class="p-6 rounded-lg border border-slate-100 bg-slate-50">
+            <div class="flex items-center justify-center w-12 h-12 rounded-md bg-white border border-slate-100">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+                <path d="M12 2C9 2 7 4 7 7c0 4 5 9 5 9s5-5 5-9c0-3-2-5-5-5z" stroke="#0F172A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 11v9" stroke="#0F172A" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h4 class="mt-4 font-semibold">3. Track impact</h4>
+            <p class="mt-2 text-sm text-slate-600">We provide impact reports and offset details for every order.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="max-w-7xl mx-auto px-6 py-16">
+      <h2 class="text-2xl font-semibold">What customers say</h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <blockquote class="bg-white p-6 rounded-xl border border-slate-100">
+          <p class="text-slate-700">"Beautifully made — I replaced several single-use items and love the minimal packaging."</p>
+          <footer class="mt-4 text-sm text-slate-500">— A. Thompson, Designer</footer>
+        </blockquote>
+
+        <blockquote class="bg-white p-6 rounded-xl border border-slate-100">
+          <p class="text-slate-700">"Fast shipping, clear impact reporting, and a high-quality product. Highly recommend."</p>
+          <footer class="mt-4 text-sm text-slate-500">— S. Rivera, Product Manager</footer>
+        </blockquote>
+
+        <blockquote class="bg-white p-6 rounded-xl border border-slate-100">
+          <p class="text-slate-700">"A brand that actually follows through on sustainability — no greenwashing here."</p>
+          <footer class="mt-4 text-sm text-slate-500">— J. Malik, Customer</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- Pricing / CTA -->
+    <section id="pricing" class="bg-green-50">
+      <div class="max-w-6xl mx-auto px-6 py-16">
+        <div class="text-center">
+          <h2 class="text-3xl font-extrabold text-slate-900">Simple pricing, meaningful impact</h2>
+          <p class="mt-3 text-slate-600 max-w-2xl mx-auto">Choose a plan that fits your lifestyle. No hidden fees, transparent offsets, and free returns within 30 days.</p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-xl border border-slate-100 text-center">
+            <div class="text-slate-700 text-sm font-semibold">Starter</div>
+            <div class="mt-4 text-3xl font-bold">$29</div>
+            <div class="mt-2 text-sm text-slate-500">Single product purchase</div>
+            <ul class="mt-6 space-y-2 text-sm text-slate-600">
+              <li>Recycled packaging</li>
+              <li>Standard shipping</li>
+            </ul>
+            <a href="#cta" class="mt-6 inline-block px-4 py-2 bg-white border border-green-700 text-green-700 rounded-md hover:bg-green-50">Select</a>
+          </div>
+
+          <div class="bg-white p-8 rounded-xl border border-green-700 shadow-md transform scale-100 md:scale-100 text-center">
+            <div class="text-slate-700 text-sm font-semibold">Most Popular</div>
+            <div class="mt-4 text-4xl font-extrabold">$79</div>
+            <div class="mt-2 text-sm text-slate-500">Bundle — best value</div>
+            <ul class="mt-6 space-y-2 text-sm text-slate-600">
+              <li>3 curated essentials</li>
+              <li>Carbon-aware shipping</li>
+              <li>Impact report</li>
+            </ul>
+            <a href="#cta" class="mt-6 inline-block px-6 py-3 bg-green-700 text-white rounded-md hover:bg-green-800">Get Bundle</a>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-slate-100 text-center">
+            <div class="text-slate-700 text-sm font-semibold">Subscription</div>
+            <div class="mt-4 text-3xl font-bold">$24/mo</div>
+            <div class="mt-2 text-sm text-slate-500">Auto-refill & savings</div>
+            <ul class="mt-6 space-y-2 text-sm text-slate-600">
+              <li>Automatic delivery</li>
+              <li>15% savings</li>
+            </ul>
+            <a href="#cta" class="mt-6 inline-block px-4 py-2 bg-white border border-green-700 text-green-700 rounded-md hover:bg-green-50">Subscribe</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="max-w-5xl mx-auto px-6 py-16">
+      <h2 class="text-2xl font-semibold">Frequently asked questions</h2>
+      <div class="mt-6 space-y-4">
+        <details class="bg-white p-4 rounded-lg border border-slate-100">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <span class="font-medium">Are your products fully recyclable?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M6 9l6 6 6-6" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-600">Most components are recyclable. We include material details on every product page so you know what can be recycled locally.</p>
+        </details>
+
+        <details class="bg-white p-4 rounded-lg border border-slate-100">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <span class="font-medium">How do you calculate carbon offsets?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M6 9l6 6 6-6" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-600">We estimate emissions per order based on product weight and shipping distance, and partner with certified projects to offset the remainder.</p>
+        </details>
+
+        <details class="bg-white p-4 rounded-lg border border-slate-100">
+          <summary class="flex justify-between items-center cursor-pointer">
+            <span class="font-medium">What is your return policy?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <path d="M6 9l6 6 6-6" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </summary>
+          <p class="mt-3 text-sm text-slate-600">Free returns within 30 days. We refund the product price and encourage reuse or donation of packaging where possible.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="cta" class="bg-white border-t border-slate-100">
+      <div class="max-w-4xl mx-auto px-6 py-12 text-center">
+        <h3 class="text-2xl font-semibold">Ready to make a greener choice?</h3>
+        <p class="mt-3 text-slate-600">Join thousands of customers choosing quality, transparency, and sustainability.</p>
+        <div class="mt-6 flex justify-center gap-4">
+          <a href="#pricing" class="px-6 py-3 bg-green-700 text-white rounded-md hover:bg-green-800">Shop now</a>
+          <a href="#" class="px-6 py-3 border border-slate-200 rounded-md text-slate-700 hover:bg-slate-50">Contact sales</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <div class="flex items-center gap-3">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <circle cx="12" cy="12" r="12" fill="#052E18"/>
+            <path d="M7 12c4-6 10-8 12-8-4 6-10 10-12 8z" fill="#86EFAC"/>
+          </svg>
+          <div>
+            <div class="text-white font-semibold">Verdant</div>
+            <div class="text-xs text-slate-400">Eco-friendly essentials</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-sm">
+        <div class="font-medium text-slate-200">Company</div>
+        <ul class="mt-3 space-y-2 text-slate-400">
+          <li><a href="#" class="hover:text-white">About us</a></li>
+          <li><a href="#" class="hover:text-white">Careers</a></li>
+          <li><a href="#" class="hover:text-white">Sustainability</a></li>
+        </ul>
+      </div>
+
+      <div class="text-sm">
+        <div class="font-medium text-slate-200">Support</div>
+        <ul class="mt-3 space-y-2 text-slate-400">
+          <li><a href="#" class="hover:text-white">Help center</a></li>
+          <li><a href="#" class="hover:text-white">Shipping</a></li>
+          <li><a href="#" class="hover:text-white">Returns</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6 py-4 text-xs text-slate-500">© 2026 Verdant. All rights reserved.</div>
+    </div>
+  </footer>
+</body>
+</html>
